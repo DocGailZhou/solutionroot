@@ -1,9 +1,7 @@
 # Instructions - Initial Setup 
 
 1. Create a fabric workspace 
-
-   ![](docs/images/create_fabric_workspace.png)
-
+   
 2. In the fabric workspace, create a lakehouse with the name of your choice. For example **miqdata** 
 
 3. Upload the infra/data folder to the File section of the lakehouse: 
