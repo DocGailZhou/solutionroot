@@ -74,56 +74,96 @@ function Test-DateFormat {
     }
 }
 
-# Calculate smart defaults (15-month business period: full 2025 + Q1 2026)
-$DefaultEndDate = "2026-03-31"
-$DefaultStartDate = "2025-01-01"
+# Calculate smart defaults for two-phase generation
+$DefaultSalesStartDate = "2020-01-01"  # 6+ years of sales history
+$DefaultSalesEndDate = "2026-03-31"    # Common end date
+$DefaultSupplyStartDate = "2025-01-01" # Recent 15-month supply chain period  
+$DefaultSupplyEndDate = "2026-03-31"   # Same end date as sales
 
 # Interactive configuration with smart defaults
-Write-Info "📅 Business Data Generation Configuration"
+Write-Info "📅 Two-Phase Data Generation Configuration"
 Write-Host "   Let's set up your business data simulation with smart defaults!" -ForegroundColor Gray
 Write-Host ""
 
-Write-Host "   🎯 Recommended: 15-month business analysis period (full 2025 + Q1 2026)" -ForegroundColor Yellow
-Write-Host "   📊 Default period spans seasonal patterns and growth trends" -ForegroundColor Gray
+Write-Host "   🎯 Two-Phase Strategy:" -ForegroundColor Yellow
+Write-Host "   • 📈 Sales Data: Long history for trend analysis (6+ years)" -ForegroundColor Gray
+Write-Host "   • 📦 Supply Chain: Recent period for current operations (15 months)" -ForegroundColor Gray
 Write-Host ""
 
 # Date range input with defaults
 Write-Host "📅 Date Range Setup:" -ForegroundColor Cyan
-Write-Host "   Default: $DefaultStartDate to $DefaultEndDate (15 months)" -ForegroundColor Green
+Write-Host "   📈 Sales Data Default: $DefaultSalesStartDate to $DefaultSalesEndDate (6+ years)" -ForegroundColor Green
+Write-Host "   📦 Supply Chain Default: $DefaultSupplyStartDate to $DefaultSupplyEndDate (15 months)" -ForegroundColor Green
+Write-Host ""
 
-$UseDefaults = Read-Host "   Use default dates? (Press Enter for YES, or type 'no')"
+$UseDefaults = Read-Host "   Use default date ranges? (Press Enter for YES, or type 'no')"
 if ($UseDefaults -eq "" -or $UseDefaults -eq "Y" -or $UseDefaults -eq "y") {
-    $StartDate = $DefaultStartDate
-    $EndDate = $DefaultEndDate
-    Write-Host "   ✅ Using defaults: $StartDate to $EndDate" -ForegroundColor Green
+    $SalesStartDate = $DefaultSalesStartDate
+    $SalesEndDate = $DefaultSalesEndDate
+    $SupplyStartDate = $DefaultSupplyStartDate
+    $SupplyEndDate = $DefaultSupplyEndDate
+    Write-Host "   ✅ Using defaults:" -ForegroundColor Green
+    Write-Host "      Sales: $SalesStartDate to $SalesEndDate" -ForegroundColor White
+    Write-Host "      Supply: $SupplyStartDate to $SupplyEndDate" -ForegroundColor White
 } else {
-    Write-Host "   📝 Custom date range:" -ForegroundColor Yellow
+    Write-Host "   📝 Custom date ranges:" -ForegroundColor Yellow
+    Write-Host ""
     
-    # Get start date
+    # Get sales start date
+    Write-Host "   📈 Sales Data Period:" -ForegroundColor Cyan
     do {
-        $StartDate = Read-Host "   Enter start date (YYYY-MM-DD)"
-        if (-not (Test-DateFormat $StartDate)) {
-            Write-Warning "   ⚠️  Invalid date format. Please use YYYY-MM-DD format."
-            $StartDate = $null
+        $SalesStartDate = Read-Host "      Sales start date (YYYY-MM-DD)"
+        if (-not (Test-DateFormat $SalesStartDate)) {
+            Write-Warning "      ⚠️  Invalid date format. Please use YYYY-MM-DD format."
+            $SalesStartDate = $null
         }
-    } while (-not $StartDate)
+    } while (-not $SalesStartDate)
     
-    # Get end date  
+    # Get sales end date  
     do {
-        $EndDate = Read-Host "   Enter end date (YYYY-MM-DD)"
-        if (-not (Test-DateFormat $EndDate)) {
-            Write-Warning "   ⚠️  Invalid date format. Please use YYYY-MM-DD format."
-            $EndDate = $null
+        $SalesEndDate = Read-Host "      Sales end date (YYYY-MM-DD)"
+        if (-not (Test-DateFormat $SalesEndDate)) {
+            Write-Warning "      ⚠️  Invalid date format. Please use YYYY-MM-DD format."
+            $SalesEndDate = $null
         } else {
             # Validate end date is after start date
-            $startDt = [DateTime]::ParseExact($StartDate, "yyyy-MM-dd", $null)
-            $endDt = [DateTime]::ParseExact($EndDate, "yyyy-MM-dd", $null)
-            if ($endDt -le $startDt) {
-                Write-Warning "   ⚠️  End date must be after start date."
-                $EndDate = $null
+            $salesStartDt = [DateTime]::ParseExact($SalesStartDate, "yyyy-MM-dd", $null)
+            $salesEndDt = [DateTime]::ParseExact($SalesEndDate, "yyyy-MM-dd", $null)
+            if ($salesEndDt -le $salesStartDt) {
+                Write-Warning "      ⚠️  End date must be after start date."
+                $SalesEndDate = $null
             }
         }
-    } while (-not $EndDate)
+    } while (-not $SalesEndDate)
+    
+    Write-Host ""
+    
+    # Get supply chain start date
+    Write-Host "   📦 Supply Chain Period:" -ForegroundColor Blue
+    do {
+        $SupplyStartDate = Read-Host "      Supply chain start date (YYYY-MM-DD)"
+        if (-not (Test-DateFormat $SupplyStartDate)) {
+            Write-Warning "      ⚠️  Invalid date format. Please use YYYY-MM-DD format."
+            $SupplyStartDate = $null
+        }
+    } while (-not $SupplyStartDate)
+    
+    # Get supply chain end date  
+    do {
+        $SupplyEndDate = Read-Host "      Supply chain end date (YYYY-MM-DD)"
+        if (-not (Test-DateFormat $SupplyEndDate)) {
+            Write-Warning "      ⚠️  Invalid date format. Please use YYYY-MM-DD format."
+            $SupplyEndDate = $null
+        } else {
+            # Validate end date is after start date
+            $supplyStartDt = [DateTime]::ParseExact($SupplyStartDate, "yyyy-MM-dd", $null)
+            $supplyEndDt = [DateTime]::ParseExact($SupplyEndDate, "yyyy-MM-dd", $null)
+            if ($supplyEndDt -le $supplyStartDt) {
+                Write-Warning "      ⚠️  End date must be after start date."
+                $SupplyEndDate = $null
+            }
+        }
+    } while (-not $SupplyEndDate)
 }
 
 Write-Host ""
@@ -143,19 +183,29 @@ $GenerateGraphs = ($GraphsInput -eq "" -or $GraphsInput -eq "Y" -or $GraphsInput
 $CopyInput = Read-Host "   Copy data to infra/data directory? (Press Enter for YES, or type 'no')"
 $CopyData = ($CopyInput -eq "" -or $CopyInput -eq "Y" -or $CopyInput -eq "y" -or $CopyInput -eq "yes")
 
-# Calculate duration
-$startDt = [DateTime]::ParseExact($StartDate, "yyyy-MM-dd", $null) 
-$endDt = [DateTime]::ParseExact($EndDate, "yyyy-MM-dd", $null)
-$duration = ($endDt - $startDt).Days
+# Calculate durations
+$salesStartDt = [DateTime]::ParseExact($SalesStartDate, "yyyy-MM-dd", $null) 
+$salesEndDt = [DateTime]::ParseExact($SalesEndDate, "yyyy-MM-dd", $null)
+$salesDuration = ($salesEndDt - $salesStartDt).Days
+
+$supplyStartDt = [DateTime]::ParseExact($SupplyStartDate, "yyyy-MM-dd", $null) 
+$supplyEndDt = [DateTime]::ParseExact($SupplyEndDate, "yyyy-MM-dd", $null)
+$supplyDuration = ($supplyEndDt - $supplyStartDt).Days
 
 Write-Host ""
 Write-Info "🗓️  Final Configuration:"
-Write-Host "   • Start Date: $StartDate" -ForegroundColor White
-Write-Host "   • End Date:   $EndDate" -ForegroundColor White  
-Write-Host "   • Duration:   $duration days" -ForegroundColor White
-Write-Host "   • Growth:     $(if($EnableGrowth) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
-Write-Host "   • Graphs:     $(if($GenerateGraphs) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
-Write-Host "   • Copy Data:  $(if($CopyData) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
+Write-Host "   📈 Sales Data Period:" -ForegroundColor Cyan
+Write-Host "     • Start Date: $SalesStartDate" -ForegroundColor White
+Write-Host "     • End Date:   $SalesEndDate" -ForegroundColor White  
+Write-Host "     • Duration:   $salesDuration days" -ForegroundColor White
+Write-Host "   📦 Supply Chain Period:" -ForegroundColor Blue
+Write-Host "     • Start Date: $SupplyStartDate" -ForegroundColor White
+Write-Host "     • End Date:   $SupplyEndDate" -ForegroundColor White  
+Write-Host "     • Duration:   $supplyDuration days" -ForegroundColor White
+Write-Host "   ⚙️  Generation Options:" -ForegroundColor Yellow
+Write-Host "     • Growth:     $(if($EnableGrowth) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
+Write-Host "     • Graphs:     $(if($GenerateGraphs) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
+Write-Host "     • Copy Data:  $(if($CopyData) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
 Write-Host ""
 
 Write-Host "🚀 Starting data generation..." -ForegroundColor Green
@@ -179,8 +229,8 @@ try {
     # Build sales command
     $SalesArgs = @(
         "main_generate_sales.py"
-        "-s", $StartDate
-        "-e", $EndDate
+        "-s", $SalesStartDate
+        "-e", $SalesEndDate
     )
     
     if ($EnableGrowth) { $SalesArgs += "--enable-growth" }
@@ -221,8 +271,8 @@ try {
     # Build supply chain command with auto-scale
     $SupplyArgs = @(
         "main_generate_supplychain.py"
-        "-s", $StartDate
-        "-e", $EndDate
+        "-s", $SupplyStartDate
+        "-e", $SupplyEndDate
         "--auto-scale"
     )
     
@@ -305,7 +355,7 @@ try {
     Write-Host "═" * 80 -ForegroundColor Green
     Write-Host ""
     Write-Success "✨ Your integrated business dataset is ready for analysis!"
-    Write-Host "   Duration: $duration days | Sales → Supply Chain → Analytics" -ForegroundColor Gray
+    Write-Host "   Sales: $salesDuration days | Supply Chain: $supplyDuration days | Sales → Supply Chain → Analytics" -ForegroundColor Gray
     Write-Host ""
     
 } catch {

@@ -10,15 +10,18 @@ Generates intelligent supplier management and inventory data with auto-scaling b
 ```
 
 **What it does:**
-- Interactive prompts with smart defaults (2025-01-01 to 2026-03-31)
-- First generates sales data for all domains (Camping, Kitchen, Ski)
-- Then auto-scales and generates supply chain data based on sales volume
+- Interactive prompts for two separate date ranges:
+  - **Sales period**: Default 2020-01-01 to 2026-03-31 (6+ years for analysis)
+  - **Supply chain period**: Default 2025-01-01 to 2026-03-31 (recent operations)
+- First generates sales data for long-term trend analysis
+- Then auto-scales supply chain data based on recent sales volume only
 - Creates comprehensive analytics dashboard (4-chart visualization)
 - Copies all data to infra directories
-- Complete end-to-end business simulation
+- Complete business simulation with historical context
 
 **Interactive Options:**
-- **Default dates**: 15-month period (full 2025 + Q1 2026)
+- **Sales data**: 6+ years of historical data for trend analysis
+- **Supply chain**: Recent 15-month period for current operations scaling
 - **Business growth**: Enabled by default (for realistic sales patterns)
 - **Analytics graphs**: Enabled by default (revenue + supply chain dashboards)
 - **Copy data**: Enabled by default (to infra/data directories)
@@ -195,6 +198,3 @@ python main_generate_supplychain.py --auto-scale --graph --copydata --no-display
 
 # Manual two-phase generation:
 python main_generate_sales.py -s 2025-01-01 -e 2026-03-31 --enable-growth --copydata --graph --no-display
-python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --auto-scale --copydata --graph --no-display
-```
-
