@@ -217,11 +217,11 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     df_account = pd.read_csv(ACCOUNT_FILE)
     df_product = pd.read_csv(PRODUCT_FILE)
     
-    # For ski orders, we'll use both Camping and Kitchen accounts to simulate winter sports retail
-    df_winter_accounts = df_account[df_account['CustomerAccountName'].isin(['Camping', 'Kitchen'])].copy()
+    # Filter accounts to Ski channel only
+    df_winter_accounts = df_account[df_account['CustomerAccountName'] == 'Ski'].copy()
     
     print(f"   Customers: {len(df_customer):,}")
-    print(f"   Winter Sports Accounts: {len(df_winter_accounts):,}")
+    print(f"   Ski Accounts: {len(df_winter_accounts):,}")
     print(f"   Ski Products: {len(df_product):,}")
     
     # Initialize data containers
@@ -237,7 +237,7 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     
     print("\n🎯 Generating orders and order lines...")
     
-    # Generate orders for each customer with winter sports accounts
+    # Generate orders for each customer with ski accounts
     customers_with_winter = df_customer[
         df_customer['CustomerId'].isin(df_winter_accounts['CustomerId'])
     ]
@@ -379,12 +379,12 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     
     # Generate customer accounts for finance (Ski channel)
     print("\n🏦 Generating customer accounts for finance...")
-    snow_customers = df_account[df_account['CustomerAccountName'] == 'Ski']['CustomerId'].unique()
-    for customer_id in snow_customers:
-        account_id = f"ACCT-SNOW-{customer_id}"
+    ski_customers = df_account[df_account['CustomerAccountName'] == 'Ski']['CustomerId'].unique()
+    for customer_id in ski_customers:
+        account_id = f"ACCT-Ski-{customer_id}"
         accounts.append({
             "AccountId": account_id,
-            "AccountNumber": f"ACC-{customer_id}-SNOW",
+            "AccountNumber": f"ACC-{customer_id}-Ski",
             "CustomerId": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
@@ -392,7 +392,7 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             "ClosedDate": "",  # Empty string for active accounts
             "Balance": 0.0,  # Zero balance since payments are immediate
             "Currency": "USD",
-            "Description": f"Accounts Receivable for Customer {customer_id} - Snow Channel",
+            "Description": f"Accounts Receivable for Customer {customer_id} - Ski Channel",
             "CreatedBy": "SampleGen"
         })
 

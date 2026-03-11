@@ -1,19 +1,19 @@
 # Supply Chain Data Generation Summary
 
-**Generated**: 2026-03-11 11:29:04  
+**Generated**: 2026-03-11 12:03:03  
 **Date Range**: 2025-01-01 to 2026-03-31  
 **Duration**: 454 days  
-**Integration**: Connected to 116,267 sales line items
+**Integration**: Connected to 115,429 sales line items
 
 ## 🏭 Generation Overview
 
 ### **Total Summary**
-- **Total Records Generated**: 8,134
+- **Total Records Generated**: 8,189
 - **Suppliers**: 5 suppliers with backup relationships
 - **Product-Supplier Mappings**: 73 relationships
-- **Inventory Records**: 72 stock locations
+- **Inventory Records**: 77 stock locations
 - **Purchase Orders**: 200 procurement orders  
-- **PO Line Items**: 539 order details
+- **PO Line Items**: 589 order details
 - **Inventory Transactions**: 6810 movement records
 - **Demand Forecasts**: 420 predictive analytics records
 - **Supply Chain Events**: 15 disruption scenarios
@@ -98,10 +98,10 @@
 - `SupplyChainEvents.csv` - 15 disruption events and scenarios
 
 ### **Inventory Data** (`output/inventory/`)  
-- `Inventory.csv` - 72 current stock levels across warehouses
+- `Inventory.csv` - 77 current stock levels across warehouses
 - `InventoryTransactions.csv` - 6810 complete movement audit trail
 - `PurchaseOrders.csv` - 200 procurement orders with supplier details  
-- `PurchaseOrderItems.csv` - 539 line items with specifications
+- `PurchaseOrderItems.csv` - 589 line items with specifications
 - `DemandForecast.csv` - 420 predictive analytics with seasonal patterns
 
 ## 🚀 Next Steps

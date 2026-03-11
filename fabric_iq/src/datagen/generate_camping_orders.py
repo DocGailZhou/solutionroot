@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Camping Product Data Generator - Microsoft Fabric Channel
+Camping Product Data Generator - Microsoft camping Channel
 =========================================================
 
 Generates realistic sales & finance data for camping products:
@@ -106,7 +106,7 @@ def parse_date(date_string):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(
-        description='Generate Camping Product Orders for Microsoft Fabric',
+        description='Generate Camping Product Orders',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Quick Examples:
@@ -205,9 +205,9 @@ def calculate_discount(unit_price, customer_segment, quantity):
     return 0.0
 
 def generate_camping_orders(start_date, end_date, order_start_number, enable_growth=False):
-    """Generate camping product orders for Microsoft Fabric"""
+    """Generate camping product orders"""
     
-    print("🏕️ Generating Camping Product Orders for Microsoft Fabric")
+    print("🏕️ Generating Camping Product Orders")
     print("=" * 64)
     print(f"📅 Date Range: {start_date.date()} to {end_date.date()}")
     print(f"📊 Order Number Start: F{order_start_number}")
@@ -222,11 +222,11 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     df_account = pd.read_csv(ACCOUNT_FILE)
     df_product = pd.read_csv(PRODUCT_FILE)
     
-    # Filter accounts to Fabric channel only
-    df_fabric_accounts = df_account[df_account['CustomerAccountName'] == 'Camping'].copy()
+    # Filter accounts to Camping channel only
+    df_camping_accounts = df_account[df_account['CustomerAccountName'] == 'Camping'].copy()
     
     print(f"   Customers: {len(df_customer):,}")
-    print(f"   Fabric Accounts: {len(df_fabric_accounts):,}")
+    print(f"   Camping Accounts: {len(df_camping_accounts):,}")
     print(f"   Camping Products: {len(df_product):,}")
     
     # Initialize data containers
@@ -248,22 +248,22 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     phase_orders = {1: 0, 2: 0, 3: 0}
     event_orders = {}
     
-    # Generate orders for each customer with Fabric account
-    customers_with_fabric = df_customer[
-        df_customer['CustomerId'].isin(df_fabric_accounts['CustomerId'])
+    # Generate orders for each customer with Camping account
+    customers_with_camping = df_customer[
+        df_customer['CustomerId'].isin(df_camping_accounts['CustomerId'])
     ]
     
-    for idx, customer in customers_with_fabric.iterrows():
+    for idx, customer in customers_with_camping.iterrows():
         if idx > 0 and idx % 50 == 0:
-            print(f"   Processed {idx}/{len(customers_with_fabric)} customers...")
+            print(f"   Processed {idx}/{len(customers_with_camping)} customers...")
         
         customer_id = customer['CustomerId']
         customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
         customer_type = get_customer_type_from_relationship(customer_segment)
         
-        # Get customer's Fabric account
-        fabric_account = df_fabric_accounts[df_fabric_accounts['CustomerId'] == customer_id].iloc[0]
-        account_id = fabric_account['CustomerAccountId']
+        # Get customer's Camping account
+        camping_account = df_camping_accounts[df_camping_accounts['CustomerId'] == customer_id].iloc[0]
+        account_id = camping_account['CustomerAccountId']
         
         # Determine number of orders for this customer with business growth patterns
         freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 2))
@@ -412,7 +412,7 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             # Create order record
             orders.append({
                 "OrderId": order_id,
-                "SalesChannelId": fabric_account['CustomerAccountName'],
+                "SalesChannelId": camping_account['CustomerAccountName'],
                 "OrderNumber": order_number,
                 "CustomerId": customer_id,
                 "CustomerAccountId": account_id,
@@ -470,12 +470,12 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     print(f"\\n🏦 Generating customer accounts for finance...")
     account_counter = 1000  # Start numbering from 1000
     
-    for customer in customers_with_fabric.itertuples():
+    for customer in customers_with_camping.itertuples():
         customer_id = customer.CustomerId
         
         accounts.append({
             "AccountId": str(uuid.uuid4()),
-            "AccountNumber": f"ACC-Fabric-{account_counter}",
+            "AccountNumber": f"ACC-Camping-{account_counter}",
             "CustomerId": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
@@ -483,7 +483,7 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             "ClosedDate": "",  # Empty for active accounts
             "Balance": 0.0,  # eCommerce: immediate payment, no balance
             "Currency": "USD",
-            "Description": f"Customer receivable account (Fabric)",
+            "Description": f"Customer receivable account (Camping)",
             "CreatedBy": "SampleGen"
         })
         account_counter += 1

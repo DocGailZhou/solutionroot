@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Kitchen Product Data Generator - Azure Databricks Channel
-========================================================
+Kitchen Product Data Generator
+==============================
 
 Generates realistic sales & finance data for kitchen products:
 🍳 Holiday seasonality (more bakeware/coffee makers in winter)
@@ -104,7 +104,7 @@ def parse_date(date_string):
 def parse_arguments():
     """Parse command line arguments"""
     parser = argparse.ArgumentParser(
-        description='Generate Kitchen Product Orders for Azure Databricks',
+        description='Generate Kitchen Product Orders',
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Quick Examples:
@@ -209,9 +209,9 @@ def calculate_discount(unit_price, customer_segment, quantity):
     return 0.0
 
 def generate_kitchen_orders(start_date, end_date, order_start_number, enable_growth=False):
-    """Generate kitchen product orders and finance data for Azure Databricks"""
+    """Generate kitchen product orders and finance data"""
     
-    print("🍳 Generating Kitchen Product Orders for Azure Databricks")
+    print("🍳 Generating Kitchen Product Orders")
     print("=" * 64)
     print(f"📅 Date Range: {start_date.date()} to {end_date.date()}")
     print(f"📊 Order Number Start: D{order_start_number}")
@@ -231,11 +231,11 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
     df_account = pd.read_csv(ACCOUNT_FILE)
     df_product = pd.read_csv(PRODUCT_FILE)
     
-    # Filter accounts to ADB (Azure Databricks) channel only
-    df_adb_accounts = df_account[df_account['CustomerAccountName'] == 'Kitchen'].copy()
+    # Filter accounts to Kitchen channel only
+    df_kitchen_accounts = df_account[df_account['CustomerAccountName'] == 'Kitchen'].copy()
     
     print(f"   Customers: {len(df_customer):,}")
-    print(f"   ADB Accounts: {len(df_adb_accounts):,}")
+    print(f"   Kitchen Accounts: {len(df_kitchen_accounts):,}")
     print(f"   Kitchen Products: {len(df_product):,}")
     
     # Initialize data containers
@@ -251,9 +251,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
     
     print("\n🎯 Generating orders with business growth patterns..." if enable_growth else "\n🎯 Generating orders and order lines...")
     
-    # Generate orders for each customer with ADB account
-    customers_with_adb = df_customer[
-        df_customer['CustomerId'].isin(df_adb_accounts['CustomerId'])
+    # Generate orders for each customer with Kitchen account
+    customers_with_kitchen = df_customer[
+        df_customer['CustomerId'].isin(df_kitchen_accounts['CustomerId'])
     ]
     
     # Initialize business growth tracking
@@ -266,17 +266,17 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
         # Month-by-month generation for visible growth patterns
         current_date = start_date.replace(day=1)
         
-        for idx, customer in customers_with_adb.iterrows():
+        for idx, customer in customers_with_kitchen.iterrows():
             if idx > 0 and idx % 50 == 0:
-                print(f"   Processed {idx}/{len(customers_with_adb)} customers...")
+                print(f"   Processed {idx}/{len(customers_with_kitchen)} customers...")
             
             customer_id = customer['CustomerId']
             customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
             customer_type = get_customer_type_from_relationship(customer_segment)
             
-            # Get customer's ADB account
-            adb_account = df_adb_accounts[df_adb_accounts['CustomerId'] == customer_id].iloc[0]
-            account_id = adb_account['CustomerAccountId']
+            # Get customer's Kitchen account
+            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerId'] == customer_id].iloc[0]
+            account_id = kitchen_account['CustomerAccountId']
             
             # Determine base number of orders for this customer
             freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 3))
@@ -399,7 +399,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     # Create order record
                     orders.append({
                         "OrderId": order_id,
-                        "SalesChannelId": adb_account['CustomerAccountName'],
+                        "SalesChannelId": kitchen_account['CustomerAccountName'],
                         "OrderNumber": order_number,
                         "CustomerId": customer_id,
                         "CustomerAccountId": account_id,
@@ -459,17 +459,17 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 current_month = next_month
     else:
         # Original random generation logic for non-growth mode
-        for idx, customer in customers_with_adb.iterrows():
+        for idx, customer in customers_with_kitchen.iterrows():
             if idx > 0 and idx % 50 == 0:
-                print(f"   Processed {idx}/{len(customers_with_adb)} customers...")
+                print(f"   Processed {idx}/{len(customers_with_kitchen)} customers...")
             
             customer_id = customer['CustomerId']
             customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
             customer_type = get_customer_type_from_relationship(customer_segment)
             
-            # Get customer's ADB account
-            adb_account = df_adb_accounts[df_adb_accounts['CustomerId'] == customer_id].iloc[0]
-            account_id = adb_account['CustomerAccountId']
+            # Get customer's Kitchen account
+            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerId'] == customer_id].iloc[0]
+            account_id = kitchen_account['CustomerAccountId']
             
             # Determine number of orders for this customer
             freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 3))
@@ -537,7 +537,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 # Create order record
                 orders.append({
                     "OrderId": order_id,
-                    "SalesChannelId": "ADB",
+                    "SalesChannelId": kitchen_account['CustomerAccountName'],
                     "OrderNumber": order_number,
                     "CustomerId": customer_id,
                     "CustomerAccountId": account_id,
@@ -596,12 +596,12 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
 
     # Generate customer accounts for finance
     print("\\n🏦 Generating customer accounts for finance...")
-    adb_customers = df_adb_accounts['CustomerId'].unique()
-    for customer_id in adb_customers:
-        account_id = f"ACCT-ADB-{customer_id}"
+    kitchen_customers = df_kitchen_accounts['CustomerId'].unique()
+    for customer_id in kitchen_customers:
+        account_id = f"ACCT-Kitchen-{customer_id}"
         accounts.append({
             "AccountId": account_id,
-            "AccountNumber": f"ACC-{customer_id}-ADB",
+            "AccountNumber": f"ACC-{customer_id}-Kitchen",
             "CustomerId": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
@@ -609,7 +609,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
             "ClosedDate": "",  # Empty string for active accounts
             "Balance": 0.0,  # Zero balance since payments are immediate
             "Currency": "USD",
-            "Description": f"Accounts Receivable for Customer {customer_id} - ADB Channel",
+            "Description": f"Accounts Receivable for Customer {customer_id} - Kitchen Channel",
             "CreatedBy": "SampleGen"
         })
 

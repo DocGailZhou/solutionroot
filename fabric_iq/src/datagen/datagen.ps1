@@ -75,9 +75,9 @@ function Test-DateFormat {
 }
 
 # Calculate smart defaults for two-phase generation
-$DefaultSalesStartDate = "2020-01-01"  # 6+ years of sales history
-$DefaultSalesEndDate = "2026-03-31"    # Common end date
-$DefaultSupplyStartDate = "2025-01-01" # Recent 15-month supply chain period  
+$DefaultSalesStartDate = "2021-01-01"  # 5+ years of sales history if run in 2026
+$DefaultSalesEndDate = "2026-03-31"    # Common end date, should asjust as needed
+$DefaultSupplyStartDate = "2025-01-01" # Recent 15-month supply chain period if run in March 2026
 $DefaultSupplyEndDate = "2026-03-31"   # Same end date as sales
 
 # Interactive configuration with smart defaults

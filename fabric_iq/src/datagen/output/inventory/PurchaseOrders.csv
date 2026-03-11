@@ -1,201 +1,201 @@
 PurchaseOrderID,PurchaseOrderNumber,SupplierID,SupplierName,OrderDate,ExpectedDeliveryDate,ActualDeliveryDate,Status,TotalOrderValue,DeliveryLocation,OrderedBy,Priority,Notes,CreatedBy,CreatedDate
-1,PO-2026-0001,3,Contoso Ski Equipment,2026-01-01,2026-01-18,,InTransit,139466.85,Main Warehouse,buyer2,High,Order for Ski products,system,2026-01-01 11:29:02
-2,PO-2026-0002,4,Worldwide Importers,2026-02-01,2026-03-06,2026-03-08,Delivered,153.65,Regional DC,buyer1,Low,Multi-category order,system,2026-02-01 11:29:02
-3,PO-2026-0003,2,Contoso Kitchen,2026-02-23,2026-03-03,2026-03-06,Delivered,5385.42,Regional DC,buyer2,Medium,Order for Kitchen products,system,2026-02-23 11:29:02
-4,PO-2026-0004,3,Contoso Ski Equipment,2026-03-02,2026-03-19,,Confirmed,9937.57,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-03-02 11:29:02
-5,PO-2025-0005,5,Fabrikam,2025-12-22,2026-01-15,2026-01-16,Delivered,14673.61,Regional DC,buyer1,High,Order for Ski products,system,2025-12-22 11:29:02
-6,PO-2026-0006,1,Contoso Camping Equipment,2026-01-20,2026-02-03,2026-02-03,Delivered,18510.07,Backup Warehouse,buyer1,Low,Order for Camping products,system,2026-01-20 11:29:02
-7,PO-2026-0007,1,Contoso Camping Equipment,2026-02-04,2026-02-17,2026-02-17,Delivered,20026.2,Regional DC,supply_manager,High,Order for Camping products,system,2026-02-04 11:29:02
-8,PO-2026-0008,4,Worldwide Importers,2026-02-21,2026-03-26,,InTransit,11128.88,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-02-21 11:29:02
-9,PO-2025-0009,2,Contoso Kitchen,2025-12-27,2026-01-11,2026-01-12,Delivered,2015.86,Main Warehouse,buyer2,High,Order for Kitchen products,system,2025-12-27 11:29:02
-10,PO-2026-0010,3,Contoso Ski Equipment,2026-01-31,2026-02-11,2026-02-12,Delivered,11384.73,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-31 11:29:02
-11,PO-2026-0011,5,Fabrikam,2026-03-10,2026-04-02,,Confirmed,10353.27,Regional DC,buyer1,Low,Order for Ski products,system,2026-03-10 11:29:02
-12,PO-2026-0012,1,Contoso Camping Equipment,2026-01-03,2026-01-20,2026-01-20,Delivered,9727.45,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-03 11:29:02
-13,PO-2026-0013,3,Contoso Ski Equipment,2026-03-03,2026-03-19,,InTransit,222.34,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-03-03 11:29:02
-14,PO-2025-0014,3,Contoso Ski Equipment,2025-12-17,2025-12-29,2025-12-30,Delivered,14769.55,Main Warehouse,buyer2,Low,Order for Ski products,system,2025-12-17 11:29:02
-15,PO-2026-0015,2,Contoso Kitchen,2026-02-16,2026-03-03,2026-03-05,Delivered,15567.53,Main Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-02-16 11:29:02
-16,PO-2026-0016,3,Contoso Ski Equipment,2026-01-18,2026-01-30,2026-02-02,Delivered,121743.79,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-18 11:29:02
-17,PO-2026-0017,2,Contoso Kitchen,2026-01-21,2026-02-04,2026-02-07,Delivered,339.68,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-01-21 11:29:02
-18,PO-2025-0018,2,Contoso Kitchen,2025-12-21,2025-12-31,2026-01-03,Delivered,10852.77,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-21 11:29:02
-19,PO-2025-0019,2,Contoso Kitchen,2025-12-25,2026-01-07,2026-01-09,Delivered,988.27,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-25 11:29:02
-20,PO-2026-0020,2,Contoso Kitchen,2026-03-04,2026-03-17,,InTransit,891.37,Main Warehouse,buyer2,High,Order for Kitchen products,system,2026-03-04 11:29:02
-21,PO-2025-0021,5,Fabrikam,2025-12-12,2026-01-02,2026-01-03,Delivered,6410.21,Backup Warehouse,buyer1,Medium,Order for Ski products,system,2025-12-12 11:29:02
-22,PO-2026-0022,5,Fabrikam,2026-01-27,2026-02-20,2026-02-23,Delivered,14970.13,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-27 11:29:02
-23,PO-2026-0023,2,Contoso Kitchen,2026-01-23,2026-02-07,2026-02-08,Delivered,8299.04,Main Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-01-23 11:29:02
-24,PO-2025-0024,1,Contoso Camping Equipment,2025-12-23,2026-01-11,2026-01-11,Delivered,29959.32,Backup Warehouse,buyer1,Medium,Order for Camping products,system,2025-12-23 11:29:02
-25,PO-2025-0025,1,Contoso Camping Equipment,2025-12-25,2026-01-07,2026-01-10,Delivered,27821.98,Backup Warehouse,buyer1,Low,Order for Camping products,system,2025-12-25 11:29:02
-26,PO-2026-0026,4,Worldwide Importers,2026-02-18,2026-03-16,,Confirmed,11677.15,Regional DC,buyer2,Low,Multi-category order,system,2026-02-18 11:29:02
-27,PO-2026-0027,1,Contoso Camping Equipment,2026-01-12,2026-01-31,2026-02-01,Delivered,18656.54,Regional DC,supply_manager,Low,Order for Camping products,system,2026-01-12 11:29:02
-28,PO-2025-0028,3,Contoso Ski Equipment,2025-12-18,2025-12-29,2025-12-30,Delivered,28667.65,Backup Warehouse,buyer2,Low,Order for Ski products,system,2025-12-18 11:29:02
-29,PO-2026-0029,4,Worldwide Importers,2026-02-12,2026-03-14,,Confirmed,19314.1,Backup Warehouse,supply_manager,Low,Multi-category order,system,2026-02-12 11:29:02
-30,PO-2026-0030,4,Worldwide Importers,2026-01-02,2026-02-04,2026-02-04,Delivered,10542.04,Main Warehouse,buyer1,Low,Multi-category order,system,2026-01-02 11:29:02
-31,PO-2026-0031,4,Worldwide Importers,2026-01-27,2026-02-28,2026-03-02,Delivered,9281.67,Regional DC,buyer2,Low,Multi-category order,system,2026-01-27 11:29:02
-32,PO-2026-0032,3,Contoso Ski Equipment,2026-03-08,2026-03-25,,Confirmed,137108.97,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-03-08 11:29:02
-33,PO-2026-0033,4,Worldwide Importers,2026-01-02,2026-01-31,2026-02-01,Delivered,16208.07,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-01-02 11:29:02
-34,PO-2026-0034,4,Worldwide Importers,2026-02-04,2026-03-03,2026-03-05,Delivered,19914.07,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-02-04 11:29:02
-35,PO-2026-0035,1,Contoso Camping Equipment,2026-01-05,2026-01-21,2026-01-23,Delivered,13957.4,Backup Warehouse,supply_manager,High,Order for Camping products,system,2026-01-05 11:29:02
-36,PO-2026-0036,5,Fabrikam,2026-01-16,2026-02-11,2026-02-12,Delivered,5185.21,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-16 11:29:02
-37,PO-2026-0037,1,Contoso Camping Equipment,2026-02-14,2026-03-04,2026-03-05,Delivered,18731.38,Regional DC,buyer2,Low,Order for Camping products,system,2026-02-14 11:29:02
-38,PO-2026-0038,1,Contoso Camping Equipment,2026-02-16,2026-03-02,2026-03-05,Delivered,24472.47,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-02-16 11:29:02
-39,PO-2026-0039,4,Worldwide Importers,2026-01-25,2026-02-21,2026-02-24,Delivered,3816.99,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-01-25 11:29:02
-40,PO-2026-0040,5,Fabrikam,2026-01-09,2026-02-04,2026-02-06,Delivered,17235.14,Backup Warehouse,buyer1,Medium,Order for Ski products,system,2026-01-09 11:29:02
-41,PO-2026-0041,1,Contoso Camping Equipment,2026-02-27,2026-03-17,,Confirmed,60960.55,Backup Warehouse,buyer1,Low,Order for Camping products,system,2026-02-27 11:29:02
-42,PO-2026-0042,2,Contoso Kitchen,2026-01-11,2026-01-24,2026-01-27,Delivered,457.25,Regional DC,buyer1,Emergency,Order for Kitchen products,system,2026-01-11 11:29:02
-43,PO-2025-0043,4,Worldwide Importers,2025-12-24,2026-01-22,2026-01-24,Delivered,14429.65,Backup Warehouse,buyer1,High,Multi-category order,system,2025-12-24 11:29:02
-44,PO-2026-0044,4,Worldwide Importers,2026-01-27,2026-03-01,2026-03-01,Delivered,10353.9,Backup Warehouse,buyer2,Medium,Multi-category order,system,2026-01-27 11:29:02
-45,PO-2026-0045,2,Contoso Kitchen,2026-03-07,2026-03-21,,InTransit,293.88,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-03-07 11:29:02
-46,PO-2025-0046,4,Worldwide Importers,2025-12-18,2026-01-20,2026-01-21,Delivered,16272.55,Backup Warehouse,buyer1,Low,Multi-category order,system,2025-12-18 11:29:02
-47,PO-2026-0047,1,Contoso Camping Equipment,2026-01-09,2026-01-26,2026-01-27,Delivered,4522.74,Backup Warehouse,supply_manager,Medium,Order for Camping products,system,2026-01-09 11:29:02
-48,PO-2026-0048,2,Contoso Kitchen,2026-03-02,2026-03-13,,Confirmed,2870.29,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-03-02 11:29:02
-49,PO-2026-0049,5,Fabrikam,2026-02-25,2026-03-17,,InTransit,5007.76,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-02-25 11:29:02
-50,PO-2026-0050,3,Contoso Ski Equipment,2026-03-02,2026-03-19,,InTransit,3539.27,Regional DC,buyer2,Low,Order for Ski products,system,2026-03-02 11:29:02
-51,PO-2026-0051,5,Fabrikam,2026-01-06,2026-01-31,2026-02-03,Delivered,16544.8,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-06 11:29:02
-52,PO-2026-0052,3,Contoso Ski Equipment,2026-02-22,2026-03-04,2026-03-05,Delivered,1644.79,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-22 11:29:02
-53,PO-2026-0053,1,Contoso Camping Equipment,2026-02-12,2026-02-24,2026-02-26,Delivered,26380.9,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-02-12 11:29:02
-54,PO-2026-0054,2,Contoso Kitchen,2026-01-10,2026-01-20,2026-01-23,Delivered,9200.45,Regional DC,buyer1,Medium,Order for Kitchen products,system,2026-01-10 11:29:02
-55,PO-2026-0055,1,Contoso Camping Equipment,2026-02-11,2026-02-28,2026-02-28,Delivered,38136.92,Main Warehouse,supply_manager,High,Order for Camping products,system,2026-02-11 11:29:02
-56,PO-2026-0056,1,Contoso Camping Equipment,2026-01-24,2026-02-05,2026-02-11,Delivered,16959.61,Regional DC,buyer1,Low,Order for Camping products,system,2026-01-24 11:29:02
-57,PO-2026-0057,5,Fabrikam,2026-02-06,2026-03-02,2026-03-02,Delivered,3302.1,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-06 11:29:02
-58,PO-2026-0058,4,Worldwide Importers,2026-01-04,2026-02-05,2026-02-08,Delivered,6564.88,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-01-04 11:29:02
-59,PO-2026-0059,4,Worldwide Importers,2026-01-06,2026-02-07,2026-02-08,Delivered,152.1,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-01-06 11:29:02
-60,PO-2026-0060,1,Contoso Camping Equipment,2026-03-08,2026-03-20,,Confirmed,7196.56,Regional DC,buyer1,Low,Order for Camping products,system,2026-03-08 11:29:02
-61,PO-2026-0061,2,Contoso Kitchen,2026-01-02,2026-01-15,2026-01-16,Delivered,11553.09,Backup Warehouse,buyer1,High,Order for Kitchen products,system,2026-01-02 11:29:02
-62,PO-2026-0062,5,Fabrikam,2026-01-23,2026-02-15,2026-02-16,Delivered,17240.37,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-23 11:29:02
-63,PO-2025-0063,3,Contoso Ski Equipment,2025-12-23,2026-01-09,,InTransit,2730.18,Regional DC,buyer1,Low,Order for Ski products,system,2025-12-23 11:29:02
-64,PO-2025-0064,2,Contoso Kitchen,2025-12-23,2026-01-05,2026-01-07,Delivered,4057.72,Regional DC,buyer2,Low,Order for Kitchen products,system,2025-12-23 11:29:02
-65,PO-2025-0065,2,Contoso Kitchen,2025-12-18,2025-12-28,2025-12-31,Delivered,14695.21,Regional DC,buyer2,Medium,Order for Kitchen products,system,2025-12-18 11:29:02
-66,PO-2026-0066,5,Fabrikam,2026-02-16,2026-03-12,,Confirmed,10258.04,Regional DC,buyer2,Medium,Order for Ski products,system,2026-02-16 11:29:02
-67,PO-2026-0067,4,Worldwide Importers,2026-01-18,2026-02-13,2026-02-26,Delivered,12410.05,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-01-18 11:29:02
-68,PO-2026-0068,3,Contoso Ski Equipment,2026-03-08,2026-03-19,,Sent,65083.79,Regional DC,buyer1,Medium,Order for Ski products,system,2026-03-08 11:29:02
-69,PO-2026-0069,5,Fabrikam,2026-01-04,2026-01-25,2026-01-25,Delivered,16186.13,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-04 11:29:02
-70,PO-2026-0070,4,Worldwide Importers,2026-02-03,2026-03-03,2026-03-04,Delivered,3958.36,Regional DC,buyer1,Low,Multi-category order,system,2026-02-03 11:29:02
-71,PO-2025-0071,4,Worldwide Importers,2025-12-26,2026-01-27,2026-01-29,Delivered,16564.87,Regional DC,buyer2,Low,Multi-category order,system,2025-12-26 11:29:02
-72,PO-2026-0072,3,Contoso Ski Equipment,2026-03-04,2026-03-20,,Confirmed,114767.82,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-03-04 11:29:02
-73,PO-2026-0073,2,Contoso Kitchen,2026-01-02,2026-01-14,2026-01-14,Delivered,22652.96,Backup Warehouse,buyer2,High,Order for Kitchen products,system,2026-01-02 11:29:02
-74,PO-2026-0074,4,Worldwide Importers,2026-02-24,2026-03-29,,Confirmed,4613.35,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-02-24 11:29:02
-75,PO-2026-0075,4,Worldwide Importers,2026-02-05,2026-03-08,2026-03-08,Delivered,18370.82,Backup Warehouse,supply_manager,Low,Multi-category order,system,2026-02-05 11:29:02
-76,PO-2025-0076,4,Worldwide Importers,2025-12-13,2026-01-12,2026-01-13,Delivered,13610.8,Main Warehouse,buyer1,Low,Multi-category order,system,2025-12-13 11:29:02
-77,PO-2026-0077,4,Worldwide Importers,2026-01-22,2026-02-20,2026-02-23,Delivered,8609.12,Main Warehouse,buyer2,High,Multi-category order,system,2026-01-22 11:29:02
-78,PO-2025-0078,5,Fabrikam,2025-12-24,2026-01-17,2026-01-19,Delivered,13942.04,Backup Warehouse,buyer1,High,Order for Ski products,system,2025-12-24 11:29:02
-79,PO-2026-0079,2,Contoso Kitchen,2026-02-13,2026-02-25,2026-02-28,Delivered,31421.6,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-02-13 11:29:02
-80,PO-2026-0080,4,Worldwide Importers,2026-02-25,2026-03-30,,Confirmed,3715.82,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-02-25 11:29:02
-81,PO-2026-0081,4,Worldwide Importers,2026-02-19,2026-03-18,,InTransit,18438.32,Main Warehouse,buyer2,Low,Multi-category order,system,2026-02-19 11:29:02
-82,PO-2026-0082,5,Fabrikam,2026-03-10,2026-04-04,,Sent,8916.28,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-03-10 11:29:02
-83,PO-2026-0083,4,Worldwide Importers,2026-01-27,2026-02-28,2026-03-02,Delivered,20440.82,Regional DC,buyer1,Low,Multi-category order,system,2026-01-27 11:29:02
-84,PO-2026-0084,2,Contoso Kitchen,2026-02-02,2026-02-17,2026-02-18,Delivered,16909.33,Main Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-02-02 11:29:02
-85,PO-2026-0085,5,Fabrikam,2026-02-12,2026-03-03,2026-03-06,Delivered,11531.81,Main Warehouse,buyer1,High,Order for Ski products,system,2026-02-12 11:29:02
-86,PO-2026-0086,3,Contoso Ski Equipment,2026-03-05,2026-03-17,,Sent,21669.88,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-03-05 11:29:02
-87,PO-2025-0087,2,Contoso Kitchen,2025-12-24,2026-01-06,2026-01-09,Delivered,17748.42,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2025-12-24 11:29:02
-88,PO-2025-0088,4,Worldwide Importers,2025-12-15,2026-01-12,,InTransit,7813.24,Backup Warehouse,buyer1,Medium,Multi-category order,system,2025-12-15 11:29:02
-89,PO-2026-0089,2,Contoso Kitchen,2026-02-14,2026-03-01,2026-03-05,Delivered,370.56,Main Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-02-14 11:29:02
-90,PO-2026-0090,4,Worldwide Importers,2026-02-10,2026-03-14,,Confirmed,270.73,Regional DC,buyer1,Low,Multi-category order,system,2026-02-10 11:29:02
-91,PO-2026-0091,5,Fabrikam,2026-02-05,2026-02-25,2026-02-25,Delivered,10178.74,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-05 11:29:02
-92,PO-2026-0092,5,Fabrikam,2026-01-20,2026-02-14,2026-02-15,Delivered,15652.32,Regional DC,supply_manager,High,Order for Ski products,system,2026-01-20 11:29:02
-93,PO-2026-0093,3,Contoso Ski Equipment,2026-01-07,2026-01-20,2026-01-21,Delivered,183430.94,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2026-01-07 11:29:02
-94,PO-2026-0094,1,Contoso Camping Equipment,2026-01-18,2026-02-02,2026-02-02,Delivered,4125.2,Backup Warehouse,buyer1,Medium,Order for Camping products,system,2026-01-18 11:29:02
-95,PO-2026-0095,3,Contoso Ski Equipment,2026-01-29,2026-02-10,2026-02-12,Delivered,11290.17,Main Warehouse,buyer1,High,Order for Ski products,system,2026-01-29 11:29:02
-96,PO-2026-0096,2,Contoso Kitchen,2026-02-15,2026-02-27,2026-03-01,Delivered,11981.45,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-15 11:29:02
-97,PO-2026-0097,3,Contoso Ski Equipment,2026-01-04,2026-01-20,2026-01-22,Delivered,51995.29,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-04 11:29:02
-98,PO-2026-0098,5,Fabrikam,2026-01-30,2026-02-24,2026-02-24,Delivered,7916.65,Regional DC,buyer2,Medium,Order for Ski products,system,2026-01-30 11:29:02
-99,PO-2026-0099,3,Contoso Ski Equipment,2026-03-09,2026-03-20,,Sent,148553.82,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-03-09 11:29:02
-100,PO-2026-0100,5,Fabrikam,2026-02-24,2026-03-22,,Confirmed,10076.82,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-24 11:29:02
-101,PO-2026-0101,2,Contoso Kitchen,2026-01-25,2026-02-03,2026-02-11,Delivered,11296.49,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-01-25 11:29:02
-102,PO-2026-0102,3,Contoso Ski Equipment,2026-02-18,2026-03-01,2026-03-04,Delivered,50226.77,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-18 11:29:02
-103,PO-2026-0103,1,Contoso Camping Equipment,2026-01-29,2026-02-16,2026-02-17,Delivered,26643.23,Regional DC,buyer1,Medium,Order for Camping products,system,2026-01-29 11:29:02
-104,PO-2026-0104,4,Worldwide Importers,2026-01-21,2026-02-19,2026-02-20,Delivered,13881.36,Backup Warehouse,supply_manager,Medium,Multi-category order,system,2026-01-21 11:29:02
-105,PO-2025-0105,1,Contoso Camping Equipment,2025-12-31,2026-01-17,2026-01-20,Delivered,24339.47,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2025-12-31 11:29:02
-106,PO-2026-0106,1,Contoso Camping Equipment,2026-01-19,2026-02-07,,InTransit,13265.76,Backup Warehouse,buyer1,High,Order for Camping products,system,2026-01-19 11:29:02
-107,PO-2026-0107,4,Worldwide Importers,2026-01-26,2026-02-25,2026-02-26,Delivered,8153.59,Main Warehouse,buyer1,Low,Multi-category order,system,2026-01-26 11:29:02
-108,PO-2026-0108,2,Contoso Kitchen,2026-02-16,2026-02-25,2026-02-28,Delivered,3338.64,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-02-16 11:29:02
-109,PO-2026-0109,3,Contoso Ski Equipment,2026-01-10,2026-01-24,2026-01-24,Delivered,9095.2,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-01-10 11:29:02
-110,PO-2025-0110,3,Contoso Ski Equipment,2025-12-16,2025-12-30,2026-01-01,Delivered,38004.63,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-16 11:29:02
-111,PO-2026-0111,5,Fabrikam,2026-01-01,2026-01-27,2026-01-29,Delivered,11859.71,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-01 11:29:02
-112,PO-2025-0112,5,Fabrikam,2025-12-13,2026-01-05,2026-01-05,Delivered,11887.56,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-13 11:29:02
-113,PO-2025-0113,4,Worldwide Importers,2025-12-24,2026-01-26,2026-01-26,Delivered,8717.7,Main Warehouse,buyer2,Low,Multi-category order,system,2025-12-24 11:29:02
-114,PO-2026-0114,4,Worldwide Importers,2026-01-04,2026-02-05,2026-02-06,Delivered,1931.02,Main Warehouse,buyer1,Low,Multi-category order,system,2026-01-04 11:29:02
-115,PO-2025-0115,1,Contoso Camping Equipment,2025-12-21,2026-01-05,2026-01-05,Delivered,4909.59,Main Warehouse,supply_manager,Medium,Order for Camping products,system,2025-12-21 11:29:02
-116,PO-2026-0116,5,Fabrikam,2026-02-07,2026-03-01,2026-03-01,Delivered,13471.84,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-07 11:29:02
-117,PO-2025-0117,1,Contoso Camping Equipment,2025-12-30,2026-01-12,2026-01-15,Delivered,40464.94,Main Warehouse,buyer1,Low,Order for Camping products,system,2025-12-30 11:29:02
-118,PO-2026-0118,2,Contoso Kitchen,2026-02-26,2026-03-11,,InTransit,7695.28,Regional DC,supply_manager,Low,Order for Kitchen products,system,2026-02-26 11:29:02
-119,PO-2026-0119,3,Contoso Ski Equipment,2026-01-26,2026-02-08,2026-02-10,Delivered,3012.46,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-26 11:29:02
-120,PO-2025-0120,1,Contoso Camping Equipment,2025-12-17,2025-12-30,2025-12-31,Delivered,15091.94,Main Warehouse,buyer2,Medium,Order for Camping products,system,2025-12-17 11:29:02
-121,PO-2026-0121,2,Contoso Kitchen,2026-01-20,2026-02-01,2026-02-02,Delivered,5916.68,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-20 11:29:02
-122,PO-2025-0122,4,Worldwide Importers,2025-12-12,2026-01-11,2026-01-13,Delivered,6078.91,Main Warehouse,buyer1,Medium,Multi-category order,system,2025-12-12 11:29:02
-123,PO-2025-0123,5,Fabrikam,2025-12-29,2026-01-20,2026-01-20,Delivered,13182.86,Regional DC,buyer2,Low,Order for Ski products,system,2025-12-29 11:29:02
-124,PO-2026-0124,5,Fabrikam,2026-02-24,2026-03-17,,Confirmed,12349.37,Backup Warehouse,buyer1,High,Order for Ski products,system,2026-02-24 11:29:02
-125,PO-2026-0125,4,Worldwide Importers,2026-02-20,2026-03-23,,InTransit,23172.71,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-20 11:29:02
-126,PO-2026-0126,2,Contoso Kitchen,2026-03-10,2026-03-18,,Confirmed,5895.22,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-03-10 11:29:02
-127,PO-2026-0127,4,Worldwide Importers,2026-02-01,2026-03-05,2026-03-05,Delivered,7938.44,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-02-01 11:29:02
-128,PO-2026-0128,1,Contoso Camping Equipment,2026-03-07,2026-03-22,,InTransit,28894.22,Backup Warehouse,buyer2,High,Order for Camping products,system,2026-03-07 11:29:02
-129,PO-2026-0129,5,Fabrikam,2026-01-13,2026-02-06,2026-02-09,Delivered,15192.58,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-13 11:29:02
-130,PO-2025-0130,3,Contoso Ski Equipment,2025-12-20,2026-01-01,2026-01-02,Delivered,54631.71,Backup Warehouse,supply_manager,High,Order for Ski products,system,2025-12-20 11:29:02
-131,PO-2026-0131,5,Fabrikam,2026-01-20,2026-02-15,2026-02-18,Delivered,17352.75,Regional DC,buyer1,Medium,Order for Ski products,system,2026-01-20 11:29:02
-132,PO-2026-0132,1,Contoso Camping Equipment,2026-02-26,2026-03-12,,Confirmed,32505.85,Regional DC,supply_manager,Low,Order for Camping products,system,2026-02-26 11:29:02
-133,PO-2026-0133,5,Fabrikam,2026-02-13,2026-03-06,2026-03-09,Delivered,5942.08,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-02-13 11:29:02
-134,PO-2026-0134,5,Fabrikam,2026-01-20,2026-02-12,2026-02-12,Delivered,12380.14,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-20 11:29:02
-135,PO-2025-0135,5,Fabrikam,2025-12-28,2026-01-19,2026-01-21,Delivered,8145.18,Regional DC,supply_manager,Medium,Order for Ski products,system,2025-12-28 11:29:02
-136,PO-2025-0136,2,Contoso Kitchen,2025-12-20,2026-01-04,2026-01-09,Delivered,3038.9,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-20 11:29:02
-137,PO-2026-0137,1,Contoso Camping Equipment,2026-02-05,2026-02-19,2026-02-21,Delivered,18988.96,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2026-02-05 11:29:02
-138,PO-2025-0138,5,Fabrikam,2025-12-20,2026-01-13,2026-01-20,Delivered,5414.35,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2025-12-20 11:29:02
-139,PO-2025-0139,3,Contoso Ski Equipment,2025-12-28,2026-01-09,2026-01-10,Delivered,120482.41,Backup Warehouse,buyer1,Low,Order for Ski products,system,2025-12-28 11:29:02
-140,PO-2026-0140,3,Contoso Ski Equipment,2026-02-14,2026-02-28,2026-03-03,Delivered,109546.83,Regional DC,buyer1,Medium,Order for Ski products,system,2026-02-14 11:29:02
-141,PO-2026-0141,1,Contoso Camping Equipment,2026-02-10,2026-02-22,2026-02-24,Delivered,5715.36,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2026-02-10 11:29:02
-142,PO-2026-0142,4,Worldwide Importers,2026-03-08,2026-04-10,,Sent,19571.65,Regional DC,supply_manager,Low,Multi-category order,system,2026-03-08 11:29:02
-143,PO-2026-0143,1,Contoso Camping Equipment,2026-02-14,2026-03-03,2026-03-03,Delivered,25739.16,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-02-14 11:29:02
-144,PO-2026-0144,3,Contoso Ski Equipment,2026-02-11,2026-02-21,2026-03-07,Delivered,5974.76,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-02-11 11:29:02
-145,PO-2025-0145,2,Contoso Kitchen,2025-12-28,2026-01-07,2026-01-08,Delivered,18003.41,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-28 11:29:02
-146,PO-2026-0146,2,Contoso Kitchen,2026-02-05,2026-02-15,2026-02-18,Delivered,1471.92,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-02-05 11:29:02
-147,PO-2026-0147,5,Fabrikam,2026-01-11,2026-01-30,2026-01-30,Delivered,9224.11,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-11 11:29:02
-148,PO-2025-0148,1,Contoso Camping Equipment,2025-12-25,2026-01-07,2026-01-10,Delivered,351.33,Regional DC,buyer2,Medium,Order for Camping products,system,2025-12-25 11:29:02
-149,PO-2026-0149,5,Fabrikam,2026-02-26,2026-03-23,,Sent,14392.78,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-02-26 11:29:02
-150,PO-2026-0150,3,Contoso Ski Equipment,2026-01-15,2026-01-29,2026-01-30,Delivered,92381.36,Backup Warehouse,buyer1,Medium,Order for Ski products,system,2026-01-15 11:29:02
-151,PO-2026-0151,2,Contoso Kitchen,2026-01-04,2026-01-15,2026-01-17,Delivered,3594.56,Main Warehouse,supply_manager,Medium,Order for Kitchen products,system,2026-01-04 11:29:02
-152,PO-2026-0152,2,Contoso Kitchen,2026-03-05,2026-03-14,,Confirmed,15717.94,Main Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-03-05 11:29:02
-153,PO-2026-0153,4,Worldwide Importers,2026-01-17,2026-02-13,2026-02-15,Delivered,2511.25,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-01-17 11:29:02
-154,PO-2026-0154,2,Contoso Kitchen,2026-02-22,2026-03-09,2026-03-12,Delivered,17235.28,Backup Warehouse,supply_manager,High,Order for Kitchen products,system,2026-02-22 11:29:02
-155,PO-2026-0155,2,Contoso Kitchen,2026-01-23,2026-01-31,2026-02-11,Delivered,2632.76,Backup Warehouse,supply_manager,Medium,Order for Kitchen products,system,2026-01-23 11:29:02
-156,PO-2026-0156,1,Contoso Camping Equipment,2026-03-01,2026-03-18,,InTransit,14568.42,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-03-01 11:29:02
-157,PO-2025-0157,5,Fabrikam,2025-12-21,2026-01-11,2026-01-11,Delivered,18919.88,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-21 11:29:02
-158,PO-2025-0158,4,Worldwide Importers,2025-12-17,2026-01-13,2026-01-15,Delivered,27177.32,Regional DC,buyer1,Medium,Multi-category order,system,2025-12-17 11:29:02
-159,PO-2026-0159,2,Contoso Kitchen,2026-01-21,2026-02-05,2026-02-12,Delivered,14429.12,Regional DC,buyer1,High,Order for Kitchen products,system,2026-01-21 11:29:02
-160,PO-2025-0160,3,Contoso Ski Equipment,2025-12-19,2025-12-30,2025-12-30,Delivered,15584.64,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-19 11:29:02
-161,PO-2026-0161,3,Contoso Ski Equipment,2026-01-08,2026-01-24,2026-01-27,Delivered,7773.5,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2026-01-08 11:29:02
-162,PO-2026-0162,2,Contoso Kitchen,2026-02-18,2026-03-04,2026-03-04,Delivered,15657.15,Backup Warehouse,buyer1,Emergency,Order for Kitchen products,system,2026-02-18 11:29:02
-163,PO-2026-0163,1,Contoso Camping Equipment,2026-02-01,2026-02-17,2026-02-20,Delivered,1289.86,Regional DC,buyer2,Low,Order for Camping products,system,2026-02-01 11:29:02
-164,PO-2026-0164,3,Contoso Ski Equipment,2026-01-26,2026-02-08,2026-02-19,Delivered,153582.9,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-26 11:29:02
-165,PO-2026-0165,4,Worldwide Importers,2026-01-04,2026-01-30,2026-01-31,Delivered,8956.22,Backup Warehouse,supply_manager,Medium,Multi-category order,system,2026-01-04 11:29:02
-166,PO-2026-0166,1,Contoso Camping Equipment,2026-01-03,2026-01-22,2026-01-22,Delivered,33177.67,Main Warehouse,buyer1,Low,Order for Camping products,system,2026-01-03 11:29:02
-167,PO-2026-0167,5,Fabrikam,2026-01-17,2026-02-09,2026-02-12,Delivered,13324.31,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-17 11:29:02
-168,PO-2026-0168,2,Contoso Kitchen,2026-02-28,2026-03-10,2026-03-10,Delivered,3740.04,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-02-28 11:29:02
-169,PO-2026-0169,2,Contoso Kitchen,2026-02-27,2026-03-13,,Sent,8361.02,Regional DC,buyer2,High,Order for Kitchen products,system,2026-02-27 11:29:02
-170,PO-2026-0170,5,Fabrikam,2026-01-14,2026-02-06,2026-02-08,Delivered,15982.53,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-01-14 11:29:02
-171,PO-2025-0171,4,Worldwide Importers,2025-12-23,2026-01-24,2026-01-26,Delivered,11505.1,Main Warehouse,buyer1,Low,Multi-category order,system,2025-12-23 11:29:02
-172,PO-2026-0172,3,Contoso Ski Equipment,2026-02-14,2026-03-03,2026-03-05,Delivered,5930.1,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-14 11:29:02
-173,PO-2026-0173,2,Contoso Kitchen,2026-02-15,2026-03-02,2026-03-02,Delivered,3616.86,Regional DC,buyer1,Medium,Order for Kitchen products,system,2026-02-15 11:29:02
-174,PO-2026-0174,5,Fabrikam,2026-01-26,2026-02-14,2026-02-16,Delivered,3737.76,Regional DC,buyer2,High,Order for Ski products,system,2026-01-26 11:29:02
-175,PO-2025-0175,3,Contoso Ski Equipment,2025-12-12,2025-12-24,2025-12-24,Delivered,19278.08,Regional DC,supply_manager,Medium,Order for Ski products,system,2025-12-12 11:29:02
-176,PO-2025-0176,5,Fabrikam,2025-12-11,2025-12-30,2026-01-01,Delivered,1725.12,Backup Warehouse,buyer1,Low,Order for Ski products,system,2025-12-11 11:29:02
-177,PO-2026-0177,1,Contoso Camping Equipment,2026-02-25,2026-03-14,,Confirmed,13464.84,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-02-25 11:29:02
-178,PO-2026-0178,3,Contoso Ski Equipment,2026-02-10,2026-02-25,2026-03-02,Delivered,157506.28,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-10 11:29:02
-179,PO-2026-0179,5,Fabrikam,2026-01-30,2026-02-24,2026-03-07,Delivered,12830.88,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-30 11:29:02
-180,PO-2026-0180,2,Contoso Kitchen,2026-03-07,2026-03-20,,Sent,17478.45,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-03-07 11:29:02
-181,PO-2026-0181,4,Worldwide Importers,2026-02-03,2026-03-03,2026-03-05,Delivered,16989.79,Regional DC,supply_manager,Medium,Multi-category order,system,2026-02-03 11:29:02
-182,PO-2025-0182,4,Worldwide Importers,2025-12-19,2026-01-18,,InTransit,8455.38,Backup Warehouse,supply_manager,Low,Multi-category order,system,2025-12-19 11:29:02
-183,PO-2026-0183,3,Contoso Ski Equipment,2026-01-22,2026-02-04,2026-02-04,Delivered,110314.83,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-22 11:29:02
-184,PO-2026-0184,5,Fabrikam,2026-01-18,2026-02-13,2026-02-14,Delivered,8913.36,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-18 11:29:02
-185,PO-2026-0185,5,Fabrikam,2026-02-16,2026-03-09,2026-03-12,Delivered,11513.81,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-16 11:29:02
-186,PO-2025-0186,5,Fabrikam,2025-12-31,2026-01-23,2026-01-29,Delivered,7044.48,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-31 11:29:02
-187,PO-2026-0187,2,Contoso Kitchen,2026-02-12,2026-02-20,2026-02-27,Delivered,6002.1,Regional DC,buyer1,Low,Order for Kitchen products,system,2026-02-12 11:29:02
-188,PO-2026-0188,5,Fabrikam,2026-02-15,2026-03-08,2026-03-10,Delivered,5319.12,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-15 11:29:02
-189,PO-2026-0189,2,Contoso Kitchen,2026-03-09,2026-03-21,,InTransit,5563.72,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-03-09 11:29:02
-190,PO-2026-0190,5,Fabrikam,2026-01-22,2026-02-13,2026-02-15,Delivered,13205.24,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-22 11:29:02
-191,PO-2026-0191,4,Worldwide Importers,2026-02-22,2026-03-23,,Confirmed,6849.62,Regional DC,supply_manager,Low,Multi-category order,system,2026-02-22 11:29:02
-192,PO-2026-0192,3,Contoso Ski Equipment,2026-01-12,2026-01-27,2026-01-28,Delivered,2877.57,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-12 11:29:02
-193,PO-2026-0193,2,Contoso Kitchen,2026-01-03,2026-01-12,2026-01-12,Delivered,6011.75,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-03 11:29:02
-194,PO-2026-0194,1,Contoso Camping Equipment,2026-01-24,2026-02-08,2026-02-13,Delivered,20947.84,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-01-24 11:29:02
-195,PO-2026-0195,4,Worldwide Importers,2026-02-13,2026-03-12,,Confirmed,3838.38,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-13 11:29:02
-196,PO-2026-0196,3,Contoso Ski Equipment,2026-01-03,2026-01-19,2026-01-20,Delivered,52419.96,Backup Warehouse,buyer2,High,Order for Ski products,system,2026-01-03 11:29:02
-197,PO-2025-0197,4,Worldwide Importers,2025-12-25,2026-01-24,2026-01-25,Delivered,152.1,Regional DC,supply_manager,Low,Multi-category order,system,2025-12-25 11:29:02
-198,PO-2026-0198,2,Contoso Kitchen,2026-03-09,2026-03-19,,InTransit,3081.78,Regional DC,supply_manager,Low,Order for Kitchen products,system,2026-03-09 11:29:02
-199,PO-2026-0199,4,Worldwide Importers,2026-02-16,2026-03-19,,InTransit,11066.64,Backup Warehouse,buyer2,Medium,Multi-category order,system,2026-02-16 11:29:02
-200,PO-2026-0200,3,Contoso Ski Equipment,2026-01-24,2026-02-03,2026-02-04,Delivered,36183.24,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-24 11:29:02
+1,PO-2026-0001,2,Contoso Kitchen,2026-03-08,2026-03-19,,Confirmed,19471.77,Main Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-03-08 12:03:01
+2,PO-2026-0002,2,Contoso Kitchen,2026-02-11,2026-02-20,2026-02-21,Delivered,5735.46,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-02-11 12:03:01
+3,PO-2026-0003,5,Fabrikam,2026-02-09,2026-03-03,2026-03-04,Delivered,19009.2,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-09 12:03:01
+4,PO-2026-0004,2,Contoso Kitchen,2026-01-26,2026-02-03,2026-02-04,Delivered,4623.96,Regional DC,supply_manager,Medium,Order for Kitchen products,system,2026-01-26 12:03:01
+5,PO-2025-0005,5,Fabrikam,2025-12-20,2026-01-12,2026-01-15,Delivered,2175.16,Regional DC,buyer1,Medium,Order for Ski products,system,2025-12-20 12:03:01
+6,PO-2026-0006,4,Worldwide Importers,2026-02-17,2026-03-17,,Sent,28996.02,Regional DC,buyer2,Medium,Multi-category order,system,2026-02-17 12:03:01
+7,PO-2025-0007,5,Fabrikam,2025-12-31,2026-01-23,2026-01-30,Delivered,6521.0,Backup Warehouse,buyer2,Low,Order for Ski products,system,2025-12-31 12:03:01
+8,PO-2026-0008,4,Worldwide Importers,2026-01-08,2026-02-04,2026-02-05,Delivered,5097.9,Main Warehouse,buyer2,Low,Multi-category order,system,2026-01-08 12:03:01
+9,PO-2026-0009,2,Contoso Kitchen,2026-01-30,2026-02-10,2026-02-19,Delivered,11011.48,Main Warehouse,buyer1,Emergency,Order for Kitchen products,system,2026-01-30 12:03:01
+10,PO-2026-0010,5,Fabrikam,2026-01-03,2026-01-24,2026-01-27,Delivered,6263.4,Backup Warehouse,buyer2,Emergency,Order for Ski products,system,2026-01-03 12:03:01
+11,PO-2026-0011,4,Worldwide Importers,2026-03-05,2026-03-31,,Sent,2970.41,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-03-05 12:03:01
+12,PO-2026-0012,5,Fabrikam,2026-01-08,2026-01-30,2026-02-02,Delivered,34019.3,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-08 12:03:01
+13,PO-2026-0013,4,Worldwide Importers,2026-01-03,2026-01-29,2026-02-10,Delivered,1955.08,Backup Warehouse,buyer1,Medium,Multi-category order,system,2026-01-03 12:03:01
+14,PO-2026-0014,4,Worldwide Importers,2026-02-23,2026-03-22,,InTransit,474.2,Backup Warehouse,buyer1,High,Multi-category order,system,2026-02-23 12:03:01
+15,PO-2026-0015,1,Contoso Camping Equipment,2026-01-08,2026-01-23,2026-01-26,Delivered,2902.83,Regional DC,buyer1,Low,Order for Camping products,system,2026-01-08 12:03:01
+16,PO-2025-0016,3,Contoso Ski Equipment,2025-12-17,2025-12-28,2025-12-30,Delivered,30352.62,Backup Warehouse,supply_manager,High,Order for Ski products,system,2025-12-17 12:03:01
+17,PO-2025-0017,1,Contoso Camping Equipment,2025-12-28,2026-01-09,2026-01-11,Delivered,4166.69,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2025-12-28 12:03:01
+18,PO-2026-0018,5,Fabrikam,2026-02-10,2026-03-02,,InTransit,18552.32,Backup Warehouse,buyer1,Emergency,Order for Ski products,system,2026-02-10 12:03:01
+19,PO-2026-0019,1,Contoso Camping Equipment,2026-02-19,2026-03-08,2026-03-10,Delivered,8199.0,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-02-19 12:03:01
+20,PO-2026-0020,2,Contoso Kitchen,2026-01-01,2026-01-09,2026-01-20,Delivered,42171.71,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-01-01 12:03:01
+21,PO-2026-0021,2,Contoso Kitchen,2026-02-01,2026-02-13,2026-02-16,Delivered,7206.77,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-01 12:03:01
+22,PO-2026-0022,1,Contoso Camping Equipment,2026-02-19,2026-03-10,2026-03-10,Delivered,5340.6,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-02-19 12:03:01
+23,PO-2026-0023,5,Fabrikam,2026-01-06,2026-01-31,2026-02-14,Delivered,29509.24,Regional DC,buyer1,High,Order for Ski products,system,2026-01-06 12:03:01
+24,PO-2026-0024,3,Contoso Ski Equipment,2026-02-21,2026-03-10,,InTransit,11315.89,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-21 12:03:01
+25,PO-2025-0025,5,Fabrikam,2025-12-26,2026-01-20,2026-01-22,Delivered,35359.43,Regional DC,supply_manager,Medium,Order for Ski products,system,2025-12-26 12:03:01
+26,PO-2026-0026,2,Contoso Kitchen,2026-01-03,2026-01-12,2026-01-12,Delivered,759.6,Regional DC,buyer1,Low,Order for Kitchen products,system,2026-01-03 12:03:01
+27,PO-2026-0027,5,Fabrikam,2026-02-26,2026-03-21,,Confirmed,23786.91,Regional DC,buyer2,Low,Order for Ski products,system,2026-02-26 12:03:01
+28,PO-2026-0028,4,Worldwide Importers,2026-03-03,2026-04-01,,InTransit,6178.68,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-03-03 12:03:01
+29,PO-2025-0029,3,Contoso Ski Equipment,2025-12-31,2026-01-17,,InTransit,11944.32,Backup Warehouse,buyer1,Low,Order for Ski products,system,2025-12-31 12:03:01
+30,PO-2026-0030,4,Worldwide Importers,2026-01-16,2026-02-12,,InTransit,5654.86,Regional DC,supply_manager,Low,Multi-category order,system,2026-01-16 12:03:01
+31,PO-2026-0031,1,Contoso Camping Equipment,2026-02-21,2026-03-05,2026-03-07,Delivered,8748.59,Backup Warehouse,buyer1,Medium,Order for Camping products,system,2026-02-21 12:03:01
+32,PO-2026-0032,2,Contoso Kitchen,2026-01-01,2026-01-10,2026-01-12,Delivered,7928.05,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-01-01 12:03:01
+33,PO-2026-0033,5,Fabrikam,2026-01-16,2026-02-11,2026-02-11,Delivered,21079.32,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-16 12:03:01
+34,PO-2026-0034,1,Contoso Camping Equipment,2026-01-13,2026-01-30,2026-02-02,Delivered,11152.72,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-13 12:03:01
+35,PO-2026-0035,2,Contoso Kitchen,2026-02-27,2026-03-13,,InTransit,24738.81,Regional DC,buyer2,High,Order for Kitchen products,system,2026-02-27 12:03:01
+36,PO-2026-0036,1,Contoso Camping Equipment,2026-01-07,2026-01-24,2026-01-25,Delivered,471.06,Main Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-07 12:03:01
+37,PO-2026-0037,5,Fabrikam,2026-02-13,2026-03-08,2026-03-11,Delivered,29391.6,Regional DC,supply_manager,High,Order for Ski products,system,2026-02-13 12:03:01
+38,PO-2026-0038,2,Contoso Kitchen,2026-02-27,2026-03-07,2026-03-07,Delivered,7707.55,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-02-27 12:03:01
+39,PO-2026-0039,5,Fabrikam,2026-03-10,2026-04-02,,InTransit,24003.01,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-03-10 12:03:01
+40,PO-2026-0040,4,Worldwide Importers,2026-01-03,2026-02-02,2026-02-03,Delivered,35276.23,Backup Warehouse,buyer1,High,Multi-category order,system,2026-01-03 12:03:01
+41,PO-2026-0041,2,Contoso Kitchen,2026-02-04,2026-02-16,2026-02-17,Delivered,1516.05,Backup Warehouse,buyer1,High,Order for Kitchen products,system,2026-02-04 12:03:01
+42,PO-2026-0042,2,Contoso Kitchen,2026-01-29,2026-02-08,2026-02-11,Delivered,2942.03,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-29 12:03:01
+43,PO-2026-0043,4,Worldwide Importers,2026-02-10,2026-03-08,2026-03-11,Delivered,9304.76,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-02-10 12:03:01
+44,PO-2026-0044,5,Fabrikam,2026-02-18,2026-03-13,,Confirmed,43662.31,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-18 12:03:01
+45,PO-2025-0045,1,Contoso Camping Equipment,2025-12-11,2025-12-29,2025-12-30,Delivered,11866.89,Main Warehouse,buyer1,Low,Order for Camping products,system,2025-12-11 12:03:01
+46,PO-2026-0046,3,Contoso Ski Equipment,2026-01-04,2026-01-20,2026-01-20,Delivered,48564.65,Backup Warehouse,supply_manager,High,Order for Ski products,system,2026-01-04 12:03:01
+47,PO-2026-0047,1,Contoso Camping Equipment,2026-02-14,2026-03-04,2026-03-15,Delivered,12118.71,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-02-14 12:03:01
+48,PO-2026-0048,2,Contoso Kitchen,2026-02-21,2026-03-08,2026-03-10,Delivered,1978.5,Main Warehouse,buyer2,Low,Order for Kitchen products,system,2026-02-21 12:03:01
+49,PO-2026-0049,4,Worldwide Importers,2026-02-02,2026-02-28,2026-03-01,Delivered,71.63,Regional DC,buyer1,Low,Multi-category order,system,2026-02-02 12:03:01
+50,PO-2025-0050,5,Fabrikam,2025-12-25,2026-01-13,2026-01-16,Delivered,5019.6,Main Warehouse,supply_manager,High,Order for Ski products,system,2025-12-25 12:03:01
+51,PO-2026-0051,2,Contoso Kitchen,2026-02-07,2026-02-22,2026-02-26,Delivered,967.69,Main Warehouse,supply_manager,Medium,Order for Kitchen products,system,2026-02-07 12:03:01
+52,PO-2026-0052,4,Worldwide Importers,2026-02-17,2026-03-15,,Sent,4187.66,Main Warehouse,supply_manager,Medium,Multi-category order,system,2026-02-17 12:03:01
+53,PO-2025-0053,5,Fabrikam,2025-12-24,2026-01-18,2026-01-18,Delivered,16175.96,Backup Warehouse,buyer1,Emergency,Order for Ski products,system,2025-12-24 12:03:01
+54,PO-2025-0054,3,Contoso Ski Equipment,2025-12-23,2026-01-09,2026-01-11,Delivered,142187.0,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-23 12:03:01
+55,PO-2025-0055,3,Contoso Ski Equipment,2025-12-29,2026-01-14,2026-01-17,Delivered,125306.3,Regional DC,buyer2,Low,Order for Ski products,system,2025-12-29 12:03:01
+56,PO-2026-0056,4,Worldwide Importers,2026-02-10,2026-03-11,2026-03-13,Delivered,5064.48,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-02-10 12:03:01
+57,PO-2026-0057,3,Contoso Ski Equipment,2026-01-27,2026-02-08,,InTransit,61833.22,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-27 12:03:01
+58,PO-2026-0058,3,Contoso Ski Equipment,2026-02-10,2026-02-23,2026-02-23,Delivered,1143.0,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-10 12:03:01
+59,PO-2026-0059,1,Contoso Camping Equipment,2026-02-20,2026-03-04,2026-03-05,Delivered,2401.57,Regional DC,buyer1,Low,Order for Camping products,system,2026-02-20 12:03:01
+60,PO-2026-0060,4,Worldwide Importers,2026-01-22,2026-02-17,2026-02-18,Delivered,18299.76,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-01-22 12:03:01
+61,PO-2026-0061,3,Contoso Ski Equipment,2026-02-19,2026-03-05,2026-03-06,Delivered,131096.0,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-19 12:03:01
+62,PO-2026-0062,4,Worldwide Importers,2026-01-22,2026-02-22,2026-02-22,Delivered,8916.75,Main Warehouse,buyer2,Low,Multi-category order,system,2026-01-22 12:03:01
+63,PO-2025-0063,2,Contoso Kitchen,2025-12-23,2026-01-04,2026-01-06,Delivered,870.38,Main Warehouse,supply_manager,Medium,Order for Kitchen products,system,2025-12-23 12:03:01
+64,PO-2026-0064,1,Contoso Camping Equipment,2026-01-03,2026-01-18,2026-01-18,Delivered,4132.68,Main Warehouse,buyer2,High,Order for Camping products,system,2026-01-03 12:03:01
+65,PO-2026-0065,5,Fabrikam,2026-02-08,2026-03-03,2026-03-06,Delivered,38400.17,Regional DC,buyer1,Medium,Order for Ski products,system,2026-02-08 12:03:01
+66,PO-2026-0066,2,Contoso Kitchen,2026-02-28,2026-03-13,,InTransit,8139.45,Regional DC,buyer1,Low,Order for Kitchen products,system,2026-02-28 12:03:01
+67,PO-2026-0067,1,Contoso Camping Equipment,2026-01-09,2026-01-22,2026-01-25,Delivered,392.55,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-01-09 12:03:01
+68,PO-2026-0068,2,Contoso Kitchen,2026-01-15,2026-01-28,2026-01-29,Delivered,14072.37,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-01-15 12:03:01
+69,PO-2025-0069,3,Contoso Ski Equipment,2025-12-28,2026-01-13,2026-01-15,Delivered,56473.9,Regional DC,buyer1,High,Order for Ski products,system,2025-12-28 12:03:01
+70,PO-2026-0070,2,Contoso Kitchen,2026-01-08,2026-01-18,2026-01-18,Delivered,3366.19,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-08 12:03:01
+71,PO-2025-0071,1,Contoso Camping Equipment,2025-12-23,2026-01-07,2026-01-07,Delivered,25334.25,Regional DC,buyer2,Low,Order for Camping products,system,2025-12-23 12:03:01
+72,PO-2026-0072,3,Contoso Ski Equipment,2026-01-19,2026-02-03,2026-02-05,Delivered,5258.81,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-01-19 12:03:01
+73,PO-2026-0073,2,Contoso Kitchen,2026-01-23,2026-01-31,2026-01-31,Delivered,775.32,Regional DC,supply_manager,Medium,Order for Kitchen products,system,2026-01-23 12:03:01
+74,PO-2026-0074,1,Contoso Camping Equipment,2026-01-28,2026-02-10,2026-02-12,Delivered,8913.73,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-01-28 12:03:01
+75,PO-2026-0075,3,Contoso Ski Equipment,2026-01-20,2026-01-30,2026-02-01,Delivered,34381.76,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-20 12:03:01
+76,PO-2025-0076,2,Contoso Kitchen,2025-12-20,2025-12-28,2025-12-30,Delivered,1136.1,Main Warehouse,buyer2,Low,Order for Kitchen products,system,2025-12-20 12:03:01
+77,PO-2025-0077,1,Contoso Camping Equipment,2025-12-19,2026-01-07,2026-01-07,Delivered,21452.48,Regional DC,buyer2,Low,Order for Camping products,system,2025-12-19 12:03:01
+78,PO-2026-0078,3,Contoso Ski Equipment,2026-01-26,2026-02-10,2026-02-11,Delivered,41882.1,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-26 12:03:01
+79,PO-2026-0079,2,Contoso Kitchen,2026-03-02,2026-03-15,,Confirmed,1226.67,Backup Warehouse,buyer2,Low,Order for Kitchen products,system,2026-03-02 12:03:01
+80,PO-2026-0080,2,Contoso Kitchen,2026-02-14,2026-02-23,2026-02-26,Delivered,412.2,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-14 12:03:01
+81,PO-2026-0081,5,Fabrikam,2026-02-19,2026-03-12,,Confirmed,28045.07,Backup Warehouse,buyer2,High,Order for Ski products,system,2026-02-19 12:03:01
+82,PO-2026-0082,3,Contoso Ski Equipment,2026-02-22,2026-03-09,2026-03-10,Delivered,14249.09,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-22 12:03:01
+83,PO-2025-0083,4,Worldwide Importers,2025-12-22,2026-01-22,2026-01-25,Delivered,664.79,Main Warehouse,supply_manager,High,Multi-category order,system,2025-12-22 12:03:01
+84,PO-2026-0084,3,Contoso Ski Equipment,2026-02-15,2026-02-25,2026-02-27,Delivered,34197.64,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-15 12:03:01
+85,PO-2025-0085,5,Fabrikam,2025-12-25,2026-01-14,2026-01-14,Delivered,2965.48,Main Warehouse,buyer2,Low,Order for Ski products,system,2025-12-25 12:03:01
+86,PO-2026-0086,1,Contoso Camping Equipment,2026-01-11,2026-01-24,2026-02-03,Delivered,10563.98,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-11 12:03:01
+87,PO-2025-0087,3,Contoso Ski Equipment,2025-12-28,2026-01-07,2026-01-07,Delivered,37024.42,Backup Warehouse,supply_manager,High,Order for Ski products,system,2025-12-28 12:03:01
+88,PO-2026-0088,4,Worldwide Importers,2026-03-03,2026-04-05,,Confirmed,834.28,Regional DC,supply_manager,Low,Multi-category order,system,2026-03-03 12:03:01
+89,PO-2025-0089,4,Worldwide Importers,2025-12-22,2026-01-18,2026-01-21,Delivered,4207.6,Backup Warehouse,supply_manager,Low,Multi-category order,system,2025-12-22 12:03:01
+90,PO-2026-0090,5,Fabrikam,2026-02-20,2026-03-16,,Sent,13417.01,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-20 12:03:01
+91,PO-2026-0091,5,Fabrikam,2026-02-09,2026-03-07,2026-03-08,Delivered,42908.2,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-09 12:03:01
+92,PO-2026-0092,3,Contoso Ski Equipment,2026-02-07,2026-02-17,2026-02-23,Delivered,3124.2,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-07 12:03:01
+93,PO-2026-0093,1,Contoso Camping Equipment,2026-02-03,2026-02-20,2026-02-21,Delivered,7154.34,Regional DC,buyer2,Medium,Order for Camping products,system,2026-02-03 12:03:01
+94,PO-2026-0094,5,Fabrikam,2026-01-21,2026-02-13,2026-02-13,Delivered,8534.85,Regional DC,buyer1,Medium,Order for Ski products,system,2026-01-21 12:03:01
+95,PO-2026-0095,4,Worldwide Importers,2026-01-12,2026-02-10,2026-02-12,Delivered,2809.04,Regional DC,supply_manager,Low,Multi-category order,system,2026-01-12 12:03:01
+96,PO-2025-0096,5,Fabrikam,2025-12-13,2026-01-04,2026-01-11,Delivered,9312.92,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-13 12:03:01
+97,PO-2026-0097,5,Fabrikam,2026-02-10,2026-03-04,2026-03-09,Delivered,18988.36,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-02-10 12:03:01
+98,PO-2026-0098,4,Worldwide Importers,2026-03-10,2026-04-09,,Confirmed,5821.79,Regional DC,buyer2,Low,Multi-category order,system,2026-03-10 12:03:01
+99,PO-2026-0099,4,Worldwide Importers,2026-02-17,2026-03-20,,Sent,1609.57,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-02-17 12:03:01
+100,PO-2026-0100,3,Contoso Ski Equipment,2026-01-24,2026-02-08,2026-02-20,Delivered,205206.38,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-24 12:03:01
+101,PO-2026-0101,2,Contoso Kitchen,2026-02-20,2026-03-06,2026-03-06,Delivered,35919.7,Regional DC,supply_manager,Low,Order for Kitchen products,system,2026-02-20 12:03:01
+102,PO-2026-0102,3,Contoso Ski Equipment,2026-01-24,2026-02-09,2026-02-12,Delivered,21599.28,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-24 12:03:01
+103,PO-2026-0103,5,Fabrikam,2026-02-22,2026-03-14,,InTransit,49957.69,Main Warehouse,buyer1,Medium,Order for Ski products,system,2026-02-22 12:03:01
+104,PO-2026-0104,2,Contoso Kitchen,2026-02-27,2026-03-08,2026-03-08,Delivered,866.93,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-02-27 12:03:01
+105,PO-2026-0105,3,Contoso Ski Equipment,2026-02-26,2026-03-10,2026-03-10,Delivered,48102.08,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-26 12:03:01
+106,PO-2026-0106,5,Fabrikam,2026-03-09,2026-04-02,,InTransit,15130.07,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-03-09 12:03:01
+107,PO-2026-0107,3,Contoso Ski Equipment,2026-02-04,2026-02-20,2026-02-20,Delivered,28315.35,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-04 12:03:01
+108,PO-2026-0108,2,Contoso Kitchen,2026-03-08,2026-03-19,,InTransit,38778.58,Main Warehouse,buyer2,Low,Order for Kitchen products,system,2026-03-08 12:03:01
+109,PO-2026-0109,1,Contoso Camping Equipment,2026-01-09,2026-01-21,2026-01-23,Delivered,17450.56,Main Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-09 12:03:01
+110,PO-2026-0110,4,Worldwide Importers,2026-01-28,2026-02-25,2026-03-09,Delivered,1072.2,Regional DC,buyer2,High,Multi-category order,system,2026-01-28 12:03:01
+111,PO-2026-0111,4,Worldwide Importers,2026-02-16,2026-03-16,,Confirmed,11803.57,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-02-16 12:03:01
+112,PO-2026-0112,3,Contoso Ski Equipment,2026-02-15,2026-02-28,2026-03-03,Delivered,20618.04,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-15 12:03:01
+113,PO-2025-0113,3,Contoso Ski Equipment,2025-12-11,2025-12-22,2025-12-22,Delivered,11983.33,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-11 12:03:01
+114,PO-2026-0114,1,Contoso Camping Equipment,2026-02-07,2026-02-24,2026-02-24,Delivered,5628.85,Regional DC,supply_manager,Medium,Order for Camping products,system,2026-02-07 12:03:01
+115,PO-2026-0115,1,Contoso Camping Equipment,2026-01-28,2026-02-12,2026-02-14,Delivered,6109.71,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-01-28 12:03:01
+116,PO-2025-0116,2,Contoso Kitchen,2025-12-28,2026-01-06,2026-01-06,Delivered,2902.21,Main Warehouse,buyer2,Low,Order for Kitchen products,system,2025-12-28 12:03:01
+117,PO-2026-0117,5,Fabrikam,2026-02-20,2026-03-17,,InTransit,11981.15,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-20 12:03:01
+118,PO-2026-0118,4,Worldwide Importers,2026-01-29,2026-03-03,2026-03-03,Delivered,2812.54,Regional DC,buyer1,Low,Multi-category order,system,2026-01-29 12:03:01
+119,PO-2025-0119,4,Worldwide Importers,2025-12-14,2026-01-11,2026-01-11,Delivered,4480.78,Regional DC,buyer2,Low,Multi-category order,system,2025-12-14 12:03:01
+120,PO-2025-0120,1,Contoso Camping Equipment,2025-12-17,2025-12-30,2025-12-30,Delivered,3946.67,Main Warehouse,supply_manager,Low,Order for Camping products,system,2025-12-17 12:03:01
+121,PO-2026-0121,4,Worldwide Importers,2026-01-18,2026-02-20,2026-02-21,Delivered,41654.87,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-01-18 12:03:01
+122,PO-2026-0122,3,Contoso Ski Equipment,2026-02-24,2026-03-11,,Sent,49750.83,Regional DC,buyer1,Medium,Order for Ski products,system,2026-02-24 12:03:01
+123,PO-2025-0123,3,Contoso Ski Equipment,2025-12-15,2025-12-26,2025-12-27,Delivered,12462.46,Backup Warehouse,buyer2,Low,Order for Ski products,system,2025-12-15 12:03:01
+124,PO-2025-0124,3,Contoso Ski Equipment,2025-12-17,2026-01-03,,InTransit,9704.76,Main Warehouse,buyer2,Low,Order for Ski products,system,2025-12-17 12:03:01
+125,PO-2026-0125,5,Fabrikam,2026-03-03,2026-03-23,,InTransit,35800.21,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-03-03 12:03:01
+126,PO-2025-0126,4,Worldwide Importers,2025-12-18,2026-01-14,2026-01-16,Delivered,3916.16,Main Warehouse,buyer2,Medium,Multi-category order,system,2025-12-18 12:03:01
+127,PO-2025-0127,4,Worldwide Importers,2025-12-27,2026-01-29,2026-01-31,Delivered,33634.19,Regional DC,supply_manager,Low,Multi-category order,system,2025-12-27 12:03:01
+128,PO-2025-0128,4,Worldwide Importers,2025-12-29,2026-01-26,2026-01-29,Delivered,3376.32,Regional DC,supply_manager,Low,Multi-category order,system,2025-12-29 12:03:01
+129,PO-2026-0129,3,Contoso Ski Equipment,2026-02-28,2026-03-12,,Sent,2675.66,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-02-28 12:03:01
+130,PO-2026-0130,5,Fabrikam,2026-01-16,2026-02-06,2026-02-09,Delivered,5763.64,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-16 12:03:01
+131,PO-2026-0131,1,Contoso Camping Equipment,2026-01-18,2026-02-05,2026-02-08,Delivered,10940.6,Regional DC,supply_manager,Low,Order for Camping products,system,2026-01-18 12:03:01
+132,PO-2026-0132,3,Contoso Ski Equipment,2026-03-09,2026-03-24,,Sent,6277.51,Main Warehouse,buyer2,High,Order for Ski products,system,2026-03-09 12:03:01
+133,PO-2026-0133,4,Worldwide Importers,2026-02-10,2026-03-09,2026-03-09,Delivered,6654.26,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-02-10 12:03:01
+134,PO-2026-0134,2,Contoso Kitchen,2026-02-04,2026-02-17,2026-02-19,Delivered,1561.85,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-04 12:03:01
+135,PO-2025-0135,1,Contoso Camping Equipment,2025-12-22,2026-01-07,2026-01-10,Delivered,2143.36,Main Warehouse,supply_manager,Low,Order for Camping products,system,2025-12-22 12:03:01
+136,PO-2025-0136,1,Contoso Camping Equipment,2025-12-19,2026-01-02,2026-01-04,Delivered,11550.28,Regional DC,supply_manager,Medium,Order for Camping products,system,2025-12-19 12:03:01
+137,PO-2026-0137,2,Contoso Kitchen,2026-01-26,2026-02-07,2026-02-10,Delivered,73962.16,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-26 12:03:01
+138,PO-2026-0138,4,Worldwide Importers,2026-02-13,2026-03-15,,InTransit,3657.68,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-02-13 12:03:01
+139,PO-2026-0139,3,Contoso Ski Equipment,2026-01-17,2026-01-29,2026-01-29,Delivered,54297.0,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-17 12:03:01
+140,PO-2025-0140,3,Contoso Ski Equipment,2025-12-17,2026-01-01,2026-01-04,Delivered,4653.54,Regional DC,buyer2,Low,Order for Ski products,system,2025-12-17 12:03:01
+141,PO-2026-0141,2,Contoso Kitchen,2026-01-15,2026-01-24,2026-01-24,Delivered,21359.24,Regional DC,supply_manager,High,Order for Kitchen products,system,2026-01-15 12:03:01
+142,PO-2026-0142,5,Fabrikam,2026-01-31,2026-02-20,2026-02-23,Delivered,42113.72,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-31 12:03:01
+143,PO-2025-0143,1,Contoso Camping Equipment,2025-12-24,2026-01-09,2026-01-09,Delivered,6651.71,Main Warehouse,supply_manager,Low,Order for Camping products,system,2025-12-24 12:03:01
+144,PO-2026-0144,5,Fabrikam,2026-02-05,2026-02-24,2026-03-08,Delivered,796.32,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-02-05 12:03:01
+145,PO-2026-0145,4,Worldwide Importers,2026-02-20,2026-03-20,,Confirmed,4387.38,Regional DC,buyer1,Medium,Multi-category order,system,2026-02-20 12:03:01
+146,PO-2025-0146,5,Fabrikam,2025-12-17,2026-01-07,2026-01-09,Delivered,8033.52,Main Warehouse,buyer2,High,Order for Ski products,system,2025-12-17 12:03:01
+147,PO-2026-0147,4,Worldwide Importers,2026-02-18,2026-03-16,,InTransit,71.63,Backup Warehouse,buyer1,High,Multi-category order,system,2026-02-18 12:03:01
+148,PO-2026-0148,4,Worldwide Importers,2026-01-09,2026-02-04,2026-02-06,Delivered,143.26,Main Warehouse,buyer1,Low,Multi-category order,system,2026-01-09 12:03:01
+149,PO-2025-0149,2,Contoso Kitchen,2025-12-21,2026-01-05,2026-01-07,Delivered,2038.08,Backup Warehouse,supply_manager,Medium,Order for Kitchen products,system,2025-12-21 12:03:01
+150,PO-2026-0150,1,Contoso Camping Equipment,2026-01-19,2026-02-03,2026-02-04,Delivered,8818.99,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-01-19 12:03:01
+151,PO-2026-0151,5,Fabrikam,2026-01-23,2026-02-18,2026-02-20,Delivered,375.92,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-23 12:03:01
+152,PO-2025-0152,1,Contoso Camping Equipment,2025-12-26,2026-01-11,2026-01-11,Delivered,9224.29,Backup Warehouse,buyer1,Low,Order for Camping products,system,2025-12-26 12:03:01
+153,PO-2026-0153,5,Fabrikam,2026-01-17,2026-02-06,2026-02-08,Delivered,24337.13,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-17 12:03:01
+154,PO-2026-0154,3,Contoso Ski Equipment,2026-01-25,2026-02-04,2026-02-04,Delivered,2618.7,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-25 12:03:01
+155,PO-2026-0155,3,Contoso Ski Equipment,2026-01-18,2026-02-04,2026-02-07,Delivered,68050.11,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-18 12:03:01
+156,PO-2026-0156,4,Worldwide Importers,2026-02-03,2026-03-01,2026-03-03,Delivered,9301.87,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-02-03 12:03:01
+157,PO-2025-0157,4,Worldwide Importers,2025-12-19,2026-01-21,2026-01-21,Delivered,14744.87,Backup Warehouse,buyer2,High,Multi-category order,system,2025-12-19 12:03:01
+158,PO-2026-0158,3,Contoso Ski Equipment,2026-01-29,2026-02-15,2026-02-17,Delivered,46187.67,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-29 12:03:01
+159,PO-2026-0159,5,Fabrikam,2026-02-20,2026-03-17,,Confirmed,15922.05,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-20 12:03:01
+160,PO-2026-0160,2,Contoso Kitchen,2026-02-09,2026-02-23,2026-02-24,Delivered,70305.82,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-09 12:03:01
+161,PO-2026-0161,5,Fabrikam,2026-01-07,2026-01-31,2026-02-02,Delivered,2439.52,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-07 12:03:01
+162,PO-2025-0162,4,Worldwide Importers,2025-12-25,2026-01-22,2026-01-23,Delivered,16867.74,Regional DC,buyer1,Low,Multi-category order,system,2025-12-25 12:03:01
+163,PO-2026-0163,1,Contoso Camping Equipment,2026-03-05,2026-03-23,,Sent,15880.25,Main Warehouse,supply_manager,Low,Order for Camping products,system,2026-03-05 12:03:01
+164,PO-2026-0164,2,Contoso Kitchen,2026-01-02,2026-01-17,2026-01-20,Delivered,48578.11,Regional DC,buyer1,Medium,Order for Kitchen products,system,2026-01-02 12:03:01
+165,PO-2026-0165,4,Worldwide Importers,2026-01-19,2026-02-18,2026-02-19,Delivered,8945.49,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-01-19 12:03:01
+166,PO-2025-0166,3,Contoso Ski Equipment,2025-12-21,2026-01-06,2026-01-09,Delivered,13382.26,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-21 12:03:01
+167,PO-2026-0167,2,Contoso Kitchen,2026-02-20,2026-03-07,2026-03-07,Delivered,667.15,Regional DC,buyer1,Medium,Order for Kitchen products,system,2026-02-20 12:03:01
+168,PO-2025-0168,5,Fabrikam,2025-12-31,2026-01-26,2026-01-29,Delivered,5801.19,Regional DC,buyer1,High,Order for Ski products,system,2025-12-31 12:03:01
+169,PO-2026-0169,2,Contoso Kitchen,2026-03-02,2026-03-14,,Sent,760.95,Regional DC,supply_manager,Low,Order for Kitchen products,system,2026-03-02 12:03:01
+170,PO-2026-0170,1,Contoso Camping Equipment,2026-01-01,2026-01-16,2026-01-16,Delivered,8863.81,Backup Warehouse,buyer1,Low,Order for Camping products,system,2026-01-01 12:03:01
+171,PO-2026-0171,4,Worldwide Importers,2026-01-04,2026-02-03,2026-02-04,Delivered,71.63,Main Warehouse,buyer2,Low,Multi-category order,system,2026-01-04 12:03:01
+172,PO-2026-0172,5,Fabrikam,2026-01-18,2026-02-07,2026-02-07,Delivered,29197.22,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-18 12:03:01
+173,PO-2026-0173,3,Contoso Ski Equipment,2026-03-08,2026-03-19,,InTransit,19118.44,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-03-08 12:03:01
+174,PO-2026-0174,3,Contoso Ski Equipment,2026-01-01,2026-01-15,2026-01-16,Delivered,90526.58,Main Warehouse,buyer1,Emergency,Order for Ski products,system,2026-01-01 12:03:01
+175,PO-2026-0175,4,Worldwide Importers,2026-03-08,2026-04-08,,Confirmed,17179.52,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-03-08 12:03:01
+176,PO-2026-0176,3,Contoso Ski Equipment,2026-02-06,2026-02-16,2026-02-16,Delivered,208770.2,Regional DC,buyer1,Emergency,Order for Ski products,system,2026-02-06 12:03:01
+177,PO-2026-0177,5,Fabrikam,2026-01-22,2026-02-16,2026-02-16,Delivered,27666.8,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-22 12:03:01
+178,PO-2026-0178,1,Contoso Camping Equipment,2026-01-24,2026-02-07,2026-02-07,Delivered,14364.75,Regional DC,buyer2,Low,Order for Camping products,system,2026-01-24 12:03:01
+179,PO-2026-0179,2,Contoso Kitchen,2026-03-05,2026-03-15,,Sent,3352.22,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-03-05 12:03:01
+180,PO-2026-0180,3,Contoso Ski Equipment,2026-01-10,2026-01-27,2026-01-29,Delivered,31.2,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-10 12:03:01
+181,PO-2026-0181,1,Contoso Camping Equipment,2026-02-01,2026-02-13,2026-02-13,Delivered,8123.26,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-02-01 12:03:01
+182,PO-2026-0182,1,Contoso Camping Equipment,2026-02-14,2026-03-05,2026-03-08,Delivered,6033.76,Regional DC,supply_manager,High,Order for Camping products,system,2026-02-14 12:03:01
+183,PO-2025-0183,3,Contoso Ski Equipment,2025-12-13,2025-12-27,2025-12-28,Delivered,160084.57,Backup Warehouse,buyer1,Medium,Order for Ski products,system,2025-12-13 12:03:01
+184,PO-2025-0184,3,Contoso Ski Equipment,2025-12-27,2026-01-08,2026-01-09,Delivered,18542.4,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-27 12:03:01
+185,PO-2026-0185,4,Worldwide Importers,2026-02-10,2026-03-13,,InTransit,37152.44,Main Warehouse,buyer2,Low,Multi-category order,system,2026-02-10 12:03:01
+186,PO-2026-0186,3,Contoso Ski Equipment,2026-02-14,2026-03-02,2026-03-04,Delivered,28139.55,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-02-14 12:03:01
+187,PO-2026-0187,4,Worldwide Importers,2026-03-05,2026-04-02,,InTransit,35035.27,Regional DC,buyer1,High,Multi-category order,system,2026-03-05 12:03:01
+188,PO-2026-0188,4,Worldwide Importers,2026-01-07,2026-02-02,2026-02-04,Delivered,17346.51,Main Warehouse,buyer1,Medium,Multi-category order,system,2026-01-07 12:03:01
+189,PO-2026-0189,5,Fabrikam,2026-02-12,2026-03-08,2026-03-09,Delivered,12012.54,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-12 12:03:01
+190,PO-2026-0190,3,Contoso Ski Equipment,2026-01-21,2026-02-06,2026-02-06,Delivered,9100.2,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-21 12:03:01
+191,PO-2025-0191,3,Contoso Ski Equipment,2025-12-29,2026-01-13,2026-01-16,Delivered,23123.01,Main Warehouse,buyer1,Low,Order for Ski products,system,2025-12-29 12:03:01
+192,PO-2026-0192,3,Contoso Ski Equipment,2026-03-02,2026-03-14,,InTransit,12304.4,Regional DC,buyer1,Low,Order for Ski products,system,2026-03-02 12:03:01
+193,PO-2026-0193,2,Contoso Kitchen,2026-01-16,2026-01-29,2026-01-30,Delivered,15355.14,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-01-16 12:03:01
+194,PO-2026-0194,1,Contoso Camping Equipment,2026-03-02,2026-03-18,,Sent,34416.57,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-03-02 12:03:01
+195,PO-2026-0195,3,Contoso Ski Equipment,2026-03-05,2026-03-15,,Confirmed,38775.98,Regional DC,supply_manager,Low,Order for Ski products,system,2026-03-05 12:03:01
+196,PO-2026-0196,1,Contoso Camping Equipment,2026-01-27,2026-02-09,2026-02-09,Delivered,14502.68,Regional DC,buyer1,Low,Order for Camping products,system,2026-01-27 12:03:01
+197,PO-2026-0197,2,Contoso Kitchen,2026-02-19,2026-02-27,2026-03-02,Delivered,1731.2,Regional DC,buyer1,Low,Order for Kitchen products,system,2026-02-19 12:03:01
+198,PO-2026-0198,2,Contoso Kitchen,2026-02-18,2026-02-28,2026-03-01,Delivered,6186.81,Backup Warehouse,buyer2,High,Order for Kitchen products,system,2026-02-18 12:03:01
+199,PO-2025-0199,2,Contoso Kitchen,2025-12-19,2025-12-27,2025-12-28,Delivered,1898.63,Regional DC,buyer2,Low,Order for Kitchen products,system,2025-12-19 12:03:01
+200,PO-2026-0200,5,Fabrikam,2026-01-21,2026-02-09,2026-02-09,Delivered,37060.72,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-21 12:03:01
