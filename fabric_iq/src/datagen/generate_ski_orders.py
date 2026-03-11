@@ -217,8 +217,8 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     df_account = pd.read_csv(ACCOUNT_FILE)
     df_product = pd.read_csv(PRODUCT_FILE)
     
-    # For ski orders, we'll use both Fabric and ADB accounts to simulate winter sports retail
-    df_winter_accounts = df_account[df_account['CustomerAccountName'].isin(['Fabric', 'ADB'])].copy()
+    # For ski orders, we'll use both Camping and Kitchen accounts to simulate winter sports retail
+    df_winter_accounts = df_account[df_account['CustomerAccountName'].isin(['Camping', 'Kitchen'])].copy()
     
     print(f"   Customers: {len(df_customer):,}")
     print(f"   Winter Sports Accounts: {len(df_winter_accounts):,}")
@@ -320,7 +320,7 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             # Create order record
             orders.append({
                 "OrderId": order_id,
-                "SalesChannelId": "Snowflake",
+                "SalesChannelId": account['CustomerAccountName'],
                 "OrderNumber": order_number,
                 "CustomerId": customer_id,
                 "CustomerAccountId": account_id,
@@ -377,9 +377,9 @@ def generate_ski_orders(start_date, end_date, order_start_number):
                 "CreatedBy": "SampleGen"
             })
     
-    # Generate customer accounts for finance (Snow channel)
-    print("\\n🏦 Generating customer accounts for finance...")
-    snow_customers = df_account[df_account['CustomerAccountName'] == 'Snow']['CustomerId'].unique()
+    # Generate customer accounts for finance (Ski channel)
+    print("\n🏦 Generating customer accounts for finance...")
+    snow_customers = df_account[df_account['CustomerAccountName'] == 'Ski']['CustomerId'].unique()
     for customer_id in snow_customers:
         account_id = f"ACCT-SNOW-{customer_id}"
         accounts.append({

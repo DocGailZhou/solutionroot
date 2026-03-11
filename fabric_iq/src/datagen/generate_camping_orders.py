@@ -223,7 +223,7 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     df_product = pd.read_csv(PRODUCT_FILE)
     
     # Filter accounts to Fabric channel only
-    df_fabric_accounts = df_account[df_account['CustomerAccountName'] == 'Fabric'].copy()
+    df_fabric_accounts = df_account[df_account['CustomerAccountName'] == 'Camping'].copy()
     
     print(f"   Customers: {len(df_customer):,}")
     print(f"   Fabric Accounts: {len(df_fabric_accounts):,}")
@@ -412,7 +412,7 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             # Create order record
             orders.append({
                 "OrderId": order_id,
-                "SalesChannelId": "Fabric",
+                "SalesChannelId": fabric_account['CustomerAccountName'],
                 "OrderNumber": order_number,
                 "CustomerId": customer_id,
                 "CustomerAccountId": account_id,

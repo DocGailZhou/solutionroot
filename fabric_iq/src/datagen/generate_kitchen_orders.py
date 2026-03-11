@@ -232,7 +232,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
     df_product = pd.read_csv(PRODUCT_FILE)
     
     # Filter accounts to ADB (Azure Databricks) channel only
-    df_adb_accounts = df_account[df_account['CustomerAccountName'] == 'ADB'].copy()
+    df_adb_accounts = df_account[df_account['CustomerAccountName'] == 'Kitchen'].copy()
     
     print(f"   Customers: {len(df_customer):,}")
     print(f"   ADB Accounts: {len(df_adb_accounts):,}")
@@ -399,7 +399,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     # Create order record
                     orders.append({
                         "OrderId": order_id,
-                        "SalesChannelId": "ADB",
+                        "SalesChannelId": adb_account['CustomerAccountName'],
                         "OrderNumber": order_number,
                         "CustomerId": customer_id,
                         "CustomerAccountId": account_id,
