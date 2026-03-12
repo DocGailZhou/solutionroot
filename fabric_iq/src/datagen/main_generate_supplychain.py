@@ -553,13 +553,7 @@ def generate_graph(results, args):
                                    color='#4169E1', alpha=0.6, 
                                    label='Demand Forecast')
                     
-                    # Add transition marker at the boundary  
-                    transition_point = len(historical_data) - 0.5
-                    ax1.axvline(x=transition_point, color='red', linestyle=':', alpha=0.7, linewidth=2)
-                    max_value = max(all_data)
-                    ax1.text(transition_point, max_value * 0.9, 
-                            'Today →', ha='center', va='bottom', fontweight='bold', 
-                            bbox=dict(boxstyle='round,pad=0.3', facecolor='white', alpha=0.8))
+                    # Transition between historical and forecast data (no visual marker needed)
                     
                 # Add labels for historical section
                 ax1.text(len(historical_data)/2 - 0.5, max(all_data) * 0.7, 
