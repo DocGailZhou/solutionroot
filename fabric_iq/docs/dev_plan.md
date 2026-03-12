@@ -25,14 +25,19 @@
 
 Since you have rich data + working ontology auto-discovery, let's focus on:
 
-### 🎯 **Sales Dashboard (5.5 Years)**
+### 🎯 **Sales Dashboard (5+ Years)**
 
-Use Current dashboard and replace one tile. 
+recreate the sales dashboard similar to current UDF dashboard. 
 
-### 📈 **Supply Chain Dashboard**
+Keep all tiles (code underneath is needs some modification as the lakehosue schema and tables are restructured).
 
-- **Enhanced forecasting visualization** (we have the beautiful graph!)
-- **Inventory optimization** insights
-- **Supplier performance** tracking
-- **Demand vs Reality** comparisons
+Sales data generated for 2021-01-01 to 2026-04-30. Replace gender distribution tile with revenue by product line (sales/order table)
+
+
+
+### 📈 **Supply Chain Dashboard** Data Source 
+
+Below is used as a base. 
+
+![revenue_trend_graph_default_20210101_to_20260430](../src/datagen/output/supply_chain_data_default_20250101_to_20260430.png)
 
