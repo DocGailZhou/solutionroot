@@ -2,41 +2,41 @@
   "suppliers": [
     {
       "SupplierID": 1,
-      "SupplierName": "Contoso Camping Equipment",
+      "SupplierName": "Contoso Ltd",
       "SupplierType": "Primary",
       "Status": "Active",
       "ProductCategory": "Camping",
       "PrimarySupplierID": null,
-      "LeadTimeDays": 14,
-      "ReliabilityScore": 92,
+      "LeadTimeDays": 10,
+      "ReliabilityScore": 95,
       "Location": "Denver, CO, USA",
-      "ContactEmail": "campingorders@contoso.com",
+      "ContactEmail": "orders@contoso.com",
       "CreatedBy": "system"
     },
     {
       "SupplierID": 2,
-      "SupplierName": "Contoso Kitchen",
+      "SupplierName": "Proseware Inc",
       "SupplierType": "Primary", 
       "Status": "Active",
       "ProductCategory": "Kitchen",
       "PrimarySupplierID": null,
       "LeadTimeDays": 10,
-      "ReliabilityScore": 90,
+      "ReliabilityScore": 93,
       "Location": "Portland, OR, USA",
-      "ContactEmail": "kitchenorders@contoso.com",
+      "ContactEmail": "orders@proseware.com",
       "CreatedBy": "system"
     },
     {
       "SupplierID": 3,
-      "SupplierName": "Contoso Ski Equipment",
+      "SupplierName": "Alpine Ski House",
       "SupplierType": "Primary",
       "Status": "Active", 
       "ProductCategory": "Ski",
       "PrimarySupplierID": null,
       "LeadTimeDays": 12,
-      "ReliabilityScore": 94,
+      "ReliabilityScore": 96,
       "Location": "Aspen, CO, USA",
-      "ContactEmail": "skiorders@contoso.com",
+      "ContactEmail": "orders@alpineskihouse.com",
       "CreatedBy": "system"
     },
     {
@@ -46,8 +46,8 @@
       "Status": "Active",
       "ProductCategory": "Multi",
       "PrimarySupplierID": null,
-      "LeadTimeDays": 28,
-      "ReliabilityScore": 80,
+      "LeadTimeDays": 21,
+      "ReliabilityScore": 85,
       "Location": "Vancouver, BC, Canada", 
       "ContactEmail": "wholesale@wideworldimporters.com",
       "CreatedBy": "system",
@@ -60,12 +60,12 @@
       "Status": "Active",
       "ProductCategory": "Ski", 
       "PrimarySupplierID": 3,
-      "LeadTimeDays": 21,
-      "ReliabilityScore": 85,
+      "LeadTimeDays": 14,
+      "ReliabilityScore": 90,
       "Location": "Salt Lake City, UT, USA",
       "ContactEmail": "supply@fabrikam.com", 
       "CreatedBy": "system",
-      "Notes": "Secondary supplier for Ski products only"
+      "Notes": "Secondary supplier for Ski products"
     }
   ],
   "secondary_relationships": [
@@ -88,12 +88,12 @@
   "supplier_tiers": {
     "primary": {
       "lead_time_range": [7, 21],
-      "reliability_range": [85, 95],
+      "reliability_range": [91, 99],
       "description": "Main suppliers with fastest delivery and highest reliability"
     },
     "secondary": {
       "lead_time_range": [14, 35], 
-      "reliability_range": [70, 85],
+      "reliability_range": [85, 90],
       "description": "Alternative suppliers for continuity planning"
     }
   }
