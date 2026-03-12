@@ -496,84 +496,140 @@ def generate_graph(results, args):
         
         # Graph 1: Demand Forecast vs Recent Sales Reality
         demand_forecast_file = inventory_path / "DemandForecast.csv"
-        inventory_transactions_file = inventory_path / "InventoryTransactions.csv"
         
-        if demand_forecast_file.exists() and inventory_transactions_file.exists():
-            # Load historical sales data (outflow = sales)
-            df_transactions = pd.read_csv(inventory_transactions_file)
-            df_transactions['TransactionDate'] = pd.to_datetime(df_transactions['TransactionDate'])
-            df_sales = df_transactions[df_transactions['Quantity'] < 0].copy()
-            df_sales['SalesQuantity'] = df_sales['Quantity'].abs()
-            df_sales['Month'] = df_sales['TransactionDate'].dt.to_period('M')
+        if demand_forecast_file.exists():
+            # Load original sales data (same data used for forecasting)
+            all_sales = []
             
-            # Load demand forecast data
-            df_forecast = pd.read_csv(demand_forecast_file)
-            df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
-            df_forecast['Month'] = df_forecast['ForecastDate'].dt.to_period('M')
+            for category in ['camping', 'kitchen', 'ski']:
+                try:
+                    # Load order file (has dates) and order line file (has quantities)
+                    orders_file = output_path / category / "sales" / f"Order_Samples_{category.capitalize()}.csv"
+                    order_lines_file = output_path / category / "sales" / f"OrderLine_Samples_{category.capitalize()}.csv"
+                    
+                    if orders_file.exists() and order_lines_file.exists():
+                        df_orders = pd.read_csv(orders_file)
+                        df_order_lines = pd.read_csv(order_lines_file)
+                        
+                        # Join to get dates + quantities
+                        if 'OrderId' in df_orders.columns and 'OrderDate' in df_orders.columns and 'OrderId' in df_order_lines.columns and 'Quantity' in df_order_lines.columns:
+                            df_sales = pd.merge(df_orders[['OrderId', 'OrderDate']], 
+                                              df_order_lines[['OrderId', 'ProductId', 'Quantity']], 
+                                              on='OrderId', how='inner')
+                            if len(df_sales) > 0:
+                                df_sales['OrderDate'] = pd.to_datetime(df_sales['OrderDate'])
+                                all_sales.append(df_sales)
+                                print(f"✅ Loaded {len(df_sales)} sales records from {category}")
+                except Exception as e:
+                    print(f"⚠️  Error loading {category} sales data: {e}")
+                    continue
             
-            # Get the transition point (use specified end_date, not data max)
-            end_date_obj = datetime.strptime(args.end_date, '%Y-%m-%d')
-            last_historical_month = pd.Timestamp(end_date_obj).to_period('M')
-            
-            # Get 3 months of historical sales leading up to transition
-            all_historical_months = df_sales['Month'].unique()
-            all_historical_months = sorted([m for m in all_historical_months])
-            recent_months = all_historical_months[-3:] if len(all_historical_months) >= 3 else all_historical_months
-            
-            # Get monthly sales data for recent months
-            historical_sales = df_sales.groupby('Month')['SalesQuantity'].sum()
-            historical_data = [historical_sales.get(m, 0) for m in recent_months]
-            
-            # Get monthly forecasts (aggregate weekly to monthly for comparison)
-            monthly_forecasts = df_forecast.groupby('Month')['PredictedDemand'].sum()
-            forecast_months = sorted(monthly_forecasts.index)
-            forecast_data = [monthly_forecasts.get(m, 0) for m in forecast_months[:3]]  # Next 3 months
-            
-            # Create continuous timeline without gaps
-            all_months = recent_months + forecast_months[:3]
-            month_labels = [str(m) for m in all_months]
-            x_positions = range(len(all_months))
-            
-            # Combine all data into single continuous arrays for seamless visualization
-            all_data = historical_data + forecast_data
-            all_colors = ['#2E8B57'] * len(historical_data) + ['#4169E1'] * len(forecast_data)
-            
-            # Create single continuous area chart
-            if all_data:
-                # Plot all data as one continuous area
-                ax1.fill_between(x_positions, 0, all_data, 
-                               color='#2E8B57', alpha=0.8, 
-                               label='Business Timeline')
+            if all_sales:
+                    combined_sales = pd.concat(all_sales, ignore_index=True)
+                    
+                    # Filter to analysis period (same as forecasting uses)
+                    period_days = (datetime.strptime(args.end_date, '%Y-%m-%d').date() - datetime.strptime(args.start_date, '%Y-%m-%d').date()).days
+                    if period_days >= 180:  # Use same 6-month logic as forecasting
+                        trend_start = pd.Timestamp(args.end_date) - pd.DateOffset(months=6)
+                        trend_start = max(pd.Timestamp(args.start_date), trend_start)
+                    else:
+                        trend_start = pd.Timestamp(args.start_date)
+                    
+                    analysis_period_sales = combined_sales[
+                        (combined_sales['OrderDate'] >= trend_start) & 
+                        (combined_sales['OrderDate'] <= pd.Timestamp(args.end_date))
+                    ].copy()
+                    
+                    analysis_period_sales['Month'] = analysis_period_sales['OrderDate'].dt.to_period('M')
+                    historical_sales = analysis_period_sales.groupby('Month')['Quantity'].sum()
+                    
+                    # Get ALL months in the analysis period for historical display
+                    all_historical_months = sorted(historical_sales.index)
+                    historical_data = [historical_sales.get(m, 0) for m in all_historical_months]
+                    recent_months = all_historical_months  # Use full analysis period
+                    
+                    # Load demand forecast data
+                    df_forecast = pd.read_csv(demand_forecast_file)
+                    df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
+                    df_forecast['Month'] = df_forecast['ForecastDate'].dt.to_period('M')
+                    
+                    # Get monthly forecasts (aggregate weekly to monthly for comparison)
+                    monthly_forecasts = df_forecast.groupby('Month')['PredictedDemand'].sum()
+                    forecast_months = sorted(monthly_forecasts.index)
+                    forecast_data = [monthly_forecasts.get(m, 0) for m in forecast_months[:3]]  # Next 3 months
+                    
+                    # Create continuous timeline without gaps
+                    all_months = recent_months + forecast_months[:3]
+                    month_labels = [str(m) for m in all_months]
+                    x_positions = range(len(all_months))
+                    
+                    # Combine all data for seamless visualization
+                    all_data = historical_data + forecast_data
+                    
+                    # Create smooth continuous visualization
+                    if all_data and len(historical_data) > 0 and len(forecast_data) > 0:
+                        # Create one continuous line with different colors for sections
+                        
+                        # Plot continuous line for entire timeline
+                        ax1.plot(x_positions, all_data, color='#1f77b4', linewidth=3, alpha=0.8)
+                        
+                        # Fill areas with different colors
+                        # Historical area (green)
+                        hist_x = list(range(len(historical_data)))
+                        ax1.fill_between(hist_x, 0, historical_data, 
+                                       color='#2E8B57', alpha=0.7, 
+                                       label='Recent Sales (Analysis Period)')
+                        
+                        # Forecast area (blue) - start from last historical point for smooth transition
+                        if len(forecast_data) > 0:
+                            forecast_start_idx = len(historical_data) - 1  # Overlap by 1 for smooth transition
+                            forecast_x = list(range(forecast_start_idx, len(all_data)))
+                            
+                            # Create transition data that includes last historical point + forecasts
+                            transition_data = [historical_data[-1]] + forecast_data
+                            
+                            ax1.fill_between(forecast_x, 0, transition_data, 
+                                           color='#4169E1', alpha=0.6, 
+                                           label='Forecast (Next 3 Months)')
+                        
+                        # Add labels for sections
+                        if len(historical_data) > 0:
+                            ax1.text(len(historical_data)/2 - 0.5, max(all_data) * 0.8, 
+                                    'Recent Sales\n(6mo Analysis)', ha='center', va='center', 
+                                    fontweight='bold', color='white', fontsize=10,
+                                    bbox=dict(boxstyle='round,pad=0.5', facecolor='#2E8B57', alpha=0.8))
+                        
+                        if len(forecast_data) > 0:
+                            forecast_center = len(historical_data) + len(forecast_data)/2 - 0.5
+                            ax1.text(forecast_center, max(all_data) * 0.4, 
+                                    'Forecast', ha='center', va='center', 
+                                    fontweight='bold', color='white', fontsize=10,
+                                    bbox=dict(boxstyle='round,pad=0.5', facecolor='#4169E1', alpha=0.8))
+                        
+                        # Set graph properties
+                        ax1.set_title('Demand Forecast vs Recent Sales Reality (Analysis Period)', fontsize=14, fontweight='bold', pad=20)
+                        ax1.set_ylabel('Units (Thousands)', fontsize=12)
+                        ax1.set_xlabel('Month', fontsize=12)
+                        
+                        # Format y-axis to show thousands  
+                        ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1000:.0f}K'))
+                        
+                        # Set x-axis labels for continuous timeline
+                        ax1.set_xticks(x_positions)
+                        ax1.set_xticklabels(month_labels, rotation=45)
+                        
+                        ax1.legend(loc='upper left', fontsize=11)
+                        ax1.grid(True, alpha=0.2)
+                    else:
+                        ax1.text(0.5, 0.5, 'No data available for comparison', ha='center', va='center', transform=ax1.transAxes)
+                        ax1.set_title('Demand Forecast vs Recent Sales Reality (No Data)', fontsize=14, fontweight='bold')
                 
-                # Overlay forecast area with different color
-                if len(forecast_data) > 0:
-                    forecast_start_idx = len(historical_data)
-                    forecast_positions = list(range(forecast_start_idx, len(all_data)))
-                    ax1.fill_between(forecast_positions, 0, forecast_data, 
-                                   color='#4169E1', alpha=0.6, 
-                                   label='Demand Forecast')
-                    
-                    # Transition between historical and forecast data (no visual marker needed)
-                    
-                # Add labels for historical section
-                ax1.text(len(historical_data)/2 - 0.5, max(all_data) * 0.7, 
-                        'Actual Sales\n(Historical)', ha='center', va='center', 
-                        fontweight='bold', color='white',
-                        bbox=dict(boxstyle='round,pad=0.5', facecolor='#2E8B57', alpha=0.8))
-            
-            ax1.set_title('Demand Forecast vs Recent Sales Reality', fontsize=14, fontweight='bold', pad=20)
-            ax1.set_ylabel('Units (Thousands)', fontsize=12)
-            ax1.set_xlabel('Month', fontsize=12)
-            
-            # Format y-axis to show thousands  
-            ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1000:.0f}K'))
-            
-            # Set x-axis labels for continuous timeline
-            ax1.set_xticks(x_positions)
-            ax1.set_xticklabels(month_labels, rotation=45)
-            
-            ax1.legend(loc='upper left', fontsize=11)
-            ax1.grid(True, alpha=0.2)
+            else:
+                ax1.text(0.5, 0.5, 'No sales data found - check file structure', ha='center', va='center', transform=ax1.transAxes)
+                ax1.set_title('Demand Forecast vs Recent Sales Reality (No Sales Data)', fontsize=14, fontweight='bold')
+        else:
+            ax1.text(0.5, 0.5, 'Forecast data not available', ha='center', va='center', transform=ax1.transAxes)
+            ax1.set_title('Demand Forecast vs Recent Sales Reality (No Forecasts)', fontsize=14, fontweight='bold')
         
 # Graph 2: Warehouse Capacity Utilization (Business Critical)
         inventory_levels_file = inventory_path / "Inventory.csv"
@@ -746,7 +802,11 @@ def generate_graph(results, args):
         print(f"📊 Business Analytics Summary:")
         
         # Enhanced transaction analysis with timeline coverage
+        inventory_transactions_file = inventory_path / "InventoryTransactions.csv"
         if inventory_transactions_file.exists():
+            df_transactions = pd.read_csv(inventory_transactions_file)
+            df_transactions['TransactionDate'] = pd.to_datetime(df_transactions['TransactionDate'])
+            
             total_transactions = len(df_transactions)
             total_quantity_moved = df_transactions['Quantity'].abs().sum()
             date_range_days = (df_transactions['TransactionDate'].max() - df_transactions['TransactionDate'].min()).days

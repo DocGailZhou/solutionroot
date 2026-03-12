@@ -76,9 +76,9 @@ function Test-DateFormat {
 
 # Calculate smart defaults for two-phase generation
 $DefaultSalesStartDate = "2021-01-01"  # 5+ years of sales history if run in 2026
-$DefaultSalesEndDate = "2026-03-31"    # Common end date, should asjust as needed
-$DefaultSupplyStartDate = "2025-01-01" # Recent 15-month supply chain period if run in March 2026
-$DefaultSupplyEndDate = "2026-03-31"   # Same end date as sales
+$DefaultSalesEndDate = "2026-04-30"    # Extended end date through April 2026
+$DefaultSupplyStartDate = "2025-01-01" # Recent 16-month supply chain period if run in 2026
+$DefaultSupplyEndDate = "2026-04-30"   # Same end date as sales
 
 # Interactive configuration with smart defaults
 Write-Info "📅 Two-Phase Data Generation Configuration"
@@ -86,14 +86,14 @@ Write-Host "   Let's set up your business data simulation with smart defaults!" 
 Write-Host ""
 
 Write-Host "   🎯 Two-Phase Strategy:" -ForegroundColor Yellow
-Write-Host "   • 📈 Sales Data: Long history for trend analysis (6+ years)" -ForegroundColor Gray
-Write-Host "   • 📦 Supply Chain: Recent period for current operations (15 months)" -ForegroundColor Gray
+Write-Host "   • 📈 Sales Data: Long history for trend analysis (5.3 years)" -ForegroundColor Gray
+Write-Host "   • 📦 Supply Chain: Recent period for current operations (16 months)" -ForegroundColor Gray
 Write-Host ""
 
 # Date range input with defaults
 Write-Host "📅 Date Range Setup:" -ForegroundColor Cyan
-Write-Host "   📈 Sales Data Default: $DefaultSalesStartDate to $DefaultSalesEndDate (6+ years)" -ForegroundColor Green
-Write-Host "   📦 Supply Chain Default: $DefaultSupplyStartDate to $DefaultSupplyEndDate (15 months)" -ForegroundColor Green
+Write-Host "   📈 Sales Data Default: $DefaultSalesStartDate to $DefaultSalesEndDate (5.3 years)" -ForegroundColor Green
+Write-Host "   📦 Supply Chain Default: $DefaultSupplyStartDate to $DefaultSupplyEndDate (16 months)" -ForegroundColor Green
 Write-Host ""
 
 $UseDefaults = Read-Host "   Use default date ranges? (Press Enter for YES, or type 'no')"

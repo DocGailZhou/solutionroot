@@ -7,7 +7,7 @@ to make sample data generation more realistic and representative of growing busi
 
 Implements a three-phase continuous growth model:
 - Phase 1 (0-33%): Strong Growing Baseline (1.4x → 2.2x avg 1.8x)
-- Phase 2 (33-67%): Sustained Growth (0.8x → 1.4x avg 1.1x)  
+- Phase 2 (33-67%): Sustained Growth (1.0x → 1.4x avg 1.2x)  
 - Phase 3 (67-100%): Explosive Growth (2.0x → 4.0x avg 3.0x)
 
 Market events include Black Friday, Christmas, Memorial Day, etc.
@@ -48,8 +48,8 @@ def calculate_business_phase(current_date: datetime, start_date: datetime, end_d
         # Phase 2: Continued Growth (33% → 67%) 
         phase = 2
         phase_progress = (progress_percent - phase_1_end) / (phase_2_end - phase_1_end)  # 0.0 to 1.0 within this phase
-        # Slower growth from 0.8 to 1.4 (average 1.1x - sustained growth)
-        multiplier = 0.8 + (phase_progress * 0.6)
+        # Continued growth from 1.0 to 1.4 (average 1.2x - sustained growth, no dip below baseline)
+        multiplier = 1.0 + (phase_progress * 0.4)
         
     else:
         # Phase 3: Explosive Growth (67% → 100%)

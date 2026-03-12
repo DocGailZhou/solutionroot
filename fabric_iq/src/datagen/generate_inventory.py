@@ -233,34 +233,145 @@ class InventoryDataGenerator:
         # Analyze by product
         velocity_analysis = {}
         
-        # Group by ProductId and calculate monthly sales
+        # Group by ProductId and calculate sales ONLY within the supply chain analysis period
         if 'ProductId' in self.sales_data.columns and 'Quantity' in self.sales_data.columns:
-            product_sales = self.sales_data.groupby('ProductId').agg({
-                'Quantity': 'sum',
-                'OrderDate': ['min', 'max', 'count']
-            }).reset_index()
-            
-            product_sales.columns = ['ProductId', 'TotalQuantity', 'FirstSale', 'LastSale', 'OrderCount']
-            
-            for _, row in product_sales.iterrows():
-                product_id = row['ProductId']
-                total_qty = row['TotalQuantity']
+            # Filter sales data to the EXACT analysis period (start_date to end_date)
+            # This ensures we only use sales relevant to the supply chain planning period
+            # Smart lookback: Use last 6 months within user's analysis period (or entire period if < 6 months)
+            period_days = (self.end_date - self.start_date).days
+            if period_days >= 180:  # 6 months = ~180 days
+                # Use last 6 months within the analysis period
+                trend_start_date = pd.Timestamp(self.end_date) - pd.DateOffset(months=6)
+                trend_start_date = max(pd.Timestamp(self.start_date), trend_start_date)
+            else:
+                # Use entire period if less than 6 months
+                trend_start_date = pd.Timestamp(self.start_date)
                 
-                # Calculate monthly average
-                if pd.notna(row['FirstSale']) and pd.notna(row['LastSale']):
-                    days_active = max((row['LastSale'] - row['FirstSale']).days, 30)
-                    monthly_sales = (total_qty / days_active) * 30
-                else:
-                    monthly_sales = total_qty / 12  # Assume 1 year if no dates
+            analysis_period_sales = self.sales_data[
+                (self.sales_data['OrderDate'] >= trend_start_date) & 
+                (self.sales_data['OrderDate'] <= pd.Timestamp(self.end_date))
+            ]
+            
+            print(f"📊 Sales data filtered to trend period: {trend_start_date.strftime('%Y-%m-%d')} to {self.end_date.strftime('%Y-%m-%d')} (within user boundary: {self.start_date} to {self.end_date})")
+            print(f"   Total sales records: {len(self.sales_data):,}")
+            print(f"   Analysis period records: {len(analysis_period_sales):,}")
+            
+            if not analysis_period_sales.empty:
+                product_sales = analysis_period_sales.groupby('ProductId').agg({
+                    'Quantity': 'sum',
+                    'OrderDate': ['min', 'max', 'count']
+                }).reset_index()
                 
-                velocity_analysis[product_id] = {
-                    'monthly_sales': max(monthly_sales, 1),  # At least 1 per month
-                    'total_sales': total_qty,
-                    'order_count': row['OrderCount']
+                product_sales.columns = ['ProductId', 'TotalQuantity', 'FirstSale', 'LastSale', 'OrderCount']
+                
+                # Calculate trend period duration for monthly averaging
+                trend_days = (pd.Timestamp(self.end_date) - trend_start_date).days
+                analysis_months = max(trend_days / 30.0, 1.0)  # At least 1 month
+                
+                for _, row in product_sales.iterrows():
+                    product_id = row['ProductId']
+                    total_qty = row['TotalQuantity']
+                    
+                    # Calculate monthly sales based on analysis period sales only
+                    monthly_sales = total_qty / analysis_months
+                    
+                    velocity_analysis[product_id] = {
+                        'monthly_sales': max(monthly_sales, 1),  # At least 1 per month
+                        'total_sales': total_qty,
+                        'order_count': row['OrderCount']
+                    }
+                    
+                print(f"📊 Analyzed velocity for {len(velocity_analysis)} products within analysis period")
+            else:
+                print(f"⚠️  No sales data found within analysis period - using defaults")
+                # Return minimal default if no sales in period
+                velocity_analysis = {
+                    'default_monthly_sales': 50,
+                    'default_safety_stock': 100,
+                    'seasonal_multiplier': 1.0
                 }
                 
         print(f"📊 Analyzed velocity for {len(velocity_analysis)} products")
         return velocity_analysis
+        
+    def _calculate_recent_sales_trend(self, product_id=None):
+        """Calculate recent sales trend from actual sales data for forecasting.
+        
+        Args:
+            product_id: Specific product ID, or None for overall trend
+            months_back: Number of months to analyze for trend
+            
+        Returns:
+            float: Monthly growth multiplier (e.g., 1.15 = 15% growth per month)
+        """
+        if self.sales_data.empty:
+            return 1.02  # Default 2% growth if no sales data
+            
+        # Ensure OrderDate is datetime
+        if 'OrderDate' in self.sales_data.columns:
+            self.sales_data['OrderDate'] = pd.to_datetime(self.sales_data['OrderDate'])
+        elif 'Order Date' in self.sales_data.columns:
+            self.sales_data['OrderDate'] = pd.to_datetime(self.sales_data['Order Date'])
+        else:
+            return 1.02  # Default if no date column
+            
+        # Smart lookback: Use last 6 months within user's analysis period (or entire period if < 6 months)
+        period_days = (self.end_date - self.start_date).days
+        if period_days >= 180:  # 6 months = ~180 days
+            # Use last 6 months within the analysis period
+            trend_start_date = pd.Timestamp(self.end_date) - pd.DateOffset(months=6)
+            trend_start_date = max(pd.Timestamp(self.start_date), trend_start_date)
+        else:
+            # Use entire period if less than 6 months
+            trend_start_date = pd.Timestamp(self.start_date)
+            
+        analysis_period_sales = self.sales_data[
+            (self.sales_data['OrderDate'] >= trend_start_date) & 
+            (self.sales_data['OrderDate'] <= pd.Timestamp(self.end_date))
+        ].copy()
+        
+        if product_id is not None and 'ProductId' in analysis_period_sales.columns:
+            analysis_period_sales = analysis_period_sales[analysis_period_sales['ProductId'] == product_id]
+            
+        if analysis_period_sales.empty or len(analysis_period_sales) < 2:
+            return 1.02  # Default if insufficient data in trend period
+            
+        # Create monthly aggregations within trend period
+        analysis_period_sales['YearMonth'] = analysis_period_sales['OrderDate'].dt.to_period('M')
+        
+        if 'Quantity' in analysis_period_sales.columns:
+            monthly_sales = analysis_period_sales.groupby('YearMonth')['Quantity'].sum().reset_index()
+        else:
+            # If no Quantity, count orders
+            monthly_sales = analysis_period_sales.groupby('YearMonth').size().reset_index(name='Quantity')
+            
+        if len(monthly_sales) < 2:
+            return 1.02  # Need at least 2 months for trend
+            
+        # Calculate month-over-month growth rates
+        monthly_sales = monthly_sales.sort_values('YearMonth')
+        monthly_sales['PrevQuantity'] = monthly_sales['Quantity'].shift(1)
+        monthly_sales['GrowthRate'] = monthly_sales['Quantity'] / monthly_sales['PrevQuantity']
+        
+        # Remove infinite and NaN values
+        valid_growth_rates = monthly_sales['GrowthRate'].replace([float('inf'), -float('inf')], pd.NA).dropna()
+        
+        if len(valid_growth_rates) == 0:
+            return 1.02
+            
+        # Calculate average monthly growth rate
+        avg_growth_rate = valid_growth_rates.mean()
+        
+        # Apply reasonable bounds (prevent extreme values)
+        bounded_growth = max(0.8, min(1.5, avg_growth_rate))  # Between -20% and +50% per month
+        
+        # Add debug output for first few products
+        if product_id is not None and product_id <= 110:  # Debug first few products only
+            print(f"   Product {product_id}: {len(valid_growth_rates)} months data, trend={bounded_growth:.3f}")
+        elif product_id is None:  # Overall trend
+            print(f"   Overall sales trend: {len(valid_growth_rates)} months data, growth={bounded_growth:.3f}")
+        
+        return bounded_growth
         
     def generate_inventory_table(self):
         """Generate current inventory levels based on sales patterns."""
@@ -694,9 +805,25 @@ class InventoryDataGenerator:
         return df_transactions
         
     def generate_demand_forecast_table(self):
-        """Generate demand forecasts based on sales velocity and seasonal patterns."""
+        """Generate demand forecasts based on recent sales trend analysis and seasonal patterns.
+        
+        Uses actual sales performance from the last 6 months to calculate growth trends,
+        then projects forward combining trend analysis with seasonal multipliers.
+        More data-driven approach than theoretical growth models.
+        """
         
         print("📈 Generating demand forecasts...")
+        print("   Using recent sales trend analysis (6 months) + seasonal patterns")
+        print(f"   Analysis period: {self.start_date} to {self.end_date}")
+        print(f"   Sales data available: {'Yes' if not self.sales_data.empty else 'No'}")
+        if not self.sales_data.empty:
+            print(f"   Sales data rows: {len(self.sales_data):,}")
+            if 'OrderDate' in self.sales_data.columns:
+                min_date = self.sales_data['OrderDate'].min()
+                max_date = self.sales_data['OrderDate'].max()
+                print(f"   Sales date range: {min_date.strftime('%Y-%m-%d')} to {max_date.strftime('%Y-%m-%d')}")
+        else:
+            print("   ⚠️  No sales data - forecasts will use default growth patterns")
         
         # Get sales velocity analysis
         velocity_data = self._analyze_sales_velocity()
@@ -721,6 +848,9 @@ class InventoryDataGenerator:
             return pd.DataFrame()
         
         # Generate forecasts for each product
+        print(f"   Generating forecasts for {len(all_products)} products...")
+        sample_trends = []  # Track trends for summary
+        
         for product in all_products:
             product_id = product['ProductID']
             
@@ -750,20 +880,50 @@ class InventoryDataGenerator:
             forecast_start_date = self.end_date + timedelta(days=1)  # Day after historical data ends
             
             for month_offset in range(3):  # Only 3 months forward
-                forecast_date = forecast_start_date + timedelta(days=30 * month_offset)
+                # Generate proper monthly forecasts (1st of each future month)
+                base_year = self.end_date.year
+                base_month = self.end_date.month + 1 + month_offset  # Next month + offset
+                
+                # Handle year rollover
+                forecast_year = base_year
+                forecast_month = base_month
+                while forecast_month > 12:
+                    forecast_month -= 12
+                    forecast_year += 1
+                
+                forecast_date = datetime(forecast_year, forecast_month, 1)
                 
                 # Get seasonal multiplier for this month
                 month_index = (forecast_date.month - 1) % 12
                 seasonal_mult = seasonal_multipliers[category][month_index]
                 
-                # Add trend and randomness
-                trend_factor = random.uniform(0.95, 1.05)  # Small trend variation
-                predicted_demand = max(1, int(baseline_demand * seasonal_mult * trend_factor))
+                # Calculate trend based on actual recent sales performance
+                sales_trend = self._calculate_recent_sales_trend(product_id)
+                sample_trends.append(sales_trend)  # Track for summary
                 
-                # Determine trend direction
-                if seasonal_mult > 1.1:
+                # Apply smoothed progressive growth for forecast periods
+                # Minimize seasonal effects to ensure consistent upward trend
+                trend_factor = min(sales_trend, 1.2)  # Cap at 20% to reduce volatility
+                
+                # Heavily minimize seasonal multipliers for smooth business forecasting
+                # Convert strong seasonal swings to gentle variations (±5% max)
+                seasonal_deviation = seasonal_mult - 1.0  # How far from neutral (1.0)
+                minimal_seasonal = 1.0 + (seasonal_deviation * 0.1)  # Only 10% of original seasonal effect
+                
+                # Ensure seasonal stays within reasonable business range (0.95 to 1.05)
+                smooth_seasonal = max(0.95, min(1.05, minimal_seasonal))
+                
+                # Progressive compound growth that ensures upward trend
+                base_growth = 1.05  # Minimum 5% growth per month
+                compound_trend = base_growth + ((trend_factor - 1.0) * (month_offset + 1) * 0.2)
+                
+                # Calculate prediction with minimized seasonal effects
+                predicted_demand = max(1, int(baseline_demand * smooth_seasonal * compound_trend))
+                
+                # Determine trend direction based on SALES TREND (not seasonal)
+                if sales_trend > 1.05:
                     trend_dir = "Growing"
-                elif seasonal_mult < 0.9:
+                elif sales_trend < 0.95:
                     trend_dir = "Declining"
                 else:
                     trend_dir = "Stable"
@@ -778,10 +938,12 @@ class InventoryDataGenerator:
                     'ForecastPeriod': 'Monthly',
                     'PredictedDemand': predicted_demand,
                     'ConfidenceLevel': round(confidence, 2),
-                    'SeasonalMultiplier': round(seasonal_mult, 2),
+                    'SeasonalMultiplier': round(smooth_seasonal, 2),
                     'TrendDirection': trend_dir,
                     'BaselineDemand': baseline_demand,
-                    'MethodUsed': 'Sales Velocity + Seasonal',
+                    'SalesTrendMultiplier': round(sales_trend, 3),
+                    'CompoundTrendMultiplier': round(compound_trend, 3),
+                    'MethodUsed': 'Recent Sales Trend Analysis + Seasonal',
                     'ForecastHorizon': 30,
                     'ActualDemand': None,  # Will be filled as time progresses
                     'AccuracyScore': None,  # Will be calculated later
@@ -810,7 +972,9 @@ class InventoryDataGenerator:
                             'SeasonalMultiplier': round(seasonal_mult, 2),
                             'TrendDirection': trend_dir,
                             'BaselineDemand': baseline_demand,
-                            'MethodUsed': 'Sales Velocity + Seasonal',
+                            'SalesTrendMultiplier': round(sales_trend, 3),
+                            'CompoundTrendMultiplier': round(compound_trend, 3),
+                            'MethodUsed': 'Recent Sales Trend Analysis + Seasonal',
                             'ForecastHorizon': 7,
                             'ActualDemand': None,
                             'AccuracyScore': None,
@@ -823,6 +987,16 @@ class InventoryDataGenerator:
         
         # Create DataFrame and save
         df_forecast = pd.DataFrame(forecast_data)
+        
+        # Print trend analysis summary
+        if sample_trends:
+            avg_trend = sum(sample_trends) / len(sample_trends)
+            min_trend = min(sample_trends)
+            max_trend = max(sample_trends)
+            growing_count = sum(1 for t in sample_trends if t > 1.02)
+            declining_count = sum(1 for t in sample_trends if t < 0.98)
+            print(f"   📊 Trend Summary: Avg={avg_trend:.3f}, Range={min_trend:.3f}-{max_trend:.3f}")
+            print(f"   📈 Growth patterns: {growing_count} growing, {declining_count} declining, {len(sample_trends)-growing_count-declining_count} stable")
         
         # Save to CSV
         output_file = self.inventory_output / "DemandForecast.csv"
