@@ -1,0 +1,201 @@
+PurchaseOrderID,PurchaseOrderNumber,SupplierID,SupplierName,OrderDate,ExpectedDeliveryDate,ActualDeliveryDate,Status,TotalOrderValue,DeliveryLocation,OrderedBy,Priority,Notes,CreatedBy,CreatedDate
+1,PO-2026-0001,1,Contoso Ltd,2026-01-07,2026-01-19,2026-01-20,Delivered,9309.9,Main Warehouse,buyer2,Medium,Order for Camping products,system,2026-01-07 11:05:25
+2,PO-2026-0002,2,Proseware Inc,2026-01-09,2026-01-19,2026-01-22,Delivered,205.5,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-09 11:05:25
+3,PO-2026-0003,3,Alpine Ski House,2026-01-24,2026-02-03,2026-02-05,Delivered,8910.53,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-01-24 11:05:25
+4,PO-2025-0004,3,Alpine Ski House,2025-12-13,2025-12-30,2025-12-31,Delivered,27702.47,Regional DC,buyer1,Medium,Order for Ski products,system,2025-12-13 11:05:25
+5,PO-2025-0005,5,Fabrikam,2025-12-19,2026-01-05,2026-01-06,Delivered,37094.38,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-19 11:05:25
+6,PO-2026-0006,4,Worldwide Importers,2026-02-24,2026-03-19,,InTransit,8797.81,Backup Warehouse,buyer2,Low,Multi-category order,system,2026-02-24 11:05:25
+7,PO-2026-0007,4,Worldwide Importers,2026-03-10,2026-04-03,,InTransit,2479.0,Main Warehouse,buyer2,High,Multi-category order,system,2026-03-10 11:05:25
+8,PO-2026-0008,2,Proseware Inc,2026-02-04,2026-02-16,2026-02-16,Delivered,982.41,Regional DC,buyer1,Emergency,Order for Kitchen products,system,2026-02-04 11:05:25
+9,PO-2026-0009,4,Worldwide Importers,2026-01-23,2026-02-13,2026-02-14,Delivered,9859.33,Main Warehouse,buyer1,Medium,Multi-category order,system,2026-01-23 11:05:25
+10,PO-2026-0010,1,Contoso Ltd,2026-03-02,2026-03-17,,InTransit,14733.88,Backup Warehouse,supply_manager,High,Order for Camping products,system,2026-03-02 11:05:25
+11,PO-2026-0011,1,Contoso Ltd,2026-03-02,2026-03-11,2026-03-14,Delivered,969.21,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-03-02 11:05:25
+12,PO-2026-0012,5,Fabrikam,2026-01-05,2026-01-23,,InTransit,28645.47,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-05 11:05:25
+13,PO-2026-0013,3,Alpine Ski House,2026-01-06,2026-01-17,2026-01-17,Delivered,14713.55,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-06 11:05:25
+14,PO-2025-0014,4,Worldwide Importers,2025-12-19,2026-01-11,,InTransit,6463.3,Main Warehouse,buyer2,Medium,Multi-category order,system,2025-12-19 11:05:25
+15,PO-2026-0015,3,Alpine Ski House,2026-01-18,2026-02-01,2026-02-02,Delivered,185279.21,Regional DC,buyer2,Low,Order for Ski products,system,2026-01-18 11:05:25
+16,PO-2026-0016,5,Fabrikam,2026-03-05,2026-03-20,,Confirmed,39043.88,Main Warehouse,buyer1,High,Order for Ski products,system,2026-03-05 11:05:25
+17,PO-2025-0017,5,Fabrikam,2025-12-21,2026-01-04,2026-01-07,Delivered,41455.41,Main Warehouse,buyer2,Low,Order for Ski products,system,2025-12-21 11:05:25
+18,PO-2025-0018,1,Contoso Ltd,2025-12-12,2025-12-24,2025-12-30,Delivered,13660.14,Regional DC,buyer2,Low,Order for Camping products,system,2025-12-12 11:05:25
+19,PO-2026-0019,1,Contoso Ltd,2026-02-09,2026-02-21,,InTransit,6172.61,Regional DC,supply_manager,Low,Order for Camping products,system,2026-02-09 11:05:25
+20,PO-2026-0020,2,Proseware Inc,2026-01-29,2026-02-08,2026-02-08,Delivered,2549.5,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-01-29 11:05:25
+21,PO-2025-0021,1,Contoso Ltd,2025-12-31,2026-01-12,2026-01-14,Delivered,43561.71,Regional DC,buyer2,Medium,Order for Camping products,system,2025-12-31 11:05:25
+22,PO-2026-0022,1,Contoso Ltd,2026-01-21,2026-01-31,2026-02-07,Delivered,21849.3,Main Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-21 11:05:25
+23,PO-2025-0023,5,Fabrikam,2025-12-15,2025-12-28,2025-12-31,Delivered,4619.51,Main Warehouse,buyer1,High,Order for Ski products,system,2025-12-15 11:05:25
+24,PO-2026-0024,3,Alpine Ski House,2026-03-06,2026-03-19,,InTransit,12495.75,Regional DC,supply_manager,Low,Order for Ski products,system,2026-03-06 11:05:25
+25,PO-2025-0025,5,Fabrikam,2025-12-21,2026-01-05,2026-01-08,Delivered,43769.74,Regional DC,buyer1,Medium,Order for Ski products,system,2025-12-21 11:05:25
+26,PO-2026-0026,2,Proseware Inc,2026-02-06,2026-02-17,,InTransit,1623.06,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-02-06 11:05:25
+27,PO-2026-0027,4,Worldwide Importers,2026-01-13,2026-02-04,2026-02-05,Delivered,9029.52,Main Warehouse,buyer1,Medium,Multi-category order,system,2026-01-13 11:05:25
+28,PO-2026-0028,4,Worldwide Importers,2026-03-09,2026-04-03,,Sent,4087.11,Backup Warehouse,supply_manager,Low,Multi-category order,system,2026-03-09 11:05:25
+29,PO-2026-0029,1,Contoso Ltd,2026-02-06,2026-02-14,2026-02-24,Delivered,2212.32,Regional DC,buyer1,High,Order for Camping products,system,2026-02-06 11:05:25
+30,PO-2026-0030,2,Proseware Inc,2026-01-07,2026-01-15,2026-01-18,Delivered,16852.52,Backup Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-07 11:05:25
+31,PO-2026-0031,1,Contoso Ltd,2026-01-08,2026-01-18,,InTransit,6402.75,Regional DC,buyer1,Low,Order for Camping products,system,2026-01-08 11:05:25
+32,PO-2026-0032,3,Alpine Ski House,2026-01-04,2026-01-19,2026-01-21,Delivered,13720.22,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-01-04 11:05:25
+33,PO-2026-0033,4,Worldwide Importers,2026-02-15,2026-03-13,,Sent,6197.5,Regional DC,buyer1,Low,Multi-category order,system,2026-02-15 11:05:25
+34,PO-2026-0034,4,Worldwide Importers,2026-02-13,2026-03-05,2026-03-06,Delivered,10846.49,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-13 11:05:25
+35,PO-2025-0035,5,Fabrikam,2025-12-23,2026-01-10,2026-01-12,Delivered,33045.59,Backup Warehouse,buyer1,High,Order for Ski products,system,2025-12-23 11:05:25
+36,PO-2026-0036,3,Alpine Ski House,2026-01-19,2026-02-01,2026-02-04,Delivered,9478.97,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-19 11:05:25
+37,PO-2026-0037,4,Worldwide Importers,2026-01-24,2026-02-17,,InTransit,6197.5,Regional DC,buyer1,Low,Multi-category order,system,2026-01-24 11:05:25
+38,PO-2025-0038,3,Alpine Ski House,2025-12-31,2026-01-10,2026-01-12,Delivered,11386.25,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2025-12-31 11:05:25
+39,PO-2026-0039,1,Contoso Ltd,2026-02-14,2026-02-28,2026-03-03,Delivered,8178.36,Main Warehouse,buyer2,Medium,Order for Camping products,system,2026-02-14 11:05:25
+40,PO-2026-0040,5,Fabrikam,2026-01-18,2026-02-02,2026-02-04,Delivered,28840.82,Backup Warehouse,supply_manager,Medium,Order for Ski products,system,2026-01-18 11:05:25
+41,PO-2026-0041,1,Contoso Ltd,2026-02-09,2026-02-21,2026-02-24,Delivered,11316.43,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-02-09 11:05:25
+42,PO-2026-0042,1,Contoso Ltd,2026-01-17,2026-01-25,2026-01-26,Delivered,7563.83,Regional DC,supply_manager,Low,Order for Camping products,system,2026-01-17 11:05:25
+43,PO-2026-0043,4,Worldwide Importers,2026-01-11,2026-01-30,2026-01-31,Delivered,2320.05,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-01-11 11:05:25
+44,PO-2026-0044,2,Proseware Inc,2026-02-10,2026-02-25,2026-02-25,Delivered,8559.62,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-10 11:05:25
+45,PO-2026-0045,3,Alpine Ski House,2026-02-25,2026-03-07,2026-03-08,Delivered,49763.3,Main Warehouse,supply_manager,High,Order for Ski products,system,2026-02-25 11:05:25
+46,PO-2026-0046,2,Proseware Inc,2026-01-14,2026-01-23,2026-01-25,Delivered,13378.29,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-14 11:05:25
+47,PO-2026-0047,4,Worldwide Importers,2026-03-06,2026-04-01,,InTransit,9130.16,Main Warehouse,buyer1,High,Multi-category order,system,2026-03-06 11:05:25
+48,PO-2026-0048,3,Alpine Ski House,2026-03-09,2026-03-23,,InTransit,48602.45,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-03-09 11:05:25
+49,PO-2026-0049,4,Worldwide Importers,2026-03-03,2026-03-27,,Sent,584.35,Main Warehouse,buyer1,High,Multi-category order,system,2026-03-03 11:05:25
+50,PO-2026-0050,5,Fabrikam,2026-01-13,2026-02-01,2026-02-03,Delivered,19404.66,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-13 11:05:25
+51,PO-2025-0051,1,Contoso Ltd,2025-12-18,2025-12-30,2025-12-31,Delivered,32509.47,Main Warehouse,buyer1,Low,Order for Camping products,system,2025-12-18 11:05:25
+52,PO-2026-0052,5,Fabrikam,2026-02-26,2026-03-13,,InTransit,5783.07,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-26 11:05:25
+53,PO-2026-0053,4,Worldwide Importers,2026-01-23,2026-02-11,2026-02-13,Delivered,11701.01,Main Warehouse,supply_manager,Medium,Multi-category order,system,2026-01-23 11:05:25
+54,PO-2025-0054,2,Proseware Inc,2025-12-23,2025-12-31,2025-12-31,Delivered,7076.03,Main Warehouse,supply_manager,Low,Order for Kitchen products,system,2025-12-23 11:05:25
+55,PO-2026-0055,5,Fabrikam,2026-03-10,2026-03-27,,Confirmed,3652.54,Regional DC,supply_manager,Low,Order for Ski products,system,2026-03-10 11:05:25
+56,PO-2026-0056,2,Proseware Inc,2026-01-30,2026-02-09,2026-02-15,Delivered,248.4,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-01-30 11:05:25
+57,PO-2026-0057,1,Contoso Ltd,2026-02-27,2026-03-13,,Confirmed,5147.88,Main Warehouse,buyer1,Medium,Order for Camping products,system,2026-02-27 11:05:25
+58,PO-2026-0058,2,Proseware Inc,2026-03-02,2026-03-15,,Sent,79375.64,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-03-02 11:05:25
+59,PO-2025-0059,3,Alpine Ski House,2025-12-19,2026-01-05,2026-01-06,Delivered,123539.52,Regional DC,buyer2,High,Order for Ski products,system,2025-12-19 11:05:25
+60,PO-2026-0060,3,Alpine Ski House,2026-02-21,2026-03-09,2026-03-12,Delivered,1040.31,Main Warehouse,buyer1,Low,Order for Ski products,system,2026-02-21 11:05:25
+61,PO-2026-0061,4,Worldwide Importers,2026-02-20,2026-03-15,,InTransit,1551.27,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-02-20 11:05:25
+62,PO-2026-0062,3,Alpine Ski House,2026-01-03,2026-01-14,2026-01-15,Delivered,57746.08,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-01-03 11:05:25
+63,PO-2026-0063,1,Contoso Ltd,2026-02-17,2026-02-28,2026-02-28,Delivered,1233.7,Main Warehouse,buyer1,Medium,Order for Camping products,system,2026-02-17 11:05:25
+64,PO-2025-0064,4,Worldwide Importers,2025-12-21,2026-01-11,2026-01-14,Delivered,6824.6,Regional DC,buyer2,Low,Multi-category order,system,2025-12-21 11:05:25
+65,PO-2026-0065,1,Contoso Ltd,2026-02-08,2026-02-23,2026-02-25,Delivered,2367.42,Regional DC,supply_manager,Low,Order for Camping products,system,2026-02-08 11:05:25
+66,PO-2026-0066,4,Worldwide Importers,2026-02-20,2026-03-12,,Sent,4547.86,Regional DC,supply_manager,Low,Multi-category order,system,2026-02-20 11:05:25
+67,PO-2026-0067,4,Worldwide Importers,2026-02-07,2026-02-26,2026-02-26,Delivered,12320.74,Main Warehouse,buyer1,Medium,Multi-category order,system,2026-02-07 11:05:25
+68,PO-2026-0068,5,Fabrikam,2026-02-17,2026-03-06,2026-03-09,Delivered,17191.96,Regional DC,buyer2,Low,Order for Ski products,system,2026-02-17 11:05:25
+69,PO-2026-0069,5,Fabrikam,2026-03-05,2026-03-23,,InTransit,22200.38,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-03-05 11:05:25
+70,PO-2026-0070,4,Worldwide Importers,2026-01-06,2026-01-26,2026-01-28,Delivered,10527.16,Main Warehouse,supply_manager,Low,Multi-category order,system,2026-01-06 11:05:25
+71,PO-2026-0071,3,Alpine Ski House,2026-01-19,2026-02-01,2026-02-01,Delivered,18633.62,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-19 11:05:25
+72,PO-2026-0072,1,Contoso Ltd,2026-02-22,2026-03-06,2026-03-14,Delivered,21163.08,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-02-22 11:05:25
+73,PO-2026-0073,5,Fabrikam,2026-02-10,2026-02-22,2026-02-22,Delivered,1539.65,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-10 11:05:25
+74,PO-2026-0074,2,Proseware Inc,2026-03-05,2026-03-15,,Confirmed,32290.24,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-03-05 11:05:25
+75,PO-2026-0075,2,Proseware Inc,2026-02-14,2026-02-26,2026-02-27,Delivered,36958.26,Backup Warehouse,buyer1,High,Order for Kitchen products,system,2026-02-14 11:05:25
+76,PO-2026-0076,3,Alpine Ski House,2026-01-17,2026-01-30,2026-01-31,Delivered,8379.55,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-17 11:05:25
+77,PO-2026-0077,4,Worldwide Importers,2026-02-19,2026-03-11,2026-03-11,Delivered,4201.75,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-19 11:05:25
+78,PO-2026-0078,5,Fabrikam,2026-01-17,2026-02-01,2026-02-03,Delivered,26745.02,Regional DC,supply_manager,Low,Order for Ski products,system,2026-01-17 11:05:25
+79,PO-2026-0079,1,Contoso Ltd,2026-01-20,2026-02-01,2026-02-15,Delivered,21167.01,Regional DC,buyer2,Low,Order for Camping products,system,2026-01-20 11:05:25
+80,PO-2026-0080,1,Contoso Ltd,2026-01-30,2026-02-09,2026-02-09,Delivered,7244.68,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-30 11:05:25
+81,PO-2026-0081,5,Fabrikam,2026-01-27,2026-02-10,2026-02-10,Delivered,6596.68,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-27 11:05:25
+82,PO-2025-0082,4,Worldwide Importers,2025-12-31,2026-01-19,2026-01-22,Delivered,7390.01,Backup Warehouse,supply_manager,Medium,Multi-category order,system,2025-12-31 11:05:25
+83,PO-2026-0083,3,Alpine Ski House,2026-02-07,2026-02-19,,InTransit,51740.67,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-07 11:05:25
+84,PO-2026-0084,1,Contoso Ltd,2026-01-10,2026-01-24,2026-01-25,Delivered,6582.75,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-10 11:05:25
+85,PO-2026-0085,1,Contoso Ltd,2026-02-24,2026-03-06,,InTransit,552.72,Backup Warehouse,buyer1,Low,Order for Camping products,system,2026-02-24 11:05:25
+86,PO-2026-0086,4,Worldwide Importers,2026-01-26,2026-02-17,2026-02-18,Delivered,7932.8,Regional DC,supply_manager,Low,Multi-category order,system,2026-01-26 11:05:25
+87,PO-2026-0087,4,Worldwide Importers,2026-02-21,2026-03-14,,Confirmed,3106.01,Main Warehouse,buyer2,Medium,Multi-category order,system,2026-02-21 11:05:25
+88,PO-2025-0088,2,Proseware Inc,2025-12-15,2025-12-23,2025-12-25,Delivered,15592.23,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-15 11:05:25
+89,PO-2026-0089,5,Fabrikam,2026-02-19,2026-03-08,2026-03-14,Delivered,4296.6,Backup Warehouse,buyer1,Medium,Order for Ski products,system,2026-02-19 11:05:25
+90,PO-2026-0090,1,Contoso Ltd,2026-01-14,2026-01-25,2026-01-27,Delivered,1181.22,Backup Warehouse,buyer1,Low,Order for Camping products,system,2026-01-14 11:05:25
+91,PO-2026-0091,3,Alpine Ski House,2026-01-05,2026-01-17,2026-01-18,Delivered,194462.14,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-05 11:05:25
+92,PO-2026-0092,5,Fabrikam,2026-01-25,2026-02-10,2026-02-13,Delivered,41156.1,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-25 11:05:25
+93,PO-2026-0093,2,Proseware Inc,2026-02-01,2026-02-09,2026-02-10,Delivered,320.75,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-01 11:05:25
+94,PO-2026-0094,2,Proseware Inc,2026-01-13,2026-01-21,2026-01-21,Delivered,495.25,Backup Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-01-13 11:05:25
+95,PO-2026-0095,5,Fabrikam,2026-02-01,2026-02-20,2026-02-20,Delivered,42637.25,Backup Warehouse,buyer1,Low,Order for Ski products,system,2026-02-01 11:05:25
+96,PO-2026-0096,5,Fabrikam,2026-03-04,2026-03-22,,Sent,3506.07,Regional DC,buyer1,Low,Order for Ski products,system,2026-03-04 11:05:25
+97,PO-2026-0097,4,Worldwide Importers,2026-02-23,2026-03-16,,InTransit,4605.1,Main Warehouse,buyer2,Low,Multi-category order,system,2026-02-23 11:05:25
+98,PO-2026-0098,2,Proseware Inc,2026-01-08,2026-01-20,2026-01-23,Delivered,46342.38,Main Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-01-08 11:05:25
+99,PO-2026-0099,3,Alpine Ski House,2026-02-15,2026-03-03,2026-03-06,Delivered,904.25,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-15 11:05:25
+100,PO-2026-0100,2,Proseware Inc,2026-01-22,2026-01-31,2026-01-31,Delivered,6962.28,Main Warehouse,buyer1,Emergency,Order for Kitchen products,system,2026-01-22 11:05:25
+101,PO-2025-0101,4,Worldwide Importers,2025-12-31,2026-01-24,2026-02-05,Delivered,17339.4,Regional DC,buyer1,Low,Multi-category order,system,2025-12-31 11:05:25
+102,PO-2026-0102,1,Contoso Ltd,2026-01-02,2026-01-16,2026-01-18,Delivered,670.4,Main Warehouse,buyer1,Low,Order for Camping products,system,2026-01-02 11:05:25
+103,PO-2026-0103,2,Proseware Inc,2026-02-20,2026-03-02,2026-03-02,Delivered,1236.98,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-02-20 11:05:25
+104,PO-2026-0104,5,Fabrikam,2026-01-04,2026-01-23,2026-01-24,Delivered,31753.08,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-04 11:05:25
+105,PO-2025-0105,1,Contoso Ltd,2025-12-20,2026-01-02,2026-01-03,Delivered,24740.37,Regional DC,supply_manager,High,Order for Camping products,system,2025-12-20 11:05:25
+106,PO-2026-0106,5,Fabrikam,2026-02-03,2026-02-20,2026-02-23,Delivered,16065.12,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-03 11:05:25
+107,PO-2026-0107,4,Worldwide Importers,2026-03-09,2026-03-31,,InTransit,233.74,Backup Warehouse,supply_manager,Medium,Multi-category order,system,2026-03-09 11:05:25
+108,PO-2026-0108,4,Worldwide Importers,2026-01-09,2026-01-30,2026-01-31,Delivered,11626.95,Regional DC,supply_manager,Low,Multi-category order,system,2026-01-09 11:05:25
+109,PO-2026-0109,3,Alpine Ski House,2026-01-29,2026-02-13,2026-02-15,Delivered,9187.38,Backup Warehouse,buyer2,Low,Order for Ski products,system,2026-01-29 11:05:25
+110,PO-2025-0110,3,Alpine Ski House,2025-12-24,2026-01-05,2026-01-08,Delivered,39617.52,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-24 11:05:25
+111,PO-2026-0111,2,Proseware Inc,2026-03-03,2026-03-18,,Confirmed,4498.85,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-03-03 11:05:25
+112,PO-2025-0112,4,Worldwide Importers,2025-12-16,2026-01-11,2026-01-12,Delivered,825.68,Backup Warehouse,supply_manager,Medium,Multi-category order,system,2025-12-16 11:05:25
+113,PO-2026-0113,2,Proseware Inc,2026-01-07,2026-01-21,2026-01-24,Delivered,736.73,Main Warehouse,buyer2,Medium,Order for Kitchen products,system,2026-01-07 11:05:25
+114,PO-2026-0114,3,Alpine Ski House,2026-01-21,2026-02-05,2026-02-07,Delivered,49551.33,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-21 11:05:25
+115,PO-2026-0115,1,Contoso Ltd,2026-01-18,2026-02-02,2026-02-02,Delivered,5306.56,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2026-01-18 11:05:25
+116,PO-2026-0116,1,Contoso Ltd,2026-01-28,2026-02-05,2026-02-07,Delivered,5704.17,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-01-28 11:05:25
+117,PO-2026-0117,5,Fabrikam,2026-02-02,2026-02-18,2026-02-21,Delivered,44010.16,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-02-02 11:05:25
+118,PO-2026-0118,1,Contoso Ltd,2026-01-14,2026-01-22,2026-01-23,Delivered,30173.65,Backup Warehouse,supply_manager,Medium,Order for Camping products,system,2026-01-14 11:05:25
+119,PO-2026-0119,4,Worldwide Importers,2026-01-12,2026-02-06,2026-02-07,Delivered,4757.56,Regional DC,buyer1,Low,Multi-category order,system,2026-01-12 11:05:25
+120,PO-2026-0120,1,Contoso Ltd,2026-01-17,2026-01-28,2026-01-31,Delivered,36205.4,Main Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-17 11:05:25
+121,PO-2026-0121,4,Worldwide Importers,2026-02-14,2026-03-05,2026-03-07,Delivered,5545.38,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-14 11:05:25
+122,PO-2025-0122,2,Proseware Inc,2025-12-30,2026-01-13,2026-01-16,Delivered,1866.6,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2025-12-30 11:05:25
+123,PO-2026-0123,5,Fabrikam,2026-01-22,2026-02-04,2026-02-04,Delivered,31844.37,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-22 11:05:25
+124,PO-2026-0124,5,Fabrikam,2026-02-28,2026-03-12,,Sent,13959.45,Regional DC,buyer1,Low,Order for Ski products,system,2026-02-28 11:05:25
+125,PO-2026-0125,1,Contoso Ltd,2026-01-22,2026-02-05,2026-02-05,Delivered,7960.79,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-01-22 11:05:25
+126,PO-2026-0126,4,Worldwide Importers,2026-01-01,2026-01-25,2026-01-25,Delivered,14171.68,Backup Warehouse,buyer1,Medium,Multi-category order,system,2026-01-01 11:05:25
+127,PO-2026-0127,2,Proseware Inc,2026-02-11,2026-02-23,2026-02-24,Delivered,2116.22,Backup Warehouse,buyer1,Medium,Order for Kitchen products,system,2026-02-11 11:05:25
+128,PO-2026-0128,1,Contoso Ltd,2026-01-01,2026-01-09,2026-01-10,Delivered,5266.18,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-01 11:05:25
+129,PO-2026-0129,3,Alpine Ski House,2026-03-04,2026-03-20,,InTransit,28968.98,Regional DC,buyer1,High,Order for Ski products,system,2026-03-04 11:05:25
+130,PO-2026-0130,3,Alpine Ski House,2026-01-26,2026-02-08,2026-02-10,Delivered,1276.99,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-01-26 11:05:25
+131,PO-2026-0131,5,Fabrikam,2026-01-19,2026-02-01,2026-02-04,Delivered,32655.53,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-19 11:05:25
+132,PO-2026-0132,4,Worldwide Importers,2026-01-26,2026-02-21,2026-02-23,Delivered,11123.38,Main Warehouse,supply_manager,Medium,Multi-category order,system,2026-01-26 11:05:25
+133,PO-2025-0133,5,Fabrikam,2025-12-21,2026-01-09,2026-01-10,Delivered,13272.21,Main Warehouse,buyer1,Low,Order for Ski products,system,2025-12-21 11:05:25
+134,PO-2026-0134,1,Contoso Ltd,2026-02-16,2026-03-03,2026-03-03,Delivered,4757.04,Backup Warehouse,buyer2,Medium,Order for Camping products,system,2026-02-16 11:05:25
+135,PO-2026-0135,5,Fabrikam,2026-02-05,2026-02-24,2026-02-25,Delivered,23814.81,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-05 11:05:25
+136,PO-2025-0136,4,Worldwide Importers,2025-12-24,2026-01-18,2026-01-21,Delivered,2207.52,Regional DC,supply_manager,Medium,Multi-category order,system,2025-12-24 11:05:25
+137,PO-2025-0137,5,Fabrikam,2025-12-29,2026-01-10,2026-01-10,Delivered,35281.2,Main Warehouse,buyer1,Low,Order for Ski products,system,2025-12-29 11:05:25
+138,PO-2025-0138,5,Fabrikam,2025-12-26,2026-01-13,2026-01-13,Delivered,41583.16,Main Warehouse,buyer2,Low,Order for Ski products,system,2025-12-26 11:05:25
+139,PO-2026-0139,5,Fabrikam,2026-03-08,2026-03-24,,Confirmed,17930.37,Backup Warehouse,supply_manager,High,Order for Ski products,system,2026-03-08 11:05:25
+140,PO-2026-0140,1,Contoso Ltd,2026-01-17,2026-01-27,2026-01-28,Delivered,4801.42,Backup Warehouse,buyer1,High,Order for Camping products,system,2026-01-17 11:05:25
+141,PO-2026-0141,2,Proseware Inc,2026-01-23,2026-02-02,2026-02-02,Delivered,6499.84,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-23 11:05:25
+142,PO-2026-0142,2,Proseware Inc,2026-01-21,2026-02-04,2026-02-05,Delivered,1905.7,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-21 11:05:25
+143,PO-2026-0143,3,Alpine Ski House,2026-01-29,2026-02-08,,InTransit,11344.9,Regional DC,buyer1,Low,Order for Ski products,system,2026-01-29 11:05:25
+144,PO-2026-0144,2,Proseware Inc,2026-03-11,2026-03-21,,InTransit,3029.06,Regional DC,supply_manager,Low,Order for Kitchen products,system,2026-03-11 11:05:25
+145,PO-2025-0145,3,Alpine Ski House,2025-12-13,2025-12-29,2025-12-30,Delivered,35780.22,Main Warehouse,supply_manager,Low,Order for Ski products,system,2025-12-13 11:05:25
+146,PO-2025-0146,3,Alpine Ski House,2025-12-20,2026-01-04,2026-01-06,Delivered,27362.02,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-20 11:05:25
+147,PO-2026-0147,2,Proseware Inc,2026-03-04,2026-03-19,,InTransit,5696.58,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-03-04 11:05:25
+148,PO-2025-0148,4,Worldwide Importers,2025-12-22,2026-01-16,2026-01-16,Delivered,8934.62,Main Warehouse,buyer2,Low,Multi-category order,system,2025-12-22 11:05:25
+149,PO-2026-0149,4,Worldwide Importers,2026-02-12,2026-03-10,2026-03-12,Delivered,4528.85,Backup Warehouse,buyer1,Low,Multi-category order,system,2026-02-12 11:05:25
+150,PO-2026-0150,4,Worldwide Importers,2026-01-25,2026-02-18,2026-02-18,Delivered,18016.82,Main Warehouse,buyer1,High,Multi-category order,system,2026-01-25 11:05:25
+151,PO-2026-0151,5,Fabrikam,2026-03-06,2026-03-18,,Confirmed,6241.15,Regional DC,buyer2,Medium,Order for Ski products,system,2026-03-06 11:05:25
+152,PO-2026-0152,1,Contoso Ltd,2026-01-06,2026-01-18,2026-01-20,Delivered,45401.3,Main Warehouse,supply_manager,Medium,Order for Camping products,system,2026-01-06 11:05:25
+153,PO-2026-0153,5,Fabrikam,2026-01-02,2026-01-20,2026-01-21,Delivered,20902.55,Main Warehouse,buyer2,Low,Order for Ski products,system,2026-01-02 11:05:25
+154,PO-2026-0154,3,Alpine Ski House,2026-03-09,2026-03-26,,Sent,9187.38,Main Warehouse,buyer1,Medium,Order for Ski products,system,2026-03-09 11:05:25
+155,PO-2025-0155,1,Contoso Ltd,2025-12-20,2026-01-04,2026-01-06,Delivered,16723.18,Backup Warehouse,buyer1,Low,Order for Camping products,system,2025-12-20 11:05:25
+156,PO-2026-0156,5,Fabrikam,2026-02-11,2026-02-23,2026-02-23,Delivered,13126.44,Regional DC,supply_manager,Low,Order for Ski products,system,2026-02-11 11:05:25
+157,PO-2026-0157,3,Alpine Ski House,2026-02-14,2026-02-24,2026-02-24,Delivered,25562.4,Regional DC,buyer2,Low,Order for Ski products,system,2026-02-14 11:05:25
+158,PO-2026-0158,2,Proseware Inc,2026-01-24,2026-02-06,2026-02-07,Delivered,3167.78,Backup Warehouse,supply_manager,Low,Order for Kitchen products,system,2026-01-24 11:05:25
+159,PO-2026-0159,4,Worldwide Importers,2026-01-13,2026-02-08,2026-02-08,Delivered,13141.15,Regional DC,buyer2,Low,Multi-category order,system,2026-01-13 11:05:25
+160,PO-2026-0160,1,Contoso Ltd,2026-01-08,2026-01-21,2026-01-21,Delivered,15779.58,Regional DC,buyer2,Medium,Order for Camping products,system,2026-01-08 11:05:25
+161,PO-2026-0161,2,Proseware Inc,2026-02-09,2026-02-24,2026-02-26,Delivered,1904.47,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-09 11:05:25
+162,PO-2026-0162,1,Contoso Ltd,2026-02-07,2026-02-17,2026-02-20,Delivered,6733.5,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-02-07 11:05:25
+163,PO-2026-0163,5,Fabrikam,2026-02-14,2026-02-27,2026-02-28,Delivered,21949.54,Backup Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-14 11:05:25
+164,PO-2026-0164,3,Alpine Ski House,2026-02-01,2026-02-12,2026-02-14,Delivered,31488.16,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-02-01 11:05:25
+165,PO-2026-0165,3,Alpine Ski House,2026-02-25,2026-03-11,2026-03-14,Delivered,9402.02,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-25 11:05:25
+166,PO-2026-0166,1,Contoso Ltd,2026-01-06,2026-01-17,2026-01-17,Delivered,6390.42,Regional DC,supply_manager,Low,Order for Camping products,system,2026-01-06 11:05:25
+167,PO-2026-0167,1,Contoso Ltd,2026-03-01,2026-03-10,2026-03-10,Delivered,3173.32,Main Warehouse,supply_manager,Medium,Order for Camping products,system,2026-03-01 11:05:25
+168,PO-2026-0168,1,Contoso Ltd,2026-01-26,2026-02-06,2026-02-08,Delivered,5138.04,Backup Warehouse,supply_manager,Low,Order for Camping products,system,2026-01-26 11:05:25
+169,PO-2025-0169,1,Contoso Ltd,2025-12-18,2025-12-30,2026-01-01,Delivered,7492.44,Main Warehouse,buyer1,Emergency,Order for Camping products,system,2025-12-18 11:05:25
+170,PO-2025-0170,5,Fabrikam,2025-12-24,2026-01-08,2026-01-10,Delivered,2050.65,Regional DC,supply_manager,Low,Order for Ski products,system,2025-12-24 11:05:25
+171,PO-2026-0171,4,Worldwide Importers,2026-01-15,2026-02-10,2026-02-13,Delivered,11863.27,Backup Warehouse,buyer1,Medium,Multi-category order,system,2026-01-15 11:05:25
+172,PO-2025-0172,1,Contoso Ltd,2025-12-18,2025-12-30,2025-12-30,Delivered,32463.66,Main Warehouse,buyer2,Low,Order for Camping products,system,2025-12-18 11:05:25
+173,PO-2026-0173,4,Worldwide Importers,2026-01-02,2026-01-24,2026-01-24,Delivered,4214.3,Backup Warehouse,supply_manager,High,Multi-category order,system,2026-01-02 11:05:25
+174,PO-2025-0174,4,Worldwide Importers,2025-12-27,2026-01-17,2026-01-20,Delivered,4273.78,Main Warehouse,buyer2,Low,Multi-category order,system,2025-12-27 11:05:25
+175,PO-2026-0175,4,Worldwide Importers,2026-02-20,2026-03-12,,Confirmed,16492.12,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-20 11:05:25
+176,PO-2025-0176,5,Fabrikam,2025-12-19,2026-01-01,2026-01-03,Delivered,20599.38,Backup Warehouse,buyer1,Low,Order for Ski products,system,2025-12-19 11:05:25
+177,PO-2025-0177,4,Worldwide Importers,2025-12-21,2026-01-09,2026-01-10,Delivered,8000.23,Main Warehouse,buyer1,Low,Multi-category order,system,2025-12-21 11:05:25
+178,PO-2026-0178,2,Proseware Inc,2026-02-21,2026-03-06,2026-03-07,Delivered,4666.96,Backup Warehouse,buyer1,Low,Order for Kitchen products,system,2026-02-21 11:05:25
+179,PO-2026-0179,1,Contoso Ltd,2026-03-08,2026-03-16,,Confirmed,240.52,Regional DC,buyer1,Low,Order for Camping products,system,2026-03-08 11:05:25
+180,PO-2025-0180,5,Fabrikam,2025-12-14,2025-12-27,2025-12-29,Delivered,2420.82,Backup Warehouse,buyer2,Low,Order for Ski products,system,2025-12-14 11:05:25
+181,PO-2026-0181,2,Proseware Inc,2026-03-10,2026-03-21,,InTransit,43993.18,Regional DC,buyer2,Low,Order for Kitchen products,system,2026-03-10 11:05:25
+182,PO-2026-0182,3,Alpine Ski House,2026-01-04,2026-01-20,2026-01-22,Delivered,33231.46,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-04 11:05:25
+183,PO-2026-0183,1,Contoso Ltd,2026-01-05,2026-01-17,2026-01-18,Delivered,18102.94,Main Warehouse,buyer1,Low,Order for Camping products,system,2026-01-05 11:05:25
+184,PO-2025-0184,5,Fabrikam,2025-12-25,2026-01-09,2026-01-12,Delivered,47843.74,Regional DC,buyer1,Low,Order for Ski products,system,2025-12-25 11:05:25
+185,PO-2026-0185,1,Contoso Ltd,2026-01-01,2026-01-14,2026-01-16,Delivered,7251.89,Regional DC,buyer2,Low,Order for Camping products,system,2026-01-01 11:05:25
+186,PO-2026-0186,2,Proseware Inc,2026-01-06,2026-01-15,2026-01-15,Delivered,34346.31,Main Warehouse,buyer1,Low,Order for Kitchen products,system,2026-01-06 11:05:25
+187,PO-2025-0187,5,Fabrikam,2025-12-24,2026-01-11,2026-01-11,Delivered,29550.25,Regional DC,buyer1,High,Order for Ski products,system,2025-12-24 11:05:25
+188,PO-2026-0188,1,Contoso Ltd,2026-01-28,2026-02-05,2026-02-06,Delivered,5588.15,Backup Warehouse,buyer2,Low,Order for Camping products,system,2026-01-28 11:05:25
+189,PO-2026-0189,3,Alpine Ski House,2026-02-20,2026-03-03,2026-03-03,Delivered,27524.86,Regional DC,buyer2,Low,Order for Ski products,system,2026-02-20 11:05:25
+190,PO-2026-0190,1,Contoso Ltd,2026-02-24,2026-03-10,2026-03-12,Delivered,34698.94,Main Warehouse,buyer2,Low,Order for Camping products,system,2026-02-24 11:05:25
+191,PO-2025-0191,3,Alpine Ski House,2025-12-27,2026-01-13,2026-01-15,Delivered,33621.05,Main Warehouse,supply_manager,High,Order for Ski products,system,2025-12-27 11:05:25
+192,PO-2026-0192,4,Worldwide Importers,2026-01-01,2026-01-21,2026-01-23,Delivered,233.74,Regional DC,supply_manager,Medium,Multi-category order,system,2026-01-01 11:05:25
+193,PO-2026-0193,3,Alpine Ski House,2026-01-30,2026-02-11,2026-02-14,Delivered,471.15,Main Warehouse,supply_manager,Low,Order for Ski products,system,2026-01-30 11:05:25
+194,PO-2026-0194,1,Contoso Ltd,2026-02-13,2026-02-21,2026-03-04,Delivered,10466.65,Main Warehouse,buyer1,High,Order for Camping products,system,2026-02-13 11:05:25
+195,PO-2026-0195,4,Worldwide Importers,2026-02-10,2026-03-01,2026-03-04,Delivered,8262.68,Main Warehouse,buyer1,Low,Multi-category order,system,2026-02-10 11:05:25
+196,PO-2026-0196,3,Alpine Ski House,2026-02-10,2026-02-22,2026-02-25,Delivered,23699.95,Backup Warehouse,buyer2,Medium,Order for Ski products,system,2026-02-10 11:05:25
+197,PO-2026-0197,5,Fabrikam,2026-01-10,2026-01-26,2026-01-27,Delivered,22272.66,Main Warehouse,buyer2,Medium,Order for Ski products,system,2026-01-10 11:05:25
+198,PO-2026-0198,5,Fabrikam,2026-02-08,2026-02-27,2026-02-28,Delivered,23456.41,Main Warehouse,supply_manager,Medium,Order for Ski products,system,2026-02-08 11:05:25
+199,PO-2025-0199,4,Worldwide Importers,2025-12-15,2026-01-08,2026-01-11,Delivered,9724.87,Backup Warehouse,buyer1,Low,Multi-category order,system,2025-12-15 11:05:25
+200,PO-2025-0200,4,Worldwide Importers,2025-12-22,2026-01-17,2026-01-19,Delivered,10858.14,Backup Warehouse,buyer1,Low,Multi-category order,system,2025-12-22 11:05:25

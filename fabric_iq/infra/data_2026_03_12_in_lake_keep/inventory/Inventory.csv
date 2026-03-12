@@ -1,0 +1,74 @@
+InventoryID,ProductID,ProductName,ProductCategory,WarehouseLocation,CurrentStock,ReservedStock,AvailableStock,SafetyStockLevel,ReorderPoint,MaxStockLevel,LastUpdated,AverageCost,Status,CreatedBy,CreatedDate
+1,1521,Adventurer Pro Backpack,Camping,Main,923,97,826,146,199,952,2026-03-11 13:05:25,146.64,Active,system,2026-01-02 11:05:25
+2,1521,Adventurer Pro Backpack,Camping,Backup,439,0,439,146,199,952,2026-03-11 13:05:25,146.64,Active,system,2026-01-02 11:05:25
+3,1531,Summit Breeze Jacket,Camping,Main,494,81,413,149,268,746,2026-03-10 12:05:25,110.15,Active,system,2025-11-17 11:05:25
+4,1531,Summit Breeze Jacket,Camping,Backup,223,0,223,149,268,746,2026-03-10 12:05:25,110.15,Active,system,2025-11-17 11:05:25
+5,1541,TrekReady Hiking Boots,Camping,Main,432,52,380,106,137,609,2026-03-11 21:05:25,109.82,Active,system,2025-10-18 11:05:25
+6,1551,BaseCamp Folding Table,Camping,Backup,518,111,407,79,133,470,2026-03-11 12:05:25,64.59,Excess,system,2025-10-19 11:05:25
+7,1561,EcoFire Camping Stove,Camping,Regional,268,40,228,47,60,250,2026-03-12 05:05:25,77.36,Excess,system,2025-10-03 11:05:25
+8,1561,EcoFire Camping Stove,Camping,Backup,63,0,63,47,60,250,2026-03-12 05:05:25,77.36,Active,system,2025-10-03 11:05:25
+9,1571,CozyNights Sleeping Bag,Camping,Main,131,29,102,76,115,377,2026-03-10 13:05:25,116.63,Active,system,2026-01-29 11:05:25
+10,1511,Alpine Explorer Tent,Camping,Main,575,74,501,183,308,1205,2026-03-12 08:05:25,323.07,Active,system,2026-01-08 11:05:25
+11,1522,SummitClimber Backpack,Camping,Main,120,13,107,120,182,928,2026-03-10 13:05:25,164.57,LowStock,system,2026-01-16 11:05:25
+12,1532,TrailBlaze Hiking Pants,Camping,Backup,247,54,193,106,188,875,2026-03-11 02:05:25,67.04,Active,system,2025-10-20 11:05:25
+13,1542,TrailWalker Hiking Shoes,Camping,Main,114,22,92,74,100,763,2026-03-11 10:05:25,82.7,Active,system,2025-12-12 11:05:25
+14,1552,TrekMaster Camping Chair,Camping,Main,534,155,379,53,71,498,2026-03-12 00:05:25,46.06,Excess,system,2026-01-12 11:05:25
+15,1552,TrekMaster Camping Chair,Camping,Backup,126,0,126,53,71,498,2026-03-12 00:05:25,46.06,Active,system,2026-01-12 11:05:25
+16,1562,PowerBurner Camping Stove,Camping,Backup,207,27,180,67,104,271,2026-03-11 08:05:25,141.93,Active,system,2025-10-18 11:05:25
+17,1572,MountainDream Sleeping Bag,Camping,Main,523,87,436,87,125,536,2026-03-12 03:05:25,198.11,Active,system,2026-01-14 11:05:25
+18,1512,SkyView 2-Person Tent,Camping,Main,930,186,744,210,257,1025,2026-03-11 10:05:25,246.74,Active,system,2026-02-06 11:05:25
+19,1523,TrailLite Daypack,Camping,Backup,393,75,318,219,344,1150,2026-03-11 07:05:25,50.25,Active,system,2025-11-07 11:05:25
+20,1533,RainGuard Hiking Jacket,Camping,Main,813,167,646,129,240,956,2026-03-11 02:05:25,125.62,Active,system,2025-10-03 11:05:25
+21,1543,TrekStar Hiking Sandals,Camping,Main,9,2,7,82,109,531,2026-03-12 05:05:25,60.13,LowStock,system,2025-10-09 11:05:25
+22,1553,Adventure Dining Table,Camping,Main,60,16,44,75,138,396,2026-03-12 07:05:25,97.37,LowStock,system,2025-11-13 11:05:25
+23,1563,CompactCook Camping Stove,Camping,Main,241,30,211,33,63,252,2026-03-10 15:05:25,71.74,Active,system,2025-09-29 11:05:25
+24,1563,CompactCook Camping Stove,Camping,Backup,56,0,56,33,63,252,2026-03-10 15:05:25,71.74,Active,system,2025-09-29 11:05:25
+25,1581,LED Headlamp - Rechargeable,Camping,Main,133,36,97,25,32,136,2026-03-11 19:05:25,52.95,Active,system,2025-09-20 11:05:25
+26,2011,Coffee Maker,Kitchen,Backup,108,16,92,150,212,1452,2026-03-11 12:05:25,144.26,LowStock,system,2026-01-17 11:05:25
+27,2012,Espresso Machine,Kitchen,Main,769,123,646,193,269,1307,2026-03-12 02:05:25,276.16,Active,system,2025-11-04 11:05:25
+28,2021,Chef Knife,Kitchen,Main,860,229,631,100,128,888,2026-03-11 15:05:25,66.72,Active,system,2025-12-09 11:05:25
+29,2022,Fork Set,Kitchen,Main,1116,192,924,177,352,1010,2026-03-10 16:05:25,33.6,Excess,system,2026-02-10 11:05:25
+30,2022,Fork Set,Kitchen,Backup,334,0,334,177,352,1010,2026-03-10 16:05:25,33.6,Active,system,2026-02-10 11:05:25
+31,2031,Coffee Mug,Kitchen,Backup,165,38,127,175,325,789,2026-03-11 14:05:25,24.53,LowStock,system,2025-09-13 11:05:25
+32,2041,Serving Platter,Kitchen,Main,507,86,421,181,307,627,2026-03-11 22:05:25,51.67,Active,system,2026-01-17 11:05:25
+33,2051,Ice Cream Bowl,Kitchen,Backup,54,6,48,64,116,443,2026-03-11 09:05:25,19.81,LowStock,system,2025-11-24 11:05:25
+34,2061,Mixing Bowl,Kitchen,Main,173,21,152,98,135,667,2026-03-10 16:05:25,25.19,Active,system,2025-12-07 11:05:25
+35,2061,Mixing Bowl,Kitchen,Backup,53,0,53,98,135,667,2026-03-10 16:05:25,25.19,Active,system,2025-12-07 11:05:25
+36,2071,Baking Pan,Kitchen,Main,85,21,64,151,200,916,2026-03-11 03:05:25,20.55,LowStock,system,2026-02-07 11:05:25
+37,2081,Food Storage Set,Kitchen,Backup,219,29,190,47,79,340,2026-03-10 14:05:25,22.6,Active,system,2025-12-21 11:05:25
+38,2091,Spatula,Kitchen,Backup,118,15,103,50,70,367,2026-03-11 10:05:25,10.35,Active,system,2026-01-26 11:05:25
+39,2101,Measuring Cup Set,Kitchen,Main,60,7,53,65,86,341,2026-03-11 11:05:25,12.6,LowStock,system,2025-09-20 11:05:25
+40,2111,High-Speed Blender,Kitchen,Backup,190,45,145,50,88,261,2026-03-11 04:05:25,139.84,Active,system,2025-12-05 11:05:25
+41,2112,4-Slice Toaster,Kitchen,Main,2,0,2,38,57,352,2026-03-11 13:05:25,65.79,LowStock,system,2025-11-14 11:05:25
+42,2112,4-Slice Toaster,Kitchen,Backup,0,0,0,38,57,352,2026-03-11 13:05:25,65.79,OutOfStock,system,2025-11-14 11:05:25
+43,2121,Bamboo Cutting Board Set,Kitchen,Main,353,79,274,55,88,329,2026-03-10 11:05:25,27.7,Excess,system,2025-11-26 11:05:25
+44,3011,Alpine Pro Racing Skis - 170cm,Ski,Main,16,1,15,4,4,22,2026-03-11 04:05:25,847.4,Active,system,2025-12-11 11:05:25
+45,3011,Alpine Pro Racing Skis - 170cm,Ski,Backup,5,0,5,4,4,22,2026-03-11 04:05:25,847.4,Active,system,2025-12-11 11:05:25
+46,3012,Mountain Master All-Terrain Skis - 165cm,Ski,Main,20,2,18,3,5,20,2026-03-11 08:05:25,660.54,Excess,system,2026-01-03 11:05:25
+47,3013,Beginner's Choice Alpine Skis - 160cm,Ski,Backup,6,0,6,2,2,19,2026-03-10 19:05:25,346.77,Active,system,2025-10-16 11:05:25
+48,3021,Nordic Classic XC Skis - 185cm,Ski,Main,5,1,4,1,1,5,2026-03-11 21:05:25,268.06,Excess,system,2025-10-27 11:05:25
+49,3021,Nordic Classic XC Skis - 185cm,Ski,Backup,1,0,1,1,1,5,2026-03-11 21:05:25,268.06,Active,system,2025-10-27 11:05:25
+50,3022,Backcountry Explorer XC Skis - 190cm,Ski,Regional,5,0,5,1,1,11,2026-03-12 09:05:25,374.18,Active,system,2025-09-18 11:05:25
+51,3031,Pro Flex Racing Ski Boots,Ski,Main,18,4,14,3,4,19,2026-03-11 15:05:25,499.83,Active,system,2025-12-30 11:05:25
+52,3031,Pro Flex Racing Ski Boots,Ski,Backup,8,0,8,3,4,19,2026-03-11 15:05:25,499.83,Active,system,2025-12-30 11:05:25
+53,3032,Comfort Fit Recreational Boots,Ski,Backup,13,2,11,2,3,15,2026-03-11 14:05:25,308.19,Active,system,2026-01-17 11:05:25
+54,3033,Women's Performance Ski Boots,Ski,Main,17,3,14,4,6,26,2026-03-10 23:05:25,419.92,Active,system,2025-12-10 11:05:25
+55,3041,Carbon Fiber Racing Poles - 120cm,Ski,Backup,2,0,2,1,1,9,2026-03-12 10:05:25,141.48,Active,system,2025-12-23 11:05:25
+56,3042,Aluminum All-Mountain Poles - 115cm,Ski,Main,4,0,4,1,1,7,2026-03-11 20:05:25,65.31,Active,system,2025-10-01 11:05:25
+57,3051,Insulated Ski Jacket - Men's,Ski,Main,14,3,11,4,6,16,2026-03-12 01:05:25,193.64,Active,system,2025-12-24 11:05:25
+58,3052,Thermal Base Layer Set - Women's,Ski,Backup,19,3,16,3,3,26,2026-03-12 10:05:25,113.64,Active,system,2025-11-20 11:05:25
+59,3053,Waterproof Ski Pants,Ski,Main,7,1,6,3,4,15,2026-03-11 17:05:25,167.21,Active,system,2025-12-15 11:05:25
+60,3061,Professional Ski Helmet,Ski,Main,5,1,4,1,1,9,2026-03-10 23:05:25,145.15,Active,system,2025-09-18 11:05:25
+61,3062,Anti-Fog Ski Goggles,Ski,Backup,2,0,2,1,1,5,2026-03-11 23:05:25,99.32,Active,system,2025-11-28 11:05:25
+62,3071,Ski Boot Bag - Premium,Ski,Main,2,0,2,1,1,9,2026-03-12 05:05:25,41.68,Active,system,2025-12-03 11:05:25
+63,3071,Ski Boot Bag - Premium,Ski,Backup,0,0,0,1,1,9,2026-03-12 05:05:25,41.68,OutOfStock,system,2025-12-03 11:05:25
+64,3072,Hand Warmers - 10 Pack,Ski,Main,3,0,3,0,0,6,2026-03-11 03:05:25,11.21,Active,system,2025-11-14 11:05:25
+65,3081,All-Temp Ski Wax Kit,Ski,Backup,48,9,39,4,6,46,2026-03-10 13:05:25,52.94,Excess,system,2025-10-17 11:05:25
+66,3082,Edge Tuning Tool Set,Ski,Backup,38,6,32,6,10,39,2026-03-11 04:05:25,94.37,Active,system,2025-09-21 11:05:25
+67,3091,Freestyle Snowboard - 155cm,Ski,Main,12,2,10,3,4,14,2026-03-11 23:05:25,510.41,Active,system,2026-01-11 11:05:25
+68,3092,All-Mountain Snowboard - 158cm,Ski,Main,14,2,12,3,4,21,2026-03-11 00:05:25,574.0,Active,system,2025-09-23 11:05:25
+69,3101,Winter Boots - Insulated,Ski,Main,4,0,4,1,1,9,2026-03-10 19:05:25,116.04,Active,system,2025-12-04 11:05:25
+70,3101,Winter Boots - Insulated,Ski,Backup,0,0,0,1,1,9,2026-03-10 19:05:25,116.04,OutOfStock,system,2025-12-04 11:05:25
+71,3102,Winter Hiking Boots - Waterproof,Ski,Regional,3,0,3,1,1,5,2026-03-12 07:05:25,189.66,Active,system,2025-09-14 11:05:25
+72,3103,Snowboard Bindings - Pro,Ski,Main,8,0,8,2,2,11,2026-03-12 06:05:25,240.1,Active,system,2026-01-01 11:05:25
+73,3104,Ski Tuning Bench - Portable,Ski,Main,5,0,5,5,8,30,2026-03-10 23:05:25,150.71,LowStock,system,2025-10-10 11:05:25
