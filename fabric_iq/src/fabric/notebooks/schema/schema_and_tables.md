@@ -5,8 +5,8 @@ This document provides a comprehensive overview of all database schemas and tabl
 ## Summary Statistics
 
 - **Total Notebooks**: 6
-- **Total Schemas**: 5
-- **Total Tables**: 21
+- **Total Schemas**: 6
+- **Total Tables**: 22
 
 ---
 
@@ -27,14 +27,15 @@ This document provides a comprehensive overview of all database schemas and tabl
 | model_finance.ipynb | finance | invoice | Financial invoicing records |
 | model_finance.ipynb | finance | account | Financial account management |
 | model_finance.ipynb | finance | payment | Financial payment processing |
-| model_inventory.ipynb | supplychain | Inventory | Current inventory levels and locations |
-| model_inventory.ipynb | supplychain | InventoryTransactions | Inventory movement audit trail |
-| model_inventory.ipynb | supplychain | PurchaseOrders | Purchase order headers |
-| model_inventory.ipynb | supplychain | PurchaseOrderItems | Purchase order line items |
-| model_inventory.ipynb | supplychain | DemandForecast | Predictive analytics and demand forecasting |
-| model_suppliers.ipynb | supplychain | Suppliers | Supplier master data |
-| model_suppliers.ipynb | supplychain | ProductSuppliers | Product-supplier relationship mapping |
-| model_suppliers.ipynb | supplychain | SupplyChainEvents | Disruption events and impacts |
+| model_inventory.ipynb | inventory | Warehouses | Warehouse locations and operational details |
+| model_inventory.ipynb | inventory | Inventory | Current inventory levels and locations |
+| model_inventory.ipynb | inventory | InventoryTransactions | Inventory movement audit trail |
+| model_inventory.ipynb | inventory | PurchaseOrders | Purchase order headers |
+| model_inventory.ipynb | inventory | PurchaseOrderItems | Purchase order line items |
+| model_inventory.ipynb | inventory | DemandForecast | Predictive analytics and demand forecasting |
+| model_supplychain.ipynb | supplychain | Suppliers | Supplier master data |
+| model_supplychain.ipynb | supplychain | ProductSuppliers | Product-supplier relationship mapping |
+| model_supplychain.ipynb | supplychain | SupplyChainEvents | Disruption events and impacts |
 
 ---
 
@@ -46,7 +47,8 @@ This document provides a comprehensive overview of all database schemas and tabl
 | product | 2 | model_product.ipynb |
 | sales | 3 | model_sales.ipynb |
 | finance | 3 | model_finance.ipynb |
-| supplychain | 8 | model_inventory.ipynb, model_suppliers.ipynb |
+| inventory | 6 | model_inventory.ipynb |
+| supplychain | 3 | model_supplychain.ipynb |
 
 ---
 
@@ -59,11 +61,18 @@ This document provides a comprehensive overview of all database schemas and tabl
 - **Financial Operations**: 3 tables for invoicing, accounts, and payments
 
 ### Supply Chain Management
-- **Inventory Control**: 2 tables for stock levels and transactions
-- **Procurement**: 2 tables for purchase orders and line items
-- **Supplier Management**: 2 tables for suppliers and product relationships  
-- **Risk Management**: 1 table for disruptions and impacts
+- **Inventory Control**: 6 tables for warehouses, stock levels, transactions, and forecasting
+- **Supplier Management**: 3 tables for suppliers, product relationships, and disruption events
+
+#### Inventory Schema Details
+- **Warehouse Management**: 1 table for locations and operational details
+- **Stock Control**: 2 tables for current levels and transaction audit trails
+- **Purchase Orders**: 2 tables for procurement headers and line items
 - **Demand Planning**: 1 table for predictive analytics and forecasting
+
+#### Supply Chain Schema Details
+- **Supplier Relationships**: 2 tables for supplier master data and product mappings
+- **Risk Management**: 1 table for disruptions, events, and impact tracking
 
 ---
 
@@ -71,12 +80,13 @@ This document provides a comprehensive overview of all database schemas and tabl
 
 The schema design supports cross-domain integration through foreign key relationships:
 
-- **Product** tables link to **Sales**, **Inventory**, and **Suppliers**
+- **Product** tables link to **Sales**, **Inventory**, and **Supplychain**
 - **Customer** tables link to **Sales** and **Finance**
-- **Supplier** information feeds **Purchase Orders**
-- **Disruption** events impact **Inventory** planning accuracy
+- **Supplier** information feeds **Purchase Orders** in the inventory schema
+- **Disruption** events in supplychain impact **Inventory** planning accuracy
+- **Warehouse** data connects inventory management with purchase order delivery
 
 ---
 
-*Generated on: March 2, 2026*
-*Source: C:\Repos\Explore\udf_solutions\prototype\src\fabric\notebooks\schema\*
+*Generated on: March 13, 2026*
+*Source: C:\Repos\Code\Explore\solutionroot\fabric_iq\src\fabric\notebooks\schema\*
