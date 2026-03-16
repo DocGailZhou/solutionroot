@@ -44,9 +44,9 @@ class InventoryDataGenerator:
             self.start_date = datetime.strptime(start_date, '%Y-%m-%d').date()
             self.end_date = datetime.strptime(end_date, '%Y-%m-%d').date()
         else:
-            # Default to recent period
-            self.end_date = date.today()
-            self.start_date = self.end_date - timedelta(days=365)
+            # Default period for sample data generation
+            self.start_date = datetime.strptime('2025-01-01', '%Y-%m-%d').date()
+            self.end_date = datetime.strptime('2026-04-30', '%Y-%m-%d').date()
             
         # Create output directories
         self.inventory_output = self.output_path / "inventory"
@@ -452,11 +452,11 @@ class InventoryDataGenerator:
                 'SafetyStockLevel': safety_stock,
                 'ReorderPoint': reorder_point,
                 'MaxStockLevel': max_stock,
-                'LastUpdated': (datetime.now() - timedelta(hours=random.randint(1, 48))).strftime('%Y-%m-%d %H:%M:%S'),
+                'LastUpdated': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(hours=random.randint(1, 48))).strftime('%Y-%m-%d %H:%M:%S'),
                 'AverageCost': round(avg_cost, 2),
                 'Status': status,
                 'CreatedBy': 'system',
-                'CreatedDate': (datetime.now() - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': (datetime.combine(self.start_date, datetime.min.time()) + timedelta(days=random.randint(0, (self.end_date - self.start_date).days - 30))).strftime('%Y-%m-%d %H:%M:%S')
             }
             
             inventory_data.append(record)
@@ -503,9 +503,10 @@ class InventoryDataGenerator:
             
         suppliers_df = self.suppliers_data['suppliers']
         
-        # Generate orders over past 90 days
+        # Generate orders over past 90 days from the end of generation period
+        generation_end = datetime.combine(self.end_date, datetime.min.time())
         for i in range(num_orders):
-            order_date = datetime.now() - timedelta(days=random.randint(1, 90))
+            order_date = generation_end - timedelta(days=random.randint(1, 90))
             
             # Select random supplier
             supplier = suppliers_df.sample(1).iloc[0]
@@ -515,7 +516,7 @@ class InventoryDataGenerator:
             expected_delivery = order_date + timedelta(days=lead_time)
             
             # Some orders are delivered, some in progress
-            if order_date < datetime.now() - timedelta(days=lead_time):
+            if order_date < generation_end - timedelta(days=lead_time):
                 # Should be delivered by now
                 if random.random() < 0.9:  # 90% delivered on time
                     actual_delivery = expected_delivery + timedelta(days=random.randint(0, 3))
@@ -940,7 +941,7 @@ class InventoryDataGenerator:
                     'ActualDemand': None,  # Will be filled as time progresses
                     'AccuracyScore': None,  # Will be calculated later
                     'CreatedBy': 'system',
-                    'CreatedDate': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                    'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d %H:%M:%S')
                 }
                 
                 forecast_data.append(forecast_record)
@@ -971,7 +972,7 @@ class InventoryDataGenerator:
                             'ActualDemand': None,
                             'AccuracyScore': None,
                             'CreatedBy': 'system',
-                            'CreatedDate': datetime.now().strftime('%Y-%m-%d %H:%M:%S')
+                            'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d %H:%M:%S')
                         }
                         
                         forecast_data.append(weekly_record)

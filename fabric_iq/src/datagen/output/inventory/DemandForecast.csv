@@ -1,421 +1,421 @@
 ForecastID,ProductID,ProductName,ProductCategory,ForecastDate,ForecastPeriod,PredictedDemand,ConfidenceLevel,SeasonalMultiplier,TrendDirection,BaselineDemand,SalesTrendMultiplier,CompoundTrendMultiplier,MethodUsed,ForecastHorizon,ActualDemand,AccuracyScore,CreatedBy,CreatedDate
-1,1521,Adventurer Pro Backpack,Camping,2026-05-01,Monthly,105,68.72,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-2,1521,Adventurer Pro Backpack,Camping,2026-05-01,Weekly,24,67.8,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-3,1521,Adventurer Pro Backpack,Camping,2026-05-08,Weekly,24,65.64,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-4,1521,Adventurer Pro Backpack,Camping,2026-05-15,Weekly,24,66.36,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-5,1521,Adventurer Pro Backpack,Camping,2026-05-22,Weekly,24,71.54,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-6,1521,Adventurer Pro Backpack,Camping,2026-06-01,Monthly,114,68.72,1.0,Growing,98,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-7,1521,Adventurer Pro Backpack,Camping,2026-07-01,Monthly,123,68.72,1.0,Growing,98,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-8,1531,Summit Breeze Jacket,Camping,2026-05-01,Monthly,129,79.12,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-9,1531,Summit Breeze Jacket,Camping,2026-05-01,Weekly,30,83.2,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-10,1531,Summit Breeze Jacket,Camping,2026-05-08,Weekly,30,74.65,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-11,1531,Summit Breeze Jacket,Camping,2026-05-15,Weekly,30,76.64,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-12,1531,Summit Breeze Jacket,Camping,2026-05-22,Weekly,30,80.88,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-13,1531,Summit Breeze Jacket,Camping,2026-06-01,Monthly,139,79.12,1.0,Growing,120,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-14,1531,Summit Breeze Jacket,Camping,2026-07-01,Monthly,151,79.12,1.0,Growing,120,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-15,1541,TrekReady Hiking Boots,Camping,2026-05-01,Monthly,64,60.15,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-16,1541,TrekReady Hiking Boots,Camping,2026-05-01,Weekly,14,58.11,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-17,1541,TrekReady Hiking Boots,Camping,2026-05-08,Weekly,14,56.3,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-18,1541,TrekReady Hiking Boots,Camping,2026-05-15,Weekly,14,58.99,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-19,1541,TrekReady Hiking Boots,Camping,2026-05-22,Weekly,14,64.13,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-20,1541,TrekReady Hiking Boots,Camping,2026-06-01,Monthly,69,60.15,1.0,Growing,60,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-21,1541,TrekReady Hiking Boots,Camping,2026-07-01,Monthly,75,60.15,1.0,Growing,60,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-22,1551,BaseCamp Folding Table,Camping,2026-05-01,Monthly,120,69.42,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-23,1551,BaseCamp Folding Table,Camping,2026-05-01,Weekly,27,69.98,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-24,1551,BaseCamp Folding Table,Camping,2026-05-08,Weekly,27,67.73,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-25,1551,BaseCamp Folding Table,Camping,2026-05-15,Weekly,27,74.2,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-26,1551,BaseCamp Folding Table,Camping,2026-05-22,Weekly,27,73.25,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-27,1551,BaseCamp Folding Table,Camping,2026-06-01,Monthly,130,69.42,1.0,Growing,112,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-28,1551,BaseCamp Folding Table,Camping,2026-07-01,Monthly,141,69.42,1.0,Growing,112,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-29,1561,EcoFire Camping Stove,Camping,2026-05-01,Monthly,81,72.52,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-30,1561,EcoFire Camping Stove,Camping,2026-05-01,Weekly,18,73.47,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-31,1561,EcoFire Camping Stove,Camping,2026-05-08,Weekly,18,69.11,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-32,1561,EcoFire Camping Stove,Camping,2026-05-15,Weekly,18,69.15,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-33,1561,EcoFire Camping Stove,Camping,2026-05-22,Weekly,18,72.07,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-34,1561,EcoFire Camping Stove,Camping,2026-06-01,Monthly,87,72.52,1.0,Growing,75,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-35,1561,EcoFire Camping Stove,Camping,2026-07-01,Monthly,94,72.52,1.0,Growing,75,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-36,1571,CozyNights Sleeping Bag,Camping,2026-05-01,Monthly,69,69.46,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-37,1571,CozyNights Sleeping Bag,Camping,2026-05-01,Weekly,16,70.57,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-38,1571,CozyNights Sleeping Bag,Camping,2026-05-08,Weekly,16,72.08,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-39,1571,CozyNights Sleeping Bag,Camping,2026-05-15,Weekly,16,71.22,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-40,1571,CozyNights Sleeping Bag,Camping,2026-05-22,Weekly,16,71.19,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-41,1571,CozyNights Sleeping Bag,Camping,2026-06-01,Monthly,74,69.46,1.0,Growing,64,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-42,1571,CozyNights Sleeping Bag,Camping,2026-07-01,Monthly,80,69.46,1.0,Growing,64,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-43,1511,Alpine Explorer Tent,Camping,2026-05-01,Monthly,72,63.38,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-44,1511,Alpine Explorer Tent,Camping,2026-05-01,Weekly,16,67.02,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-45,1511,Alpine Explorer Tent,Camping,2026-05-08,Weekly,16,59.57,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-46,1511,Alpine Explorer Tent,Camping,2026-05-15,Weekly,16,62.79,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-47,1511,Alpine Explorer Tent,Camping,2026-05-22,Weekly,16,68.23,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-48,1511,Alpine Explorer Tent,Camping,2026-06-01,Monthly,78,63.38,1.0,Growing,67,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-49,1511,Alpine Explorer Tent,Camping,2026-07-01,Monthly,84,63.38,1.0,Growing,67,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-50,1522,SummitClimber Backpack,Camping,2026-05-01,Monthly,119,71.95,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-51,1522,SummitClimber Backpack,Camping,2026-05-01,Weekly,27,70.5,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-52,1522,SummitClimber Backpack,Camping,2026-05-08,Weekly,27,76.05,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-53,1522,SummitClimber Backpack,Camping,2026-05-15,Weekly,27,73.93,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-54,1522,SummitClimber Backpack,Camping,2026-05-22,Weekly,27,76.22,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-55,1522,SummitClimber Backpack,Camping,2026-06-01,Monthly,129,71.95,1.0,Growing,111,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-56,1522,SummitClimber Backpack,Camping,2026-07-01,Monthly,139,71.95,1.0,Growing,111,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-57,1532,TrailBlaze Hiking Pants,Camping,2026-05-01,Monthly,128,76.84,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-58,1532,TrailBlaze Hiking Pants,Camping,2026-05-01,Weekly,29,76.77,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-59,1532,TrailBlaze Hiking Pants,Camping,2026-05-08,Weekly,29,73.9,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-60,1532,TrailBlaze Hiking Pants,Camping,2026-05-15,Weekly,29,76.9,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-61,1532,TrailBlaze Hiking Pants,Camping,2026-05-22,Weekly,29,74.44,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-62,1532,TrailBlaze Hiking Pants,Camping,2026-06-01,Monthly,138,76.84,1.0,Growing,119,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-63,1532,TrailBlaze Hiking Pants,Camping,2026-07-01,Monthly,149,76.84,1.0,Growing,119,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-64,1542,TrailWalker Hiking Shoes,Camping,2026-05-01,Monthly,113,76.93,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-65,1542,TrailWalker Hiking Shoes,Camping,2026-05-01,Weekly,26,80.11,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-66,1542,TrailWalker Hiking Shoes,Camping,2026-05-08,Weekly,26,76.34,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-67,1542,TrailWalker Hiking Shoes,Camping,2026-05-15,Weekly,26,74.71,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-68,1542,TrailWalker Hiking Shoes,Camping,2026-05-22,Weekly,26,80.74,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-69,1542,TrailWalker Hiking Shoes,Camping,2026-06-01,Monthly,122,76.93,1.0,Growing,105,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-70,1542,TrailWalker Hiking Shoes,Camping,2026-07-01,Monthly,132,76.93,1.0,Growing,105,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-71,1552,TrekMaster Camping Chair,Camping,2026-05-01,Monthly,118,62.87,1.0,Growing,110,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-72,1552,TrekMaster Camping Chair,Camping,2026-05-01,Weekly,27,62.74,1.0,Growing,110,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-73,1552,TrekMaster Camping Chair,Camping,2026-05-08,Weekly,27,61.09,1.0,Growing,110,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-74,1552,TrekMaster Camping Chair,Camping,2026-05-15,Weekly,27,61.56,1.0,Growing,110,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-75,1552,TrekMaster Camping Chair,Camping,2026-05-22,Weekly,27,63.55,1.0,Growing,110,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-76,1552,TrekMaster Camping Chair,Camping,2026-06-01,Monthly,128,62.87,1.0,Growing,110,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-77,1552,TrekMaster Camping Chair,Camping,2026-07-01,Monthly,138,62.87,1.0,Growing,110,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-78,1562,PowerBurner Camping Stove,Camping,2026-05-01,Monthly,76,67.81,1.0,Growing,71,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-79,1562,PowerBurner Camping Stove,Camping,2026-05-01,Weekly,17,64.0,1.0,Growing,71,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-80,1562,PowerBurner Camping Stove,Camping,2026-05-08,Weekly,17,68.97,1.0,Growing,71,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-81,1562,PowerBurner Camping Stove,Camping,2026-05-15,Weekly,17,70.78,1.0,Growing,71,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-82,1562,PowerBurner Camping Stove,Camping,2026-05-22,Weekly,17,65.39,1.0,Growing,71,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-83,1562,PowerBurner Camping Stove,Camping,2026-06-01,Monthly,82,67.81,1.0,Growing,71,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-84,1562,PowerBurner Camping Stove,Camping,2026-07-01,Monthly,89,67.81,1.0,Growing,71,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-85,1572,MountainDream Sleeping Bag,Camping,2026-05-01,Monthly,114,79.4,1.0,Growing,106,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-86,1572,MountainDream Sleeping Bag,Camping,2026-05-01,Weekly,26,80.91,1.0,Growing,106,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-87,1572,MountainDream Sleeping Bag,Camping,2026-05-08,Weekly,26,82.91,1.0,Growing,106,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-88,1572,MountainDream Sleeping Bag,Camping,2026-05-15,Weekly,26,74.62,1.0,Growing,106,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-89,1572,MountainDream Sleeping Bag,Camping,2026-05-22,Weekly,26,77.8,1.0,Growing,106,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-90,1572,MountainDream Sleeping Bag,Camping,2026-06-01,Monthly,123,79.4,1.0,Growing,106,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-91,1572,MountainDream Sleeping Bag,Camping,2026-07-01,Monthly,133,79.4,1.0,Growing,106,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-92,1512,SkyView 2-Person Tent,Camping,2026-05-01,Monthly,106,72.1,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-93,1512,SkyView 2-Person Tent,Camping,2026-05-01,Weekly,24,74.12,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-94,1512,SkyView 2-Person Tent,Camping,2026-05-08,Weekly,24,71.77,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-95,1512,SkyView 2-Person Tent,Camping,2026-05-15,Weekly,24,73.82,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-96,1512,SkyView 2-Person Tent,Camping,2026-05-22,Weekly,24,71.71,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-97,1512,SkyView 2-Person Tent,Camping,2026-06-01,Monthly,115,72.1,1.0,Growing,99,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-98,1512,SkyView 2-Person Tent,Camping,2026-07-01,Monthly,124,72.1,1.0,Growing,99,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-99,1523,TrailLite Daypack,Camping,2026-05-01,Monthly,79,70.12,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-100,1523,TrailLite Daypack,Camping,2026-05-01,Weekly,18,74.12,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-101,1523,TrailLite Daypack,Camping,2026-05-08,Weekly,18,74.5,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-102,1523,TrailLite Daypack,Camping,2026-05-15,Weekly,18,72.92,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-103,1523,TrailLite Daypack,Camping,2026-05-22,Weekly,18,73.76,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-104,1523,TrailLite Daypack,Camping,2026-06-01,Monthly,86,70.12,1.0,Growing,74,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-105,1523,TrailLite Daypack,Camping,2026-07-01,Monthly,93,70.12,1.0,Growing,74,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-106,1533,RainGuard Hiking Jacket,Camping,2026-05-01,Monthly,125,63.39,1.0,Growing,116,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-107,1533,RainGuard Hiking Jacket,Camping,2026-05-01,Weekly,29,60.38,1.0,Growing,116,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-108,1533,RainGuard Hiking Jacket,Camping,2026-05-08,Weekly,29,68.03,1.0,Growing,116,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-109,1533,RainGuard Hiking Jacket,Camping,2026-05-15,Weekly,29,62.64,1.0,Growing,116,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-110,1533,RainGuard Hiking Jacket,Camping,2026-05-22,Weekly,29,63.57,1.0,Growing,116,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-111,1533,RainGuard Hiking Jacket,Camping,2026-06-01,Monthly,135,63.39,1.0,Growing,116,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-112,1533,RainGuard Hiking Jacket,Camping,2026-07-01,Monthly,146,63.39,1.0,Growing,116,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-113,1543,TrekStar Hiking Sandals,Camping,2026-05-01,Monthly,79,76.51,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-114,1543,TrekStar Hiking Sandals,Camping,2026-05-01,Weekly,18,75.36,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-115,1543,TrekStar Hiking Sandals,Camping,2026-05-08,Weekly,18,79.51,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-116,1543,TrekStar Hiking Sandals,Camping,2026-05-15,Weekly,18,75.73,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-117,1543,TrekStar Hiking Sandals,Camping,2026-05-22,Weekly,18,75.01,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-118,1543,TrekStar Hiking Sandals,Camping,2026-06-01,Monthly,86,76.51,1.0,Growing,74,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-119,1543,TrekStar Hiking Sandals,Camping,2026-07-01,Monthly,93,76.51,1.0,Growing,74,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-120,1553,Adventure Dining Table,Camping,2026-05-01,Monthly,113,71.98,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-121,1553,Adventure Dining Table,Camping,2026-05-01,Weekly,26,71.43,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-122,1553,Adventure Dining Table,Camping,2026-05-08,Weekly,26,67.66,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-123,1553,Adventure Dining Table,Camping,2026-05-15,Weekly,26,68.79,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-124,1553,Adventure Dining Table,Camping,2026-05-22,Weekly,26,72.94,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-125,1553,Adventure Dining Table,Camping,2026-06-01,Monthly,122,71.98,1.0,Growing,105,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-126,1553,Adventure Dining Table,Camping,2026-07-01,Monthly,132,71.98,1.0,Growing,105,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-127,1563,CompactCook Camping Stove,Camping,2026-05-01,Monthly,115,74.56,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-128,1563,CompactCook Camping Stove,Camping,2026-05-01,Weekly,26,75.12,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-129,1563,CompactCook Camping Stove,Camping,2026-05-08,Weekly,26,77.82,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-130,1563,CompactCook Camping Stove,Camping,2026-05-15,Weekly,26,73.62,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-131,1563,CompactCook Camping Stove,Camping,2026-05-22,Weekly,26,76.37,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-132,1563,CompactCook Camping Stove,Camping,2026-06-01,Monthly,124,74.56,1.0,Growing,107,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-133,1563,CompactCook Camping Stove,Camping,2026-07-01,Monthly,134,74.56,1.0,Growing,107,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-134,1581,LED Headlamp - Rechargeable,Camping,2026-05-01,Monthly,65,77.73,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-135,1581,LED Headlamp - Rechargeable,Camping,2026-05-01,Weekly,15,74.28,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-136,1581,LED Headlamp - Rechargeable,Camping,2026-05-08,Weekly,15,76.94,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-137,1581,LED Headlamp - Rechargeable,Camping,2026-05-15,Weekly,15,75.92,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-138,1581,LED Headlamp - Rechargeable,Camping,2026-05-22,Weekly,15,78.0,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-139,1581,LED Headlamp - Rechargeable,Camping,2026-06-01,Monthly,71,77.73,1.0,Growing,61,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-140,1581,LED Headlamp - Rechargeable,Camping,2026-07-01,Monthly,76,77.73,1.0,Growing,61,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-141,2011,Coffee Maker,Kitchen,2026-05-01,Monthly,122,66.46,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-142,2011,Coffee Maker,Kitchen,2026-05-01,Weekly,28,67.37,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-143,2011,Coffee Maker,Kitchen,2026-05-08,Weekly,28,68.77,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-144,2011,Coffee Maker,Kitchen,2026-05-15,Weekly,28,69.52,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-145,2011,Coffee Maker,Kitchen,2026-05-22,Weekly,28,68.38,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-146,2011,Coffee Maker,Kitchen,2026-06-01,Monthly,131,66.46,1.0,Growing,113,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-147,2011,Coffee Maker,Kitchen,2026-07-01,Monthly,142,66.46,1.0,Growing,113,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-148,2012,Espresso Machine,Kitchen,2026-05-01,Monthly,68,70.83,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-149,2012,Espresso Machine,Kitchen,2026-05-01,Weekly,15,74.7,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-150,2012,Espresso Machine,Kitchen,2026-05-08,Weekly,15,69.83,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-151,2012,Espresso Machine,Kitchen,2026-05-15,Weekly,15,74.23,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-152,2012,Espresso Machine,Kitchen,2026-05-22,Weekly,15,75.22,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-153,2012,Espresso Machine,Kitchen,2026-06-01,Monthly,73,70.83,1.0,Growing,63,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-154,2012,Espresso Machine,Kitchen,2026-07-01,Monthly,79,70.83,1.0,Growing,63,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-155,2021,Chef Knife,Kitchen,2026-05-01,Monthly,108,76.54,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-156,2021,Chef Knife,Kitchen,2026-05-01,Weekly,25,72.26,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-157,2021,Chef Knife,Kitchen,2026-05-08,Weekly,25,78.0,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-158,2021,Chef Knife,Kitchen,2026-05-15,Weekly,25,72.58,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-159,2021,Chef Knife,Kitchen,2026-05-22,Weekly,25,81.32,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-160,2021,Chef Knife,Kitchen,2026-06-01,Monthly,116,76.54,1.0,Growing,100,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-161,2021,Chef Knife,Kitchen,2026-07-01,Monthly,125,76.54,1.0,Growing,100,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-162,2022,Fork Set,Kitchen,2026-05-01,Monthly,72,63.77,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-163,2022,Fork Set,Kitchen,2026-05-01,Weekly,16,67.79,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-164,2022,Fork Set,Kitchen,2026-05-08,Weekly,16,59.88,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-165,2022,Fork Set,Kitchen,2026-05-15,Weekly,16,68.11,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-166,2022,Fork Set,Kitchen,2026-05-22,Weekly,16,62.21,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-167,2022,Fork Set,Kitchen,2026-06-01,Monthly,78,63.77,1.0,Growing,67,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-168,2022,Fork Set,Kitchen,2026-07-01,Monthly,84,63.77,1.0,Growing,67,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-169,2031,Coffee Mug,Kitchen,2026-05-01,Monthly,92,72.66,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-170,2031,Coffee Mug,Kitchen,2026-05-01,Weekly,21,70.42,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-171,2031,Coffee Mug,Kitchen,2026-05-08,Weekly,21,68.74,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-172,2031,Coffee Mug,Kitchen,2026-05-15,Weekly,21,69.11,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-173,2031,Coffee Mug,Kitchen,2026-05-22,Weekly,21,74.89,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-174,2031,Coffee Mug,Kitchen,2026-06-01,Monthly,100,72.66,1.0,Growing,86,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-175,2031,Coffee Mug,Kitchen,2026-07-01,Monthly,108,72.66,1.0,Growing,86,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-176,2041,Serving Platter,Kitchen,2026-05-01,Monthly,71,73.93,1.0,Growing,66,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-177,2041,Serving Platter,Kitchen,2026-05-01,Weekly,16,75.11,1.0,Growing,66,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-178,2041,Serving Platter,Kitchen,2026-05-08,Weekly,16,70.69,1.0,Growing,66,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-179,2041,Serving Platter,Kitchen,2026-05-15,Weekly,16,69.32,1.0,Growing,66,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-180,2041,Serving Platter,Kitchen,2026-05-22,Weekly,16,71.47,1.0,Growing,66,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-181,2041,Serving Platter,Kitchen,2026-06-01,Monthly,76,73.93,1.0,Growing,66,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-182,2041,Serving Platter,Kitchen,2026-07-01,Monthly,83,73.93,1.0,Growing,66,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-183,2051,Ice Cream Bowl,Kitchen,2026-05-01,Monthly,127,75.96,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-184,2051,Ice Cream Bowl,Kitchen,2026-05-01,Weekly,29,80.62,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-185,2051,Ice Cream Bowl,Kitchen,2026-05-08,Weekly,29,71.16,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-186,2051,Ice Cream Bowl,Kitchen,2026-05-15,Weekly,29,76.76,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-187,2051,Ice Cream Bowl,Kitchen,2026-05-22,Weekly,29,73.25,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-188,2051,Ice Cream Bowl,Kitchen,2026-06-01,Monthly,137,75.96,1.0,Growing,118,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-189,2051,Ice Cream Bowl,Kitchen,2026-07-01,Monthly,148,75.96,1.0,Growing,118,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-190,2061,Mixing Bowl,Kitchen,2026-05-01,Monthly,100,70.64,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-191,2061,Mixing Bowl,Kitchen,2026-05-01,Weekly,23,71.35,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-192,2061,Mixing Bowl,Kitchen,2026-05-08,Weekly,23,71.69,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-193,2061,Mixing Bowl,Kitchen,2026-05-15,Weekly,23,68.97,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-194,2061,Mixing Bowl,Kitchen,2026-05-22,Weekly,23,70.25,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-195,2061,Mixing Bowl,Kitchen,2026-06-01,Monthly,108,70.64,1.0,Growing,93,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-196,2061,Mixing Bowl,Kitchen,2026-07-01,Monthly,117,70.64,1.0,Growing,93,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-197,2071,Baking Pan,Kitchen,2026-05-01,Monthly,122,75.93,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-198,2071,Baking Pan,Kitchen,2026-05-01,Weekly,28,74.29,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-199,2071,Baking Pan,Kitchen,2026-05-08,Weekly,28,75.3,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-200,2071,Baking Pan,Kitchen,2026-05-15,Weekly,28,79.55,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-201,2071,Baking Pan,Kitchen,2026-05-22,Weekly,28,79.7,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-202,2071,Baking Pan,Kitchen,2026-06-01,Monthly,131,75.93,1.0,Growing,113,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-203,2071,Baking Pan,Kitchen,2026-07-01,Monthly,142,75.93,1.0,Growing,113,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-204,2081,Food Storage Set,Kitchen,2026-05-01,Monthly,81,70.87,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-205,2081,Food Storage Set,Kitchen,2026-05-01,Weekly,18,73.95,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-206,2081,Food Storage Set,Kitchen,2026-05-08,Weekly,18,68.8,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-207,2081,Food Storage Set,Kitchen,2026-05-15,Weekly,18,70.37,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-208,2081,Food Storage Set,Kitchen,2026-05-22,Weekly,18,68.41,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-209,2081,Food Storage Set,Kitchen,2026-06-01,Monthly,87,70.87,1.0,Growing,75,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-210,2081,Food Storage Set,Kitchen,2026-07-01,Monthly,94,70.87,1.0,Growing,75,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-211,2091,Spatula,Kitchen,2026-05-01,Monthly,64,66.98,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-212,2091,Spatula,Kitchen,2026-05-01,Weekly,14,70.97,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-213,2091,Spatula,Kitchen,2026-05-08,Weekly,14,65.59,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-214,2091,Spatula,Kitchen,2026-05-15,Weekly,14,67.71,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-215,2091,Spatula,Kitchen,2026-05-22,Weekly,14,68.54,1.0,Growing,60,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-216,2091,Spatula,Kitchen,2026-06-01,Monthly,69,66.98,1.0,Growing,60,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-217,2091,Spatula,Kitchen,2026-07-01,Monthly,75,66.98,1.0,Growing,60,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-218,2101,Measuring Cup Set,Kitchen,2026-05-01,Monthly,81,62.69,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-219,2101,Measuring Cup Set,Kitchen,2026-05-01,Weekly,18,62.99,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-220,2101,Measuring Cup Set,Kitchen,2026-05-08,Weekly,18,64.68,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-221,2101,Measuring Cup Set,Kitchen,2026-05-15,Weekly,18,58.78,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-222,2101,Measuring Cup Set,Kitchen,2026-05-22,Weekly,18,58.99,1.0,Growing,75,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-223,2101,Measuring Cup Set,Kitchen,2026-06-01,Monthly,87,62.69,1.0,Growing,75,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-224,2101,Measuring Cup Set,Kitchen,2026-07-01,Monthly,94,62.69,1.0,Growing,75,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-225,2111,High-Speed Blender,Kitchen,2026-05-01,Monthly,95,75.73,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-226,2111,High-Speed Blender,Kitchen,2026-05-01,Weekly,22,74.82,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-227,2111,High-Speed Blender,Kitchen,2026-05-08,Weekly,22,80.0,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-228,2111,High-Speed Blender,Kitchen,2026-05-15,Weekly,22,74.99,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-229,2111,High-Speed Blender,Kitchen,2026-05-22,Weekly,22,71.62,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-230,2111,High-Speed Blender,Kitchen,2026-06-01,Monthly,102,75.73,1.0,Growing,88,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-231,2111,High-Speed Blender,Kitchen,2026-07-01,Monthly,110,75.73,1.0,Growing,88,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-232,2112,4-Slice Toaster,Kitchen,2026-05-01,Monthly,102,70.49,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-233,2112,4-Slice Toaster,Kitchen,2026-05-01,Weekly,23,69.67,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-234,2112,4-Slice Toaster,Kitchen,2026-05-08,Weekly,23,73.32,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-235,2112,4-Slice Toaster,Kitchen,2026-05-15,Weekly,23,67.0,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-236,2112,4-Slice Toaster,Kitchen,2026-05-22,Weekly,23,69.28,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-237,2112,4-Slice Toaster,Kitchen,2026-06-01,Monthly,110,70.49,1.0,Growing,95,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-238,2112,4-Slice Toaster,Kitchen,2026-07-01,Monthly,119,70.49,1.0,Growing,95,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-239,2121,Bamboo Cutting Board Set,Kitchen,2026-05-01,Monthly,122,79.87,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-240,2121,Bamboo Cutting Board Set,Kitchen,2026-05-01,Weekly,28,76.07,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-241,2121,Bamboo Cutting Board Set,Kitchen,2026-05-08,Weekly,28,78.57,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-242,2121,Bamboo Cutting Board Set,Kitchen,2026-05-15,Weekly,28,81.35,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-243,2121,Bamboo Cutting Board Set,Kitchen,2026-05-22,Weekly,28,79.37,1.0,Growing,113,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-244,2121,Bamboo Cutting Board Set,Kitchen,2026-06-01,Monthly,131,79.87,1.0,Growing,113,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-245,2121,Bamboo Cutting Board Set,Kitchen,2026-07-01,Monthly,142,79.87,1.0,Growing,113,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-246,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-01,Monthly,123,77.86,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-247,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-01,Weekly,28,80.22,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-248,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-08,Weekly,28,81.6,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-249,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-15,Weekly,28,82.45,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-250,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-22,Weekly,28,74.22,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-251,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-06-01,Monthly,132,77.86,1.0,Growing,114,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-252,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-07-01,Monthly,143,77.86,1.0,Growing,114,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-253,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-01,Monthly,109,62.7,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-254,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-01,Weekly,25,62.62,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-255,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-08,Weekly,25,66.78,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-256,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-15,Weekly,25,61.2,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-257,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-22,Weekly,25,64.58,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-258,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-06-01,Monthly,117,62.7,1.0,Growing,101,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-259,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-07-01,Monthly,127,62.7,1.0,Growing,101,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-260,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-01,Monthly,70,72.87,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-261,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-01,Weekly,16,70.71,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-262,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-08,Weekly,16,70.0,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-263,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-15,Weekly,16,74.32,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-264,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-22,Weekly,16,76.64,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-265,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-06-01,Monthly,75,72.87,1.0,Growing,65,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-266,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-07-01,Monthly,81,72.87,1.0,Growing,65,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-267,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-01,Monthly,104,63.79,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-268,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-01,Weekly,24,60.01,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-269,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-08,Weekly,24,61.43,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-270,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-15,Weekly,24,63.08,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-271,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-22,Weekly,24,58.87,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-272,3021,Nordic Classic XC Skis - 185cm,Ski,2026-06-01,Monthly,113,63.79,1.0,Growing,97,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-273,3021,Nordic Classic XC Skis - 185cm,Ski,2026-07-01,Monthly,122,63.79,1.0,Growing,97,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-274,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-01,Monthly,116,64.13,1.0,Growing,108,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-275,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-01,Weekly,26,68.07,1.0,Growing,108,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-276,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-08,Weekly,26,67.88,1.0,Growing,108,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-277,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-15,Weekly,26,60.02,1.0,Growing,108,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-278,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-22,Weekly,26,62.17,1.0,Growing,108,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-279,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-06-01,Monthly,125,64.13,1.0,Growing,108,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-280,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-07-01,Monthly,136,64.13,1.0,Growing,108,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-281,3031,Pro Flex Racing Ski Boots,Ski,2026-05-01,Monthly,117,67.79,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-282,3031,Pro Flex Racing Ski Boots,Ski,2026-05-01,Weekly,27,66.76,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-283,3031,Pro Flex Racing Ski Boots,Ski,2026-05-08,Weekly,27,67.31,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-284,3031,Pro Flex Racing Ski Boots,Ski,2026-05-15,Weekly,27,68.97,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-285,3031,Pro Flex Racing Ski Boots,Ski,2026-05-22,Weekly,27,65.86,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-286,3031,Pro Flex Racing Ski Boots,Ski,2026-06-01,Monthly,127,67.79,1.0,Growing,109,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-287,3031,Pro Flex Racing Ski Boots,Ski,2026-07-01,Monthly,137,67.79,1.0,Growing,109,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-288,3032,Comfort Fit Recreational Boots,Ski,2026-05-01,Monthly,128,79.92,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-289,3032,Comfort Fit Recreational Boots,Ski,2026-05-01,Weekly,29,74.93,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-290,3032,Comfort Fit Recreational Boots,Ski,2026-05-08,Weekly,29,79.41,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-291,3032,Comfort Fit Recreational Boots,Ski,2026-05-15,Weekly,29,83.56,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-292,3032,Comfort Fit Recreational Boots,Ski,2026-05-22,Weekly,29,77.51,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-293,3032,Comfort Fit Recreational Boots,Ski,2026-06-01,Monthly,138,79.92,1.0,Growing,119,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-294,3032,Comfort Fit Recreational Boots,Ski,2026-07-01,Monthly,149,79.92,1.0,Growing,119,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-295,3033,Women's Performance Ski Boots,Ski,2026-05-01,Monthly,70,66.23,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-296,3033,Women's Performance Ski Boots,Ski,2026-05-01,Weekly,16,64.6,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-297,3033,Women's Performance Ski Boots,Ski,2026-05-08,Weekly,16,67.61,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-298,3033,Women's Performance Ski Boots,Ski,2026-05-15,Weekly,16,68.49,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-299,3033,Women's Performance Ski Boots,Ski,2026-05-22,Weekly,16,61.32,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-300,3033,Women's Performance Ski Boots,Ski,2026-06-01,Monthly,75,66.23,1.0,Growing,65,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-301,3033,Women's Performance Ski Boots,Ski,2026-07-01,Monthly,81,66.23,1.0,Growing,65,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-302,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-01,Monthly,98,78.48,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-303,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-01,Weekly,22,82.07,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-304,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-08,Weekly,22,76.58,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-305,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-15,Weekly,22,79.89,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-306,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-22,Weekly,22,77.59,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-307,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-06-01,Monthly,106,78.48,1.0,Growing,91,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-308,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-07-01,Monthly,114,78.48,1.0,Growing,91,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-309,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-01,Monthly,85,73.37,1.0,Growing,79,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-310,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-01,Weekly,19,70.58,1.0,Growing,79,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-311,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-08,Weekly,19,75.32,1.0,Growing,79,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-312,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-15,Weekly,19,76.25,1.0,Growing,79,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-313,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-22,Weekly,19,76.9,1.0,Growing,79,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-314,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-06-01,Monthly,92,73.37,1.0,Growing,79,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-315,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-07-01,Monthly,99,73.37,1.0,Growing,79,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-316,3051,Insulated Ski Jacket - Men's,Ski,2026-05-01,Monthly,90,67.83,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-317,3051,Insulated Ski Jacket - Men's,Ski,2026-05-01,Weekly,20,69.46,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-318,3051,Insulated Ski Jacket - Men's,Ski,2026-05-08,Weekly,20,70.67,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-319,3051,Insulated Ski Jacket - Men's,Ski,2026-05-15,Weekly,20,69.41,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-320,3051,Insulated Ski Jacket - Men's,Ski,2026-05-22,Weekly,20,65.99,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-321,3051,Insulated Ski Jacket - Men's,Ski,2026-06-01,Monthly,97,67.83,1.0,Growing,84,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-322,3051,Insulated Ski Jacket - Men's,Ski,2026-07-01,Monthly,105,67.83,1.0,Growing,84,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-323,3052,Thermal Base Layer Set - Women's,Ski,2026-05-01,Monthly,66,78.51,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-324,3052,Thermal Base Layer Set - Women's,Ski,2026-05-01,Weekly,15,83.16,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-325,3052,Thermal Base Layer Set - Women's,Ski,2026-05-08,Weekly,15,77.6,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-326,3052,Thermal Base Layer Set - Women's,Ski,2026-05-15,Weekly,15,74.35,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-327,3052,Thermal Base Layer Set - Women's,Ski,2026-05-22,Weekly,15,78.17,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-328,3052,Thermal Base Layer Set - Women's,Ski,2026-06-01,Monthly,72,78.51,1.0,Growing,62,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-329,3052,Thermal Base Layer Set - Women's,Ski,2026-07-01,Monthly,78,78.51,1.0,Growing,62,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-330,3053,Waterproof Ski Pants,Ski,2026-05-01,Monthly,72,71.71,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-331,3053,Waterproof Ski Pants,Ski,2026-05-01,Weekly,16,67.03,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-332,3053,Waterproof Ski Pants,Ski,2026-05-08,Weekly,16,75.33,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-333,3053,Waterproof Ski Pants,Ski,2026-05-15,Weekly,16,66.74,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-334,3053,Waterproof Ski Pants,Ski,2026-05-22,Weekly,16,69.6,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-335,3053,Waterproof Ski Pants,Ski,2026-06-01,Monthly,78,71.71,1.0,Growing,67,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-336,3053,Waterproof Ski Pants,Ski,2026-07-01,Monthly,84,71.71,1.0,Growing,67,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-337,3061,Professional Ski Helmet,Ski,2026-05-01,Monthly,88,74.6,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-338,3061,Professional Ski Helmet,Ski,2026-05-01,Weekly,20,73.76,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-339,3061,Professional Ski Helmet,Ski,2026-05-08,Weekly,20,78.45,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-340,3061,Professional Ski Helmet,Ski,2026-05-15,Weekly,20,71.32,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-341,3061,Professional Ski Helmet,Ski,2026-05-22,Weekly,20,73.55,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-342,3061,Professional Ski Helmet,Ski,2026-06-01,Monthly,95,74.6,1.0,Growing,82,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-343,3061,Professional Ski Helmet,Ski,2026-07-01,Monthly,103,74.6,1.0,Growing,82,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-344,3062,Anti-Fog Ski Goggles,Ski,2026-05-01,Monthly,104,74.71,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-345,3062,Anti-Fog Ski Goggles,Ski,2026-05-01,Weekly,24,75.75,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-346,3062,Anti-Fog Ski Goggles,Ski,2026-05-08,Weekly,24,75.41,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-347,3062,Anti-Fog Ski Goggles,Ski,2026-05-15,Weekly,24,75.61,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-348,3062,Anti-Fog Ski Goggles,Ski,2026-05-22,Weekly,24,74.12,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-349,3062,Anti-Fog Ski Goggles,Ski,2026-06-01,Monthly,113,74.71,1.0,Growing,97,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-350,3062,Anti-Fog Ski Goggles,Ski,2026-07-01,Monthly,122,74.71,1.0,Growing,97,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-351,3071,Ski Boot Bag - Premium,Ski,2026-05-01,Monthly,66,67.49,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-352,3071,Ski Boot Bag - Premium,Ski,2026-05-01,Weekly,15,71.46,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-353,3071,Ski Boot Bag - Premium,Ski,2026-05-08,Weekly,15,68.47,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-354,3071,Ski Boot Bag - Premium,Ski,2026-05-15,Weekly,15,67.7,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-355,3071,Ski Boot Bag - Premium,Ski,2026-05-22,Weekly,15,65.24,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-356,3071,Ski Boot Bag - Premium,Ski,2026-06-01,Monthly,72,67.49,1.0,Growing,62,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-357,3071,Ski Boot Bag - Premium,Ski,2026-07-01,Monthly,78,67.49,1.0,Growing,62,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-358,3072,Hand Warmers - 10 Pack,Ski,2026-05-01,Monthly,113,79.07,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-359,3072,Hand Warmers - 10 Pack,Ski,2026-05-01,Weekly,26,82.04,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-360,3072,Hand Warmers - 10 Pack,Ski,2026-05-08,Weekly,26,75.07,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-361,3072,Hand Warmers - 10 Pack,Ski,2026-05-15,Weekly,26,76.73,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-362,3072,Hand Warmers - 10 Pack,Ski,2026-05-22,Weekly,26,81.79,1.0,Growing,105,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-363,3072,Hand Warmers - 10 Pack,Ski,2026-06-01,Monthly,122,79.07,1.0,Growing,105,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-364,3072,Hand Warmers - 10 Pack,Ski,2026-07-01,Monthly,132,79.07,1.0,Growing,105,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-365,3081,All-Temp Ski Wax Kit,Ski,2026-05-01,Monthly,117,62.84,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-366,3081,All-Temp Ski Wax Kit,Ski,2026-05-01,Weekly,27,64.03,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-367,3081,All-Temp Ski Wax Kit,Ski,2026-05-08,Weekly,27,63.17,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-368,3081,All-Temp Ski Wax Kit,Ski,2026-05-15,Weekly,27,60.46,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-369,3081,All-Temp Ski Wax Kit,Ski,2026-05-22,Weekly,27,66.53,1.0,Growing,109,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-370,3081,All-Temp Ski Wax Kit,Ski,2026-06-01,Monthly,127,62.84,1.0,Growing,109,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-371,3081,All-Temp Ski Wax Kit,Ski,2026-07-01,Monthly,137,62.84,1.0,Growing,109,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-372,3082,Edge Tuning Tool Set,Ski,2026-05-01,Monthly,103,79.3,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-373,3082,Edge Tuning Tool Set,Ski,2026-05-01,Weekly,23,81.39,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-374,3082,Edge Tuning Tool Set,Ski,2026-05-08,Weekly,23,74.45,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-375,3082,Edge Tuning Tool Set,Ski,2026-05-15,Weekly,23,80.98,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-376,3082,Edge Tuning Tool Set,Ski,2026-05-22,Weekly,23,77.13,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-377,3082,Edge Tuning Tool Set,Ski,2026-06-01,Monthly,111,79.3,1.0,Growing,96,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-378,3082,Edge Tuning Tool Set,Ski,2026-07-01,Monthly,120,79.3,1.0,Growing,96,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-379,3091,Freestyle Snowboard - 155cm,Ski,2026-05-01,Monthly,69,79.29,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-380,3091,Freestyle Snowboard - 155cm,Ski,2026-05-01,Weekly,16,83.48,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-381,3091,Freestyle Snowboard - 155cm,Ski,2026-05-08,Weekly,16,77.93,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-382,3091,Freestyle Snowboard - 155cm,Ski,2026-05-15,Weekly,16,75.05,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-383,3091,Freestyle Snowboard - 155cm,Ski,2026-05-22,Weekly,16,74.31,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-384,3091,Freestyle Snowboard - 155cm,Ski,2026-06-01,Monthly,74,79.29,1.0,Growing,64,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-385,3091,Freestyle Snowboard - 155cm,Ski,2026-07-01,Monthly,80,79.29,1.0,Growing,64,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-386,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-01,Monthly,98,60.28,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-387,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-01,Weekly,22,62.67,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-388,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-08,Weekly,22,61.11,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-389,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-15,Weekly,22,63.44,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-390,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-22,Weekly,22,64.15,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-391,3092,All-Mountain Snowboard - 158cm,Ski,2026-06-01,Monthly,106,60.28,1.0,Growing,91,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-392,3092,All-Mountain Snowboard - 158cm,Ski,2026-07-01,Monthly,114,60.28,1.0,Growing,91,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-393,3101,Winter Boots - Insulated,Ski,2026-05-01,Monthly,127,65.17,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-394,3101,Winter Boots - Insulated,Ski,2026-05-01,Weekly,29,62.76,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-395,3101,Winter Boots - Insulated,Ski,2026-05-08,Weekly,29,62.28,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-396,3101,Winter Boots - Insulated,Ski,2026-05-15,Weekly,29,67.01,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-397,3101,Winter Boots - Insulated,Ski,2026-05-22,Weekly,29,67.09,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-398,3101,Winter Boots - Insulated,Ski,2026-06-01,Monthly,137,65.17,1.0,Growing,118,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-399,3101,Winter Boots - Insulated,Ski,2026-07-01,Monthly,148,65.17,1.0,Growing,118,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-400,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-01,Monthly,87,65.95,1.0,Growing,81,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-401,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-01,Weekly,20,63.09,1.0,Growing,81,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-402,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-08,Weekly,20,68.26,1.0,Growing,81,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-403,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-15,Weekly,20,62.17,1.0,Growing,81,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-404,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-22,Weekly,20,64.81,1.0,Growing,81,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-405,3102,Winter Hiking Boots - Waterproof,Ski,2026-06-01,Monthly,94,65.95,1.0,Growing,81,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-406,3102,Winter Hiking Boots - Waterproof,Ski,2026-07-01,Monthly,102,65.95,1.0,Growing,81,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-407,3103,Snowboard Bindings - Pro,Ski,2026-05-01,Monthly,84,67.32,1.0,Growing,78,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-408,3103,Snowboard Bindings - Pro,Ski,2026-05-01,Weekly,19,69.11,1.0,Growing,78,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-409,3103,Snowboard Bindings - Pro,Ski,2026-05-08,Weekly,19,71.31,1.0,Growing,78,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-410,3103,Snowboard Bindings - Pro,Ski,2026-05-15,Weekly,19,63.69,1.0,Growing,78,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-411,3103,Snowboard Bindings - Pro,Ski,2026-05-22,Weekly,19,69.86,1.0,Growing,78,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-412,3103,Snowboard Bindings - Pro,Ski,2026-06-01,Monthly,90,67.32,1.0,Growing,78,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-413,3103,Snowboard Bindings - Pro,Ski,2026-07-01,Monthly,98,67.32,1.0,Growing,78,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-414,3104,Ski Tuning Bench - Portable,Ski,2026-05-01,Monthly,75,60.93,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-415,3104,Ski Tuning Bench - Portable,Ski,2026-05-01,Weekly,17,55.97,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-416,3104,Ski Tuning Bench - Portable,Ski,2026-05-08,Weekly,17,60.53,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-417,3104,Ski Tuning Bench - Portable,Ski,2026-05-15,Weekly,17,64.07,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-418,3104,Ski Tuning Bench - Portable,Ski,2026-05-22,Weekly,17,61.32,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-16 12:45:03
-419,3104,Ski Tuning Bench - Portable,Ski,2026-06-01,Monthly,81,60.93,1.0,Growing,70,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
-420,3104,Ski Tuning Bench - Portable,Ski,2026-07-01,Monthly,88,60.93,1.0,Growing,70,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-16 12:45:03
+1,1521,Adventurer Pro Backpack,Camping,2026-05-01,Monthly,69,77.58,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+2,1521,Adventurer Pro Backpack,Camping,2026-05-01,Weekly,16,77.43,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+3,1521,Adventurer Pro Backpack,Camping,2026-05-08,Weekly,16,79.48,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+4,1521,Adventurer Pro Backpack,Camping,2026-05-15,Weekly,16,80.23,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+5,1521,Adventurer Pro Backpack,Camping,2026-05-22,Weekly,16,78.09,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+6,1521,Adventurer Pro Backpack,Camping,2026-06-01,Monthly,74,77.58,1.0,Growing,64,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+7,1521,Adventurer Pro Backpack,Camping,2026-07-01,Monthly,80,77.58,1.0,Growing,64,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+8,1531,Summit Breeze Jacket,Camping,2026-05-01,Monthly,90,74.61,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+9,1531,Summit Breeze Jacket,Camping,2026-05-01,Weekly,20,76.78,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-10 00:00:00
+10,1531,Summit Breeze Jacket,Camping,2026-05-08,Weekly,20,73.39,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+11,1531,Summit Breeze Jacket,Camping,2026-05-15,Weekly,20,77.9,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+12,1531,Summit Breeze Jacket,Camping,2026-05-22,Weekly,20,74.17,1.0,Growing,84,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+13,1531,Summit Breeze Jacket,Camping,2026-06-01,Monthly,97,74.61,1.0,Growing,84,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+14,1531,Summit Breeze Jacket,Camping,2026-07-01,Monthly,105,74.61,1.0,Growing,84,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+15,1541,TrekReady Hiking Boots,Camping,2026-05-01,Monthly,82,77.46,1.0,Growing,76,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+16,1541,TrekReady Hiking Boots,Camping,2026-05-01,Weekly,19,76.44,1.0,Growing,76,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+17,1541,TrekReady Hiking Boots,Camping,2026-05-08,Weekly,19,82.12,1.0,Growing,76,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+18,1541,TrekReady Hiking Boots,Camping,2026-05-15,Weekly,19,74.83,1.0,Growing,76,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+19,1541,TrekReady Hiking Boots,Camping,2026-05-22,Weekly,19,74.78,1.0,Growing,76,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+20,1541,TrekReady Hiking Boots,Camping,2026-06-01,Monthly,88,77.46,1.0,Growing,76,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+21,1541,TrekReady Hiking Boots,Camping,2026-07-01,Monthly,95,77.46,1.0,Growing,76,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+22,1551,BaseCamp Folding Table,Camping,2026-05-01,Monthly,108,60.07,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+23,1551,BaseCamp Folding Table,Camping,2026-05-01,Weekly,25,59.51,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+24,1551,BaseCamp Folding Table,Camping,2026-05-08,Weekly,25,63.51,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-03 00:00:00
+25,1551,BaseCamp Folding Table,Camping,2026-05-15,Weekly,25,55.08,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+26,1551,BaseCamp Folding Table,Camping,2026-05-22,Weekly,25,55.95,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+27,1551,BaseCamp Folding Table,Camping,2026-06-01,Monthly,116,60.07,1.0,Growing,100,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+28,1551,BaseCamp Folding Table,Camping,2026-07-01,Monthly,125,60.07,1.0,Growing,100,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+29,1561,EcoFire Camping Stove,Camping,2026-05-01,Monthly,128,62.03,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-03 00:00:00
+30,1561,EcoFire Camping Stove,Camping,2026-05-01,Weekly,29,59.3,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+31,1561,EcoFire Camping Stove,Camping,2026-05-08,Weekly,29,65.74,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+32,1561,EcoFire Camping Stove,Camping,2026-05-15,Weekly,29,65.5,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+33,1561,EcoFire Camping Stove,Camping,2026-05-22,Weekly,29,61.55,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+34,1561,EcoFire Camping Stove,Camping,2026-06-01,Monthly,138,62.03,1.0,Growing,119,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+35,1561,EcoFire Camping Stove,Camping,2026-07-01,Monthly,149,62.03,1.0,Growing,119,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-19 00:00:00
+36,1571,CozyNights Sleeping Bag,Camping,2026-05-01,Monthly,108,63.39,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-15 00:00:00
+37,1571,CozyNights Sleeping Bag,Camping,2026-05-01,Weekly,25,67.25,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+38,1571,CozyNights Sleeping Bag,Camping,2026-05-08,Weekly,25,65.94,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+39,1571,CozyNights Sleeping Bag,Camping,2026-05-15,Weekly,25,65.73,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+40,1571,CozyNights Sleeping Bag,Camping,2026-05-22,Weekly,25,61.26,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+41,1571,CozyNights Sleeping Bag,Camping,2026-06-01,Monthly,116,63.39,1.0,Growing,100,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+42,1571,CozyNights Sleeping Bag,Camping,2026-07-01,Monthly,125,63.39,1.0,Growing,100,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+43,1511,Alpine Explorer Tent,Camping,2026-05-01,Monthly,88,74.17,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+44,1511,Alpine Explorer Tent,Camping,2026-05-01,Weekly,20,77.88,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+45,1511,Alpine Explorer Tent,Camping,2026-05-08,Weekly,20,76.14,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+46,1511,Alpine Explorer Tent,Camping,2026-05-15,Weekly,20,75.35,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+47,1511,Alpine Explorer Tent,Camping,2026-05-22,Weekly,20,69.63,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+48,1511,Alpine Explorer Tent,Camping,2026-06-01,Monthly,95,74.17,1.0,Growing,82,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+49,1511,Alpine Explorer Tent,Camping,2026-07-01,Monthly,103,74.17,1.0,Growing,82,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+50,1522,SummitClimber Backpack,Camping,2026-05-01,Monthly,77,67.13,1.0,Growing,72,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+51,1522,SummitClimber Backpack,Camping,2026-05-01,Weekly,17,62.74,1.0,Growing,72,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+52,1522,SummitClimber Backpack,Camping,2026-05-08,Weekly,17,64.81,1.0,Growing,72,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+53,1522,SummitClimber Backpack,Camping,2026-05-15,Weekly,17,62.71,1.0,Growing,72,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+54,1522,SummitClimber Backpack,Camping,2026-05-22,Weekly,17,64.15,1.0,Growing,72,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+55,1522,SummitClimber Backpack,Camping,2026-06-01,Monthly,83,67.13,1.0,Growing,72,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+56,1522,SummitClimber Backpack,Camping,2026-07-01,Monthly,90,67.13,1.0,Growing,72,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+57,1532,TrailBlaze Hiking Pants,Camping,2026-05-01,Monthly,104,76.53,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+58,1532,TrailBlaze Hiking Pants,Camping,2026-05-01,Weekly,24,77.33,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+59,1532,TrailBlaze Hiking Pants,Camping,2026-05-08,Weekly,24,75.54,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+60,1532,TrailBlaze Hiking Pants,Camping,2026-05-15,Weekly,24,80.22,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+61,1532,TrailBlaze Hiking Pants,Camping,2026-05-22,Weekly,24,77.02,1.0,Growing,97,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+62,1532,TrailBlaze Hiking Pants,Camping,2026-06-01,Monthly,113,76.53,1.0,Growing,97,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-18 00:00:00
+63,1532,TrailBlaze Hiking Pants,Camping,2026-07-01,Monthly,122,76.53,1.0,Growing,97,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+64,1542,TrailWalker Hiking Shoes,Camping,2026-05-01,Monthly,105,66.96,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-10 00:00:00
+65,1542,TrailWalker Hiking Shoes,Camping,2026-05-01,Weekly,24,68.93,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+66,1542,TrailWalker Hiking Shoes,Camping,2026-05-08,Weekly,24,66.11,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+67,1542,TrailWalker Hiking Shoes,Camping,2026-05-15,Weekly,24,68.56,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-17 00:00:00
+68,1542,TrailWalker Hiking Shoes,Camping,2026-05-22,Weekly,24,69.6,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+69,1542,TrailWalker Hiking Shoes,Camping,2026-06-01,Monthly,114,66.96,1.0,Growing,98,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+70,1542,TrailWalker Hiking Shoes,Camping,2026-07-01,Monthly,123,66.96,1.0,Growing,98,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-08 00:00:00
+71,1552,TrekMaster Camping Chair,Camping,2026-05-01,Monthly,103,60.01,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+72,1552,TrekMaster Camping Chair,Camping,2026-05-01,Weekly,23,61.24,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+73,1552,TrekMaster Camping Chair,Camping,2026-05-08,Weekly,23,58.5,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+74,1552,TrekMaster Camping Chair,Camping,2026-05-15,Weekly,23,56.38,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+75,1552,TrekMaster Camping Chair,Camping,2026-05-22,Weekly,23,64.95,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+76,1552,TrekMaster Camping Chair,Camping,2026-06-01,Monthly,111,60.01,1.0,Growing,96,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+77,1552,TrekMaster Camping Chair,Camping,2026-07-01,Monthly,120,60.01,1.0,Growing,96,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+78,1562,PowerBurner Camping Stove,Camping,2026-05-01,Monthly,75,60.06,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+79,1562,PowerBurner Camping Stove,Camping,2026-05-01,Weekly,17,58.61,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+80,1562,PowerBurner Camping Stove,Camping,2026-05-08,Weekly,17,58.53,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+81,1562,PowerBurner Camping Stove,Camping,2026-05-15,Weekly,17,61.13,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+82,1562,PowerBurner Camping Stove,Camping,2026-05-22,Weekly,17,59.81,1.0,Growing,70,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+83,1562,PowerBurner Camping Stove,Camping,2026-06-01,Monthly,81,60.06,1.0,Growing,70,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+84,1562,PowerBurner Camping Stove,Camping,2026-07-01,Monthly,88,60.06,1.0,Growing,70,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+85,1572,MountainDream Sleeping Bag,Camping,2026-05-01,Monthly,100,74.39,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+86,1572,MountainDream Sleeping Bag,Camping,2026-05-01,Weekly,23,71.29,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+87,1572,MountainDream Sleeping Bag,Camping,2026-05-08,Weekly,23,71.38,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+88,1572,MountainDream Sleeping Bag,Camping,2026-05-15,Weekly,23,77.03,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+89,1572,MountainDream Sleeping Bag,Camping,2026-05-22,Weekly,23,75.81,1.0,Growing,93,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+90,1572,MountainDream Sleeping Bag,Camping,2026-06-01,Monthly,108,74.39,1.0,Growing,93,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+91,1572,MountainDream Sleeping Bag,Camping,2026-07-01,Monthly,117,74.39,1.0,Growing,93,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-18 00:00:00
+92,1512,SkyView 2-Person Tent,Camping,2026-05-01,Monthly,105,77.84,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+93,1512,SkyView 2-Person Tent,Camping,2026-05-01,Weekly,24,79.83,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+94,1512,SkyView 2-Person Tent,Camping,2026-05-08,Weekly,24,81.81,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+95,1512,SkyView 2-Person Tent,Camping,2026-05-15,Weekly,24,76.43,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+96,1512,SkyView 2-Person Tent,Camping,2026-05-22,Weekly,24,82.06,1.0,Growing,98,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+97,1512,SkyView 2-Person Tent,Camping,2026-06-01,Monthly,114,77.84,1.0,Growing,98,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+98,1512,SkyView 2-Person Tent,Camping,2026-07-01,Monthly,123,77.84,1.0,Growing,98,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+99,1523,TrailLite Daypack,Camping,2026-05-01,Monthly,86,62.28,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+100,1523,TrailLite Daypack,Camping,2026-05-01,Weekly,20,66.4,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-12 00:00:00
+101,1523,TrailLite Daypack,Camping,2026-05-08,Weekly,20,65.48,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-31 00:00:00
+102,1523,TrailLite Daypack,Camping,2026-05-15,Weekly,20,62.74,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+103,1523,TrailLite Daypack,Camping,2026-05-22,Weekly,20,67.06,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+104,1523,TrailLite Daypack,Camping,2026-06-01,Monthly,93,62.28,1.0,Growing,80,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+105,1523,TrailLite Daypack,Camping,2026-07-01,Monthly,100,62.28,1.0,Growing,80,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+106,1533,RainGuard Hiking Jacket,Camping,2026-05-01,Monthly,119,71.7,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+107,1533,RainGuard Hiking Jacket,Camping,2026-05-01,Weekly,27,70.59,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+108,1533,RainGuard Hiking Jacket,Camping,2026-05-08,Weekly,27,72.37,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+109,1533,RainGuard Hiking Jacket,Camping,2026-05-15,Weekly,27,74.04,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-31 00:00:00
+110,1533,RainGuard Hiking Jacket,Camping,2026-05-22,Weekly,27,70.98,1.0,Growing,111,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+111,1533,RainGuard Hiking Jacket,Camping,2026-06-01,Monthly,129,71.7,1.0,Growing,111,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+112,1533,RainGuard Hiking Jacket,Camping,2026-07-01,Monthly,139,71.7,1.0,Growing,111,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+113,1543,TrekStar Hiking Sandals,Camping,2026-05-01,Monthly,129,64.18,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+114,1543,TrekStar Hiking Sandals,Camping,2026-05-01,Weekly,30,61.0,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+115,1543,TrekStar Hiking Sandals,Camping,2026-05-08,Weekly,30,64.79,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+116,1543,TrekStar Hiking Sandals,Camping,2026-05-15,Weekly,30,63.35,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-27 00:00:00
+117,1543,TrekStar Hiking Sandals,Camping,2026-05-22,Weekly,30,62.85,1.0,Growing,120,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+118,1543,TrekStar Hiking Sandals,Camping,2026-06-01,Monthly,139,64.18,1.0,Growing,120,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+119,1543,TrekStar Hiking Sandals,Camping,2026-07-01,Monthly,151,64.18,1.0,Growing,120,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-24 00:00:00
+120,1553,Adventure Dining Table,Camping,2026-05-01,Monthly,69,61.58,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-18 00:00:00
+121,1553,Adventure Dining Table,Camping,2026-05-01,Weekly,16,60.5,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+122,1553,Adventure Dining Table,Camping,2026-05-08,Weekly,16,60.21,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+123,1553,Adventure Dining Table,Camping,2026-05-15,Weekly,16,60.38,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+124,1553,Adventure Dining Table,Camping,2026-05-22,Weekly,16,65.84,1.0,Growing,64,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+125,1553,Adventure Dining Table,Camping,2026-06-01,Monthly,74,61.58,1.0,Growing,64,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+126,1553,Adventure Dining Table,Camping,2026-07-01,Monthly,80,61.58,1.0,Growing,64,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+127,1563,CompactCook Camping Stove,Camping,2026-05-01,Monthly,68,60.47,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+128,1563,CompactCook Camping Stove,Camping,2026-05-01,Weekly,15,58.34,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+129,1563,CompactCook Camping Stove,Camping,2026-05-08,Weekly,15,58.52,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+130,1563,CompactCook Camping Stove,Camping,2026-05-15,Weekly,15,58.64,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+131,1563,CompactCook Camping Stove,Camping,2026-05-22,Weekly,15,64.91,1.0,Growing,63,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-10 00:00:00
+132,1563,CompactCook Camping Stove,Camping,2026-06-01,Monthly,73,60.47,1.0,Growing,63,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+133,1563,CompactCook Camping Stove,Camping,2026-07-01,Monthly,79,60.47,1.0,Growing,63,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+134,1581,LED Headlamp - Rechargeable,Camping,2026-05-01,Monthly,112,61.57,1.0,Growing,104,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-28 00:00:00
+135,1581,LED Headlamp - Rechargeable,Camping,2026-05-01,Weekly,26,66.44,1.0,Growing,104,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+136,1581,LED Headlamp - Rechargeable,Camping,2026-05-08,Weekly,26,58.37,1.0,Growing,104,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+137,1581,LED Headlamp - Rechargeable,Camping,2026-05-15,Weekly,26,62.38,1.0,Growing,104,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+138,1581,LED Headlamp - Rechargeable,Camping,2026-05-22,Weekly,26,65.28,1.0,Growing,104,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+139,1581,LED Headlamp - Rechargeable,Camping,2026-06-01,Monthly,121,61.57,1.0,Growing,104,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+140,1581,LED Headlamp - Rechargeable,Camping,2026-07-01,Monthly,131,61.57,1.0,Growing,104,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+141,2011,Coffee Maker,Kitchen,2026-05-01,Monthly,66,66.49,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+142,2011,Coffee Maker,Kitchen,2026-05-01,Weekly,15,66.69,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+143,2011,Coffee Maker,Kitchen,2026-05-08,Weekly,15,63.11,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+144,2011,Coffee Maker,Kitchen,2026-05-15,Weekly,15,62.01,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+145,2011,Coffee Maker,Kitchen,2026-05-22,Weekly,15,70.25,1.0,Growing,62,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+146,2011,Coffee Maker,Kitchen,2026-06-01,Monthly,72,66.49,1.0,Growing,62,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+147,2011,Coffee Maker,Kitchen,2026-07-01,Monthly,78,66.49,1.0,Growing,62,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+148,2012,Espresso Machine,Kitchen,2026-05-01,Monthly,115,61.71,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+149,2012,Espresso Machine,Kitchen,2026-05-01,Weekly,26,59.78,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+150,2012,Espresso Machine,Kitchen,2026-05-08,Weekly,26,65.66,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+151,2012,Espresso Machine,Kitchen,2026-05-15,Weekly,26,65.95,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+152,2012,Espresso Machine,Kitchen,2026-05-22,Weekly,26,64.41,1.0,Growing,107,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+153,2012,Espresso Machine,Kitchen,2026-06-01,Monthly,124,61.71,1.0,Growing,107,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+154,2012,Espresso Machine,Kitchen,2026-07-01,Monthly,134,61.71,1.0,Growing,107,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+155,2021,Chef Knife,Kitchen,2026-05-01,Monthly,127,78.63,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+156,2021,Chef Knife,Kitchen,2026-05-01,Weekly,29,81.12,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+157,2021,Chef Knife,Kitchen,2026-05-08,Weekly,29,76.39,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+158,2021,Chef Knife,Kitchen,2026-05-15,Weekly,29,74.91,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-18 00:00:00
+159,2021,Chef Knife,Kitchen,2026-05-22,Weekly,29,79.39,1.0,Growing,118,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+160,2021,Chef Knife,Kitchen,2026-06-01,Monthly,137,78.63,1.0,Growing,118,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+161,2021,Chef Knife,Kitchen,2026-07-01,Monthly,148,78.63,1.0,Growing,118,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-16 00:00:00
+162,2022,Fork Set,Kitchen,2026-05-01,Monthly,123,79.27,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+163,2022,Fork Set,Kitchen,2026-05-01,Weekly,28,78.45,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+164,2022,Fork Set,Kitchen,2026-05-08,Weekly,28,78.75,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+165,2022,Fork Set,Kitchen,2026-05-15,Weekly,28,83.4,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+166,2022,Fork Set,Kitchen,2026-05-22,Weekly,28,75.12,1.0,Growing,114,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+167,2022,Fork Set,Kitchen,2026-06-01,Monthly,132,79.27,1.0,Growing,114,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+168,2022,Fork Set,Kitchen,2026-07-01,Monthly,143,79.27,1.0,Growing,114,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+169,2031,Coffee Mug,Kitchen,2026-05-01,Monthly,103,66.26,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-10 00:00:00
+170,2031,Coffee Mug,Kitchen,2026-05-01,Weekly,23,69.29,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+171,2031,Coffee Mug,Kitchen,2026-05-08,Weekly,23,63.32,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+172,2031,Coffee Mug,Kitchen,2026-05-15,Weekly,23,69.27,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+173,2031,Coffee Mug,Kitchen,2026-05-22,Weekly,23,64.43,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+174,2031,Coffee Mug,Kitchen,2026-06-01,Monthly,111,66.26,1.0,Growing,96,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+175,2031,Coffee Mug,Kitchen,2026-07-01,Monthly,120,66.26,1.0,Growing,96,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+176,2041,Serving Platter,Kitchen,2026-05-01,Monthly,109,74.35,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+177,2041,Serving Platter,Kitchen,2026-05-01,Weekly,25,75.94,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+178,2041,Serving Platter,Kitchen,2026-05-08,Weekly,25,75.04,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+179,2041,Serving Platter,Kitchen,2026-05-15,Weekly,25,71.22,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+180,2041,Serving Platter,Kitchen,2026-05-22,Weekly,25,76.48,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+181,2041,Serving Platter,Kitchen,2026-06-01,Monthly,117,74.35,1.0,Growing,101,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+182,2041,Serving Platter,Kitchen,2026-07-01,Monthly,127,74.35,1.0,Growing,101,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-22 00:00:00
+183,2051,Ice Cream Bowl,Kitchen,2026-05-01,Monthly,86,62.5,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+184,2051,Ice Cream Bowl,Kitchen,2026-05-01,Weekly,20,64.23,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+185,2051,Ice Cream Bowl,Kitchen,2026-05-08,Weekly,20,65.1,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+186,2051,Ice Cream Bowl,Kitchen,2026-05-15,Weekly,20,67.28,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-03 00:00:00
+187,2051,Ice Cream Bowl,Kitchen,2026-05-22,Weekly,20,62.22,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+188,2051,Ice Cream Bowl,Kitchen,2026-06-01,Monthly,93,62.5,1.0,Growing,80,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-05 00:00:00
+189,2051,Ice Cream Bowl,Kitchen,2026-07-01,Monthly,100,62.5,1.0,Growing,80,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+190,2061,Mixing Bowl,Kitchen,2026-05-01,Monthly,92,70.41,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-13 00:00:00
+191,2061,Mixing Bowl,Kitchen,2026-05-01,Weekly,21,66.49,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+192,2061,Mixing Bowl,Kitchen,2026-05-08,Weekly,21,73.0,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+193,2061,Mixing Bowl,Kitchen,2026-05-15,Weekly,21,73.92,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+194,2061,Mixing Bowl,Kitchen,2026-05-22,Weekly,21,65.92,1.0,Growing,86,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+195,2061,Mixing Bowl,Kitchen,2026-06-01,Monthly,100,70.41,1.0,Growing,86,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-16 00:00:00
+196,2061,Mixing Bowl,Kitchen,2026-07-01,Monthly,108,70.41,1.0,Growing,86,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+197,2071,Baking Pan,Kitchen,2026-05-01,Monthly,108,69.99,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+198,2071,Baking Pan,Kitchen,2026-05-01,Weekly,25,66.09,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+199,2071,Baking Pan,Kitchen,2026-05-08,Weekly,25,74.79,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+200,2071,Baking Pan,Kitchen,2026-05-15,Weekly,25,73.2,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-12 00:00:00
+201,2071,Baking Pan,Kitchen,2026-05-22,Weekly,25,70.39,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+202,2071,Baking Pan,Kitchen,2026-06-01,Monthly,116,69.99,1.0,Growing,100,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+203,2071,Baking Pan,Kitchen,2026-07-01,Monthly,125,69.99,1.0,Growing,100,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+204,2081,Food Storage Set,Kitchen,2026-05-01,Monthly,65,65.9,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+205,2081,Food Storage Set,Kitchen,2026-05-01,Weekly,15,67.82,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+206,2081,Food Storage Set,Kitchen,2026-05-08,Weekly,15,62.3,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+207,2081,Food Storage Set,Kitchen,2026-05-15,Weekly,15,67.41,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+208,2081,Food Storage Set,Kitchen,2026-05-22,Weekly,15,62.88,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+209,2081,Food Storage Set,Kitchen,2026-06-01,Monthly,71,65.9,1.0,Growing,61,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+210,2081,Food Storage Set,Kitchen,2026-07-01,Monthly,76,65.9,1.0,Growing,61,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+211,2091,Spatula,Kitchen,2026-05-01,Monthly,79,72.95,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+212,2091,Spatula,Kitchen,2026-05-01,Weekly,18,77.3,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+213,2091,Spatula,Kitchen,2026-05-08,Weekly,18,74.03,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+214,2091,Spatula,Kitchen,2026-05-15,Weekly,18,70.05,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+215,2091,Spatula,Kitchen,2026-05-22,Weekly,18,69.84,1.0,Growing,74,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+216,2091,Spatula,Kitchen,2026-06-01,Monthly,86,72.95,1.0,Growing,74,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+217,2091,Spatula,Kitchen,2026-07-01,Monthly,93,72.95,1.0,Growing,74,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+218,2101,Measuring Cup Set,Kitchen,2026-05-01,Monthly,96,75.24,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+219,2101,Measuring Cup Set,Kitchen,2026-05-01,Weekly,22,75.75,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+220,2101,Measuring Cup Set,Kitchen,2026-05-08,Weekly,22,76.13,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-17 00:00:00
+221,2101,Measuring Cup Set,Kitchen,2026-05-15,Weekly,22,79.72,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+222,2101,Measuring Cup Set,Kitchen,2026-05-22,Weekly,22,71.41,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-03 00:00:00
+223,2101,Measuring Cup Set,Kitchen,2026-06-01,Monthly,103,75.24,1.0,Growing,89,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-22 00:00:00
+224,2101,Measuring Cup Set,Kitchen,2026-07-01,Monthly,112,75.24,1.0,Growing,89,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-10 00:00:00
+225,2111,High-Speed Blender,Kitchen,2026-05-01,Monthly,70,64.35,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+226,2111,High-Speed Blender,Kitchen,2026-05-01,Weekly,16,66.39,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+227,2111,High-Speed Blender,Kitchen,2026-05-08,Weekly,16,68.16,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+228,2111,High-Speed Blender,Kitchen,2026-05-15,Weekly,16,62.21,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+229,2111,High-Speed Blender,Kitchen,2026-05-22,Weekly,16,62.31,1.0,Growing,65,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-31 00:00:00
+230,2111,High-Speed Blender,Kitchen,2026-06-01,Monthly,75,64.35,1.0,Growing,65,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-28 00:00:00
+231,2111,High-Speed Blender,Kitchen,2026-07-01,Monthly,81,64.35,1.0,Growing,65,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-03 00:00:00
+232,2112,4-Slice Toaster,Kitchen,2026-05-01,Monthly,86,78.68,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+233,2112,4-Slice Toaster,Kitchen,2026-05-01,Weekly,20,83.27,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+234,2112,4-Slice Toaster,Kitchen,2026-05-08,Weekly,20,78.52,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+235,2112,4-Slice Toaster,Kitchen,2026-05-15,Weekly,20,75.39,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-12 00:00:00
+236,2112,4-Slice Toaster,Kitchen,2026-05-22,Weekly,20,82.6,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+237,2112,4-Slice Toaster,Kitchen,2026-06-01,Monthly,93,78.68,1.0,Growing,80,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+238,2112,4-Slice Toaster,Kitchen,2026-07-01,Monthly,100,78.68,1.0,Growing,80,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+239,2121,Bamboo Cutting Board Set,Kitchen,2026-05-01,Monthly,89,63.45,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+240,2121,Bamboo Cutting Board Set,Kitchen,2026-05-01,Weekly,20,63.83,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+241,2121,Bamboo Cutting Board Set,Kitchen,2026-05-08,Weekly,20,61.49,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+242,2121,Bamboo Cutting Board Set,Kitchen,2026-05-15,Weekly,20,60.31,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+243,2121,Bamboo Cutting Board Set,Kitchen,2026-05-22,Weekly,20,66.98,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+244,2121,Bamboo Cutting Board Set,Kitchen,2026-06-01,Monthly,96,63.45,1.0,Growing,83,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+245,2121,Bamboo Cutting Board Set,Kitchen,2026-07-01,Monthly,104,63.45,1.0,Growing,83,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+246,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-01,Monthly,95,78.71,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-26 00:00:00
+247,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-01,Weekly,22,75.69,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+248,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-08,Weekly,22,76.36,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-12 00:00:00
+249,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-15,Weekly,22,82.52,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+250,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-05-22,Weekly,22,74.44,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+251,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-06-01,Monthly,102,78.71,1.0,Growing,88,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+252,3011,Alpine Pro Racing Skis - 170cm,Ski,2026-07-01,Monthly,110,78.71,1.0,Growing,88,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+253,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-01,Monthly,86,70.91,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+254,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-01,Weekly,20,74.67,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-27 00:00:00
+255,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-08,Weekly,20,74.42,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+256,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-15,Weekly,20,68.24,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+257,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-05-22,Weekly,20,75.33,1.0,Growing,80,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-18 00:00:00
+258,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-06-01,Monthly,93,70.91,1.0,Growing,80,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+259,3012,Mountain Master All-Terrain Skis - 165cm,Ski,2026-07-01,Monthly,100,70.91,1.0,Growing,80,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+260,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-01,Monthly,120,60.35,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+261,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-01,Weekly,27,59.59,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+262,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-08,Weekly,27,55.86,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+263,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-15,Weekly,27,61.24,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+264,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-05-22,Weekly,27,58.34,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+265,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-06-01,Monthly,130,60.35,1.0,Growing,112,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+266,3013,Beginner's Choice Alpine Skis - 160cm,Ski,2026-07-01,Monthly,141,60.35,1.0,Growing,112,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+267,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-01,Monthly,65,70.46,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+268,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-01,Weekly,15,70.73,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+269,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-08,Weekly,15,68.93,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-17 00:00:00
+270,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-15,Weekly,15,66.98,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+271,3021,Nordic Classic XC Skis - 185cm,Ski,2026-05-22,Weekly,15,75.22,1.0,Growing,61,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+272,3021,Nordic Classic XC Skis - 185cm,Ski,2026-06-01,Monthly,71,70.46,1.0,Growing,61,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+273,3021,Nordic Classic XC Skis - 185cm,Ski,2026-07-01,Monthly,76,70.46,1.0,Growing,61,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+274,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-01,Monthly,108,79.98,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+275,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-01,Weekly,25,83.44,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+276,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-08,Weekly,25,81.98,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-10 00:00:00
+277,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-15,Weekly,25,84.46,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+278,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-05-22,Weekly,25,79.79,1.0,Growing,100,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+279,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-06-01,Monthly,116,79.98,1.0,Growing,100,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+280,3022,Backcountry Explorer XC Skis - 190cm,Ski,2026-07-01,Monthly,125,79.98,1.0,Growing,100,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+281,3031,Pro Flex Racing Ski Boots,Ski,2026-05-01,Monthly,72,72.36,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-28 00:00:00
+282,3031,Pro Flex Racing Ski Boots,Ski,2026-05-01,Weekly,16,72.21,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+283,3031,Pro Flex Racing Ski Boots,Ski,2026-05-08,Weekly,16,75.98,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+284,3031,Pro Flex Racing Ski Boots,Ski,2026-05-15,Weekly,16,70.63,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-02 00:00:00
+285,3031,Pro Flex Racing Ski Boots,Ski,2026-05-22,Weekly,16,70.86,1.0,Growing,67,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-26 00:00:00
+286,3031,Pro Flex Racing Ski Boots,Ski,2026-06-01,Monthly,78,72.36,1.0,Growing,67,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+287,3031,Pro Flex Racing Ski Boots,Ski,2026-07-01,Monthly,84,72.36,1.0,Growing,67,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+288,3032,Comfort Fit Recreational Boots,Ski,2026-05-01,Monthly,128,77.67,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+289,3032,Comfort Fit Recreational Boots,Ski,2026-05-01,Weekly,29,73.18,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+290,3032,Comfort Fit Recreational Boots,Ski,2026-05-08,Weekly,29,73.7,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+291,3032,Comfort Fit Recreational Boots,Ski,2026-05-15,Weekly,29,72.81,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+292,3032,Comfort Fit Recreational Boots,Ski,2026-05-22,Weekly,29,73.81,1.0,Growing,119,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-03 00:00:00
+293,3032,Comfort Fit Recreational Boots,Ski,2026-06-01,Monthly,138,77.67,1.0,Growing,119,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-13 00:00:00
+294,3032,Comfort Fit Recreational Boots,Ski,2026-07-01,Monthly,149,77.67,1.0,Growing,119,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-15 00:00:00
+295,3033,Women's Performance Ski Boots,Ski,2026-05-01,Monthly,120,62.01,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-20 00:00:00
+296,3033,Women's Performance Ski Boots,Ski,2026-05-01,Weekly,27,59.15,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+297,3033,Women's Performance Ski Boots,Ski,2026-05-08,Weekly,27,58.46,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+298,3033,Women's Performance Ski Boots,Ski,2026-05-15,Weekly,27,59.18,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+299,3033,Women's Performance Ski Boots,Ski,2026-05-22,Weekly,27,65.5,1.0,Growing,112,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+300,3033,Women's Performance Ski Boots,Ski,2026-06-01,Monthly,130,62.01,1.0,Growing,112,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+301,3033,Women's Performance Ski Boots,Ski,2026-07-01,Monthly,141,62.01,1.0,Growing,112,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+302,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-01,Monthly,111,69.13,1.0,Growing,103,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+303,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-01,Weekly,25,64.72,1.0,Growing,103,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+304,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-08,Weekly,25,66.53,1.0,Growing,103,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+305,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-15,Weekly,25,64.71,1.0,Growing,103,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-18 00:00:00
+306,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-05-22,Weekly,25,70.43,1.0,Growing,103,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+307,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-06-01,Monthly,120,69.13,1.0,Growing,103,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+308,3041,Carbon Fiber Racing Poles - 120cm,Ski,2026-07-01,Monthly,129,69.13,1.0,Growing,103,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+309,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-01,Monthly,101,71.06,1.0,Growing,94,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+310,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-01,Weekly,23,74.12,1.0,Growing,94,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+311,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-08,Weekly,23,70.21,1.0,Growing,94,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-31 00:00:00
+312,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-15,Weekly,23,74.87,1.0,Growing,94,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+313,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-05-22,Weekly,23,68.96,1.0,Growing,94,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+314,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-06-01,Monthly,109,71.06,1.0,Growing,94,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-13 00:00:00
+315,3042,Aluminum All-Mountain Poles - 115cm,Ski,2026-07-01,Monthly,118,71.06,1.0,Growing,94,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+316,3051,Insulated Ski Jacket - Men's,Ski,2026-05-01,Monthly,98,77.77,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-28 00:00:00
+317,3051,Insulated Ski Jacket - Men's,Ski,2026-05-01,Weekly,22,77.78,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-15 00:00:00
+318,3051,Insulated Ski Jacket - Men's,Ski,2026-05-08,Weekly,22,77.65,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+319,3051,Insulated Ski Jacket - Men's,Ski,2026-05-15,Weekly,22,73.41,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+320,3051,Insulated Ski Jacket - Men's,Ski,2026-05-22,Weekly,22,73.55,1.0,Growing,91,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+321,3051,Insulated Ski Jacket - Men's,Ski,2026-06-01,Monthly,106,77.77,1.0,Growing,91,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-04 00:00:00
+322,3051,Insulated Ski Jacket - Men's,Ski,2026-07-01,Monthly,114,77.77,1.0,Growing,91,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-03 00:00:00
+323,3052,Thermal Base Layer Set - Women's,Ski,2026-05-01,Monthly,83,62.43,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+324,3052,Thermal Base Layer Set - Women's,Ski,2026-05-01,Weekly,19,59.86,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-14 00:00:00
+325,3052,Thermal Base Layer Set - Women's,Ski,2026-05-08,Weekly,19,63.61,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-03-31 00:00:00
+326,3052,Thermal Base Layer Set - Women's,Ski,2026-05-15,Weekly,19,61.79,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+327,3052,Thermal Base Layer Set - Women's,Ski,2026-05-22,Weekly,19,59.47,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+328,3052,Thermal Base Layer Set - Women's,Ski,2026-06-01,Monthly,89,62.43,1.0,Growing,77,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-18 00:00:00
+329,3052,Thermal Base Layer Set - Women's,Ski,2026-07-01,Monthly,96,62.43,1.0,Growing,77,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+330,3053,Waterproof Ski Pants,Ski,2026-05-01,Monthly,103,78.89,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+331,3053,Waterproof Ski Pants,Ski,2026-05-01,Weekly,23,77.7,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+332,3053,Waterproof Ski Pants,Ski,2026-05-08,Weekly,23,81.12,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+333,3053,Waterproof Ski Pants,Ski,2026-05-15,Weekly,23,77.57,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+334,3053,Waterproof Ski Pants,Ski,2026-05-22,Weekly,23,78.26,1.0,Growing,96,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+335,3053,Waterproof Ski Pants,Ski,2026-06-01,Monthly,111,78.89,1.0,Growing,96,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+336,3053,Waterproof Ski Pants,Ski,2026-07-01,Monthly,120,78.89,1.0,Growing,96,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+337,3061,Professional Ski Helmet,Ski,2026-05-01,Monthly,95,65.42,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+338,3061,Professional Ski Helmet,Ski,2026-05-01,Weekly,22,66.69,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+339,3061,Professional Ski Helmet,Ski,2026-05-08,Weekly,22,67.32,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+340,3061,Professional Ski Helmet,Ski,2026-05-15,Weekly,22,62.66,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+341,3061,Professional Ski Helmet,Ski,2026-05-22,Weekly,22,66.22,1.0,Growing,88,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+342,3061,Professional Ski Helmet,Ski,2026-06-01,Monthly,102,65.42,1.0,Growing,88,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+343,3061,Professional Ski Helmet,Ski,2026-07-01,Monthly,110,65.42,1.0,Growing,88,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+344,3062,Anti-Fog Ski Goggles,Ski,2026-05-01,Monthly,106,76.52,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+345,3062,Anti-Fog Ski Goggles,Ski,2026-05-01,Weekly,24,79.73,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+346,3062,Anti-Fog Ski Goggles,Ski,2026-05-08,Weekly,24,80.18,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+347,3062,Anti-Fog Ski Goggles,Ski,2026-05-15,Weekly,24,79.16,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+348,3062,Anti-Fog Ski Goggles,Ski,2026-05-22,Weekly,24,81.08,1.0,Growing,99,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+349,3062,Anti-Fog Ski Goggles,Ski,2026-06-01,Monthly,115,76.52,1.0,Growing,99,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+350,3062,Anti-Fog Ski Goggles,Ski,2026-07-01,Monthly,124,76.52,1.0,Growing,99,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-15 00:00:00
+351,3071,Ski Boot Bag - Premium,Ski,2026-05-01,Monthly,96,73.29,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+352,3071,Ski Boot Bag - Premium,Ski,2026-05-01,Weekly,22,68.7,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+353,3071,Ski Boot Bag - Premium,Ski,2026-05-08,Weekly,22,72.64,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-22 00:00:00
+354,3071,Ski Boot Bag - Premium,Ski,2026-05-15,Weekly,22,73.06,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+355,3071,Ski Boot Bag - Premium,Ski,2026-05-22,Weekly,22,77.53,1.0,Growing,89,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+356,3071,Ski Boot Bag - Premium,Ski,2026-06-01,Monthly,103,73.29,1.0,Growing,89,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+357,3071,Ski Boot Bag - Premium,Ski,2026-07-01,Monthly,112,73.29,1.0,Growing,89,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-03 00:00:00
+358,3072,Hand Warmers - 10 Pack,Ski,2026-05-01,Monthly,102,64.83,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-01 00:00:00
+359,3072,Hand Warmers - 10 Pack,Ski,2026-05-01,Weekly,23,68.71,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+360,3072,Hand Warmers - 10 Pack,Ski,2026-05-08,Weekly,23,69.08,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-20 00:00:00
+361,3072,Hand Warmers - 10 Pack,Ski,2026-05-15,Weekly,23,68.22,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+362,3072,Hand Warmers - 10 Pack,Ski,2026-05-22,Weekly,23,60.05,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+363,3072,Hand Warmers - 10 Pack,Ski,2026-06-01,Monthly,110,64.83,1.0,Growing,95,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-12 00:00:00
+364,3072,Hand Warmers - 10 Pack,Ski,2026-07-01,Monthly,119,64.83,1.0,Growing,95,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+365,3081,All-Temp Ski Wax Kit,Ski,2026-05-01,Monthly,124,77.32,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+366,3081,All-Temp Ski Wax Kit,Ski,2026-05-01,Weekly,28,74.73,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-19 00:00:00
+367,3081,All-Temp Ski Wax Kit,Ski,2026-05-08,Weekly,28,77.21,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+368,3081,All-Temp Ski Wax Kit,Ski,2026-05-15,Weekly,28,81.47,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-18 00:00:00
+369,3081,All-Temp Ski Wax Kit,Ski,2026-05-22,Weekly,28,78.25,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-07 00:00:00
+370,3081,All-Temp Ski Wax Kit,Ski,2026-06-01,Monthly,134,77.32,1.0,Growing,115,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+371,3081,All-Temp Ski Wax Kit,Ski,2026-07-01,Monthly,144,77.32,1.0,Growing,115,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-09 00:00:00
+372,3082,Edge Tuning Tool Set,Ski,2026-05-01,Monthly,109,76.64,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-10 00:00:00
+373,3082,Edge Tuning Tool Set,Ski,2026-05-01,Weekly,25,79.67,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+374,3082,Edge Tuning Tool Set,Ski,2026-05-08,Weekly,25,74.82,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-16 00:00:00
+375,3082,Edge Tuning Tool Set,Ski,2026-05-15,Weekly,25,73.7,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+376,3082,Edge Tuning Tool Set,Ski,2026-05-22,Weekly,25,80.86,1.0,Growing,101,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+377,3082,Edge Tuning Tool Set,Ski,2026-06-01,Monthly,117,76.64,1.0,Growing,101,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+378,3082,Edge Tuning Tool Set,Ski,2026-07-01,Monthly,127,76.64,1.0,Growing,101,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-07 00:00:00
+379,3091,Freestyle Snowboard - 155cm,Ski,2026-05-01,Monthly,102,77.54,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-28 00:00:00
+380,3091,Freestyle Snowboard - 155cm,Ski,2026-05-01,Weekly,23,81.92,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+381,3091,Freestyle Snowboard - 155cm,Ski,2026-05-08,Weekly,23,79.84,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-25 00:00:00
+382,3091,Freestyle Snowboard - 155cm,Ski,2026-05-15,Weekly,23,73.57,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+383,3091,Freestyle Snowboard - 155cm,Ski,2026-05-22,Weekly,23,80.23,1.0,Growing,95,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+384,3091,Freestyle Snowboard - 155cm,Ski,2026-06-01,Monthly,110,77.54,1.0,Growing,95,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-29 00:00:00
+385,3091,Freestyle Snowboard - 155cm,Ski,2026-07-01,Monthly,119,77.54,1.0,Growing,95,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-25 00:00:00
+386,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-01,Monthly,88,67.15,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+387,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-01,Weekly,20,68.32,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+388,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-08,Weekly,20,62.65,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-21 00:00:00
+389,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-15,Weekly,20,71.39,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-01 00:00:00
+390,3092,All-Mountain Snowboard - 158cm,Ski,2026-05-22,Weekly,20,70.13,1.0,Growing,82,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-06 00:00:00
+391,3092,All-Mountain Snowboard - 158cm,Ski,2026-06-01,Monthly,95,67.15,1.0,Growing,82,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+392,3092,All-Mountain Snowboard - 158cm,Ski,2026-07-01,Monthly,103,67.15,1.0,Growing,82,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-10 00:00:00
+393,3101,Winter Boots - Insulated,Ski,2026-05-01,Monthly,74,74.81,1.0,Growing,69,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-21 00:00:00
+394,3101,Winter Boots - Insulated,Ski,2026-05-01,Weekly,17,78.84,1.0,Growing,69,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-08 00:00:00
+395,3101,Winter Boots - Insulated,Ski,2026-05-08,Weekly,17,75.01,1.0,Growing,69,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-13 00:00:00
+396,3101,Winter Boots - Insulated,Ski,2026-05-15,Weekly,17,75.56,1.0,Growing,69,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+397,3101,Winter Boots - Insulated,Ski,2026-05-22,Weekly,17,77.6,1.0,Growing,69,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+398,3101,Winter Boots - Insulated,Ski,2026-06-01,Monthly,80,74.81,1.0,Growing,69,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-27 00:00:00
+399,3101,Winter Boots - Insulated,Ski,2026-07-01,Monthly,86,74.81,1.0,Growing,69,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-02 00:00:00
+400,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-01,Monthly,83,79.16,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-16 00:00:00
+401,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-01,Weekly,19,80.19,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-18 00:00:00
+402,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-08,Weekly,19,84.0,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-23 00:00:00
+403,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-15,Weekly,19,78.31,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-28 00:00:00
+404,3102,Winter Hiking Boots - Waterproof,Ski,2026-05-22,Weekly,19,80.6,1.0,Growing,77,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-11 00:00:00
+405,3102,Winter Hiking Boots - Waterproof,Ski,2026-06-01,Monthly,89,79.16,1.0,Growing,77,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-06 00:00:00
+406,3102,Winter Hiking Boots - Waterproof,Ski,2026-07-01,Monthly,96,79.16,1.0,Growing,77,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-03-31 00:00:00
+407,3103,Snowboard Bindings - Pro,Ski,2026-05-01,Monthly,89,69.89,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-14 00:00:00
+408,3103,Snowboard Bindings - Pro,Ski,2026-05-01,Weekly,20,69.31,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-03 00:00:00
+409,3103,Snowboard Bindings - Pro,Ski,2026-05-08,Weekly,20,73.23,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-24 00:00:00
+410,3103,Snowboard Bindings - Pro,Ski,2026-05-15,Weekly,20,67.16,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-10 00:00:00
+411,3103,Snowboard Bindings - Pro,Ski,2026-05-22,Weekly,20,72.22,1.0,Growing,83,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-05 00:00:00
+412,3103,Snowboard Bindings - Pro,Ski,2026-06-01,Monthly,96,69.89,1.0,Growing,83,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-24 00:00:00
+413,3103,Snowboard Bindings - Pro,Ski,2026-07-01,Monthly,104,69.89,1.0,Growing,83,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-23 00:00:00
+414,3104,Ski Tuning Bench - Portable,Ski,2026-05-01,Monthly,124,63.71,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),30,,,system,2026-04-11 00:00:00
+415,3104,Ski Tuning Bench - Portable,Ski,2026-05-01,Weekly,28,64.26,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-09 00:00:00
+416,3104,Ski Tuning Bench - Portable,Ski,2026-05-08,Weekly,28,60.51,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-04 00:00:00
+417,3104,Ski Tuning Bench - Portable,Ski,2026-05-15,Weekly,28,62.99,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-29 00:00:00
+418,3104,Ski Tuning Bench - Portable,Ski,2026-05-22,Weekly,28,60.28,1.0,Growing,115,1.08,1.08,Business Growth Forecast (8% Monthly),7,,,system,2026-04-12 00:00:00
+419,3104,Ski Tuning Bench - Portable,Ski,2026-06-01,Monthly,134,63.71,1.0,Growing,115,1.08,1.166,Business Growth Forecast (8% Monthly),30,,,system,2026-04-16 00:00:00
+420,3104,Ski Tuning Bench - Portable,Ski,2026-07-01,Monthly,144,63.71,1.0,Growing,115,1.08,1.26,Business Growth Forecast (8% Monthly),30,,,system,2026-04-24 00:00:00

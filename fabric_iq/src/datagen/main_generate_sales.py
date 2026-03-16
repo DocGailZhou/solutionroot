@@ -87,13 +87,15 @@ Business Growth Features (--enable-growth):
     parser.add_argument(
         '-s', '--start-date',
         type=str,
-        help='Start date (YYYY-MM-DD). Default: 1 year ago from today'
+        required=True,
+        help='Start date (YYYY-MM-DD). Required.'
     )
     
     parser.add_argument(
         '-e', '--end-date', 
         type=str,
-        help='End date (YYYY-MM-DD). Default: today'
+        required=True,
+        help='End date (YYYY-MM-DD). Required.'
     )
     
     parser.add_argument(
@@ -519,22 +521,9 @@ def main():
     
     args = parse_arguments()
     
-    # Set date range with defaults (1 year of data ending today if not specified)
-    # Use today's date as default end date when user doesn't specify one
-    # Use specified end date when user provides -e option
-    today = datetime.now()
-    DEFAULT_START_DATE = datetime(today.year - 1, today.month, today.day)  # 1 year ago from today (consistent with supply chain)
-    DEFAULT_END_DATE = today  # Today's date when no end date specified
-    
-    if args.start_date:
-        start_date = parse_date(args.start_date)
-    else:
-        start_date = DEFAULT_START_DATE
-        
-    if args.end_date:
-        end_date = parse_date(args.end_date)
-    else:
-        end_date = DEFAULT_END_DATE
+    # Parse required date range
+    start_date = parse_date(args.start_date)
+    end_date = parse_date(args.end_date)
     
     # Validate date range
     if start_date >= end_date:

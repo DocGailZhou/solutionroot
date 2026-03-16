@@ -12,6 +12,7 @@ Calculates realistic wholesale costs based on retail pricing patterns.
 import pandas as pd
 import json
 import random
+import argparse
 from datetime import datetime, timedelta
 from pathlib import Path
 import os
@@ -82,14 +83,16 @@ class SupplierDataGenerator:
             
         return products
         
-    def generate_suppliers_table(self):
+    def generate_suppliers_table(self, start_date, end_date):
         """Generate the Suppliers table data."""
         
         suppliers_data = []
         
         for supplier in self.suppliers_config['suppliers']:
-            # Add timestamp
-            created_date = datetime.now() - timedelta(days=random.randint(30, 365))
+            # Add timestamp - use random date within generation period
+            days_in_range = (end_date - start_date).days
+            random_days = random.randint(0, max(0, days_in_range - 30))  # Keep some margin from end
+            created_date = start_date + timedelta(days=random_days)
             
             supplier_record = {
                 'SupplierID': supplier['SupplierID'],
@@ -119,7 +122,7 @@ class SupplierDataGenerator:
         
         return df_suppliers
         
-    def generate_product_suppliers_table(self):
+    def generate_product_suppliers_table(self, start_date, end_date):
         """Generate the ProductSuppliers mapping table."""
         
         product_supplier_data = []
@@ -196,7 +199,7 @@ class SupplierDataGenerator:
                     'LeadTimeDays': primary_supplier['LeadTimeDays'] + random.randint(-3, 3),
                     'Status': 'Active',
                     'CreatedBy': 'system',
-                    'CreatedDate': (datetime.now() - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
+                    'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
                 }
                 
                 product_supplier_data.append(record)
@@ -227,7 +230,7 @@ class SupplierDataGenerator:
                         'LeadTimeDays': backup_supplier['LeadTimeDays'] + random.randint(-5, 5),
                         'Status': 'Active',
                         'CreatedBy': 'system',
-                        'CreatedDate': (datetime.now() - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
+                        'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
                     }
                     
                     product_supplier_data.append(record)
@@ -244,7 +247,7 @@ class SupplierDataGenerator:
         
         return df_product_suppliers
         
-    def generate_supply_chain_events_sample(self, num_events=10):
+    def generate_supply_chain_events_sample(self, start_date, end_date, num_events=10):
         """Generate sample supply chain events for testing."""
         
         events_data = []
@@ -279,15 +282,17 @@ class SupplierDataGenerator:
         
         for i in range(num_events):
             template = random.choice(event_templates)
-            start_date = datetime.now() - timedelta(days=random.randint(1, 90))
+            # Generate start dates within the generation period
+            days_in_range = (end_date - start_date).days
+            event_start = start_date + timedelta(days=random.randint(0, max(0, days_in_range - 30)))
             
             # Some events are resolved, some ongoing
             if random.random() < 0.7:  # 70% resolved
-                end_date = start_date + timedelta(days=random.randint(1, 30))
+                event_end = event_start + timedelta(days=random.randint(1, 30))
                 status = 'Resolved'
-                actual_duration = (end_date - start_date).days
+                actual_duration = (event_end - event_start).days
             else:
-                end_date = None
+                event_end = None
                 status = random.choice(['Active', 'Monitoring'])
                 actual_duration = None
                 
@@ -298,8 +303,8 @@ class SupplierDataGenerator:
                 'Description': template['Description'],
                 'Severity': template['Severity'],
                 'Status': status,
-                'StartDate': start_date.strftime('%Y-%m-%d'),
-                'EndDate': end_date.strftime('%Y-%m-%d') if end_date else None,
+                'StartDate': event_start.strftime('%Y-%m-%d'),
+                'EndDate': event_end.strftime('%Y-%m-%d') if event_end else None,
                 'GeographicArea': template['GeographicArea'],
                 'IndustryImpact': template['IndustryImpact'],
                 'PredictedDuration': random.randint(3, 21),
@@ -307,7 +312,7 @@ class SupplierDataGenerator:
                 'AlertLevel': random.choice(['Yellow', 'Orange', 'Red']),
                 'ReportedBy': 'Supply Chain Monitor',
                 'CreatedBy': 'system',
-                'CreatedDate': start_date.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': event_start.strftime('%Y-%m-%d %H:%M:%S')
             }
             
             events_data.append(event)
@@ -323,16 +328,16 @@ class SupplierDataGenerator:
         
         return df_events
         
-    def generate_all_supplier_data(self, num_events=10):
+    def generate_all_supplier_data(self, start_date, end_date, num_events=10):
         """Generate all supplier-related data tables."""
         
         print("\n🏭 Starting Supplier Data Generation...")
         print("=" * 50)
         
         # Generate each table
-        df_suppliers = self.generate_suppliers_table()
-        df_product_suppliers = self.generate_product_suppliers_table()
-        df_events = self.generate_supply_chain_events_sample(num_events)
+        df_suppliers = self.generate_suppliers_table(start_date, end_date)
+        df_product_suppliers = self.generate_product_suppliers_table(start_date, end_date)
+        df_events = self.generate_supply_chain_events_sample(start_date, end_date, num_events)
         
         print("\n📊 Generation Summary:")
         print(f"   Suppliers: {len(df_suppliers)} records")
@@ -351,14 +356,31 @@ class SupplierDataGenerator:
 def main():
     """Main function to run supplier data generation."""
     
+    parser = argparse.ArgumentParser(description='Generate supplier data for specified date range')
+    parser.add_argument('-s', '--start', type=str, required=True,
+                      help='Start date in YYYY-MM-DD format (e.g., 2026-01-01)')
+    parser.add_argument('-e', '--end', type=str, required=True, 
+                      help='End date in YYYY-MM-DD format (e.g., 2026-03-31)')
+    
+    args = parser.parse_args()
+    
+    # Parse dates
+    start_date = datetime.strptime(args.start, '%Y-%m-%d') 
+    end_date = datetime.strptime(args.end, '%Y-%m-%d')
+    
     try:
         # Initialize generator
         generator = SupplierDataGenerator()
         
-        # Generate all data
-        results = generator.generate_all_supplier_data(num_events=15)
+        # Generate all data with date range
+        results = generator.generate_all_supplier_data(
+            start_date=start_date, 
+            end_date=end_date, 
+            num_events=15
+        )
         
-        print("\n🎉 Supplier data generation completed successfully!")
+        print(f"\n🎉 Supplier data generation completed successfully!")
+        print(f"📅 Date range: {args.start} to {args.end}")
         
     except Exception as e:
         print(f"\n❌ Error during generation: {str(e)}")

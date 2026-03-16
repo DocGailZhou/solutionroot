@@ -54,8 +54,9 @@ PAYMENT_FILE = FINANCE_OUTPUT_DIR / "Payment_Samples_Kitchen.csv"
 ACCOUNT_FIN_FILE = FINANCE_OUTPUT_DIR / "Account_Samples_Kitchen.csv"
 
 # Data generation parameters
-DEFAULT_START_DATE = datetime(2020, 1, 1)
-DEFAULT_END_DATE = datetime(2026, 1, 12)  # Default end date
+# Remove default dates - require user to specify
+# DEFAULT_START_DATE = datetime(2020, 1, 1)
+# DEFAULT_END_DATE = datetime(2026, 1, 12)  # Default end date
 ORDER_NUMBER_START = 200000  # Different from camping orders
 
 # Customer hierarchy structure matching schema
@@ -117,13 +118,15 @@ Quick Examples:
     parser.add_argument(
         '-s', '--start-date',
         type=str,
-        help='Start date (YYYY-MM-DD). Default: 2020-01-01'
+        required=True,
+        help='Start date (YYYY-MM-DD). Required.'
     )
     
     parser.add_argument(
         '-e', '--end-date', 
         type=str,
-        help='End date (YYYY-MM-DD). Default: today (2026-01-12)'
+        required=True,
+        help='End date (YYYY-MM-DD). Required.'
     )
     
     parser.add_argument(
@@ -692,16 +695,9 @@ def main():
     # Parse command line arguments
     args = parse_arguments()
     
-    # Set date range
-    if args.start_date:
-        start_date = parse_date(args.start_date)
-    else:
-        start_date = DEFAULT_START_DATE
-        
-    if args.end_date:
-        end_date = parse_date(args.end_date)
-    else:
-        end_date = DEFAULT_END_DATE
+    # Parse required date range
+    start_date = parse_date(args.start_date)
+    end_date = parse_date(args.end_date)
     
     # Validate date range
     if start_date >= end_date:

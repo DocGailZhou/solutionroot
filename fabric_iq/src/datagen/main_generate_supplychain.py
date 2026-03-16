@@ -62,10 +62,11 @@ from generate_suppliers import SupplierDataGenerator
 from generate_inventory import InventoryDataGenerator
 
 
-def generate_warehouses_csv(input_path, output_path):
+def generate_warehouses_csv(input_path, output_path, end_date_str):
     """Generate Warehouses.csv from warehouses.json configuration."""
     import pandas as pd
-    from datetime import datetime
+    from datetime import datetime, timedelta
+    import random
     
     config_file = input_path / "warehouses.json"
     warehouses_output_dir = output_path / "inventory"
@@ -80,7 +81,11 @@ def generate_warehouses_csv(input_path, output_path):
             config = json.load(f)
             
         warehouses_data = []
-        current_time = datetime.now()
+        # Use end_date as base for warehouse creation dates
+        end_date = datetime.strptime(end_date_str, '%Y-%m-%d')
+        # Warehouses created 30-180 days before end of period with some randomization
+        created_date_base = end_date - timedelta(days=random.randint(30, 180))
+        last_updated_base = end_date - timedelta(days=random.randint(1, 30))
         
         for warehouse in config['warehouses']:
             # Flatten the nested structure for CSV format
@@ -113,10 +118,10 @@ def generate_warehouses_csv(input_path, output_path):
                 'AutomationLevel': warehouse['Operations']['AutomationLevel'],
                 'DeliveryName': warehouse['DeliveryName'],
                 
-                # System fields
+                # System fields - add small random variance per warehouse
                 'CreatedBy': warehouse.get('CreatedBy', 'system'),
-                'CreatedDate': current_time.strftime('%Y-%m-%d %H:%M:%S'),
-                'LastUpdated': current_time.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': (created_date_base + timedelta(hours=random.randint(-24, 24))).strftime('%Y-%m-%d %H:%M:%S'),
+                'LastUpdated': (last_updated_base + timedelta(hours=random.randint(-12, 12))).strftime('%Y-%m-%d %H:%M:%S')
             }
             warehouses_data.append(record)
             
@@ -217,7 +222,7 @@ def calculate_optimal_parameters(start_date, end_date):
     return recommended_orders, recommended_transactions, sales_info
 
 
-def generate_summary_report(results, args, start_time, end_time):
+def generate_summary_report(results, args):
     """Generate a comprehensive summary markdown report."""
     
     # Calculate totals
@@ -283,11 +288,8 @@ def generate_summary_report(results, args, start_time, end_time):
     duration_days = (datetime.strptime(args.end_date, '%Y-%m-%d').date() - 
                     datetime.strptime(args.start_date, '%Y-%m-%d').date()).days
     
-    generation_time = end_time.strftime('%Y-%m-%d %H:%M:%S')
-    
     summary_content = f"""# Supply Chain Data Generation Summary
 
-**Generated**: {generation_time}  
 **Date Range**: {args.start_date} to {args.end_date}  
 **Duration**: {duration_days} days  
 **Integration**: {sales_integration}
@@ -489,159 +491,26 @@ def generate_graph(results, args):
             print("⚠️  No supply chain data found for graphing. Generate data first.")
             return
         
-        # Create subplot layout (2x2 grid) with larger figure size
-        fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, figsize=(18, 14))
+        # Create subplot layout (2x3 grid) with 5 tiles + 1 empty
+        fig, axes = plt.subplots(2, 3, figsize=(24, 14))
+        ax1, ax2, ax3 = axes[0, 0], axes[0, 1], axes[0, 2]
+        ax4, ax5, ax6 = axes[1, 0], axes[1, 1], axes[1, 2]
         fig.suptitle(f'Supply Chain Business Dashboard\n{args.start_date} to {args.end_date}', 
                      fontsize=18, fontweight='bold', y=0.96)
         
-        # Graph 1: Demand Forecast vs Recent Sales Reality
-        demand_forecast_file = inventory_path / "DemandForecast.csv"
+        # Tile 1: Recent Sales (Last 6 Months)
+        _create_recent_sales_chart(ax1, output_path, args)
         
-        if demand_forecast_file.exists():
-            # Load original sales data (same data used for forecasting)
-            all_sales = []
-            
-            for category in ['camping', 'kitchen', 'ski']:
-                try:
-                    # Load order file (has dates) and order line file (has quantities)
-                    orders_file = output_path / "sales" / category / f"Order_Samples_{category.capitalize()}.csv"
-                    order_lines_file = output_path / "sales" / category / f"OrderLine_Samples_{category.capitalize()}.csv"
-                    
-                    if orders_file.exists() and order_lines_file.exists():
-                        df_orders = pd.read_csv(orders_file)
-                        df_order_lines = pd.read_csv(order_lines_file)
-                        
-                        # Join to get dates + quantities
-                        if 'OrderId' in df_orders.columns and 'OrderDate' in df_orders.columns and 'OrderId' in df_order_lines.columns and 'Quantity' in df_order_lines.columns:
-                            df_sales = pd.merge(df_orders[['OrderId', 'OrderDate']], 
-                                              df_order_lines[['OrderId', 'ProductId', 'Quantity']], 
-                                              on='OrderId', how='inner')
-                            if len(df_sales) > 0:
-                                df_sales['OrderDate'] = pd.to_datetime(df_sales['OrderDate'])
-                                all_sales.append(df_sales)
-                                print(f"✅ Loaded {len(df_sales)} sales records from {category}")
-                except Exception as e:
-                    print(f"⚠️  Error loading {category} sales data: {e}")
-                    continue
-            
-            if all_sales:
-                    combined_sales = pd.concat(all_sales, ignore_index=True)
-                    
-                    # Filter to analysis period (same as forecasting uses)
-                    period_days = (datetime.strptime(args.end_date, '%Y-%m-%d').date() - datetime.strptime(args.start_date, '%Y-%m-%d').date()).days
-                    if period_days >= 180:  # Use same 6-month logic as forecasting
-                        trend_start = pd.Timestamp(args.end_date) - pd.DateOffset(months=6)
-                        trend_start = max(pd.Timestamp(args.start_date), trend_start)
-                    else:
-                        trend_start = pd.Timestamp(args.start_date)
-                    
-                    analysis_period_sales = combined_sales[
-                        (combined_sales['OrderDate'] >= trend_start) & 
-                        (combined_sales['OrderDate'] <= pd.Timestamp(args.end_date))
-                    ].copy()
-                    
-                    analysis_period_sales['Month'] = analysis_period_sales['OrderDate'].dt.to_period('M')
-                    historical_sales = analysis_period_sales.groupby('Month')['Quantity'].sum()
-                    
-                    # Get ALL months in the analysis period for historical display
-                    all_historical_months = sorted(historical_sales.index)
-                    historical_data = [historical_sales.get(m, 0) for m in all_historical_months]
-                    recent_months = all_historical_months  # Use full analysis period
-                    
-                    # DEBUG: Show what we're plotting to understand the trend
-                    print(f"📊 Graph Data Analysis:")
-                    print(f"   Historical months: {[str(m) for m in all_historical_months[-3:]]}")  # Last 3 months
-                    print(f"   Historical values: {historical_data[-3:] if len(historical_data) >= 3 else historical_data}")
-                    
-                    # Load demand forecast data
-                    df_forecast = pd.read_csv(demand_forecast_file)
-                    df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
-                    df_forecast['Month'] = df_forecast['ForecastDate'].dt.to_period('M')
-                    
-                    # Filter to only monthly forecasts to avoid double-counting (CSV has both monthly and weekly)
-                    monthly_only_forecasts = df_forecast[df_forecast['ForecastPeriod'] == 'Monthly'].copy()
-                    
-                    # Get monthly forecasts (now properly filtered)
-                    monthly_forecasts = monthly_only_forecasts.groupby('Month')['PredictedDemand'].sum()
-                    forecast_months = sorted(monthly_forecasts.index)
-                    forecast_data = [monthly_forecasts.get(m, 0) for m in forecast_months[:3]]  # Next 3 months
-                    
-                    print(f"   Forecast months: {[str(m) for m in forecast_months[:3]]}")
-                    print(f"   Forecast values: {forecast_data}")
-                    
-                    # Create continuous timeline without gaps
-                    all_months = recent_months + forecast_months[:3]
-                    month_labels = [str(m) for m in all_months]
-                    x_positions = range(len(all_months))
-                    
-                    # Combine all data for seamless visualization
-                    all_data = historical_data + forecast_data
-                    
-                    # Create smooth continuous visualization
-                    if all_data and len(historical_data) > 0 and len(forecast_data) > 0:
-                        # Create one continuous line with different colors for sections
-                        
-                        # Plot continuous line for entire timeline
-                        ax1.plot(x_positions, all_data, color='#1f77b4', linewidth=3, alpha=0.8)
-                        
-                        # Fill areas with different colors
-                        # Historical area (green) - extend to connect with forecast
-                        hist_x = list(range(len(historical_data) + 1))  # Extend by 1 to connect
-                        hist_data_extended = historical_data + [historical_data[-1]]  # Repeat last value
-                        ax1.fill_between(hist_x, 0, hist_data_extended, 
-                                       color='#2E8B57', alpha=0.7, 
-                                       label='Recent Sales (Last 6 Months)')
-                        
-                        # Forecast area (blue) - start from connection point
-                        if len(forecast_data) > 0:
-                            forecast_start_idx = len(historical_data)  # Start right after historical
-                            forecast_x = list(range(forecast_start_idx, len(all_data)))
-                            
-                            # Use forecast data directly (no overlap needed since historical extends)
-                            ax1.fill_between(forecast_x, 0, forecast_data, 
-                                           color='#4169E1', alpha=0.6, 
-                                           label='Forecast (Next 3 Months)')
-                        
-                        # Add labels for sections
-                        if len(historical_data) > 0:
-                            ax1.text(len(historical_data)/2 - 0.5, max(all_data) * 0.8, 
-                                    'Recent Sales\n(Last 6 Months)', ha='center', va='center', 
-                                    fontweight='bold', color='white', fontsize=10,
-                                    bbox=dict(boxstyle='round,pad=0.5', facecolor='#2E8B57', alpha=0.8))
-                        
-                        if len(forecast_data) > 0:
-                            forecast_center = len(historical_data) + len(forecast_data)/2 - 0.5
-                            ax1.text(forecast_center, max(all_data) * 0.4, 
-                                    'Forecast', ha='center', va='center', 
-                                    fontweight='bold', color='white', fontsize=10,
-                                    bbox=dict(boxstyle='round,pad=0.5', facecolor='#4169E1', alpha=0.8))
-                        
-                        # Set graph properties
-                        ax1.set_title('Recent Sales vs Demand Forecast', fontsize=14, fontweight='bold', pad=20)
-                        ax1.set_ylabel('Units (Thousands)', fontsize=12)
-                        ax1.set_xlabel('Month', fontsize=12)
-                        
-                        # Format y-axis to show thousands  
-                        ax1.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1000:.0f}K'))
-                        
-                        # Set x-axis labels for continuous timeline
-                        ax1.set_xticks(x_positions)
-                        ax1.set_xticklabels(month_labels, rotation=45)
-                        
-                        ax1.legend(loc='upper left', fontsize=11)
-                        ax1.grid(True, alpha=0.2)
-                    else:
-                        ax1.text(0.5, 0.5, 'No data available for comparison', ha='center', va='center', transform=ax1.transAxes)
-                        ax1.set_title('Demand Forecast vs Recent Sales Reality (No Data)', fontsize=14, fontweight='bold')
-                
-            else:
-                ax1.text(0.5, 0.5, 'No sales data found - check file structure', ha='center', va='center', transform=ax1.transAxes)
-                ax1.set_title('Demand Forecast vs Recent Sales Reality (No Sales Data)', fontsize=14, fontweight='bold')
-        else:
-            ax1.text(0.5, 0.5, 'Forecast data not available', ha='center', va='center', transform=ax1.transAxes)
-            ax1.set_title('Demand Forecast vs Recent Sales Reality (No Forecasts)', fontsize=14, fontweight='bold')
+        # Tile 2: Demand Forecast (Next 3 Months) 
+        _create_demand_forecast_chart(ax2, inventory_path)
         
-# Graph 2: Warehouse Capacity Utilization (Business Critical)
+        # Tile 6: Empty (reserved for future expansion)
+        ax6.text(0.5, 0.5, 'Reserved for\nFuture Analytics', ha='center', va='center', 
+                transform=ax6.transAxes, fontsize=14, style='italic', alpha=0.5)
+        ax6.set_title('Future Expansion', fontsize=14, fontweight='bold', pad=20)
+        ax6.axis('off')  # Clean empty tile
+        
+# Tile 3: Warehouse Capacity Utilization (Business Critical)
         inventory_levels_file = inventory_path / "Inventory.csv"
         if inventory_levels_file.exists():
             df_inventory = pd.read_csv(inventory_levels_file)
@@ -667,21 +536,21 @@ def generate_graph(results, args):
             # Color code by utilization level (Red: >90%, Yellow: 70-90%, Green: <70%)
             colors = ['#DC143C' if u > 90 else '#FFD700' if u > 70 else '#32CD32' for u in utilizations]
             
-            bars = ax2.barh(display_locations, utilizations, color=colors, alpha=0.8, height=0.6)
+            bars = ax3.barh(display_locations, utilizations, color=colors, alpha=0.8, height=0.6)
             
             # Add percentage labels on bars
             for i, (bar, util) in enumerate(zip(bars, utilizations)):
-                ax2.text(util + 2, i, f'{util:.1f}%', va='center', fontweight='bold', fontsize=12)
+                ax3.text(util + 2, i, f'{util:.1f}%', va='center', fontweight='bold', fontsize=12)
             
             # Add capacity zones
-            ax2.axvline(x=70, color='orange', linestyle='--', alpha=0.7, linewidth=2, label='High Utilization')
-            ax2.axvline(x=90, color='red', linestyle='--', alpha=0.7, linewidth=2, label='Critical Capacity')
+            ax3.axvline(x=70, color='orange', linestyle='--', alpha=0.7, linewidth=2, label='High Utilization')
+            ax3.axvline(x=90, color='red', linestyle='--', alpha=0.7, linewidth=2, label='Critical Capacity')
             
-            ax2.set_title('Warehouse Capacity Utilization', fontsize=14, fontweight='bold', pad=20)
-            ax2.set_xlabel('Capacity Utilization (%)', fontsize=12)
-            ax2.set_xlim(0, 105)
-            ax2.legend(loc='lower right', fontsize=10)
-            ax2.grid(True, alpha=0.2, axis='x')
+            ax3.set_title('Warehouse Capacity Utilization', fontsize=14, fontweight='bold', pad=20)
+            ax3.set_xlabel('Capacity Utilization (%)', fontsize=12)
+            ax3.set_xlim(0, 105)
+            ax3.legend(loc='lower right', fontsize=10)
+            ax3.grid(True, alpha=0.2, axis='x')
         
         # Graph 3: Stock Health by Category (Actionable Insights)
         if inventory_levels_file.exists():
@@ -723,18 +592,18 @@ def generate_graph(results, args):
             colors = [health_colors.get(status, '#808080') for status in health_counts.index]
             
             # Create horizontal bar chart for better readability
-            bars = ax3.barh(range(len(health_counts)), health_counts.values, color=colors, alpha=0.8)
+            bars = ax4.barh(range(len(health_counts)), health_counts.values, color=colors, alpha=0.8)
             
             # Add count labels
             for i, (bar, count) in enumerate(zip(bars, health_counts.values)):
-                ax3.text(count + max(health_counts.values) * 0.01, i, f'{count}', 
+                ax4.text(count + max(health_counts.values) * 0.01, i, f'{count}', 
                         va='center', fontweight='bold', fontsize=12)
             
-            ax3.set_yticks(range(len(health_counts)))
-            ax3.set_yticklabels(health_counts.index, fontsize=11)
-            ax3.set_title('Inventory Health Status', fontsize=14, fontweight='bold', pad=20)
-            ax3.set_xlabel('Number of Products', fontsize=12)
-            ax3.grid(True, alpha=0.2, axis='x')
+            ax4.set_yticks(range(len(health_counts)))
+            ax4.set_yticklabels(health_counts.index, fontsize=11)
+            ax4.set_title('Inventory Health Status', fontsize=14, fontweight='bold', pad=20)
+            ax4.set_xlabel('Number of Products', fontsize=12)
+            ax4.grid(True, alpha=0.2, axis='x')
         
         # Graph 4: Supplier Performance Matrix (Simplified for POC)
         suppliers_file = suppliers_path / "Suppliers.csv"
@@ -767,17 +636,17 @@ def generate_graph(results, args):
                 colors = ['red' if x == 'Secondary' else 'blue' for x in df_suppliers_filtered['SupplierType']]
                 sizes = [max(50, 200 - lt*3) for lt in df_suppliers_filtered['LeadTimeDays']]  # Larger dot = faster delivery
                 
-                scatter = ax4.scatter(risk_scores, reliability_scores, c=colors, s=sizes, alpha=0.7, edgecolors='black')
+                scatter = ax5.scatter(risk_scores, reliability_scores, c=colors, s=sizes, alpha=0.7, edgecolors='black')
                 
                 # Add supplier name labels (simple and clean)
                 for i, row in df_suppliers_filtered.iterrows():
-                    ax4.annotate(row['CleanName'], (row['RiskScore'], row['ReliabilityScore']), 
+                    ax5.annotate(row['CleanName'], (row['RiskScore'], row['ReliabilityScore']), 
                                xytext=(5, 5), textcoords='offset points', fontsize=10,
                                bbox=dict(boxstyle='round,pad=0.2', facecolor='white', alpha=0.8, edgecolor='gray'))
                 
-                ax4.set_xlabel('Risk Score (Lower is Better)', fontsize=12)
-                ax4.set_ylabel('Reliability Score (Higher is Better)', fontsize=12)
-                ax4.set_title('Supplier Performance Matrix', fontsize=14, fontweight='bold', pad=20)
+                ax5.set_xlabel('Risk Score (Lower is Better)', fontsize=12)
+                ax5.set_ylabel('Reliability Score (Higher is Better)', fontsize=12)
+                ax5.set_title('Supplier Performance Matrix', fontsize=14, fontweight='bold', pad=20)
                 
                 # Simple legend - just Primary vs Backup
                 from matplotlib.patches import Patch
@@ -785,13 +654,13 @@ def generate_graph(results, args):
                     Patch(facecolor='blue', label='Primary Supplier'),
                     Patch(facecolor='red', label='Secondary Supplier')
                 ]
-                ax4.legend(handles=legend_elements, loc='lower left', fontsize=10)
-                ax4.grid(True, alpha=0.2)
+                ax5.legend(handles=legend_elements, loc='lower left', fontsize=10)
+                ax5.grid(True, alpha=0.2)
             else:
-                ax4.text(0.5, 0.5, 'No suppliers meet\nreliability criteria (≥80%)', 
-                        ha='center', va='center', transform=ax4.transAxes, fontsize=14)
-                ax4.set_title('Supplier Performance Matrix', fontsize=14, fontweight='bold', pad=20)
-            ax4.grid(True, alpha=0.2)
+                ax5.text(0.5, 0.5, 'No suppliers meet\nreliability criteria (≥80%)', 
+                        ha='center', va='center', transform=ax5.transAxes, fontsize=14)
+                ax5.set_title('Supplier Performance Matrix', fontsize=14, fontweight='bold', pad=20)
+            ax5.grid(True, alpha=0.2)
         
         # Add overall business insights text box
         fig.text(0.02, 0.02, 
@@ -942,6 +811,111 @@ def copy_data_to_infra():
         print("   Make sure the destination directory is accessible")
 
 
+def _create_recent_sales_chart(ax, output_path, args):
+    """Create a simple recent sales trend chart (last 6 months)"""
+    all_sales = []
+    
+    for category in ['camping', 'kitchen', 'ski']:
+        try:
+            orders_file = output_path / "sales" / category / f"Order_Samples_{category.capitalize()}.csv"
+            order_lines_file = output_path / "sales" / category / f"OrderLine_Samples_{category.capitalize()}.csv"
+            
+            if orders_file.exists() and order_lines_file.exists():
+                df_orders = pd.read_csv(orders_file)
+                df_order_lines = pd.read_csv(order_lines_file)
+                
+                if 'OrderId' in df_orders.columns and 'OrderDate' in df_orders.columns:
+                    df_sales = pd.merge(df_orders[['OrderId', 'OrderDate']], 
+                                      df_order_lines[['OrderId', 'Quantity']], 
+                                      on='OrderId', how='inner')
+                    if len(df_sales) > 0:
+                        df_sales['OrderDate'] = pd.to_datetime(df_sales['OrderDate'])
+                        all_sales.append(df_sales)
+        except Exception:
+            continue
+    
+    if all_sales:
+        combined_sales = pd.concat(all_sales, ignore_index=True)
+        
+        # Calculate trend start (last 6 months) but ensure we start from beginning of a complete month
+        raw_trend_start = pd.Timestamp(args.end_date) - pd.DateOffset(months=6)
+        
+        # Ensure we don't go before the actual start date
+        bounded_trend_start = max(pd.Timestamp(args.start_date), raw_trend_start)
+        
+        # Round to the beginning of the month to avoid partial month bias
+        trend_start = bounded_trend_start.replace(day=1)
+        
+        # If rounding creates a date before our data period, use the actual start date
+        if trend_start < pd.Timestamp(args.start_date):
+            trend_start = pd.Timestamp(args.start_date)
+        
+        print(f"📊 Recent Sales Trend period: {trend_start.strftime('%Y-%m-%d')} to {args.end_date}")
+        
+        sales_period = combined_sales[
+            (combined_sales['OrderDate'] >= trend_start) & 
+            (combined_sales['OrderDate'] <= pd.Timestamp(args.end_date))
+        ].copy()
+        
+        sales_period['Month'] = sales_period['OrderDate'].dt.to_period('M')
+        monthly_sales = sales_period.groupby('Month')['Quantity'].sum()
+        
+        months = list(monthly_sales.index)
+        values = list(monthly_sales.values)
+        
+        # Simple trend line - no special handling, all dates are equal
+        ax.plot(range(len(months)), values, color='#2E8B57', linewidth=3, marker='o', markersize=6)
+        ax.fill_between(range(len(months)), 0, values, color='#2E8B57', alpha=0.3)
+        
+        ax.set_title('Recent Sales Trend', fontsize=14, fontweight='bold', pad=20)
+        ax.set_ylabel('Units Sold', fontsize=12)
+        ax.set_xlabel('Month', fontsize=12)
+        ax.set_xticks(range(len(months)))
+        ax.set_xticklabels([m.end_time.strftime('%Y-%m') for m in months], rotation=45)
+        ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1000:.0f}K'))
+        ax.grid(True, alpha=0.2)
+    else:
+        ax.text(0.5, 0.5, 'No sales data available', ha='center', va='center', transform=ax.transAxes)
+        ax.set_title('Recent Sales Trend (No Data)', fontsize=14, fontweight='bold')
+
+
+def _create_demand_forecast_chart(ax, inventory_path):
+    """Create a simple demand forecast chart (next 3 months)"""
+    demand_forecast_file = inventory_path / "DemandForecast.csv"
+    
+    if demand_forecast_file.exists():
+        try:
+            df_forecast = pd.read_csv(demand_forecast_file)
+            df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
+            df_forecast['Month'] = df_forecast['ForecastDate'].dt.to_period('M')
+            
+            # Filter to monthly forecasts only
+            monthly_forecasts = df_forecast[df_forecast['ForecastPeriod'] == 'Monthly'].copy()
+            forecast_by_month = monthly_forecasts.groupby('Month')['PredictedDemand'].sum()
+            
+            months = list(forecast_by_month.index)[:3]  # Next 3 months
+            values = [forecast_by_month.get(m, 0) for m in months]
+            
+            # Simple forecast line
+            ax.plot(range(len(months)), values, color='#4169E1', linewidth=3, marker='s', markersize=6)
+            ax.fill_between(range(len(months)), 0, values, color='#4169E1', alpha=0.3)
+            
+            ax.set_title('Demand Forecast', fontsize=14, fontweight='bold', pad=20)
+            ax.set_ylabel('Predicted Demand', fontsize=12)
+            ax.set_xlabel('Month', fontsize=12)
+            ax.set_xticks(range(len(months)))
+            ax.set_xticklabels([m.end_time.strftime('%Y-%m') for m in months], rotation=45)
+            ax.yaxis.set_major_formatter(plt.FuncFormatter(lambda x, p: f'{x/1000:.0f}K'))
+            ax.grid(True, alpha=0.2)
+            
+        except Exception as e:
+            ax.text(0.5, 0.5, f'Forecast error: {str(e)}', ha='center', va='center', transform=ax.transAxes)
+            ax.set_title('Demand Forecast (Error)', fontsize=14, fontweight='bold')
+    else:
+        ax.text(0.5, 0.5, 'Forecast data not available', ha='center', va='center', transform=ax.transAxes)
+        ax.set_title('Demand Forecast (No Data)', fontsize=14, fontweight='bold')
+
+
 def main():
     """Main function to orchestrate supply chain data generation."""
     
@@ -951,27 +925,26 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog="""
 Examples:
-  python main_generate_supplychain.py
-  python main_generate_supplychain.py --start-date 2025-01-01 --end-date 2026-03-02
-  python main_generate_supplychain.py --inventory-only --num-orders 50
-  python main_generate_supplychain.py --auto-scale  # Auto-calculate based on sales data
-  python main_generate_supplychain.py --auto-scale --graph
-  python main_generate_supplychain.py --graph --num-orders 25 --num-transactions 800
+  python main_generate_supplychain.py -s 2025-01-01 -e 2026-04-30
+  python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-02 --inventory-only --num-orders 50
+  python main_generate_supplychain.py -s 2025-01-01 -e 2026-04-30 --auto-scale  # Auto-calculate based on sales data
+  python main_generate_supplychain.py -s 2025-01-01 -e 2026-04-30 --auto-scale --graph
+  python main_generate_supplychain.py -s 2025-01-01 -e 2026-04-30 --graph --num-orders 25 --num-transactions 800
         """
     )
     
     parser.add_argument(
         '-s', '--start-date',
         type=str,
-        default=(date.today() - timedelta(days=365)).strftime('%Y-%m-%d'),  # 1 year ago from today
-        help='Start date for analysis (YYYY-MM-DD, default: 1 year ago from today)'
+        required=True,
+        help='Start date for analysis (YYYY-MM-DD)'
     )
     
     parser.add_argument(
         '-e', '--end-date', 
         type=str,
-        default=date.today().strftime('%Y-%m-%d'),
-        help='End date for analysis (YYYY-MM-DD, default: today)'
+        required=True,
+        help='End date for analysis (YYYY-MM-DD)'
     )
     
     parser.add_argument(
@@ -1030,8 +1003,6 @@ Examples:
     # Print banner
     print_banner()
     
-    start_time = datetime.now()
-    
     # Auto-scale parameters if requested
     if args.auto_scale:
         print("🚀 Auto-scaling enabled - analyzing existing sales data...")
@@ -1064,6 +1035,8 @@ Examples:
             
             supplier_generator = SupplierDataGenerator()
             supplier_results = supplier_generator.generate_all_supplier_data(
+                start_date=datetime.strptime(args.start_date, '%Y-%m-%d'),
+                end_date=datetime.strptime(args.end_date, '%Y-%m-%d'),
                 num_events=args.num_events
             )
             results['suppliers'] = supplier_results
@@ -1080,7 +1053,7 @@ Examples:
         output_dir = current_dir / "output"
         
         print("🏭 Generating warehouse master data...")
-        warehouse_success = generate_warehouses_csv(input_dir, output_dir)
+        warehouse_success = generate_warehouses_csv(input_dir, output_dir, args.end_date)
         if warehouse_success:
             print("   └─ Warehouse configuration loaded and CSV generated")
         
@@ -1097,10 +1070,8 @@ Examples:
         
         print("✅ Phase 2 completed successfully!")
         
-        end_time = datetime.now()
-        
         # Generate summary report
-        summary_file = generate_summary_report(results, args, start_time, end_time)
+        summary_file = generate_summary_report(results, args)
         
         # Generate analytics graph if requested
         if args.graph:
