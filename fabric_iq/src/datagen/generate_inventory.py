@@ -901,21 +901,21 @@ class InventoryDataGenerator:
                 sales_trend = self._calculate_recent_sales_trend(product_id)
                 sample_trends.append(sales_trend)  # Track for summary
                 
-                # Apply smoothed progressive growth for forecast periods
-                # Minimize seasonal effects to ensure consistent upward trend
-                trend_factor = min(sales_trend, 1.2)  # Cap at 20% to reduce volatility
+                # Use actual sales trend without artificial caps for better forecasting
+                # Only apply minimal smoothing to prevent extreme outliers
+                trend_factor = max(0.9, min(2.0, sales_trend))  # Allow up to 100% growth, minimum -10%
                 
-                # Heavily minimize seasonal multipliers for smooth business forecasting
-                # Convert strong seasonal swings to gentle variations (±5% max)
+                # Minimize seasonal multipliers for smooth business forecasting
+                # Convert strong seasonal swings to gentle variations (±3% max)
                 seasonal_deviation = seasonal_mult - 1.0  # How far from neutral (1.0)
-                minimal_seasonal = 1.0 + (seasonal_deviation * 0.1)  # Only 10% of original seasonal effect
+                minimal_seasonal = 1.0 + (seasonal_deviation * 0.05)  # Only 5% of original seasonal effect
                 
-                # Ensure seasonal stays within reasonable business range (0.95 to 1.05)
-                smooth_seasonal = max(0.95, min(1.05, minimal_seasonal))
+                # Ensure seasonal stays within tight business range (0.97 to 1.03)
+                smooth_seasonal = max(0.97, min(1.03, minimal_seasonal))
                 
-                # Progressive compound growth that ensures upward trend
-                base_growth = 1.05  # Minimum 5% growth per month
-                compound_trend = base_growth + ((trend_factor - 1.0) * (month_offset + 1) * 0.2)
+                # Use the actual trend factor directly with compound growth over time
+                # This preserves the upward trajectory from sales growth patterns
+                compound_trend = trend_factor ** (month_offset + 1)  # Compound monthly growth
                 
                 # Calculate prediction with minimized seasonal effects
                 predicted_demand = max(1, int(baseline_demand * smooth_seasonal * compound_trend))

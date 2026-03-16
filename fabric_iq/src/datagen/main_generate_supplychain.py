@@ -151,7 +151,7 @@ def calculate_optimal_parameters(start_date, end_date):
         categories_found = []
         
         for category in ['camping', 'kitchen', 'ski']:
-            sales_path = output_path / category / "sales"
+            sales_path = output_path / "sales" / category
             if sales_path.exists():
                 # Count order lines
                 orderline_files = list(sales_path.glob("*OrderLine*.csv"))
@@ -263,7 +263,7 @@ def generate_summary_report(results, args, start_time, end_time):
             
             sales_count = 0
             for category in ['camping', 'kitchen', 'ski']:
-                sales_path = output_path / category / "sales"
+                sales_path = output_path / "sales" / category
                 if sales_path.exists():
                     orderline_files = list(sales_path.glob("*OrderLine*.csv"))
                     for file_path in orderline_files:
@@ -504,8 +504,8 @@ def generate_graph(results, args):
             for category in ['camping', 'kitchen', 'ski']:
                 try:
                     # Load order file (has dates) and order line file (has quantities)
-                    orders_file = output_path / category / "sales" / f"Order_Samples_{category.capitalize()}.csv"
-                    order_lines_file = output_path / category / "sales" / f"OrderLine_Samples_{category.capitalize()}.csv"
+                    orders_file = output_path / "sales" / category / f"Order_Samples_{category.capitalize()}.csv"
+                    order_lines_file = output_path / "sales" / category / f"OrderLine_Samples_{category.capitalize()}.csv"
                     
                     if orders_file.exists() and order_lines_file.exists():
                         df_orders = pd.read_csv(orders_file)
@@ -548,6 +548,11 @@ def generate_graph(results, args):
                     historical_data = [historical_sales.get(m, 0) for m in all_historical_months]
                     recent_months = all_historical_months  # Use full analysis period
                     
+                    # DEBUG: Show what we're plotting to understand the trend
+                    print(f"📊 Graph Data Analysis:")
+                    print(f"   Historical months: {[str(m) for m in all_historical_months[-3:]]}")  # Last 3 months
+                    print(f"   Historical values: {historical_data[-3:] if len(historical_data) >= 3 else historical_data}")
+                    
                     # Load demand forecast data
                     df_forecast = pd.read_csv(demand_forecast_file)
                     df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
@@ -557,6 +562,9 @@ def generate_graph(results, args):
                     monthly_forecasts = df_forecast.groupby('Month')['PredictedDemand'].sum()
                     forecast_months = sorted(monthly_forecasts.index)
                     forecast_data = [monthly_forecasts.get(m, 0) for m in forecast_months[:3]]  # Next 3 months
+                    
+                    print(f"   Forecast months: {[str(m) for m in forecast_months[:3]]}")
+                    print(f"   Forecast values: {forecast_data}")
                     
                     # Create continuous timeline without gaps
                     all_months = recent_months + forecast_months[:3]

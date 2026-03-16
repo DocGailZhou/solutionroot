@@ -383,7 +383,7 @@ def generate_revenue_graph(start_date, end_date, run_camping, run_kitchen, run_s
     try:
         # Load order data from each domain
         if run_camping:
-            camping_file = output_dir / "camping" / "sales" / "Order_Samples_Camping.csv"
+            camping_file = output_dir / "sales" / "camping" / "Order_Samples_Camping.csv"
             if camping_file.exists():
                 df = pd.read_csv(camping_file)
                 df['Domain'] = 'Camping'
@@ -391,7 +391,7 @@ def generate_revenue_graph(start_date, end_date, run_camping, run_kitchen, run_s
                 all_orders.append(df[['OrderDate', 'OrderTotal', 'Domain', 'Color']])
         
         if run_kitchen:
-            kitchen_file = output_dir / "kitchen" / "sales" / "Order_Samples_Kitchen.csv"
+            kitchen_file = output_dir / "sales" / "kitchen" / "Order_Samples_Kitchen.csv"
             if kitchen_file.exists():
                 df = pd.read_csv(kitchen_file)
                 df['Domain'] = 'Kitchen'
@@ -399,7 +399,7 @@ def generate_revenue_graph(start_date, end_date, run_camping, run_kitchen, run_s
                 all_orders.append(df[['OrderDate', 'OrderTotal', 'Domain', 'Color']])
         
         if run_ski:
-            ski_file = output_dir / "ski" / "sales" / "Order_Samples_Ski.csv"
+            ski_file = output_dir / "sales" / "ski" / "Order_Samples_Ski.csv"
             if ski_file.exists():
                 df = pd.read_csv(ski_file)
                 df['Domain'] = 'Ski'

@@ -5,10 +5,10 @@ Business Growth & Market Event Logic
 This module contains the logic for business growth patterns and market event simulation
 to make sample data generation more realistic and representative of growing businesses.
 
-Implements a three-phase continuous growth model:
-- Phase 1 (0-33%): Strong Growing Baseline (1.4x → 2.2x avg 1.8x)
-- Phase 2 (33-67%): Sustained Growth (1.0x → 1.4x avg 1.2x)  
-- Phase 3 (67-100%): Explosive Growth (2.0x → 4.0x avg 3.0x)
+Implements a three-phase smooth growth model with consolidation:
+- Phase 1 (0-33%): Steady Initial Growth (1.0x → 1.8x, avg 1.4x)
+- Phase 2 (33-35%): Consolidation Period (flat at 1.8x)  
+- Phase 3 (35-100%): Sustained Growth (1.8x → 3.0x, avg 2.4x)
 
 Market events include Black Friday, Christmas, Memorial Day, etc.
 Customer tier amplification makes VIP/Partner customers more responsive to trends.
@@ -34,90 +34,39 @@ def calculate_business_phase(current_date: datetime, start_date: datetime, end_d
     
     # Define phase boundaries as percentages
     phase_1_end = 0.33  # 0% to 33%
-    phase_2_end = 0.67  # 33% to 67%
-    # phase_3_end = 1.0  # 67% to 100%
+    phase_2_end = 0.35  # 33% to 35% (brief consolidation)
+    # phase_3_end = 1.0  # 35% to 100%
     
     if progress_percent <= phase_1_end:
-        # Phase 1: Strong Growing Baseline (0% → 33%)
+        # Phase 1: Steady Initial Growth (0% → 33%)
         phase = 1
         phase_progress = progress_percent / phase_1_end  # 0.0 to 1.0 within this phase
-        # Growth from 1.4 to 2.2 (average 1.8x - very strong growing baseline)
-        multiplier = 1.4 + (phase_progress * 0.8)
+        # Smooth growth from 1.0 to 1.8 (steady initial growth)
+        multiplier = 1.0 + (phase_progress * 0.8)
         
     elif progress_percent <= phase_2_end:
-        # Phase 2: Continued Growth (33% → 67%) 
+        # Phase 2: Consolidation Period (33% → 35%) 
         phase = 2
-        phase_progress = (progress_percent - phase_1_end) / (phase_2_end - phase_1_end)  # 0.0 to 1.0 within this phase
-        # Continued growth from 1.0 to 1.4 (average 1.2x - sustained growth, no dip below baseline)
-        multiplier = 1.0 + (phase_progress * 0.4)
+        # Flat period at 1.8x for consolidation
+        multiplier = 1.8
         
     else:
-        # Phase 3: Explosive Growth (67% → 100%)
+        # Phase 3: Sustained Growth (35% → 100%)
         phase = 3
         phase_progress = (progress_percent - phase_2_end) / (1.0 - phase_2_end)  # 0.0 to 1.0 within this phase
-        # Growth from 2.0 to 4.0 (average 3.0x - explosive growth & expansion)
-        multiplier = 2.0 + (phase_progress * 2.0)
+        # Continued growth from 1.8 to 3.0 (sustained growth)
+        multiplier = 1.8 + (phase_progress * 1.2)
     
     return phase, multiplier
 
 def get_market_event_multiplier(current_date: datetime) -> Tuple[str, float, float]:
     """
-    Determine if current date falls on a market event and return multipliers.
+    Simple market events - minimal seasonal variation for smooth trends.
     
     Returns:
         Tuple[str, float, float]: (event_name, order_frequency_multiplier, order_size_multiplier)
     """
-    month = current_date.month
-    day = current_date.day
-    
-    # Black Friday (last Friday of November)
-    if month == 11:
-        # Find the last Friday of November
-        last_day = calendar.monthrange(current_date.year, 11)[1]
-        last_friday = None
-        for d in range(last_day, 0, -1):
-            test_date = datetime(current_date.year, 11, d)
-            if test_date.weekday() == 4:  # Friday is 4
-                last_friday = d
-                break
-        
-        if last_friday and day >= last_friday and day <= last_friday + 3:  # 4-day weekend
-            return "Black Friday Weekend", 4.0, 1.4
-    
-    # Christmas Shopping Season (December 1-25)
-    if month == 12 and 1 <= day <= 25:
-        # Gradual ramp-up throughout December
-        week = (day - 1) // 7 + 1  # Week 1-4
-        multipliers = {1: 1.2, 2: 1.5, 3: 1.8, 4: 2.0}
-        week_mult = multipliers.get(min(week, 4), 2.0)
-        return "Christmas Shopping", week_mult, 1.2
-    
-    # Memorial Day Weekend (last Monday of May)
-    if month == 5:
-        # Find the last Monday of May
-        last_day = calendar.monthrange(current_date.year, 5)[1]
-        last_monday = None
-        for d in range(last_day, 0, -1):
-            test_date = datetime(current_date.year, 5, d)
-            if test_date.weekday() == 0:  # Monday is 0
-                last_monday = d
-                break
-        
-        if last_monday and day >= last_monday - 2 and day <= last_monday:  # 3-day weekend
-            return "Memorial Day Weekend", 1.5, 1.3  # Especially good for camping
-    
-    # Back-to-School (August 15-31)
-    if month == 8 and day >= 15:
-        return "Back-to-School", 1.3, 1.2  # Good for kitchen equipment
-    
-    # New Year Resolution (January 2-15)
-    if month == 1 and 2 <= day <= 15:
-        return "New Year Resolutions", 1.4, 1.1  # Fitness/outdoor goals
-    
-    # Post-Holiday Lull (January 16-31)
-    if month == 1 and 16 <= day <= 31:
-        return "Post-Holiday Lull", 0.7, 0.9
-    
+    # Keep it simple - just normal business operations
     return "Normal", 1.0, 1.0
 
 def get_customer_tier_multiplier(customer_relationship_type: str, base_multiplier: float) -> float:
