@@ -1,0 +1,70 @@
+ProductSupplierID,ProductID,ProductName,ProductCategory,SupplierID,SupplierName,SupplierProductCode,WholesaleCost,MinOrderQuantity,MaxOrderQuantity,LeadTimeDays,Status,CreatedBy,CreatedDate
+1,1521,Adventurer Pro Backpack,Camping,1,Contoso Ltd,CON-1521,130.33,1,1000.0,12,Active,system,2025-12-13 00:00:00
+2,1531,Summit Breeze Jacket,Camping,1,Contoso Ltd,CON-1531,102.35,1,,8,Active,system,2026-03-31 00:00:00
+3,1541,TrekReady Hiking Boots,Camping,1,Contoso Ltd,CON-1541,130.33,1,10000.0,7,Active,system,2025-12-17 00:00:00
+4,1551,BaseCamp Folding Table,Camping,1,Contoso Ltd,CON-1551,66.43,50,10000.0,8,Active,system,2026-01-14 00:00:00
+5,1561,EcoFire Camping Stove,Camping,1,Contoso Ltd,CON-1561,76.16,25,,10,Active,system,2026-03-27 00:00:00
+6,1571,CozyNights Sleeping Bag,Camping,1,Contoso Ltd,CON-1571,102.95,25,1000.0,8,Active,system,2025-12-23 00:00:00
+7,1511,Alpine Explorer Tent,Camping,1,Contoso Ltd,CON-1511,324.35,10,1000.0,8,Active,system,2025-11-17 00:00:00
+8,1522,SummitClimber Backpack,Camping,1,Contoso Ltd,CON-1522,175.0,25,,10,Active,system,2026-02-11 00:00:00
+9,1522,SummitClimber Backpack,Camping,4,Worldwide Importers,WOR-1522,186.9,50,,26,Active,system,2026-02-06 00:00:00
+10,1532,TrailBlaze Hiking Pants,Camping,1,Contoso Ltd,CON-1532,67.66,10,5000.0,9,Active,system,2025-11-14 00:00:00
+11,1542,TrailWalker Hiking Shoes,Camping,1,Contoso Ltd,CON-1542,84.03,1,,8,Active,system,2026-02-13 00:00:00
+12,1542,TrailWalker Hiking Shoes,Camping,4,Worldwide Importers,WOR-1542,92.28,1,5000.0,24,Active,system,2025-12-22 00:00:00
+13,1552,TrekMaster Camping Chair,Camping,1,Contoso Ltd,CON-1552,57.76,5,1000.0,11,Active,system,2026-02-24 00:00:00
+14,1562,PowerBurner Camping Stove,Camping,1,Contoso Ltd,CON-1562,136.09,1,5000.0,12,Active,system,2026-03-17 00:00:00
+15,1572,MountainDream Sleeping Bag,Camping,1,Contoso Ltd,CON-1572,213.98,50,10000.0,9,Active,system,2026-01-01 00:00:00
+16,1512,SkyView 2-Person Tent,Camping,1,Contoso Ltd,CON-1512,240.11,1,,11,Active,system,2025-11-26 00:00:00
+17,1512,SkyView 2-Person Tent,Camping,4,Worldwide Importers,WOR-1512,216.3,25,,16,Active,system,2026-02-20 00:00:00
+18,1523,TrailLite Daypack,Camping,1,Contoso Ltd,CON-1523,52.02,50,10000.0,11,Active,system,2026-03-09 00:00:00
+19,1533,RainGuard Hiking Jacket,Camping,1,Contoso Ltd,CON-1533,121.69,5,1000.0,13,Active,system,2025-11-21 00:00:00
+20,1543,TrekStar Hiking Sandals,Camping,1,Contoso Ltd,CON-1543,55.81,10,5000.0,13,Active,system,2026-03-31 00:00:00
+21,1543,TrekStar Hiking Sandals,Camping,4,Worldwide Importers,WOR-1543,73.76,1,2000.0,23,Active,system,2025-12-12 00:00:00
+22,1553,Adventure Dining Table,Camping,1,Contoso Ltd,CON-1553,117.02,1,1000.0,13,Active,system,2026-02-03 00:00:00
+23,1563,CompactCook Camping Stove,Camping,1,Contoso Ltd,CON-1563,71.58,1,10000.0,10,Active,system,2026-03-01 00:00:00
+24,1581,LED Headlamp - Rechargeable,Camping,1,Contoso Ltd,CON-1581,55.96,10,1000.0,10,Active,system,2026-02-26 00:00:00
+25,2011,Coffee Maker,Kitchen,2,Proseware Inc,PRO-2011,115.89,5,10000.0,10,Active,system,2026-02-23 00:00:00
+26,2012,Espresso Machine,Kitchen,2,Proseware Inc,PRO-2012,296.77,1,10000.0,9,Active,system,2025-11-10 00:00:00
+27,2021,Chef Knife,Kitchen,2,Proseware Inc,PRO-2021,57.11,50,1000.0,7,Active,system,2025-12-26 00:00:00
+28,2022,Fork Set,Kitchen,2,Proseware Inc,PRO-2022,28.01,25,1000.0,8,Active,system,2026-03-06 00:00:00
+29,2031,Coffee Mug,Kitchen,2,Proseware Inc,PRO-2031,23.79,1,1000.0,10,Active,system,2025-12-21 00:00:00
+30,2031,Coffee Mug,Kitchen,4,Worldwide Importers,WOR-2031,21.48,10,5000.0,21,Active,system,2026-03-24 00:00:00
+31,2041,Serving Platter,Kitchen,2,Proseware Inc,PRO-2041,44.75,25,,7,Active,system,2026-01-30 00:00:00
+32,2051,Ice Cream Bowl,Kitchen,2,Proseware Inc,PRO-2051,17.25,50,,12,Active,system,2026-01-28 00:00:00
+33,2061,Mixing Bowl,Kitchen,2,Proseware Inc,PRO-2061,24.98,1,,12,Active,system,2026-03-03 00:00:00
+34,2071,Baking Pan,Kitchen,2,Proseware Inc,PRO-2071,21.87,5,10000.0,9,Active,system,2025-12-03 00:00:00
+35,2081,Food Storage Set,Kitchen,2,Proseware Inc,PRO-2081,27.81,10,1000.0,13,Active,system,2026-02-16 00:00:00
+36,2091,Spatula,Kitchen,2,Proseware Inc,PRO-2091,10.11,1,5000.0,9,Active,system,2026-02-20 00:00:00
+37,2101,Measuring Cup Set,Kitchen,2,Proseware Inc,PRO-2101,12.66,50,,11,Active,system,2026-01-21 00:00:00
+38,2101,Measuring Cup Set,Kitchen,4,Worldwide Importers,WOR-2101,16.75,10,5000.0,18,Active,system,2026-03-03 00:00:00
+39,2111,High-Speed Blender,Kitchen,2,Proseware Inc,PRO-2111,129.13,10,5000.0,9,Active,system,2025-11-30 00:00:00
+40,2112,4-Slice Toaster,Kitchen,2,Proseware Inc,PRO-2112,64.65,25,1000.0,13,Active,system,2026-03-13 00:00:00
+41,2121,Bamboo Cutting Board Set,Kitchen,2,Proseware Inc,PRO-2121,36.68,50,1000.0,11,Active,system,2025-11-18 00:00:00
+42,3011,Alpine Pro Racing Skis - 170cm,Ski,3,Alpine Ski House,ALP-3011,1038.69,5,1000.0,10,Active,system,2026-03-21 00:00:00
+43,3012,Mountain Master All-Terrain Skis - 165cm,Ski,3,Alpine Ski House,ALP-3012,617.91,5,5000.0,15,Active,system,2025-11-02 00:00:00
+44,3013,Beginner's Choice Alpine Skis - 160cm,Ski,3,Alpine Ski House,ALP-3013,320.02,25,1000.0,13,Active,system,2025-11-01 00:00:00
+45,3021,Nordic Classic XC Skis - 185cm,Ski,3,Alpine Ski House,ALP-3021,220.13,25,,12,Active,system,2025-11-16 00:00:00
+46,3022,Backcountry Explorer XC Skis - 190cm,Ski,3,Alpine Ski House,ALP-3022,385.22,10,,12,Active,system,2026-03-06 00:00:00
+47,3031,Pro Flex Racing Ski Boots,Ski,3,Alpine Ski House,ALP-3031,400.29,5,1000.0,9,Active,system,2025-11-09 00:00:00
+48,3032,Comfort Fit Recreational Boots,Ski,3,Alpine Ski House,ALP-3032,247.7,10,5000.0,14,Active,system,2026-03-07 00:00:00
+49,3033,Women's Performance Ski Boots,Ski,3,Alpine Ski House,ALP-3033,360.76,1,1000.0,15,Active,system,2026-01-27 00:00:00
+50,3041,Carbon Fiber Racing Poles - 120cm,Ski,3,Alpine Ski House,ALP-3041,136.9,50,5000.0,9,Active,system,2025-12-29 00:00:00
+51,3041,Carbon Fiber Racing Poles - 120cm,Ski,4,Worldwide Importers,WOR-3041,149.92,50,500.0,24,Active,system,2026-02-02 00:00:00
+52,3042,Aluminum All-Mountain Poles - 115cm,Ski,3,Alpine Ski House,ALP-3042,75.34,10,5000.0,15,Active,system,2026-03-16 00:00:00
+53,3051,Insulated Ski Jacket - Men's,Ski,3,Alpine Ski House,ALP-3051,237.43,10,5000.0,9,Active,system,2026-02-14 00:00:00
+54,3052,Thermal Base Layer Set - Women's,Ski,3,Alpine Ski House,ALP-3052,99.01,25,,12,Active,system,2025-12-19 00:00:00
+55,3053,Waterproof Ski Pants,Ski,3,Alpine Ski House,ALP-3053,162.57,25,,15,Active,system,2026-01-26 00:00:00
+56,3053,Waterproof Ski Pants,Ski,4,Worldwide Importers,WOR-3053,167.9,1,5000.0,25,Active,system,2025-11-05 00:00:00
+57,3061,Professional Ski Helmet,Ski,3,Alpine Ski House,ALP-3061,139.63,50,5000.0,10,Active,system,2025-11-12 00:00:00
+58,3062,Anti-Fog Ski Goggles,Ski,3,Alpine Ski House,ALP-3062,89.85,1,5000.0,11,Active,system,2026-02-11 00:00:00
+59,3071,Ski Boot Bag - Premium,Ski,3,Alpine Ski House,ALP-3071,45.24,5,5000.0,9,Active,system,2026-03-11 00:00:00
+60,3072,Hand Warmers - 10 Pack,Ski,3,Alpine Ski House,ALP-3072,9.48,5,1000.0,10,Active,system,2025-12-07 00:00:00
+61,3081,All-Temp Ski Wax Kit,Ski,3,Alpine Ski House,ALP-3081,59.05,5,1000.0,13,Active,system,2025-12-01 00:00:00
+62,3082,Edge Tuning Tool Set,Ski,3,Alpine Ski House,ALP-3082,77.17,5,5000.0,9,Active,system,2026-01-10 00:00:00
+63,3091,Freestyle Snowboard - 155cm,Ski,3,Alpine Ski House,ALP-3091,408.76,1,10000.0,9,Active,system,2026-01-29 00:00:00
+64,3091,Freestyle Snowboard - 155cm,Ski,4,Worldwide Importers,WOR-3091,441.63,1,5000.0,19,Active,system,2026-02-13 00:00:00
+65,3092,All-Mountain Snowboard - 158cm,Ski,3,Alpine Ski House,ALP-3092,554.59,10,1000.0,11,Active,system,2026-02-16 00:00:00
+66,3101,Winter Boots - Insulated,Ski,3,Alpine Ski House,ALP-3101,116.29,10,5000.0,12,Active,system,2026-01-24 00:00:00
+67,3102,Winter Hiking Boots - Waterproof,Ski,3,Alpine Ski House,ALP-3102,158.0,50,10000.0,10,Active,system,2026-01-19 00:00:00
+68,3103,Snowboard Bindings - Pro,Ski,3,Alpine Ski House,ALP-3103,180.51,5,,10,Active,system,2025-12-17 00:00:00
+69,3104,Ski Tuning Bench - Portable,Ski,3,Alpine Ski House,ALP-3104,149.07,10,5000.0,11,Active,system,2025-12-16 00:00:00

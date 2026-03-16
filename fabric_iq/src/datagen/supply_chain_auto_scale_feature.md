@@ -1,7 +1,9 @@
 # Smart Data Generation Suite
 
 ### ✨ Auto-Scale Supply Chain Parameters
-The supply chain generator now automatically calculates optimal parameters based on your sales data!
+The supply chain generator automatically calculates optimal parameters based on your sales data.
+
+> **Required Parameters**: All commands require explicit start and end date parameters (`-s` and `-e`) to ensure deterministic, reproducible results.
 
 ```bash
 python main_generate_supplychain.py --auto-scale -s 2025-01-01 -e 2026-03-31
@@ -19,17 +21,13 @@ python main_generate_supplychain.py --auto-scale -s 2025-01-01 -e 2026-03-31
 The PowerShell script handles the complete workflow automatically:
 
 ## PowerShell Script (Recommended)
-**`datagen.ps1`**
+**`datagen.ps1`** - Interactive workflow with guided prompts
+
+**Date Range Coordination**: For optimal integration, use the same end date (`-e`) for both sales and supply chain generation. Start dates can differ - sales generation can begin earlier to provide sufficient historical data for supply chain auto-scaling analysis. 
 
 ```powershell
-# Interactive mode (prompts for dates)
+# Interactive mode (prompts for dates and options)
 .\datagen.ps1
-
-# Direct execution  
-.\datagen.ps1 -StartDate "2025-01-01" -EndDate "2026-03-31"
-
-# Full feature execution
-.\datagen.ps1 -StartDate "2025-01-01" -EndDate "2026-03-31" -EnableGrowth -GenerateGraphs -CopyData
 ```
 
 ## Workflow
@@ -49,10 +47,14 @@ The PowerShell script handles the complete workflow automatically:
 ✅ Using auto-calculated parameters
 ```
 
-## Manual Override
-You can still use manual parameters if needed:
+## Manual Parameter Override
+You can override auto-calculated parameters with specific values:
 ```bash
+# Custom parameters with required date range
 python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --num-orders 50 --num-transactions 800
+
+# Full manual control with additional options
+python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --num-orders 125 --num-transactions 2000 --copydata --graph --no-display
 ```
 
 ## Benefits
@@ -60,4 +62,5 @@ python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --num-orders 50 
 - **Time Saving**: No manual parameter calculation needed
 - **Integrated Workflow**: One command generates complete business dataset  
 - **Intelligent Defaults**: Falls back gracefully when sales data is not available
-- **Date Consistency**: Ensures sales and supply chain data use same date range
+- **Deterministic Results**: Same input parameters always produce identical outputs
+- **Date Consistency**: All generated data uses the specified date range exclusively
