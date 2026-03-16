@@ -558,8 +558,11 @@ def generate_graph(results, args):
                     df_forecast['ForecastDate'] = pd.to_datetime(df_forecast['ForecastDate'])
                     df_forecast['Month'] = df_forecast['ForecastDate'].dt.to_period('M')
                     
-                    # Get monthly forecasts (aggregate weekly to monthly for comparison)
-                    monthly_forecasts = df_forecast.groupby('Month')['PredictedDemand'].sum()
+                    # Filter to only monthly forecasts to avoid double-counting (CSV has both monthly and weekly)
+                    monthly_only_forecasts = df_forecast[df_forecast['ForecastPeriod'] == 'Monthly'].copy()
+                    
+                    # Get monthly forecasts (now properly filtered)
+                    monthly_forecasts = monthly_only_forecasts.groupby('Month')['PredictedDemand'].sum()
                     forecast_months = sorted(monthly_forecasts.index)
                     forecast_data = [monthly_forecasts.get(m, 0) for m in forecast_months[:3]]  # Next 3 months
                     
@@ -582,28 +585,27 @@ def generate_graph(results, args):
                         ax1.plot(x_positions, all_data, color='#1f77b4', linewidth=3, alpha=0.8)
                         
                         # Fill areas with different colors
-                        # Historical area (green)
-                        hist_x = list(range(len(historical_data)))
-                        ax1.fill_between(hist_x, 0, historical_data, 
+                        # Historical area (green) - extend to connect with forecast
+                        hist_x = list(range(len(historical_data) + 1))  # Extend by 1 to connect
+                        hist_data_extended = historical_data + [historical_data[-1]]  # Repeat last value
+                        ax1.fill_between(hist_x, 0, hist_data_extended, 
                                        color='#2E8B57', alpha=0.7, 
-                                       label='Recent Sales (Analysis Period)')
+                                       label='Recent Sales (Last 6 Months)')
                         
-                        # Forecast area (blue) - start from last historical point for smooth transition
+                        # Forecast area (blue) - start from connection point
                         if len(forecast_data) > 0:
-                            forecast_start_idx = len(historical_data) - 1  # Overlap by 1 for smooth transition
+                            forecast_start_idx = len(historical_data)  # Start right after historical
                             forecast_x = list(range(forecast_start_idx, len(all_data)))
                             
-                            # Create transition data that includes last historical point + forecasts
-                            transition_data = [historical_data[-1]] + forecast_data
-                            
-                            ax1.fill_between(forecast_x, 0, transition_data, 
+                            # Use forecast data directly (no overlap needed since historical extends)
+                            ax1.fill_between(forecast_x, 0, forecast_data, 
                                            color='#4169E1', alpha=0.6, 
                                            label='Forecast (Next 3 Months)')
                         
                         # Add labels for sections
                         if len(historical_data) > 0:
                             ax1.text(len(historical_data)/2 - 0.5, max(all_data) * 0.8, 
-                                    'Recent Sales\n(6mo Analysis)', ha='center', va='center', 
+                                    'Recent Sales\n(Last 6 Months)', ha='center', va='center', 
                                     fontweight='bold', color='white', fontsize=10,
                                     bbox=dict(boxstyle='round,pad=0.5', facecolor='#2E8B57', alpha=0.8))
                         
@@ -615,7 +617,7 @@ def generate_graph(results, args):
                                     bbox=dict(boxstyle='round,pad=0.5', facecolor='#4169E1', alpha=0.8))
                         
                         # Set graph properties
-                        ax1.set_title('Demand Forecast vs Recent Sales Reality (Analysis Period)', fontsize=14, fontweight='bold', pad=20)
+                        ax1.set_title('Recent Sales vs Demand Forecast', fontsize=14, fontweight='bold', pad=20)
                         ax1.set_ylabel('Units (Thousands)', fontsize=12)
                         ax1.set_xlabel('Month', fontsize=12)
                         
