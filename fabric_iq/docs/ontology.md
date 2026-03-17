@@ -25,10 +25,10 @@
 
 ## Documentation Resources
 
-### Microsoft Fabric IQ & Semantic Modeling
+### Microsoft Fabric IQ Documentation
 - [Fabric IQ documentation - Microsoft Fabric | Microsoft Learn](https://learn.microsoft.com/en-us/fabric/iq/) main page for all useful documentations. 
 
-### GitHub Resources & Examples
+### GitHub Repo Example
 - [Microsoft Fabric Samples Repository](https://github.com/microsoft/fabric-samples) - Comprehensive collection of practical implementations
   - Semantic link tutorials and notebooks
   - Data agent implementation examples
