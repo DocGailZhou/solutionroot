@@ -5,6 +5,18 @@
 # META {
 # META   "kernel_info": {
 # META     "name": "synapse_pyspark"
+# META   },
+# META   "dependencies": {
+# META     "lakehouse": {
+# META       "default_lakehouse": "7bc5f01b-929f-4d7f-a7f4-165a36c3a7c5",
+# META       "default_lakehouse_name": "miqdata",
+# META       "default_lakehouse_workspace_id": "2948455a-3fb0-46d0-b1c3-2375575d3ee4",
+# META       "known_lakehouses": [
+# META         {
+# META           "id": "7bc5f01b-929f-4d7f-a7f4-165a36c3a7c5"
+# META         }
+# META       ]
+# META     }
 # META   }
 # META }
 
@@ -32,7 +44,7 @@
 
 # Schema Configuration
 SCHEMA_NAME = "customer"
-spark.sql(f"CREATE DATABASE IF NOT EXISTS {SCHEMA_NAME}")
+spark.sql(f"CREATE SCHEMA IF NOT EXISTS {SCHEMA_NAME}")
 print(f"✅ {SCHEMA_NAME} schema ready!")
 
 # METADATA ********************
