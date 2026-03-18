@@ -48,6 +48,7 @@ sys.path.append(os.path.dirname(__file__))
 
 from fabric_api import FabricApiError, create_fabric_client, create_workspace_fabric_client
 from graph_api import create_graph_client
+from helpers.config import REPO_ROOT, SOLUTION_NAME, default_workspace_name
 from helpers.utils import (
     encode_notebook,
     get_required_env_var,
@@ -63,8 +64,7 @@ from helpers.udf_workspace_admins import setup_workspace_administrators
 # Constants
 # ---------------------------------------------------------------------------
 
-SOLUTION_NAME = "Unified Data Foundation"
-INSTALLER_NOTEBOOK_NAME = "udf_solution_installer"
+INSTALLER_NOTEBOOK_NAME = "fabric_solution_installer"
 
 ALL_DEPLOYMENT_STEPS = [
     "setup_workspace",
@@ -82,13 +82,9 @@ ALL_DEPLOYMENT_STEPS = [
 def _notebook_path() -> str:
     """Return the absolute path to the installer notebook file.
 
-    The notebook lives at ``<repo-root>/infra/deploy/udf_solution_installer.ipynb``.
-    This file is located at ``<repo-root>/infra/scripts/fabric/install_udf_solution.py``,
-    so we walk two directories up from the script directory to reach ``infra/``.
+    The notebook lives at ``<repo-root>/fabric_iq/infra/deploy/fabric_solution_installer.ipynb``.
     """
-    script_dir = os.path.dirname(os.path.abspath(__file__))
-    infra_dir = os.path.dirname(os.path.dirname(script_dir))
-    return os.path.join(infra_dir, "deploy", f"{INSTALLER_NOTEBOOK_NAME}.ipynb")
+    return os.path.join(REPO_ROOT, "fabric_iq", "infra", "deploy", f"{INSTALLER_NOTEBOOK_NAME}.ipynb")
 
 
 def _upload_installer_notebook(workspace_client, notebook_path: str) -> str:
@@ -177,7 +173,7 @@ def main() -> None:
     capacity_name = get_required_env_var("AZURE_FABRIC_CAPACITY_NAME")
     solution_suffix = get_required_env_var("SOLUTION_SUFFIX")
     workspace_name = os.getenv(
-        "FABRIC_WORKSPACE_NAME", f"{SOLUTION_NAME} - {solution_suffix}"
+        "FABRIC_WORKSPACE_NAME", default_workspace_name(solution_suffix)
     )
     workspace_administrators = parse_workspace_administrators(
         get_required_env_var("AZURE_FABRIC_CAPACITY_ADMINISTRATORS"),

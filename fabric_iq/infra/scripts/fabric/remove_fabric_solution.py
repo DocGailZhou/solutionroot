@@ -1,34 +1,17 @@
-from fabric_api import create_fabric_client, FabricApiError
 import sys
 import os
 
-def get_required_env_var(var_name: str) -> str:
-    """Get a required environment variable or exit with error.
-    
-    Args:
-        var_name: Name of the environment variable to retrieve
-        
-    Returns:
-        Value of the environment variable
-        
-    Raises:
-        SystemExit: If the environment variable is not set
-    """
-    value = os.getenv(var_name)
-    if not value:
-        print(f"❌ Missing environment variable: {var_name}")
-        sys.exit(1)
-    return value
+# Add current directory to path so local modules can be imported
+sys.path.append(os.path.dirname(__file__))
+
+from fabric_api import create_fabric_client, FabricApiError
+from helpers.config import SOLUTION_NAME, default_workspace_name
+from helpers.utils import get_required_env_var
 
 
 ####################
 # Variables set up #
 ####################
-
-SOLUTION_NAME = "Unified_Data_Foundation"
-script_dir = os.path.dirname(os.path.abspath(__file__))
-# Go up three levels from infra/scripts/fabric to repo root
-repo_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
 
 ##############################
 # Environment Variable Setup #
@@ -38,7 +21,7 @@ repo_root = os.path.dirname(os.path.dirname(os.path.dirname(script_dir)))
 solution_suffix = get_required_env_var("SOLUTION_SUFFIX")
 # Use custom workspace name if provided; fall back to auto-generated name.
 # 'or' handles both None (unset) and '' (set to empty by CI/CD when var is not configured).
-workspace_name = os.getenv("FABRIC_WORKSPACE_NAME") or f"{SOLUTION_NAME}_{solution_suffix}"
+workspace_name = os.getenv("FABRIC_WORKSPACE_NAME") or default_workspace_name(solution_suffix)
 workspace_id = os.getenv("FABRIC_WORKSPACE_ID")
 if workspace_name and workspace_id:
     print("⚠️ WARNING: Both FABRIC_WORKSPACE_NAME and FABRIC_WORKSPACE_ID are set")
