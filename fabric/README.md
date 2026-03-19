@@ -18,3 +18,12 @@
    - All data in the Files/data folder will be loaded to the appropriate tables in the lakehouse **miqdata** 
    - You can now review the schema, tables, and data. 
 
+## Instructions - Update Resources 
+
+If you have regenerated data, please delete the  Files/data folder or rename it to something like Files/data_backup. And then update the new data generated (upload folder) to Files
+
+If you have updated the fabric notebooks, please delete all older notebooks and import updated ones from your local folder
+
+The easiest way to re-load to recreate schema and reload the data. 
+
+Open the notebook named `update_pipeline.ipynb`. And run each cell from top to down. 
