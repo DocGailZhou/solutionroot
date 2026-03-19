@@ -106,7 +106,7 @@ class SupplierDataGenerator:
                 'Location': supplier['Location'],
                 'ContactEmail': supplier['ContactEmail'],
                 'CreatedBy': supplier['CreatedBy'],
-                'CreatedDate': created_date.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': created_date.strftime('%Y-%m-%d')
             }
             
             suppliers_data.append(supplier_record)
@@ -199,7 +199,7 @@ class SupplierDataGenerator:
                     'LeadTimeDays': primary_supplier['LeadTimeDays'] + random.randint(-3, 3),
                     'Status': 'Active',
                     'CreatedBy': 'system',
-                    'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
+                    'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d')
                 }
                 
                 product_supplier_data.append(record)
@@ -230,7 +230,7 @@ class SupplierDataGenerator:
                         'LeadTimeDays': backup_supplier['LeadTimeDays'] + random.randint(-5, 5),
                         'Status': 'Active',
                         'CreatedBy': 'system',
-                        'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d %H:%M:%S')
+                        'CreatedDate': (end_date - timedelta(days=random.randint(30, 180))).strftime('%Y-%m-%d')
                     }
                     
                     product_supplier_data.append(record)
@@ -312,7 +312,14 @@ class SupplierDataGenerator:
                 'AlertLevel': random.choice(['Yellow', 'Orange', 'Red']),
                 'ReportedBy': 'Supply Chain Monitor',
                 'CreatedBy': 'system',
-                'CreatedDate': event_start.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': event_start.strftime('%Y-%m-%d'),
+                'SupplierID': None,
+                'ProductCategory': template.get('ProductCategory', None),
+                'ImpactLevel': random.choice(['Low', 'Medium', 'High']),
+                'DeliveryDelay': random.randint(1, 14),
+                'CostIncrease': round(random.uniform(0, 25), 2),
+                'AlternativeAction': random.choice(['Switch supplier', 'Increase safety stock', 'Expedite shipping', 'Negotiate terms', None]),
+                'EstimatedRevenueImpact': round(random.uniform(1000, 500000), 2)
             }
             
             events_data.append(event)

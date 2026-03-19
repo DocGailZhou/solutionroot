@@ -1,4 +1,4 @@
-CustomerAccountId,ParentAccountId,CustomerAccountName,CustomerId,IsoCurrencyCode
+CustomerAccountID,ParentAccountID,CustomerAccountName,CustomerID,IsoCurrencyCode
 CA-0001,P1-Camping,Camping,CID-001,USD
 CA-0002,P2-Kitchen,Kitchen,CID-001,USD
 CA-0003,P1-Camping,Camping,CID-002,USD

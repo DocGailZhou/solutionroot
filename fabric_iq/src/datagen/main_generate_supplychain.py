@@ -120,8 +120,8 @@ def generate_warehouses_csv(input_path, output_path, end_date_str):
                 
                 # System fields - add small random variance per warehouse
                 'CreatedBy': warehouse.get('CreatedBy', 'system'),
-                'CreatedDate': (created_date_base + timedelta(hours=random.randint(-24, 24))).strftime('%Y-%m-%d %H:%M:%S'),
-                'LastUpdated': (last_updated_base + timedelta(hours=random.randint(-12, 12))).strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': (created_date_base + timedelta(hours=random.randint(-24, 24))).strftime('%Y-%m-%d'),
+                'LastUpdated': (last_updated_base + timedelta(hours=random.randint(-12, 12))).strftime('%Y-%m-%d')
             }
             warehouses_data.append(record)
             
@@ -824,10 +824,10 @@ def _create_recent_sales_chart(ax, output_path, args):
                 df_orders = pd.read_csv(orders_file)
                 df_order_lines = pd.read_csv(order_lines_file)
                 
-                if 'OrderId' in df_orders.columns and 'OrderDate' in df_orders.columns:
-                    df_sales = pd.merge(df_orders[['OrderId', 'OrderDate']], 
-                                      df_order_lines[['OrderId', 'Quantity']], 
-                                      on='OrderId', how='inner')
+                if 'OrderID' in df_orders.columns and 'OrderDate' in df_orders.columns:
+                    df_sales = pd.merge(df_orders[['OrderID', 'OrderDate']], 
+                                      df_order_lines[['OrderID', 'Quantity']], 
+                                      on='OrderID', how='inner')
                     if len(df_sales) > 0:
                         df_sales['OrderDate'] = pd.to_datetime(df_sales['OrderDate'])
                         all_sales.append(df_sales)

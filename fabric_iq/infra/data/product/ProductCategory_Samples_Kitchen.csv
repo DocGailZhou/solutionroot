@@ -1,4 +1,4 @@
-CategoryID,ParentCategoryId,CategoryName,CategoryDescription,BrandName,BrandLogoUrl,IsActive
+CategoryID,ParentCategoryID,CategoryName,CategoryDescription,BrandName,BrandLogoUrl,IsActive
 201,P2-Kitchen,Coffee Makers,Coffee Makers for home and business kitchens.,Contoso Kitchen,https://contoso.com/kitchen-logo.png,TRUE
 202,P2-Kitchen,Cutlery,Cutlery for home and business kitchens.,Contoso Kitchen,https://contoso.com/kitchen-logo.png,TRUE
 203,P2-Kitchen,Cups & Mugs,Cups & Mugs for home and business kitchens.,Contoso Kitchen,https://contoso.com/kitchen-logo.png,TRUE

@@ -136,8 +136,8 @@ class InventoryDataGenerator:
                                 
                                 # Join orderlines with orders to get dates
                                 df_combined = df_orderlines.merge(
-                                    df_orders[['OrderId', 'OrderDate']], 
-                                    on='OrderId', 
+                                    df_orders[['OrderID', 'OrderDate']], 
+                                    on='OrderID', 
                                     how='left'
                                 )
                                 df_combined['Category'] = category.title()
@@ -234,7 +234,7 @@ class InventoryDataGenerator:
         velocity_analysis = {}
         
         # Group by ProductId and calculate sales ONLY within the supply chain analysis period
-        if 'ProductId' in self.sales_data.columns and 'Quantity' in self.sales_data.columns:
+        if 'ProductID' in self.sales_data.columns and 'Quantity' in self.sales_data.columns:
             # Filter sales data to the EXACT analysis period (start_date to end_date)
             # This ensures we only use sales relevant to the supply chain planning period
             # Smart lookback: Use last 6 months within user's analysis period (or entire period if < 6 months)
@@ -257,19 +257,19 @@ class InventoryDataGenerator:
             print(f"   Analysis period records: {len(analysis_period_sales):,}")
             
             if not analysis_period_sales.empty:
-                product_sales = analysis_period_sales.groupby('ProductId').agg({
+                product_sales = analysis_period_sales.groupby('ProductID').agg({
                     'Quantity': 'sum',
                     'OrderDate': ['min', 'max', 'count']
                 }).reset_index()
                 
-                product_sales.columns = ['ProductId', 'TotalQuantity', 'FirstSale', 'LastSale', 'OrderCount']
+                product_sales.columns = ['ProductID', 'TotalQuantity', 'FirstSale', 'LastSale', 'OrderCount']
                 
                 # Calculate trend period duration for monthly averaging
                 trend_days = (pd.Timestamp(self.end_date) - trend_start_date).days
                 analysis_months = max(trend_days / 30.0, 1.0)  # At least 1 month
                 
                 for _, row in product_sales.iterrows():
-                    product_id = row['ProductId']
+                    product_id = row['ProductID']
                     total_qty = row['TotalQuantity']
                     
                     # Calculate monthly sales based on analysis period sales only
@@ -330,8 +330,8 @@ class InventoryDataGenerator:
             (self.sales_data['OrderDate'] <= pd.Timestamp(self.end_date))
         ].copy()
         
-        if product_id is not None and 'ProductId' in analysis_period_sales.columns:
-            analysis_period_sales = analysis_period_sales[analysis_period_sales['ProductId'] == product_id]
+        if product_id is not None and 'ProductID' in analysis_period_sales.columns:
+            analysis_period_sales = analysis_period_sales[analysis_period_sales['ProductID'] == product_id]
             
         if analysis_period_sales.empty or len(analysis_period_sales) < 2:
             return 1.08  # Default 8% growth if insufficient data in trend period
@@ -452,11 +452,11 @@ class InventoryDataGenerator:
                 'SafetyStockLevel': safety_stock,
                 'ReorderPoint': reorder_point,
                 'MaxStockLevel': max_stock,
-                'LastUpdated': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(hours=random.randint(1, 48))).strftime('%Y-%m-%d %H:%M:%S'),
+                'LastUpdated': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(hours=random.randint(1, 48))).strftime('%Y-%m-%d'),
                 'AverageCost': round(avg_cost, 2),
                 'Status': status,
                 'CreatedBy': 'system',
-                'CreatedDate': (datetime.combine(self.start_date, datetime.min.time()) + timedelta(days=random.randint(0, (self.end_date - self.start_date).days - 30))).strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': (datetime.combine(self.start_date, datetime.min.time()) + timedelta(days=random.randint(0, (self.end_date - self.start_date).days - 30))).strftime('%Y-%m-%d')
             }
             
             inventory_data.append(record)
@@ -553,7 +553,7 @@ class InventoryDataGenerator:
                 'Priority': priority,
                 'Notes': f"Order for {supplier['ProductCategory']} products" if supplier['ProductCategory'] != 'Multi' else "Multi-category order",
                 'CreatedBy': 'system',
-                'CreatedDate': order_date.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': order_date.strftime('%Y-%m-%d')
             }
             
             po_data.append(record)
@@ -777,7 +777,7 @@ class InventoryDataGenerator:
                 'ProductCategory': inventory_record['ProductCategory'],
                 'WarehouseLocation': inventory_record['WarehouseLocation'],
                 'TransactionType': transaction_type,
-                'TransactionDate': transaction_date.strftime('%Y-%m-%d %H:%M:%S'),
+                'TransactionDate': transaction_date.strftime('%Y-%m-%d'),
                 'Quantity': quantity,
                 'UnitCost': round(unit_cost, 2),
                 'TotalValue': round(total_value, 2),
@@ -788,7 +788,7 @@ class InventoryDataGenerator:
                 'ProcessedBy': random.choice(['warehouse1', 'warehouse2', 'system']),
                 'Notes': f"Transaction processed for {inventory_record['WarehouseLocation']} location",
                 'CreatedBy': 'system',
-                'CreatedDate': transaction_date.strftime('%Y-%m-%d %H:%M:%S')
+                'CreatedDate': transaction_date.strftime('%Y-%m-%d')
             }
             
             transactions_data.append(record)
@@ -941,7 +941,7 @@ class InventoryDataGenerator:
                     'ActualDemand': None,  # Will be filled as time progresses
                     'AccuracyScore': None,  # Will be calculated later
                     'CreatedBy': 'system',
-                    'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d %H:%M:%S')
+                    'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d')
                 }
                 
                 forecast_data.append(forecast_record)
@@ -972,7 +972,7 @@ class InventoryDataGenerator:
                             'ActualDemand': None,
                             'AccuracyScore': None,
                             'CreatedBy': 'system',
-                            'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d %H:%M:%S')
+                            'CreatedDate': (datetime.combine(self.end_date, datetime.min.time()) - timedelta(days=random.randint(1, 30))).strftime('%Y-%m-%d')
                         }
                         
                         forecast_data.append(weekly_record)

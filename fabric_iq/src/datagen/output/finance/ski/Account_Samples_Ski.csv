@@ -1,4 +1,4 @@
-AccountId,AccountNumber,CustomerId,AccountType,AccountStatus,CreatedDate,ClosedDate,Balance,Currency,Description,CreatedBy
+AccountID,AccountNumber,CustomerID,AccountType,AccountStatus,CreatedDate,ClosedDate,Balance,Currency,Description,CreatedBy
 ACCT-Ski-CID-001,ACC-CID-001-Ski,CID-001,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-001 - Ski Channel,SampleGen
 ACCT-Ski-CID-002,ACC-CID-002-Ski,CID-002,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-002 - Ski Channel,SampleGen
 ACCT-Ski-CID-003,ACC-CID-003-Ski,CID-003,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-003 - Ski Channel,SampleGen

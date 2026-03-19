@@ -256,7 +256,7 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
     
     # Generate orders for each customer with Kitchen account
     customers_with_kitchen = df_customer[
-        df_customer['CustomerId'].isin(df_kitchen_accounts['CustomerId'])
+        df_customer['CustomerID'].isin(df_kitchen_accounts['CustomerID'])
     ]
     
     # Initialize business growth tracking
@@ -273,13 +273,13 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
             if idx > 0 and idx % 50 == 0:
                 print(f"   Processed {idx}/{len(customers_with_kitchen)} customers...")
             
-            customer_id = customer['CustomerId']
-            customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
+            customer_id = customer['CustomerID']
+            customer_segment = customer.get('CustomerRelationshipTypeID', 'Standard')
             customer_type = get_customer_type_from_relationship(customer_segment)
             
             # Get customer's Kitchen account
-            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerId'] == customer_id].iloc[0]
-            account_id = kitchen_account['CustomerAccountId']
+            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerID'] == customer_id].iloc[0]
+            account_id = kitchen_account['CustomerAccountID']
             
             # Determine base number of orders for this customer
             freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 3))
@@ -376,9 +376,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                         total_tax += tax
                         
                         orderlines.append({
-                            "OrderId": order_id,
+                            "OrderID": order_id,
                             "OrderLineNumber": line_num,
-                            "ProductId": product_id,
+                            "ProductID": product_id,
                             "ProductName": product_name,
                             "Quantity": quantity,
                             "UnitPrice": boosted_unit_price,  # Use boosted price
@@ -401,11 +401,11 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     
                     # Create order record
                     orders.append({
-                        "OrderId": order_id,
-                        "SalesChannelId": kitchen_account['CustomerAccountName'],
+                        "OrderID": order_id,
+                        "SalesChannelID": kitchen_account['CustomerAccountName'],
                         "OrderNumber": order_number,
-                        "CustomerId": customer_id,
-                        "CustomerAccountId": account_id,
+                        "CustomerID": customer_id,
+                        "CustomerAccountID": account_id,
                         "OrderDate": order_date.date(),
                         "OrderStatus": order_status,
                         "SubTotal": round(subtotal, 2),
@@ -418,9 +418,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     
                     # Create payment record
                     orderpayments.append({
-                        "OrderId": order_id,
+                        "OrderID": order_id,
                         "PaymentMethod": payment_method,
-                        "TransactionId": str(uuid.uuid4())
+                        "TransactionID": str(uuid.uuid4())
                     })
                     
                     # Generate finance data for this order
@@ -433,10 +433,10 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     
                     # Create invoice record
                     invoices.append({
-                        "InvoiceId": invoice_id,
+                        "InvoiceID": invoice_id,
                         "InvoiceNumber": invoice_number,
-                        "CustomerId": customer_id,
-                        "OrderId": order_id,
+                        "CustomerID": customer_id,
+                        "OrderID": order_id,
                         "InvoiceDate": invoice_date.date(),
                         "DueDate": due_date.date(),
                         "SubTotal": round(subtotal, 2),
@@ -449,9 +449,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     # Create payment record (immediate payment - eCommerce model)
                     payment_id = str(uuid.uuid4())
                     payments.append({
-                        "PaymentId": payment_id,
-                        "InvoiceId": invoice_id,
-                        "CustomerId": customer_id,
+                        "PaymentID": payment_id,
+                        "InvoiceID": invoice_id,
+                        "CustomerID": customer_id,
                         "PaymentDate": order_date.date(),
                         "PaymentAmount": order_total,
                         "PaymentMethod": payment_method,
@@ -466,13 +466,13 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
             if idx > 0 and idx % 50 == 0:
                 print(f"   Processed {idx}/{len(customers_with_kitchen)} customers...")
             
-            customer_id = customer['CustomerId']
-            customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
+            customer_id = customer['CustomerID']
+            customer_segment = customer.get('CustomerRelationshipTypeID', 'Standard')
             customer_type = get_customer_type_from_relationship(customer_segment)
             
             # Get customer's Kitchen account
-            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerId'] == customer_id].iloc[0]
-            account_id = kitchen_account['CustomerAccountId']
+            kitchen_account = df_kitchen_accounts[df_kitchen_accounts['CustomerID'] == customer_id].iloc[0]
+            account_id = kitchen_account['CustomerAccountID']
             
             # Determine number of orders for this customer
             freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 3))
@@ -524,9 +524,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                     total_tax += tax
                     
                     orderlines.append({
-                        "OrderId": order_id,
+                        "OrderID": order_id,
                         "OrderLineNumber": line_num,
-                        "ProductId": product_id,
+                        "ProductID": product_id,
                         "ProductName": product_name,
                         "Quantity": quantity,
                         "UnitPrice": boosted_unit_price,  # Use boosted price
@@ -539,11 +539,11 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 
                 # Create order record
                 orders.append({
-                    "OrderId": order_id,
-                    "SalesChannelId": kitchen_account['CustomerAccountName'],
+                    "OrderID": order_id,
+                    "SalesChannelID": kitchen_account['CustomerAccountName'],
                     "OrderNumber": order_number,
-                    "CustomerId": customer_id,
-                    "CustomerAccountId": account_id,
+                    "CustomerID": customer_id,
+                    "CustomerAccountID": account_id,
                     "OrderDate": order_date.date(),
                     "OrderStatus": order_status,
                     "SubTotal": round(subtotal, 2),
@@ -556,9 +556,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 
                 # Create payment record
                 orderpayments.append({
-                    "OrderId": order_id,
+                    "OrderID": order_id,
                     "PaymentMethod": payment_method,
-                    "TransactionId": str(uuid.uuid4())
+                    "TransactionID": str(uuid.uuid4())
                 })
                 
                 # Generate finance data for this order
@@ -571,10 +571,10 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 
                 # Create invoice record
                 invoices.append({
-                    "InvoiceId": invoice_id,
+                    "InvoiceID": invoice_id,
                     "InvoiceNumber": invoice_number,
-                    "CustomerId": customer_id,
-                    "OrderId": order_id,
+                    "CustomerID": customer_id,
+                    "OrderID": order_id,
                     "InvoiceDate": invoice_date.date(),
                     "DueDate": due_date.date(),
                     "SubTotal": round(subtotal, 2),
@@ -587,9 +587,9 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
                 # Create payment record (immediate payment - eCommerce model)
                 payment_id = str(uuid.uuid4())
                 payments.append({
-                    "PaymentId": payment_id,
-                    "InvoiceId": invoice_id,
-                    "CustomerId": customer_id,
+                    "PaymentID": payment_id,
+                    "InvoiceID": invoice_id,
+                    "CustomerID": customer_id,
                     "PaymentDate": order_date.date(),
                     "PaymentAmount": order_total,
                     "PaymentMethod": payment_method,
@@ -599,13 +599,13 @@ def generate_kitchen_orders(start_date, end_date, order_start_number, enable_gro
 
     # Generate customer accounts for finance
     print("\\n🏦 Generating customer accounts for finance...")
-    kitchen_customers = df_kitchen_accounts['CustomerId'].unique()
+    kitchen_customers = df_kitchen_accounts['CustomerID'].unique()
     for customer_id in kitchen_customers:
         account_id = f"ACCT-Kitchen-{customer_id}"
         accounts.append({
-            "AccountId": account_id,
+            "AccountID": account_id,
             "AccountNumber": f"ACC-{customer_id}-Kitchen",
-            "CustomerId": customer_id,
+            "CustomerID": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
             "CreatedDate": start_date.date(),

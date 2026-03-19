@@ -242,24 +242,24 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     
     # Generate orders for each customer with ski accounts
     customers_with_winter = df_customer[
-        df_customer['CustomerId'].isin(df_winter_accounts['CustomerId'])
+        df_customer['CustomerID'].isin(df_winter_accounts['CustomerID'])
     ]
     
     for idx, customer in customers_with_winter.iterrows():
         if idx > 0 and idx % 100 == 0:
             print(f"   Processed {idx}/{len(customers_with_winter)} customers...")
         
-        customer_id = customer['CustomerId']
-        customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
+        customer_id = customer['CustomerID']
+        customer_segment = customer.get('CustomerRelationshipTypeID', 'Standard')
         customer_type = get_customer_type_from_relationship(customer_segment)
         
         # Get customer's account (randomly pick if they have multiple)
-        customer_accounts = df_winter_accounts[df_winter_accounts['CustomerId'] == customer_id]
+        customer_accounts = df_winter_accounts[df_winter_accounts['CustomerID'] == customer_id]
         if customer_accounts.empty:
             continue
             
         account = customer_accounts.sample(n=1).iloc[0]
-        account_id = account['CustomerAccountId']
+        account_id = account['CustomerAccountID']
         
         # Determine number of orders for this customer (ski equipment tends to be purchased less frequently)
         freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 2))
@@ -307,9 +307,9 @@ def generate_ski_orders(start_date, end_date, order_start_number):
                 total_tax += tax
                 
                 orderlines.append({
-                    "OrderId": order_id,
+                    "OrderID": order_id,
                     "OrderLineNumber": line_num,
-                    "ProductId": product_id,
+                    "ProductID": product_id,
                     "ProductName": product_name,
                     "Quantity": quantity,
                     "UnitPrice": unit_price,
@@ -322,11 +322,11 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             
             # Create order record
             orders.append({
-                "OrderId": order_id,
-                "SalesChannelId": account['CustomerAccountName'],
+                "OrderID": order_id,
+                "SalesChannelID": account['CustomerAccountName'],
                 "OrderNumber": order_number,
-                "CustomerId": customer_id,
-                "CustomerAccountId": account_id,
+                "CustomerID": customer_id,
+                "CustomerAccountID": account_id,
                 "OrderDate": order_date.date(),
                 "OrderStatus": order_status,
                 "SubTotal": round(subtotal, 2),
@@ -339,9 +339,9 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             
             # Create payment record
             orderpayments.append({
-                "OrderId": order_id,
+                "OrderID": order_id,
                 "PaymentMethod": payment_method,
-                "TransactionId": str(uuid.uuid4())
+                "TransactionID": str(uuid.uuid4())
             })
             
             # Generate finance data for this order
@@ -354,10 +354,10 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             
             # Create invoice record
             invoices.append({
-                "InvoiceId": invoice_id,
+                "InvoiceID": invoice_id,
                 "InvoiceNumber": invoice_number,
-                "CustomerId": customer_id,
-                "OrderId": order_id,
+                "CustomerID": customer_id,
+                "OrderID": order_id,
                 "InvoiceDate": invoice_date.date(),
                 "DueDate": due_date.date(),
                 "SubTotal": round(subtotal, 2),
@@ -370,9 +370,9 @@ def generate_ski_orders(start_date, end_date, order_start_number):
             # Create payment record (immediate payment for eCommerce)
             finance_payment_id = f"PAY-{order_id}"
             payments.append({
-                "PaymentId": finance_payment_id,
-                "InvoiceId": invoice_id,
-                "CustomerId": customer_id,
+                "PaymentID": finance_payment_id,
+                "InvoiceID": invoice_id,
+                "CustomerID": customer_id,
                 "PaymentDate": invoice_date.date(),
                 "PaymentAmount": order_total,
                 "PaymentMethod": payment_method,
@@ -382,13 +382,13 @@ def generate_ski_orders(start_date, end_date, order_start_number):
     
     # Generate customer accounts for finance (Ski channel)
     print("\n🏦 Generating customer accounts for finance...")
-    ski_customers = df_account[df_account['CustomerAccountName'] == 'Ski']['CustomerId'].unique()
+    ski_customers = df_account[df_account['CustomerAccountName'] == 'Ski']['CustomerID'].unique()
     for customer_id in ski_customers:
         account_id = f"ACCT-Ski-{customer_id}"
         accounts.append({
-            "AccountId": account_id,
+            "AccountID": account_id,
             "AccountNumber": f"ACC-{customer_id}-Ski",
-            "CustomerId": customer_id,
+            "CustomerID": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
             "CreatedDate": start_date.date(),

@@ -75,10 +75,24 @@ function Test-DateFormat {
 }
 
 # Calculate smart defaults for two-phase generation
-$DefaultSalesStartDate = "2021-01-01"  # 5+ years of sales history if run in 2026
-$DefaultSalesEndDate = "2026-04-30"    # Extended end date through April 2026
-$DefaultSupplyStartDate = "2025-01-01" # Recent 16-month supply chain period if run in 2026
-$DefaultSupplyEndDate = "2026-04-30"   # Same end date as sales
+$DefaultSalesStartDate = "2025-01-01"  # default start date for sales data
+$DefaultSalesEndDate = "2026-04-30"    # default end date for sales data
+$DefaultSupplyStartDate = "2025-07-01" # default start date for supply data
+$DefaultSupplyEndDate = "2026-04-30"   # default end date for supply data
+
+# Helper: calculate human-readable duration label from two date strings
+function Get-DurationLabel($startStr, $endStr) {
+    $s = [DateTime]::ParseExact($startStr, "yyyy-MM-dd", $null)
+    $e = [DateTime]::ParseExact($endStr,   "yyyy-MM-dd", $null)
+    $totalMonths = ($e.Year - $s.Year) * 12 + $e.Month - $s.Month
+    if ($totalMonths -ge 12) {
+        $years  = [Math]::Floor($totalMonths / 12)
+        $months = $totalMonths % 12
+        if ($months -eq 0) { return "$years yr" }
+        return "$years yr $months mo"
+    }
+    return "$totalMonths months"
+}
 
 # Interactive configuration with smart defaults
 Write-Info "📅 Two-Phase Data Generation Configuration"
@@ -86,14 +100,16 @@ Write-Host "   Let's set up your business data simulation with smart defaults!" 
 Write-Host ""
 
 Write-Host "   🎯 Two-Phase Strategy:" -ForegroundColor Yellow
-Write-Host "   • 📈 Sales Data: Long history for trend analysis (5.3 years)" -ForegroundColor Gray
-Write-Host "   • 📦 Supply Chain: Recent period for current operations (16 months)" -ForegroundColor Gray
+Write-Host "   • 📈 Sales Data: Long history for trend analysis" -ForegroundColor Gray
+Write-Host "   • 📦 Supply Chain: Recent period for current operations" -ForegroundColor Gray
 Write-Host ""
 
 # Date range input with defaults
+$salesLabel  = Get-DurationLabel $DefaultSalesStartDate  $DefaultSalesEndDate
+$supplyLabel = Get-DurationLabel $DefaultSupplyStartDate $DefaultSupplyEndDate
 Write-Host "📅 Date Range Setup:" -ForegroundColor Cyan
-Write-Host "   📈 Sales Data Default: $DefaultSalesStartDate to $DefaultSalesEndDate (5.3 years)" -ForegroundColor Green
-Write-Host "   📦 Supply Chain Default: $DefaultSupplyStartDate to $DefaultSupplyEndDate (16 months)" -ForegroundColor Green
+Write-Host "   📈 Sales Data Default: $DefaultSalesStartDate to $DefaultSalesEndDate ($salesLabel)" -ForegroundColor Green
+Write-Host "   📦 Supply Chain Default: $DefaultSupplyStartDate to $DefaultSupplyEndDate ($supplyLabel)" -ForegroundColor Green
 Write-Host ""
 
 $UseDefaults = Read-Host "   Use default date ranges? (Press Enter for YES, or type 'no')"
@@ -103,8 +119,8 @@ if ($UseDefaults -eq "" -or $UseDefaults -eq "Y" -or $UseDefaults -eq "y") {
     $SupplyStartDate = $DefaultSupplyStartDate
     $SupplyEndDate = $DefaultSupplyEndDate
     Write-Host "   ✅ Using defaults:" -ForegroundColor Green
-    Write-Host "      Sales: $SalesStartDate to $SalesEndDate" -ForegroundColor White
-    Write-Host "      Supply: $SupplyStartDate to $SupplyEndDate" -ForegroundColor White
+    Write-Host "      Sales:  $SalesStartDate to $SalesEndDate ($salesLabel)" -ForegroundColor White
+    Write-Host "      Supply: $SupplyStartDate to $SupplyEndDate ($supplyLabel)" -ForegroundColor White
 } else {
     Write-Host "   📝 Custom date ranges:" -ForegroundColor Yellow
     Write-Host ""
@@ -221,9 +237,9 @@ try {
     Write-Host "═" * 80 -ForegroundColor Green
     
     Write-Info "   Generating comprehensive sales data for all product categories..."
-    Write-Info "   • 🏕️  Camping products (Microsoft Fabric channel)"
-    Write-Info "   • 🍳 Kitchen products (Azure Databricks channel)"  
-    Write-Info "   • ⛷️  Ski products (Winter Sports channel)"
+    Write-Info "   • 🏕️  Camping products"
+    Write-Info "   • 🍳 Kitchen products"  
+    Write-Info "   • ⛷️  Ski products"
     Write-Host ""
     
     # Build sales command
@@ -247,7 +263,7 @@ try {
     $env:PYTHONIOENCODING = "utf-8"
     
     # Execute sales generation
-    $SalesResult = & python @SalesArgs
+    $SalesResult = & python -X utf8 @SalesArgs
     if ($LASTEXITCODE -ne 0) {
         throw "Sales data generation failed with exit code $LASTEXITCODE"
     }
@@ -289,7 +305,7 @@ try {
     $env:PYTHONIOENCODING = "utf-8"
     
     # Execute supply chain generation
-    $SupplyResult = & python @SupplyArgs
+    $SupplyResult = & python -X utf8 @SupplyArgs
     if ($LASTEXITCODE -ne 0) {
         throw "Supply chain data generation failed with exit code $LASTEXITCODE"
     }

@@ -253,20 +253,20 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     
     # Generate orders for each customer with Camping account
     customers_with_camping = df_customer[
-        df_customer['CustomerId'].isin(df_camping_accounts['CustomerId'])
+        df_customer['CustomerID'].isin(df_camping_accounts['CustomerID'])
     ]
     
     for idx, customer in customers_with_camping.iterrows():
         if idx > 0 and idx % 50 == 0:
             print(f"   Processed {idx}/{len(customers_with_camping)} customers...")
         
-        customer_id = customer['CustomerId']
-        customer_segment = customer.get('CustomerRelationshipTypeId', 'Standard')
+        customer_id = customer['CustomerID']
+        customer_segment = customer.get('CustomerRelationshipTypeID', 'Standard')
         customer_type = get_customer_type_from_relationship(customer_segment)
         
         # Get customer's Camping account
-        camping_account = df_camping_accounts[df_camping_accounts['CustomerId'] == customer_id].iloc[0]
-        account_id = camping_account['CustomerAccountId']
+        camping_account = df_camping_accounts[df_camping_accounts['CustomerID'] == customer_id].iloc[0]
+        account_id = camping_account['CustomerAccountID']
         
         # Determine number of orders for this customer with business growth patterns
         freq_range = SEGMENT_ORDER_FREQ.get(customer_segment, (1, 2))
@@ -399,9 +399,9 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
                 total_tax += tax
                 
                 orderlines.append({
-                    "OrderId": order_id,
+                    "OrderID": order_id,
                     "OrderLineNumber": line_num,
-                    "ProductId": product_id,
+                    "ProductID": product_id,
                     "ProductName": product_name,
                     "Quantity": quantity,
                     "UnitPrice": unit_price,
@@ -414,11 +414,11 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             
             # Create order record
             orders.append({
-                "OrderId": order_id,
-                "SalesChannelId": camping_account['CustomerAccountName'],
+                "OrderID": order_id,
+                "SalesChannelID": camping_account['CustomerAccountName'],
                 "OrderNumber": order_number,
-                "CustomerId": customer_id,
-                "CustomerAccountId": account_id,
+                "CustomerID": customer_id,
+                "CustomerAccountID": account_id,
                 "OrderDate": order_date.date(),
                 "OrderStatus": order_status,
                 "SubTotal": round(subtotal, 2),
@@ -431,9 +431,9 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             
             # Create payment record
             orderpayments.append({
-                "OrderId": order_id,
+                "OrderID": order_id,
                 "PaymentMethod": payment_method,
-                "TransactionId": str(uuid.uuid4())
+                "TransactionID": str(uuid.uuid4())
             })
             
             # Generate Finance Data (Invoice + Payment)
@@ -444,10 +444,10 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             
             # Create invoice record
             invoices.append({
-                "InvoiceId": invoice_id,
+                "InvoiceID": invoice_id,
                 "InvoiceNumber": invoice_number,
-                "CustomerId": customer_id,
-                "OrderId": order_id,
+                "CustomerID": customer_id,
+                "OrderID": order_id,
                 "InvoiceDate": invoice_date,
                 "DueDate": invoice_date,  # eCommerce: immediate payment
                 "SubTotal": round(subtotal, 2),
@@ -459,9 +459,9 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
             
             # Create finance payment record (follows CSV structure, not schema)
             payments.append({
-                "PaymentId": str(uuid.uuid4()),
-                "InvoiceId": invoice_id,
-                "CustomerId": customer_id,
+                "PaymentID": str(uuid.uuid4()),
+                "InvoiceID": invoice_id,
+                "CustomerID": customer_id,
                 "PaymentDate": invoice_date,  # eCommerce: immediate payment
                 "PaymentAmount": order_total,
                 "PaymentMethod": payment_method,
@@ -474,12 +474,12 @@ def generate_camping_orders(start_date, end_date, order_start_number, enable_gro
     account_counter = 1000  # Start numbering from 1000
     
     for customer in customers_with_camping.itertuples():
-        customer_id = customer.CustomerId
+        customer_id = customer.CustomerID
         
         accounts.append({
-            "AccountId": str(uuid.uuid4()),
+            "AccountID": str(uuid.uuid4()),
             "AccountNumber": f"ACC-Camping-{account_counter}",
-            "CustomerId": customer_id,
+            "CustomerID": customer_id,
             "AccountType": "Receivable",
             "AccountStatus": "Active",
             "CreatedDate": start_date.date(),

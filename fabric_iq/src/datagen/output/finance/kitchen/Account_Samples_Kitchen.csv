@@ -1,4 +1,4 @@
-AccountId,AccountNumber,CustomerId,AccountType,AccountStatus,CreatedDate,ClosedDate,Balance,Currency,Description,CreatedBy
+AccountID,AccountNumber,CustomerID,AccountType,AccountStatus,CreatedDate,ClosedDate,Balance,Currency,Description,CreatedBy
 ACCT-Kitchen-CID-001,ACC-CID-001-Kitchen,CID-001,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-001 - Kitchen Channel,SampleGen
 ACCT-Kitchen-CID-002,ACC-CID-002-Kitchen,CID-002,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-002 - Kitchen Channel,SampleGen
 ACCT-Kitchen-CID-003,ACC-CID-003-Kitchen,CID-003,Receivable,Active,2025-01-01,,0.0,USD,Accounts Receivable for Customer CID-003 - Kitchen Channel,SampleGen

@@ -1,4 +1,4 @@
-CustomerRelationshipTypeId,CustomerRelationshipTypeName,CustomerRelationshipTypeDescription
+CustomerRelationshipTypeID,CustomerRelationshipTypeName,CustomerRelationshipTypeDescription
 Standard,Standard Individual,Basic individual customer with standard service level and pricing. Entry-level tier for personal customers.
 Premium,Premium Individual,"Enhanced individual customer with priority support, exclusive offers, and premium service benefits."
 VIP,VIP Individual,"Top-tier individual customer with white-glove service, dedicated support, and exclusive access to premium products and events."
