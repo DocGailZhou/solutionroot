@@ -1,29 +1,92 @@
-# Instructions - Initial Setup 
+# Fabric Setup and Pipeline Run Guide
 
-1. Create a fabric workspace 
-   
-2. In the fabric workspace, create a lakehouse with the name of your choice. For example **miqdata** 
+This guide walks through the full process from cloning the repo to running the Fabric pipeline and validating results.
 
-3. Upload the infra/data folder to the File section of the lakehouse: 
+## Prerequisites
 
-   You will have something like this: Files/data/camping, customer, inventory, kitchen, product, ski, supplychain. 
+- Microsoft Fabric access with permission to create a workspace, lakehouse, and notebooks
+- Git installed on your machine
+- This repository available locally
 
-4. Create a folder named 'notebooks' in your Fabric Workspace. 
+## Step 1. Create Fabric workspace and lakehouse
 
-5. Upload all the files in this repo under src/fabric/notebooks to the notebooks folder in your Fabric Workspace 
+1. Create a new Fabric workspace.
+2. In that workspace, create a Lakehouse. Example name: `miqdata`.
+3. Open the lakehouse and make sure you can see the `Files` section.
 
-6. Open the notebook named `main_pipeline.ipynb`. Add the lakehouse you created to this notebook. Then run this notebook. You will get the following results 
+## Step 2. Upload the `data` subfolder to the lakehouse
 
-   - All schemas and tables created in the lakehouse 
-   - All data in the Files/data folder will be loaded to the appropriate tables in the lakehouse **miqdata** 
-   - You can now review the schema, tables, and data. 
+1. From this repo, locate `fabric/infra/data`.
+2. In Fabric Lakehouse, go to `Files`.
+3. Upload the full `data` folder (not individual files one by one).
 
-## Instructions - Update Resources 
+After upload, your lakehouse path should look like:
 
-If you have regenerated data, please delete the  Files/data folder or rename it to something like Files/data_backup. And then update the new data generated (upload folder) to Files
+- `Files/data/customer`
+- `Files/data/product`
+- `Files/data/camping`
+- `Files/data/kitchen`
+- `Files/data/ski`
+- `Files/data/<product_line>/sales` (for example `Files/data/camping/sales`)
+- `Files/data/<product_line>/finance` (for example `Files/data/camping/finance`)
+- `Files/data/inventory`
+- `Files/data/supplychain`
 
-If you have updated the fabric notebooks, please delete all older notebooks and import updated ones from your local folder
+Important: notebook loaders use paths like `Files/data/customer`, `Files/data/product`, and `Files/data/<product_line>/<domain>`. If folder names change, load steps will fail.
 
-The easiest way to re-load to recreate schema and reload the data. 
+## Step 4. Upload notebooks to Fabric
 
-Open the notebook named `update_pipeline.ipynb`. And run each cell from top to down. 
+1. In your Fabric workspace, create a folder named `notebooks`.
+2. Upload all notebooks from `fabric/src/fabric/notebooks`.
+3. Include notebook files from subfolders as well:
+   - `data_management`
+   - `data_processing`
+   - `schema`
+
+At minimum, confirm these notebooks exist after upload:
+
+- `main_pipeline.ipynb`
+- `create_scheme_tables`
+- `load_data_all_tables`
+
+## Step 5. Attach lakehouse and run the pipeline
+
+1. Open `main_pipeline.ipynb` in Fabric.
+2. Attach the lakehouse you created (for example `miqdata`) to the notebook session.
+3. Run the notebook top-to-bottom.
+
+If you made changes to the notebooks or data, you can review and execute `update_pipeline.ipynb` 
+
+1. Optional cleanup (commented by default):
+   - `#%run truncate_all_tables`
+   - `#%run drop_all_tables`
+2. Schema and table creation:
+   - `%run create_scheme_tables`
+3. Data load into all tables:
+   - `%run load_data_all_tables`
+
+## Step 6. Expected output and validation
+
+During a successful run, you should see messages similar to:
+
+```text
+All schemas and tables created successfully!
+Customer schema: 5 tables, <n> records loaded
+Product schema: 2 tables, <n> records loaded
+Sales schema: 3 tables, <n> records loaded
+Finance schema: 3 tables, <n> records loaded
+Inventory schema: 6 tables, <n> records loaded
+Supplychain schema: 3 tables, <n> records loaded
+```
+
+Final expected state:
+
+- 6 schemas created: `customer`, `product`, `sales`, `finance`, `inventory`, `supplychain`
+- 22 total tables created and populated
+- Data loaded from `Files/data/...` into corresponding lakehouse tables
+
+## Common issues
+
+- `Path not found` errors: confirm `Files/data/...` folder structure matches exactly.
+- Notebook reference errors on `%run`: verify all required notebooks were uploaded.
+- Table already exists or duplicate-data scenarios: use the optional cleanup cells and rerun.
