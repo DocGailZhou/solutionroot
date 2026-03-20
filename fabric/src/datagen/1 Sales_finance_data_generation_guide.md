@@ -6,10 +6,10 @@ Generates realistic sales and finance data for three business domains: Camping �
 
 ```bash
 # Historical data (6+ years)
-python main_generate_sales.py -s 2020-01-01 -e 2026-03-31 --enable-growth --copydata --graph --no-display
+python main_generate_sales.py -s 2020-01-01 -e 2026-03-31 --enable-growth --copydata .\infra\data --graph --no-display
 
 # Standard business period
-python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --graph --copydata
+python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --graph --copydata .\infra\data
 
 ```
 
@@ -25,7 +25,7 @@ python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --grap
 | `--enable-growth` | Enable business growth patterns and market events |
 | `--graph` | Generate monthly revenue trend graph |
 | `--no-display` | Save graphs without GUI windows (for automation) |
-| `--copydata` | Copy generated files to infra/data/ directory |
+| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\infra\data`) |
 
 
 
@@ -63,20 +63,31 @@ output/
 └── revenue_trend_graph_[daterange].png (with --graph)
 ```
 
-## 🏗️ Infrastructure Copy (with --copydata)
+## 🏗️ Copy to Destination (with --copydata)
 
-The `--copydata` option automatically copies all generated files from the `output/` directory to the `infra/data/` directory structure, making them ready for Microsoft Fabric lakehouse integration.
+The `--copydata <OUTPUT_DIR>` option copies files from **both** the `output/` and `input/` directories to the specified destination, making them ready for Microsoft Fabric lakehouse integration or any other downstream use.
 
-### Infrastructure Directory Structure
+### What gets copied
+
+| Source | Files | Destination |
+|--------|-------|-------------|
+| `output/` (all subfolders) | All generated `*.csv` files | `<OUTPUT_DIR>/` (structure preserved) |
+| `output/` | `sample_sales_data_summary.md` | `<OUTPUT_DIR>/` |
+| `input/` | `Product_Samples_*.csv`, `ProductCategory_Samples_*.csv` (9 files) | `<OUTPUT_DIR>/product/` |
+| `input/` | `Customer_Samples.csv`, `CustomerAccount_Samples.csv`, `CustomerRelationshipType_Samples.csv`, `CustomerTradeName_Samples.csv`, `Location_Samples.csv` | `<OUTPUT_DIR>/customer/` |
+
+### Copied Directory Structure
 ```
-infra/data/
+<OUTPUT_DIR>/
 ├── finance/
 │   ├── camping/ → [All camping finance CSV files]
-│   ├── kitchen/ → [All kitchen finance CSV files]  
-│   └── ski/ → [All ski finance CSV files]
+│   ├── kitchen/ → [All kitchen finance CSV files]
+│   └── ski/     → [All ski finance CSV files]
 ├── sales/
 │   ├── camping/ → [All camping sales CSV files]
 │   ├── kitchen/ → [All kitchen sales CSV files]
-│   └── ski/ → [All ski sales CSV files]  
+│   └── ski/     → [All ski sales CSV files]
+├── product/     → [9 product & category CSV files from input/]
+├── customer/    → [5 customer & location CSV files from input/]
 └── sample_sales_data_summary.md
 ```

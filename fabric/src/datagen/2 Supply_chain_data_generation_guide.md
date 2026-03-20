@@ -6,7 +6,7 @@ Generates supplier management and inventory data with purchase orders and supply
 
 ```bash
 # Standard generation with auto-scaling
-python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --auto-scale --graph --copydata --no-display
+python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --auto-scale --graph --copydata .\infra\data --no-display
 
 # Manual parameters
 python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --num-orders 30 --num-transactions 500 --graph --no-display
@@ -24,7 +24,7 @@ python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --inventory-only
 | `--auto-scale` | Auto-calculate parameters based on existing sales data |
 | `--graph` | Generate supply chain analytics dashboard |
 | `--no-display` | Save graphs without GUI windows (for automation) |
-| `--copydata` | Copy generated files to infra/data/ directory |
+| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\infra\data`) |
 | `--num-orders` | Number of purchase orders (default: 30) |
 | `--num-transactions` | Number of inventory transactions (default: 500) |
 | `--inventory-only` | Generate only inventory data (requires existing supplier data) |
@@ -49,9 +49,9 @@ output/
 └── sample_supplychain_data_summary.md
 ```
 
-### Infrastructure Copy (with --copydata)
+### Copy to Destination (with --copydata)
 ```
-../../infra/data/
+<OUTPUT_DIR>/
 ├── supplychain/       # Generated supplier data (mirrors output structure)
 ├── inventory/         # Generated inventory data (mirrors output structure)
 └── *.md              # Summary reports
