@@ -16,6 +16,15 @@ copilot --agent anvil:anvil
 
 
 
+**Exit the GitHub Copilot CLI** 
+
+  Two ways to exit back to your regular terminal:
+
+   - Ctrl+C twice — cancel/clear, then exit
+   - /exit or /quit — type either slash command and press Enter
+
+
+
 **Resume to previous sessions:** 
 
 copilot --agent anvil:anvil --resume
