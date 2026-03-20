@@ -1,6 +1,6 @@
 # Fabric Setup and Pipeline Run Guide
 
-This guide walks through the full process from cloning the repo to running the Fabric pipeline and validating results.
+This guide walks through the full process of setting up Fabric workspace,  running data pipeline,  and validating results.
 
 ## Prerequisites
 
@@ -23,31 +23,34 @@ This guide walks through the full process from cloning the repo to running the F
 After upload, your lakehouse path should look like:
 
 - `Files/data/customer`
-- `Files/data/product`
-- `Files/data/camping`
-- `Files/data/kitchen`
-- `Files/data/ski`
-- `Files/data/<product_line>/sales` (for example `Files/data/camping/sales`)
-- `Files/data/<product_line>/finance` (for example `Files/data/camping/finance`)
+- `Files/data/finance/<product_line>s` (for example `Files/data/finance/camping` or `Files/data/finance/kitchen`)
 - `Files/data/inventory`
+- `Files/data/product`
+- `Files/data/sales/<product_line>s` (for example `Files/data/sales/camping` or `Files/data/sales/kitchen`)
 - `Files/data/supplychain`
 
 Important: notebook loaders use paths like `Files/data/customer`, `Files/data/product`, and `Files/data/<product_line>/<domain>`. If folder names change, load steps will fail.
 
 ## Step 4. Upload notebooks to Fabric
 
-1. In your Fabric workspace, create a folder named `notebooks`.
-2. Upload all notebooks from `fabric/src/fabric/notebooks`.
-3. Include notebook files from subfolders as well:
+1. In your Fabric workspace, create a folder named `notebooks`, and create subfolders under the notebooks:
+
    - `data_management`
    - `data_processing`
+   - `query_samples`
    - `schema`
 
-At minimum, confirm these notebooks exist after upload:
+2. Upload all notebooks from `fabric/src/fabric/notebooks`, such as 
 
-- `main_pipeline.ipynb`
-- `create_scheme_tables`
-- `load_data_all_tables`
+   `main_pipeline.ipynb`
+
+   `update_pipeline.ipynb`
+
+3. Then upload notebook files from subfolders as well:
+   - `data_management`
+   - `data_processing`
+   - `query_samples`
+   - `schema`
 
 ## Step 5. Attach lakehouse and run the pipeline
 
@@ -67,16 +70,24 @@ If you made changes to the notebooks or data, you can review and execute `update
 
 ## Step 6. Expected output and validation
 
-During a successful run, you should see messages similar to:
+During a successful run of `main_pipeline`, you should see messages similar to:
 
 ```text
-All schemas and tables created successfully!
-Customer schema: 5 tables, <n> records loaded
-Product schema: 2 tables, <n> records loaded
-Sales schema: 3 tables, <n> records loaded
-Finance schema: 3 tables, <n> records loaded
-Inventory schema: 6 tables, <n> records loaded
-Supplychain schema: 3 tables, <n> records loaded
+🎉 All schemas and tables created successfully!
+
+✅ Loading 'customer' schema from: Files/data/customer
+✅ Customer schema: 5 tables, 2,734 records loaded
+✅ Loading 'product' schema from: Files/data/product
+✅ Product schema: 2 tables, 90 records loaded
+✅ Loading 'sales' schema from 3 product lines: camping, kitchen, ski
+✅ Sales schema: 3 tables, 90,192 records loaded
+✅ Loading 'finance' schema from 3 product lines: camping, kitchen, ski
+✅ Finance schema: 3 tables, 39,557 records loaded
+✅ Loading 'inventory' schema from: Files/data/inventory
+✅ Inventory schema: 6 tables, 5,500 records loaded
+✅ Loading 'supplychain' schema from: Files/data/supplychain
+✅ Supplychain schema: 3 tables, 93 records loaded
+✅ Data loading is complete at: [2026-03-19 18:32:47] 
 ```
 
 Final expected state:
