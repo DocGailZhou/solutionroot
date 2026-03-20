@@ -1,5 +1,5 @@
 # ============================================================================
-# parameter.yml — fabric-cicd parameterization for fabric_iq/fabric_workspace
+# parameter.yml — fabric-cicd parameterization for fabric/fabric_workspace
 # ============================================================================
 # Handles environment-specific value replacement when deploying to target
 # environments via the fabric-cicd library.

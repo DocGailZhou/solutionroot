@@ -82,9 +82,9 @@ ALL_DEPLOYMENT_STEPS = [
 def _notebook_path() -> str:
     """Return the absolute path to the installer notebook file.
 
-    The notebook lives at ``<repo-root>/fabric_iq/infra/deploy/fabric_solution_installer.ipynb``.
+    The notebook lives at ``<repo-root>/fabric/infra/deploy/fabric_solution_installer.ipynb``.
     """
-    return os.path.join(REPO_ROOT, "fabric_iq", "infra", "deploy", f"{INSTALLER_NOTEBOOK_NAME}.ipynb")
+    return os.path.join(REPO_ROOT, "fabric", "infra", "deploy", f"{INSTALLER_NOTEBOOK_NAME}.ipynb")
 
 
 def _upload_installer_notebook(workspace_client, notebook_path: str) -> str:
