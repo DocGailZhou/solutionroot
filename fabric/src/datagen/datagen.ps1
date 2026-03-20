@@ -195,9 +195,19 @@ $EnableGrowth = ($GrowthInput -eq "" -or $GrowthInput -eq "Y" -or $GrowthInput -
 $GraphsInput = Read-Host "   Generate analytics graphs? (Press Enter for YES, or type 'no')"
 $GenerateGraphs = ($GraphsInput -eq "" -or $GraphsInput -eq "Y" -or $GraphsInput -eq "y")
 
-# Copy data to infra (default: Yes)
-$CopyInput = Read-Host "   Copy data to infra/data directory? (Press Enter for YES, or type 'no')"
+# Copy data to user-specified output folder
+$CopyInput = Read-Host "   Copy generated data to a destination folder? (Press Enter for YES, or type 'no')"
 $CopyData = ($CopyInput -eq "" -or $CopyInput -eq "Y" -or $CopyInput -eq "y" -or $CopyInput -eq "yes")
+
+if ($CopyData) {
+    $DefaultCopyPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "infra" "data"
+    $CopyPathInput = Read-Host "   Output folder path (press Enter for default: $DefaultCopyPath)"
+    if ($CopyPathInput -eq "") {
+        $CopyDataPath = $DefaultCopyPath
+    } else {
+        $CopyDataPath = $CopyPathInput
+    }
+}
 
 # Calculate durations
 $salesStartDt = [DateTime]::ParseExact($SalesStartDate, "yyyy-MM-dd", $null) 
@@ -221,7 +231,7 @@ Write-Host "     • Duration:   $supplyDuration days" -ForegroundColor White
 Write-Host "   ⚙️  Generation Options:" -ForegroundColor Yellow
 Write-Host "     • Growth:     $(if($EnableGrowth) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
 Write-Host "     • Graphs:     $(if($GenerateGraphs) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
-Write-Host "     • Copy Data:  $(if($CopyData) {'Enabled ✅'} else {'Disabled'})" -ForegroundColor White
+Write-Host "     • Copy Data:  $(if($CopyData) {"Enabled ✅ → $CopyDataPath"} else {'Disabled'})" -ForegroundColor White
 Write-Host ""
 
 Write-Host "🚀 Starting data generation..." -ForegroundColor Green
@@ -254,7 +264,7 @@ try {
         $SalesArgs += "--graph"
         $SalesArgs += "--no-display"  # Prevent GUI windows in automation
     }
-    if ($CopyData) { $SalesArgs += "--copydata" }
+    if ($CopyData) { $SalesArgs += "--copydata"; $SalesArgs += $CopyDataPath }
     
     Write-Host "   Executing: python $($SalesArgs -join ' ')" -ForegroundColor Gray
     Write-Host ""
@@ -296,7 +306,7 @@ try {
         $SupplyArgs += "--graph"
         $SupplyArgs += "--no-display"  # Prevent GUI windows in automation
     }
-    if ($CopyData) { $SupplyArgs += "--copydata" }
+    if ($CopyData) { $SupplyArgs += "--copydata"; $SupplyArgs += $CopyDataPath }
     
     Write-Host "   Executing: python $($SupplyArgs -join ' ')" -ForegroundColor Gray
     Write-Host ""
@@ -363,7 +373,7 @@ try {
     }
     
     if ($CopyData) {
-        Write-Host "     • Copied to: ../infra/data/" -ForegroundColor Gray
+        Write-Host "     • Copied to: $CopyDataPath" -ForegroundColor Gray
     }
     
     Write-Host ""

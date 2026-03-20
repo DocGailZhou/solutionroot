@@ -763,15 +763,15 @@ def generate_graph(results, args):
         print("   Make sure matplotlib and pandas are installed: pip install matplotlib pandas")
 
 
-def copy_data_to_infra():
-    """Copy generated supply chain data files to infra/data directory with proper folder structure."""
+def copy_data_to_dest_path(output_dest_path):
+    """Copy generated supply chain data files to the specified destination directory with proper folder structure."""
     
-    print("\n📁 Copying data files to infra directory...")
+    print("\n📁 Copying data files to output directory...")
     
     # Define source and destination paths
     current_dir = Path(__file__).parent
     output_dir = current_dir / "output"
-    infra_dir = current_dir.parent.parent / "infra" / "data"
+    infra_dir = Path(output_dest_path).resolve()
     
     try:
         # Create destination directory if it doesn't exist
@@ -994,8 +994,9 @@ Examples:
     
     parser.add_argument(
         '--copydata',
-        action='store_true',
-        help='Copy generated data files to infra/data directory'
+        type=str,
+        metavar='OUTPUT_DIR',
+        help='Copy generated data files to the specified output directory'
     )
     
     args = parser.parse_args()
@@ -1079,7 +1080,7 @@ Examples:
         
         # Copy data files if requested
         if args.copydata:
-            copy_data_to_infra()
+            copy_data_to_dest_path(args.copydata)
         
         # Print final summary
         print_summary(results)

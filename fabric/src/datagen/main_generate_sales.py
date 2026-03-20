@@ -136,8 +136,9 @@ Business Growth Features (--enable-growth):
     
     parser.add_argument(
         '--copydata',
-        action='store_true',
-        help='Copy generated files to infra/data directory'
+        type=str,
+        metavar='OUTPUT_DIR',
+        help='Copy generated files to the specified output directory'
     )
     
     return parser.parse_args()
@@ -264,26 +265,26 @@ def generate_summary_file(start_date, end_date, camping_stats, kitchen_stats, sk
     except Exception as e:
         print(f"❌ Failed to generate summary file: {e}")
 
-def copy_csv_files():
-    """Copy CSV files from input and output folders to infrastructure data folders"""
+def copy_csv_files(output_dest_path):
+    """Copy CSV files from input and output folders to the specified destination directory"""
     print("\n" + "=" * 60)
-    print("📁 COPYING CSV FILES TO INFRASTRUCTURE DATA FOLDERS")
+    print("📁 COPYING CSV FILES TO OUTPUT DIRECTORY")
     print("=" * 60)
     
     base_path = Path(__file__).parent
     
-    # Define source and destination paths using relative paths
+    # Define source and destination paths
     input_source = base_path / "input"
     output_source = base_path / "output"
-    output_dest = base_path / ".." / ".." / "infra" / "data"
+    output_dest = Path(output_dest_path).resolve()
     
     # Ensure destination directories exist
     output_dest.mkdir(parents=True, exist_ok=True)
     
     copied_files = 0
     
-    # Copy CSV files from output to infra/data (recursively)
-    print(f"📂 Copying CSV files from output folder to {output_dest.resolve()}...")
+    # Copy CSV files from output (recursively)
+    print(f"📂 Copying CSV files from output folder to {output_dest}...")
     output_csv_files = glob.glob(str(output_source / "**" / "*.csv"), recursive=True)
     for csv_file in output_csv_files:
         src_file = Path(csv_file)
@@ -296,19 +297,19 @@ def copy_csv_files():
         
         try:
             shutil.copy2(src_file, dest_file)
-            print(f"   ✅ {rel_path} → {dest_file.relative_to(base_path.parent.parent)}")
+            print(f"   ✅ {rel_path} → {dest_file}")
             copied_files += 1
         except Exception as e:
             print(f"   ❌ Failed to copy {rel_path}: {e}")
     
-    # Copy summary markdown file to infra/data root
+    # Copy summary markdown file to destination root
     summary_file = output_source / "sample_sales_data_summary.md"
     if summary_file.exists():
         dest_summary = output_dest / "sample_sales_data_summary.md"
         try:
             shutil.copy2(summary_file, dest_summary)
             print(f"\n📋 Copying summary file...")
-            print(f"   ✅ sample_sales_data_summary.md → {dest_summary.relative_to(base_path.parent.parent)}")
+            print(f"   ✅ sample_sales_data_summary.md → {dest_summary}")
             copied_files += 1
         except Exception as e:
             print(f"   ❌ Failed to copy summary file: {e}")
@@ -637,9 +638,9 @@ def main():
             print("\n" + "="*60)
             generate_revenue_graph(start_date, end_date, run_camping, run_kitchen, run_ski, args.no_display)
         
-        # Copy CSV files to infrastructure data folders (if requested)
+        # Copy CSV files to user-specified output directory (if requested)
         if args.copydata:
-            copy_csv_files()
+            copy_csv_files(args.copydata)
         
     except Exception as e:
         print(f"❌ Error during generation: {str(e)}")
