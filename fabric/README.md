@@ -29,9 +29,9 @@ After upload, your lakehouse path should look like:
 - `Files/data/sales/<product_line>s` (for example `Files/data/sales/camping` or `Files/data/sales/kitchen`)
 - `Files/data/supplychain`
 
-Important: notebook loaders use paths like `Files/data/customer`, `Files/data/product`, and `Files/data/<product_line>/<domain>`. If folder names change, load steps will fail.
+**Important**: data loading notebooks use paths like `Files/data/customer`, `Files/data/product`.  If folder names change, load steps will fail. The way to correct the problem is to synchronize the code and file structure under `data` folder. 
 
-## Step 4. Upload notebooks to Fabric
+## Step 3. Upload notebooks to Fabric
 
 1. In your Fabric workspace, create a folder named `notebooks`, and create subfolders under the notebooks:
 
@@ -52,7 +52,7 @@ Important: notebook loaders use paths like `Files/data/customer`, `Files/data/pr
    - `query_samples`
    - `schema`
 
-## Step 5. Attach lakehouse and run the pipeline
+## Step 4. Attach lakehouse and run the main pipeline
 
 1. Open `main_pipeline.ipynb` in Fabric.
 2. Attach the lakehouse you created (for example `miqdata`) to the notebook session.
@@ -68,7 +68,7 @@ If you made changes to the notebooks or data, you can review and execute `update
 3. Data load into all tables:
    - `%run load_data_all_tables`
 
-## Step 6. Expected output and validation
+## Step 5. Expected output and validation
 
 During a successful run of `main_pipeline`, you should see messages similar to:
 
