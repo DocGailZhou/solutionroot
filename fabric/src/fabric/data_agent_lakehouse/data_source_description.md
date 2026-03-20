@@ -4,7 +4,7 @@
 
 This document provides comprehensive descriptions of all data sources available in the Fabric IQ lakehouse. All data is loaded as Delta tables and is analytics-ready for business intelligence and reporting purposes.
 
-Data is synthetic and generated for demonstration purposes, covering **485 days** of realistic business transactions (2025-01-01 to 2026-04-30) across three product categories: Camping, Kitchen, and Ski.
+Data is synthetic and generated for demonstration purposes, covering realistic business transactions across three product categories: Camping, Kitchen, and Ski.
 
 ---
 
@@ -19,8 +19,7 @@ Master data entities for customer identity, accounts, locations, and relationshi
 #### Customer (`customer.Customer`)
 **Purpose**: Core customer master data with demographics, contact information, and relationship management  
 **Source**: Customer management systems and CRM platforms  
-**Update Frequency**: Daily batch processing  
-**Record Count**: ~513 customers
+**Update Frequency**: Daily batch processing
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -103,8 +102,7 @@ Master data entities for customer identity, accounts, locations, and relationshi
 
 #### CustomerAccount (`customer.CustomerAccount`)
 **Purpose**: Financial account groupings that link customers to their purchasing accounts  
-**Update Frequency**: Real-time during account creation/modification  
-**Record Count**: ~1,539 accounts
+**Update Frequency**: Real-time during account creation/modification
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -181,8 +179,7 @@ Sales transaction data covering orders, line items, and payment records.
 
 #### Order (`sales.Order`)
 **Purpose**: Sales order headers with customer, pricing, and status information  
-**Update Frequency**: Real-time during order processing  
-**Record Count**: ~19,564 orders
+**Update Frequency**: Real-time during order processing
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -209,8 +206,7 @@ Sales transaction data covering orders, line items, and payment records.
 ---
 
 #### OrderLine (`sales.OrderLine`)
-**Purpose**: Individual line items within sales orders, linking products to orders  
-**Record Count**: ~53,742 order lines (avg 2.7 lines per order)
+**Purpose**: Individual line items within sales orders, linking products to orders
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -244,8 +240,7 @@ Financial data covering accounts, invoicing, and payment processing.
 ---
 
 #### invoice (`finance.invoice`)
-**Purpose**: Invoice records for billing customers, linked to sales orders  
-**Record Count**: ~19,564 invoices (one per order)
+**Purpose**: Invoice records for billing customers, linked to sales orders
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -264,8 +259,7 @@ Financial data covering accounts, invoicing, and payment processing.
 ---
 
 #### account (`finance.account`)
-**Purpose**: Financial accounts tracking receivables and payables per customer  
-**Record Count**: ~515 accounts
+**Purpose**: Financial accounts tracking receivables and payables per customer
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -290,8 +284,7 @@ Financial data covering accounts, invoicing, and payment processing.
 ---
 
 #### payment (`finance.payment`)
-**Purpose**: Payment transaction records for money received from customers  
-**Record Count**: ~19,564 payments
+**Purpose**: Payment transaction records for money received from customers
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -313,8 +306,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### Warehouses (`inventory.Warehouses`)
-**Purpose**: Master data for warehouse locations and operational details  
-**Record Count**: 3 warehouses (Main, Backup, Regional)
+**Purpose**: Master data for warehouse locations and operational details
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -333,8 +325,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### Inventory (`inventory.Inventory`)
-**Purpose**: Current stock levels per product per warehouse  
-**Record Count**: 73 stock location records
+**Purpose**: Current stock levels per product per warehouse
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -355,8 +346,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### InventoryTransactions (`inventory.InventoryTransactions`)
-**Purpose**: Full audit trail of all inventory movements  
-**Record Count**: ~3,165 transactions
+**Purpose**: Full audit trail of all inventory movements
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -377,8 +367,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### PurchaseOrders (`inventory.PurchaseOrders`)
-**Purpose**: Purchase order headers for product procurement  
-**Record Count**: 119 purchase orders
+**Purpose**: Purchase order headers for product procurement
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -401,8 +390,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### PurchaseOrderItems (`inventory.PurchaseOrderItems`)
-**Purpose**: Line items within purchase orders  
-**Record Count**: 349 line items
+**Purpose**: Line items within purchase orders
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -422,8 +410,7 @@ Inventory management data covering warehouses, stock levels, purchase orders, an
 ---
 
 #### DemandForecast (`inventory.DemandForecast`)
-**Purpose**: Pre-generated demand forecasts for inventory planning  
-**Record Count**: 420 forecast records
+**Purpose**: Pre-generated demand forecasts for inventory planning
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -452,14 +439,13 @@ Supplier master data, product-supplier relationships, and disruption event track
 ---
 
 #### Suppliers (`supplychain.Suppliers`)
-**Purpose**: Master data for product suppliers and backup supplier network  
-**Record Count**: 5 suppliers
+**Purpose**: Master data for product suppliers and backup supplier network
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
 | SupplierID | INT | Primary key | 1, 2, 3, 4, 5 |
 | SupplierName | STRING | Full supplier name | "Contoso Camping Equipment" |
-| SupplierType | STRING | Supplier role in network | Primary, Backup, Emergency |
+| SupplierType | STRING | Supplier role in network | Primary, Secondary |
 | Status | STRING | Current supplier operational status | Active, Disrupted, Inactive |
 | ProductCategory | STRING | Category this supplier covers | Camping, Kitchen, Ski, Multi |
 | PrimarySupplierID | INT | Primary supplier this backs up (NULL if primary) | NULL, 1 |
@@ -469,15 +455,14 @@ Supplier master data, product-supplier relationships, and disruption event track
 | ContactEmail | STRING | Primary supplier contact email | supplier@contoso.com |
 
 **Supplier Network**:
-- Camping: Contoso Camping Equipment (Primary), Worldwide Importers (Backup)
-- Kitchen: Contoso Kitchen (Primary), Worldwide Importers (Backup)  
-- Ski: Contoso Ski Equipment (Primary), Worldwide Importers + Fabrikam (Backup)
+- Camping: Contoso Ltd (Primary), Worldwide Importers (Secondary)
+- Kitchen: Proseware Inc (Primary), Worldwide Importers (Secondary)
+- Ski: Alpine Ski House (Primary), Worldwide Importers + Fabrikam (Secondary)
 
 ---
 
 #### ProductSuppliers (`supplychain.ProductSuppliers`)
-**Purpose**: Maps products to their suppliers with pricing and ordering terms  
-**Record Count**: 68 product-supplier relationships
+**Purpose**: Maps products to their suppliers with pricing and ordering terms
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -497,8 +482,7 @@ Supplier master data, product-supplier relationships, and disruption event track
 ---
 
 #### SupplyChainEvents (`supplychain.SupplyChainEvents`)
-**Purpose**: Consolidated disruption events and their business impact assessment  
-**Record Count**: 15 disruption scenarios
+**Purpose**: Consolidated disruption events and their business impact assessment
 
 | Field Name | Data Type | Description | Sample Values |
 |------------|-----------|-------------|---------------|
@@ -535,15 +519,68 @@ Supplier master data, product-supplier relationships, and disruption event track
 - **Referential Integrity**: All foreign key relationships are consistent across tables
 
 ### Key Relationships
-- `customer.Customer` ↔ `sales.Order`: One-to-many via `CustomerId`
+
+**Within-Domain Relationships**
+
+*Customer Domain:*
+- `customer.Customer` ↔ `customer.CustomerRelationshipType`: Many-to-one via `CustomerRelationshipTypeId`
+- `customer.Customer` ↔ `customer.CustomerTradeName`: One-to-many via `CustomerId`
+- `customer.Customer` ↔ `customer.Location`: One-to-many via `CustomerId`
+- `customer.Customer` ↔ `customer.CustomerAccount`: One-to-many via `CustomerId`
+- `customer.CustomerAccount` ↔ `customer.CustomerAccount` (parent): Self-referential hierarchy via `ParentAccountId`
+
+*Product Domain:*
+- `product.Product` ↔ `product.ProductCategory`: Many-to-one via `ProductCategoryID`
+- `product.ProductCategory` ↔ `product.ProductCategory` (parent): Self-referential hierarchy via `ParentCategoryId`
+
+*Sales Domain:*
 - `sales.Order` ↔ `sales.OrderLine`: One-to-many via `OrderId`
-- `product.Product` ↔ `sales.OrderLine`: One-to-many via `ProductId`
-- `sales.Order` ↔ `finance.invoice`: One-to-one via `OrderId`
-- `customer.Customer` ↔ `finance.account`: One-to-many via `CustomerId`
+- `sales.Order` ↔ `sales.OrderPayment`: One-to-one via `OrderId`
+
+*Finance Domain:*
 - `finance.invoice` ↔ `finance.payment`: One-to-one via `InvoiceId`
-- `product.Product` ↔ `inventory.Inventory`: One-to-many via `ProductID`
-- `inventory.Warehouses` ↔ `inventory.PurchaseOrders`: One-to-many via `WarehouseID` / `DeliveryLocation`
+
+*Inventory Domain:*
+- `inventory.PurchaseOrders` ↔ `inventory.PurchaseOrderItems`: One-to-many via `PurchaseOrderID`
+
+*Supply Chain Domain:*
 - `supplychain.Suppliers` ↔ `supplychain.ProductSuppliers`: One-to-many via `SupplierID`
+- `supplychain.Suppliers` ↔ `supplychain.SupplyChainEvents`: One-to-many via `SupplierID`
+- `supplychain.Suppliers` ↔ `supplychain.Suppliers` (primary): Self-referential via `PrimarySupplierID` (secondary suppliers reference their primary)
+
+**Cross-Domain Relationships**
+
+*Customer → Sales:*
+- `customer.Customer` ↔ `sales.Order`: One-to-many via `CustomerId`
+- `customer.CustomerAccount` ↔ `sales.Order`: One-to-many via `CustomerAccountId`
+
+*Customer → Finance:*
+- `customer.Customer` ↔ `finance.invoice`: One-to-many via `CustomerId`
+- `customer.Customer` ↔ `finance.account`: One-to-many via `CustomerId`
+- `customer.Customer` ↔ `finance.payment`: One-to-many via `CustomerId`
+
+*Product → Sales:*
+- `product.Product` ↔ `sales.OrderLine`: One-to-many via `ProductId`
+
+*Product → Inventory:*
+- `product.Product` ↔ `inventory.Inventory`: One-to-many via `ProductID`
+- `product.Product` ↔ `inventory.InventoryTransactions`: One-to-many via `ProductID`
+- `product.Product` ↔ `inventory.PurchaseOrderItems`: One-to-many via `ProductID`
+- `product.Product` ↔ `inventory.DemandForecast`: One-to-many via `ProductID`
+
+*Product → Supply Chain:*
+- `product.Product` ↔ `supplychain.ProductSuppliers`: One-to-many via `ProductID`
+
+*Sales → Finance:*
+- `sales.Order` ↔ `finance.invoice`: One-to-one via `OrderId`
+
+*Inventory Warehouse Links:*
+- `inventory.Warehouses` ↔ `inventory.Inventory`: One-to-many via `WarehouseLocation` / `WarehouseID`
+- `inventory.Warehouses` ↔ `inventory.InventoryTransactions`: One-to-many via `WarehouseLocation` / `WarehouseID`
+- `inventory.Warehouses` ↔ `inventory.PurchaseOrders`: One-to-many via `DeliveryLocation` / `WarehouseID`
+
+*Supply Chain → Inventory:*
+- `supplychain.Suppliers` ↔ `inventory.PurchaseOrders`: One-to-many via `SupplierID`
 
 ### Synthetic Data Notice
 All data in this environment is synthetically generated for demonstration and learning purposes. Data patterns, relationships, and business rules reflect realistic scenarios but do not represent actual customer, product, or financial information.
