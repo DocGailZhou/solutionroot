@@ -6,10 +6,10 @@ Generates realistic sales and finance data for three business domains: Camping ð
 
 ```bash
 # Historical data (6+ years)
-python main_generate_sales.py -s 2020-01-01 -e 2026-03-31 --enable-growth --copydata .\infra\data --graph --no-display
+python main_generate_sales.py -s 2020-01-01 -e 2026-03-31 --enable-growth --copydata .\output_copydata\data --graph --no-display
 
 # Standard business period
-python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --graph --copydata .\infra\data
+python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --graph --copydata .\output_copydata\data
 
 ```
 
@@ -25,7 +25,7 @@ python main_generate_sales.py -s 2025-01-01 -e 2026-04-30 --enable-growth --grap
 | `--enable-growth` | Enable business growth patterns and market events |
 | `--graph` | Generate monthly revenue trend graph |
 | `--no-display` | Save graphs without GUI windows (for automation) |
-| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\infra\data`) |
+| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\output_copydata\data`) |
 
 
 
