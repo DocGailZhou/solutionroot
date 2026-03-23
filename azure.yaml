@@ -18,22 +18,22 @@ hooks:
   postprovision:
     windows:
       shell: pwsh
-      run: ./fabric_iq/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric_iq/infra/scripts/fabric/install_fabric_solution.py"
+      run: ./fabric/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric/infra/scripts/fabric/install_fabric_solution.py"
       interactive: true
       continueOnError: false
     posix:
       shell: pwsh
-      run: ./fabric_iq/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric_iq/infra/scripts/fabric/install_fabric_solution.py" -SkipPythonVirtualEnvironment
+      run: ./fabric/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric/infra/scripts/fabric/install_fabric_solution.py" -SkipPythonVirtualEnvironment
       interactive: true
       continueOnError: false
   predown:
     windows:
       shell: pwsh
-      run: ./fabric_iq/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric_iq/infra/scripts/fabric/remove_fabric_solution.py"
+      run: ./fabric/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric/infra/scripts/fabric/remove_fabric_solution.py"
       interactive: true
       continueOnError: false
     posix:
       shell: pwsh
-      run: ./fabric_iq/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric_iq/infra/scripts/fabric/remove_fabric_solution.py" -SkipPythonVirtualEnvironment
+      run: ./fabric/infra/scripts/utils/Run-PythonScript.ps1 -ScriptPath "fabric/infra/scripts/fabric/remove_fabric_solution.py" -SkipPythonVirtualEnvironment
       interactive: true
       continueOnError: false
