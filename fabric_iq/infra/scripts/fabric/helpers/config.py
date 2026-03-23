@@ -4,7 +4,7 @@ Shared configuration constants for Fabric deployment scripts.
 
 import os
 
-SOLUTION_NAME = "Fabric IQ"
+SOLUTION_NAME = "Microsoft IQ"
 
 # Paths derived from the repository layout.
 # config.py lives at <repo-root>/fabric_iq/infra/scripts/fabric/helpers/config.py
