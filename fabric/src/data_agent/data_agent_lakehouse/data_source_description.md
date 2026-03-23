@@ -1,8 +1,8 @@
-# Data Source Descriptions - Fabric IQ Lakehouse
+# Data Source Descriptions - Fabric Lakehouse
 
 ## Overview
 
-This document provides comprehensive descriptions of all data sources available in the Fabric IQ lakehouse. All data is loaded as Delta tables and is analytics-ready for business intelligence and reporting purposes.
+This document provides comprehensive descriptions of all data sources available in the Fabric lakehouse. All data is loaded as Delta tables and is analytics-ready for business intelligence and reporting purposes.
 
 Data is synthetic and generated for demonstration purposes, covering realistic business transactions across three product categories: Camping, Kitchen, and Ski.
 
