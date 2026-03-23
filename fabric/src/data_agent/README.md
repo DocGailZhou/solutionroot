@@ -20,17 +20,17 @@ Create a data agent with the lakehouse as the data source.
 
 ---
 
-## Option 2: Ontology Graph Model
+## Option 2: Ontology + Semantic Model
+
+Create a semantic model from the ontology, then use that semantic model as the data agent's data source.
+
+Files: `data_agent_ontology_semantic_model/` *(in progress)*
+
+## Option 3: Ontology Graph Model
 
 Link the lakehouse schema and tables using an ontology graph model, then use that ontology as the data agent's data source.
 
 Files: `data_agent_ontology_graph_model/` *(in progress)*
 
 ---
-
-## Option 3: Ontology + Semantic Model
-
-Create a semantic model from the ontology, then use that semantic model as the data agent's data source.
-
-Files: `data_agent_ontology_semantic_model/` *(in progress)*
 
