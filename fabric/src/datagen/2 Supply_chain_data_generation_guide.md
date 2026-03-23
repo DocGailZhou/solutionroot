@@ -6,7 +6,7 @@ Generates supplier management and inventory data with purchase orders and supply
 
 ```bash
 # Standard generation with auto-scaling
-python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --auto-scale --graph --copydata .\infra\data --no-display
+python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --auto-scale --graph --copydata .\output_copydata\data --no-display
 
 # Manual parameters
 python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --num-orders 30 --num-transactions 500 --graph --no-display
@@ -24,7 +24,7 @@ python main_generate_supplychain.py -s 2025-01-01 -e 2026-03-31 --inventory-only
 | `--auto-scale` | Auto-calculate parameters based on existing sales data |
 | `--graph` | Generate supply chain analytics dashboard |
 | `--no-display` | Save graphs without GUI windows (for automation) |
-| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\infra\data`) |
+| `--copydata <OUTPUT_DIR>` | Copy generated files to the specified directory (e.g. `.\output_copydata\data`) |
 | `--num-orders` | Number of purchase orders (default: 30) |
 | `--num-transactions` | Number of inventory transactions (default: 500) |
 | `--inventory-only` | Generate only inventory data (requires existing supplier data) |

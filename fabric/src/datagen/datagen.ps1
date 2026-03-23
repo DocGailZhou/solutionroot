@@ -200,7 +200,7 @@ $CopyInput = Read-Host "   Copy generated data to a destination folder? (Press E
 $CopyData = ($CopyInput -eq "" -or $CopyInput -eq "Y" -or $CopyInput -eq "y" -or $CopyInput -eq "yes")
 
 if ($CopyData) {
-    $DefaultCopyPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "infra" "data"
+    $DefaultCopyPath = Join-Path (Split-Path -Parent $MyInvocation.MyCommand.Path) "output_copydata" "data"
     $CopyPathInput = Read-Host "   Output folder path (press Enter for default: $DefaultCopyPath)"
     if ($CopyPathInput -eq "") {
         $CopyDataPath = $DefaultCopyPath
