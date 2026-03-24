@@ -4,16 +4,13 @@
 
 This document provides sample questions that demonstrate the capabilities of the Fabric Data Agent using the ontology graph model built on **Product**, **Inventory**, and **Supply Chain** schemas. The agent can answer complex business questions by traversing relationships between entities across these three interconnected domains.
 
-## Common Data Source Issues
+## Data Agent Instructions
 
-If you experience problems, below are commonly root causes: 
+The agent is configured to understand and query the following business domains:
 
-1. **Connection Problem**: The system or query interface may not be connected to the Microsoft Fabric Ontology Graph Model or Lakehouse. This means the tool cannot reach or access your data at all.
-2. **Permission or Access Error**: My environment might not have the required permissions to query the database or underlying data lake. Role or credential issues are a frequent cause.
-3. **Backend System Outage**: The Fabric Lakehouse, related databases, or query engines could be down for maintenance or experiencing outages.
-4. **Configuration Issues**: The data source, endpoints, or connection strings may be misconfigured, preventing queries from running.
-5. **Data Not Loaded**: The necessary business data (products, orders, suppliers, etc.) may not be imported or synced in the underlying system yet.
-6. **Query Timeout or Failure**: Some tools have query execution limits; infrastructure issues or inefficient queries can cause failures.
+### Business Domain Coverage
+- 👥 **Democratization**: Non-technical users get enterprise-grade analytics
+- 🔄 **Agility**: Business changes don't break existing queries
 
 
 
@@ -35,6 +32,218 @@ If you experience problems, below are commonly root causes:
 - **Suppliers**: Supplier master data with backup relationships
 - **ProductSuppliers**: Product-supplier mapping with pricing
 - **SupplyChainEvents**: Disruption events and impact tracking
+
+---
+
+## How to Query Your Fabric Ontology
+
+### Query Methods Available
+
+#### 1. **Natural Language Queries (Recommended)**
+Use Fabric's AI-powered query interface to ask questions in plain English:
+
+```
+"Show me all camping products with low inventory levels"
+"Which suppliers have active disruption events?"
+"What's the total inventory value by warehouse?"
+```
+
+#### 2. **Graph Query Language (GQL)**
+For structured graph traversals:
+
+```gql
+MATCH (i:Inventory)-[:TracksProduct]->(p:Product)-[:BelongsToCategory]->(c:ProductCategory {CategoryName: 'Camping'})
+WHERE i.CurrentStock < i.ReorderPoint
+RETURN p.ProductName, i.CurrentStock, i.ReorderPoint
+```
+
+#### 3. **SPARQL Queries**
+For semantic web-style queries:
+
+```sparql
+PREFIX ont: <http://fabric.ontology/>
+SELECT ?productName ?stockLevel ?warehouse
+WHERE {
+  ?product ont:hasName ?productName ;
+           ont:hasInventory ?inventory .
+  ?inventory ont:currentStock ?stockLevel ;
+             ont:locatedAt ?warehouse .
+  FILTER (?stockLevel < 50)
+}
+```
+
+#### 4. **Power BI Integration**
+Connect Power BI to your ontology for visual analytics:
+- Use the Fabric connector in Power BI Desktop
+- Create relationships using ontology mappings
+- Build dashboards with semantic layer intelligence
+
+---
+
+### Troubleshooting GQL Query Errors
+
+#### Common Issues & Solutions
+
+**1. Incorrect Relationship Names**
+- ❌ `[:BELONGS_TO]` → ✅ `[:BelongsToCategory]` 
+- ❌ `[:STORED_IN]` → ✅ `[:StoredAt]`
+- ❌ `[:TRACKS_PRODUCT]` → ✅ `[:TracksProduct]`
+
+**Your Actual Relationship Names:**
+- `BelongsToCategory`: Product → ProductCategory
+- `TracksProduct`: Inventory → Product  
+- `StoredAt`: Inventory → Warehouses
+- `OrderedFrom`: PurchaseOrders → Suppliers
+- `Contains`: PurchaseOrders → PurchaseOrderItems
+- `OrdersProduct`: PurchaseOrderItems → Product
+
+**2. Wrong Relationship Direction**
+- ❌ `(p:Product)-[:TracksProduct]->(i:Inventory)` 
+- ✅ `(i:Inventory)-[:TracksProduct]->(p:Product)`
+
+**3. Query Syntax Issues**
+- Ensure proper spacing around relationship patterns
+- Use correct node and property names
+- Check parentheses and brackets are balanced
+
+#### Testing Your Queries
+
+**Start Simple:**
+```gql
+// Test basic node retrieval first
+MATCH (p:Product) RETURN p LIMIT 5
+
+// Then test relationships one by one  
+MATCH (p:Product)-[:BelongsToCategory]->(c:ProductCategory) 
+RETURN p.ProductName, c.CategoryName LIMIT 5
+```
+
+**Check Available Relationships:**
+```gql
+// See what relationships exist from Product nodes
+MATCH (p:Product)-[r]->(n) 
+RETURN type(r) as RelationshipType, labels(n) as ConnectedTo
+LIMIT 20
+```
+
+---
+
+### Example Queries for Your Ontology
+
+#### Basic Entity Queries
+
+**Get All Product Categories:**
+```gql
+MATCH (c:ProductCategory)
+RETURN c.CategoryName, c.CategoryDescription
+ORDER BY c.CategoryName
+```
+
+**Find Products by Category:**
+```gql
+MATCH (p:Product)-[:BelongsToCategory]->(c:ProductCategory {CategoryName: 'Camping'})
+RETURN p.ProductName, p.ListPrice, p.StandardCost
+ORDER BY p.ListPrice DESC
+```
+
+#### Cross-Domain Relationship Queries
+
+**Products with Low Inventory:**
+```gql
+MATCH (i:Inventory)-[:TracksProduct]->(p:Product)
+MATCH (i)-[:StoredAt]->(w:Warehouses)
+WHERE i.CurrentStock < i.ReorderPoint
+RETURN p.ProductName, p.ProductCategory, i.CurrentStock, 
+       i.ReorderPoint, w.WarehouseName
+ORDER BY i.CurrentStock ASC
+```
+
+**Supplier Risk Analysis:**
+```gql
+MATCH (s:Suppliers)-[:AFFECTED_BY]->(e:SupplyChainEvents)
+-[:SUPPLIES]->(ps:ProductSuppliers)-[:FOR_PRODUCT]->(p:Product)
+WHERE e.Status = 'Active' AND e.Severity IN ['High', 'Critical']
+RETURN s.SupplierName, e.EventName, e.Severity,
+       COUNT(p) as AffectedProductCount
+ORDER BY AffectedProductCount DESC
+```
+
+#### Aggregation and Analytics
+
+**Inventory Value by Warehouse:**
+```gql
+MATCH (w:Warehouses)<-[:StoredAt]-(i:Inventory)-[:TracksProduct]->(p:Product)
+RETURN w.WarehouseName, 
+       SUM(i.CurrentStock * p.StandardCost) as TotalValue,
+       COUNT(i) as ProductCount
+ORDER BY TotalValue DESC
+```
+
+**Purchase Order Analysis:**
+```gql
+MATCH (po:PurchaseOrders)-[:OrderedFrom]->(s:Suppliers)
+MATCH (po)-[:Contains]->(poi:PurchaseOrderItems)-[:OrdersProduct]->(p:Product)
+WHERE po.Status = 'Pending'
+RETURN s.SupplierName, po.PurchaseOrderNumber, 
+       SUM(poi.QuantityOrdered * poi.UnitCost) as OrderValue,
+       po.ExpectedDeliveryDate
+ORDER BY OrderValue DESC
+```
+
+#### Complex Business Intelligence
+
+**Supply Chain Vulnerability Assessment:**
+```gql
+MATCH (p:Product)-[:SUPPLIED_BY]->(ps:ProductSuppliers)-[:FROM_SUPPLIER]->(s:Suppliers)
+WHERE NOT EXISTS {
+  MATCH (p)-[:SUPPLIED_BY]->(ps2:ProductSuppliers)-[:FROM_SUPPLIER]->(s2:Suppliers)
+  WHERE s2.SupplierID <> s.SupplierID
+}
+WITH p, s
+MATCH (p)-[:TRACKED_IN]->(i:Inventory)
+WHERE i.CurrentStock < (i.ReorderPoint * 1.5)
+RETURN p.ProductName, s.SupplierName, i.CurrentStock, 
+       i.ReorderPoint, 'Single Source + Low Stock' as RiskType
+ORDER BY i.CurrentStock ASC
+```
+
+---
+
+### Accessing Your Ontology
+
+#### Through Fabric Workspace
+1. **Open Fabric Workspace** → Navigate to your `fabriciq_team_ontology.Ontology`
+2. **Query Interface** → Use the built-in query editor
+3. **Natural Language** → Type questions in the search/query box
+4. **Graph Explorer** → Visual interface for browsing relationships
+
+#### Programmatic Access
+```python
+# Python example using Fabric REST API
+import requests
+
+headers = {
+    'Authorization': 'Bearer <your_token>',
+    'Content-Type': 'application/json'
+}
+
+query = {
+    "query": "MATCH (p:Product) WHERE p.ProductCategory = 'Camping' RETURN p LIMIT 10",
+    "parameters": {}
+}
+
+response = requests.post(
+    'https://<your-fabric-endpoint>/v1/ontology/query',
+    headers=headers,
+    json=query
+)
+```
+
+#### Power BI Connection
+1. **Get Data** → More → Online Services → Microsoft Fabric
+2. **Connect to Ontology** → Select your workspace and ontology
+3. **Import Relationships** → Fabric automatically maps graph relationships
+4. **Build Reports** → Use semantic understanding for intuitive reporting
 
 ---
 
@@ -161,25 +370,27 @@ If you experience problems, below are commonly root causes:
 
 ---
 
-### 🎯 Strategic Business Questions
+### 🎯 Strategic Business Questions - **THE ONTOLOGY ADVANTAGE**
 
-#### Risk Management
-- "Identify our top 5 supply chain vulnerabilities"
-- "Which products have backup supplier coverage?"
-- "Show me geographic concentration risks in our supplier base"
-- "What's our inventory buffer against supply disruptions?"
+#### **C-Suite Risk Management** 🏢
+- "Identify our top 5 supply chain vulnerabilities" → **Instant risk dashboard**
+- "Which products have backup supplier coverage?" → **Supplier dependency analysis**
+- "Show me geographic concentration risks in our supplier base" → **Geographic risk heatmap**
+- "What's our inventory buffer against supply disruptions?" → **Resilience scoring**
 
-#### Optimization Opportunities  
-- "Which slow-moving products are tying up warehouse space?"
-- "Show me opportunities to consolidate suppliers for better terms"
-- "Which products could benefit from demand forecast accuracy improvements?"
-- "Where can we optimize safety stock levels without increasing risk?"
+#### **Operational Excellence** 🔧
+- "Which slow-moving products are tying up warehouse space?" → **Capital optimization**
+- "Show me opportunities to consolidate suppliers for better terms" → **Procurement strategy**
+- "Which products could benefit from demand forecast accuracy improvements?" → **ML model targeting**
+- "Where can we optimize safety stock levels without increasing risk?" → **Inventory optimization**
 
-#### Performance Benchmarking
-- "Compare inventory turnover rates across product categories"
-- "Show supplier performance rankings by reliability and cost"
-- "What's our forecast accuracy vs. industry benchmarks?"
-- "How does our warehouse utilization compare to capacity planning goals?"
+#### **Performance Intelligence** 📊
+- "Compare inventory turnover rates across product categories" → **Category performance**
+- "Show supplier performance rankings by reliability and cost" → **Vendor scorecards**
+- "What's our forecast accuracy vs. industry benchmarks?" → **Competitive analysis**
+- "How does our warehouse utilization compare to capacity planning goals?" → **Operational KPIs**
+
+**💰 Business Impact:** Each question represents decisions worth **millions in working capital, risk mitigation, and operational efficiency**.
 
 ---
 
@@ -201,15 +412,92 @@ If you experience problems, below are commonly root causes:
 - Executive-level questions requiring comprehensive analysis
 - Example: "What's our overall supply chain resilience score and top 3 improvement opportunities?"
 
----
+## 🔧 **Technical Implementation Details**
 
-## Expected Agent Capabilities
+### **Ontology Configuration**
 
-The agent should be able to:
-- ✅ Navigate relationships between Product ↔ Inventory ↔ Supply Chain
-- ✅ Aggregate data across multiple warehouses and suppliers 
-- ✅ Calculate derived metrics (turnover, utilization, risk scores)
-- ✅ Provide time-series analysis and trend identification
-- ✅ Offer proactive insights and recommendations
-- ✅ Handle both operational and strategic business questions
-- ✅ Explain complex supply chain relationships in business terms
+**Entity Type Mapping:**
+```yaml
+Product:
+  key: ProductID
+  properties: [ProductName, ListPrice, StandardCost, ProductCategoryID]
+  relationships: [BelongsToCategory]
+
+Inventory:
+  key: InventoryID  
+  properties: [CurrentStock, ReorderPoint, WarehouseID, ProductID]
+  relationships: [TracksProduct, StoredAt]
+
+Suppliers:
+  key: SupplierID
+  properties: [SupplierName, LeadTimeDays, ReliabilityScore]
+  relationships: [SuppliesProduct]
+```
+
+### **Common Issues & Solutions**
+
+**Issue**: "No data in ontology preview"
+**Solution**: 
+1. Check semantic model relationships are published
+2. Verify lakehouse tables are managed (not external)
+3. Refresh graph model manually
+
+**Issue**: "GQL queries fail"
+**Solution**:
+1. Verify relationship names match ontology schema
+2. Check relationship directions
+3. Add `Support group by in GQL` to agent instructions
+
+**Issue**: "Agent gives generic responses"
+**Solution**:
+1. Bind data to entity types
+2. Refresh graph model after schema changes
+3. Test with simple queries first
+
+### **Performance Optimization**
+
+- **Graph Model Refresh**: Schedule during off-hours
+- **Query Complexity**: Start simple, build complexity incrementally  
+- **Data Volume**: Test with subset before full dataset
+- **Relationship Depth**: Limit traversal depth for large graphs
+
+### **Development Checklist**
+
+**Phase 1 - Setup:**
+- [ ] Fabric workspace configured (F64+ capacity)
+- [ ] Lakehouse tables created with proper relationships
+- [ ] Power BI semantic model published
+- [ ] Ontology generated from semantic model
+
+**Phase 2 - Configuration:**
+- [ ] Entity types reviewed and renamed if needed
+- [ ] Entity type keys configured
+- [ ] Relationship types bound to data
+- [ ] Graph model refreshed
+
+**Phase 3 - Testing:**
+- [ ] Basic GQL queries tested
+- [ ] Cross-domain relationships verified
+- [ ] Data agent created and configured
+- [ ] Natural language queries tested
+
+**Phase 4 - Validation:**
+- [ ] Sample questions from each domain work
+- [ ] Performance acceptable for data volume
+- [ ] Agent responses are domain-specific
+- [ ] Documentation updated
+
+### **Next Steps for Engineers**
+
+1. **Clone this accelerator** as starting template
+2. **Replace sample data** with your business domain
+3. **Modify entity relationships** for your use case
+4. **Test incrementally** with simple queries first
+5. **Scale gradually** to production data volumes
+
+### **Resources & Documentation**
+
+- [Fabric Ontology Documentation](https://learn.microsoft.com/en-us/fabric/iq/ontology/)
+- [GQL Query Reference](https://learn.microsoft.com/en-us/fabric/graph/gql-reference-abridged)
+- [Power BI Semantic Models](https://learn.microsoft.com/en-us/fabric/data-warehouse/semantic-models)
+- [Data Agent Configuration](https://learn.microsoft.com/en-us/fabric/data-science/concept-data-agent)
