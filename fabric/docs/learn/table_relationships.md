@@ -113,23 +113,23 @@ Work through this list one relationship at a time. The **From** column is always
 
 ### Group 1: Product → Inventory Domain
 
-| # | From Table | From Field | To Table | To Field | Cardinality | Direction |
-|---|---|---|---|---|---|---|
-| 1 | `product_Product` | `ProductID` | `inventory_Inventory` | `ProductID` | One to Many | Single |
-| 2 | `product_Product` | `ProductID` | `inventory_InventoryTransactions` | `ProductID` | One to Many | Single |
-| 3 | `product_Product` | `ProductID` | `inventory_PurchaseOrderItems` | `ProductID` | One to Many | Single |
-| 4 | `product_Product` | `ProductID` | `inventory_DemandForecast` | `ProductID` | One to Many | Single |
-| 5 | `product_ProductCategory` | `CategoryID` | `product_Product` | `ProductCategoryID` | One to Many | Single |
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 1 | Product_Inventory | `product_product` | `ProductID` | `inventory_Inventory` | `ProductID` | One to Many | Single |
+| 2 | Product_InventoryTransactions | `product_product` | `ProductID` | `inventory_InventoryTransactions` | `ProductID` | One to Many | Single |
+| 3 | Product_PurchaseOrderItems | `product_product` | `ProductID` | `inventory_PurchaseOrderItems` | `ProductID` | One to Many | Single |
+| 4 | Product_DemandForecast | `product`_product | `ProductID` | `inventory_DemandForecast` | `ProductID` | One to Many | Single |
+| 5 | Product_ProductCategory | `product_productCategory` | `CategoryID` | `product_Product` | `ProductCategoryID` | One to Many | Single |
 
 ---
 
 ### Group 2: Warehouses → Inventory Domain
 
-| # | From Table | From Field | To Table | To Field | Cardinality | Direction |
-|---|---|---|---|---|---|---|
-| 6 | `inventory_Warehouses` | `WarehouseID` | `inventory_Inventory` | `WarehouseLocation` | One to Many | Single |
-| 7 | `inventory_Warehouses` | `WarehouseID` | `inventory_InventoryTransactions` | `WarehouseLocation` | One to Many | Single |
-| 8 | `inventory_Warehouses` | `WarehouseID` | `inventory_PurchaseOrders` | `DeliveryLocation` | One to Many | Single |
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 6 | Warehouses_Inventory | `inventory_Warehouses` | `WarehouseID` | `inventory_Inventory` | `WarehouseLocation` | One to Many | Single |
+| 7 | Warehouses_InventoryTransactions | `inventory_Warehouses` | `WarehouseID` | `inventory_InventoryTransactions` | `WarehouseLocation` | One to Many | Single |
+| 8 | Warehouses_PurchaseOrders | `inventory_Warehouses` | `WarehouseID` | `inventory_PurchaseOrders` | `DeliveryLocation` | One to Many | Single |
 
 > **Note**: `WarehouseID` values in your data are `Main`, `Backup`, `Regional`. The `WarehouseLocation` and `DeliveryLocation` fields in the other tables use these same values as foreign keys.
 
@@ -137,19 +137,19 @@ Work through this list one relationship at a time. The **From** column is always
 
 ### Group 3: Purchase Orders → Line Items
 
-| # | From Table | From Field | To Table | To Field | Cardinality | Direction |
-|---|---|---|---|---|---|---|
-| 9 | `inventory_PurchaseOrders` | `PurchaseOrderID` | `inventory_PurchaseOrderItems` | `PurchaseOrderID` | One to Many | Single |
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 9 | PurchaseOrders_PurchaseOrderItems | `inventory_PurchaseOrders` | `PurchaseOrderID` | `inventory_PurchaseOrderItems` | `PurchaseOrderID` | One to Many | Single |
 
 ---
 
 ### Group 4: Suppliers → Supply Chain Domain
 
-| # | From Table | From Field | To Table | To Field | Cardinality | Direction |
-|---|---|---|---|---|---|---|
-| 10 | `supplychain_Suppliers` | `SupplierID` | `inventory_PurchaseOrders` | `SupplierID` | One to Many | Single |
-| 11 | `supplychain_Suppliers` | `SupplierID` | `supplychain_ProductSuppliers` | `SupplierID` | One to Many | Single |
-| 12 | `supplychain_Suppliers` | `SupplierID` | `supplychain_SupplyChainEvents` | `SupplierID` | One to Many | Single |
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 10 | Suppliers_PurchaseOrders | `supplychain_Suppliers` | `SupplierID` | `inventory_PurchaseOrders` | `SupplierID` | One to Many | Single |
+| 11 | Suppliers_ProductSuppliers | `supplychain_Suppliers` | `SupplierID` | `supplychain_ProductSuppliers` | `SupplierID` | One to Many | Single |
+| 12 | Suppliers_SupplyChainEvents | `supplychain_Suppliers` | `SupplierID` | `supplychain_SupplyChainEvents` | `SupplierID` | One to Many | Single |
 
 > **Note**: `SupplyChainEvents.SupplierID` can be NULL (for general/market-wide events). This is fine — the relationship still works. NULL rows simply won't match any supplier and will appear as "blank" in reports.
 
@@ -157,9 +157,9 @@ Work through this list one relationship at a time. The **From** column is always
 
 ### Group 5: Product → Supply Chain Domain
 
-| # | From Table | From Field | To Table | To Field | Cardinality | Direction |
-|---|---|---|---|---|---|---|
-| 13 | `product_Product` | `ProductID` | `supplychain_ProductSuppliers` | `ProductID` | One to Many | Single |
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 13 | Product_ProductSuppliers | `product_Product` | `ProductID` | `supplychain_ProductSuppliers` | `ProductID` | One to Many | Single |
 
 ---
 

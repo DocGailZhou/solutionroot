@@ -41,7 +41,7 @@ The questions below contain placeholders in square brackets (e.g., `[Product Nam
 
 | # | Domain | Question | Notes |
 |---|--------|----------|-------|
-| 1 | Inventory | What is the available stock for [Product Name] in all warehouses? | Multi-warehouse stock query |
+| 1 | Inventory | What is the available stock for [**Product Name**] in all warehouses? | Multi-warehouse stock query |
 | 2 | Inventory | List products that are below their reorder point. | Stock alert analysis |
 | 3 | Inventory | Which products have the highest inventory levels? | High stock identification |
 | 4 | Inventory | How much of [Product Name] is reserved in stock? | Reserved stock inquiry |
