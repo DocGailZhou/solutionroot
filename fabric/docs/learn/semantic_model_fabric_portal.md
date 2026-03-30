@@ -79,6 +79,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `CategoryID`
 - **To table**: `Product` 
 - **To column**: `ProductCategoryID`
+- **Cardinality**: One to Many (1:m) - One category has many products
 - Click **OK** or **Create**
 
 **Relationship 2:**
@@ -86,6 +87,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `ProductID`
 - **To table**: `Inventory`
 - **To column**: `ProductID`
+- **Cardinality**: One to Many (1:m) - One product has inventory in multiple warehouses
 - Click **OK**
 
 **Relationship 3:**
@@ -93,6 +95,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `ProductID`
 - **To table**: `InventoryTransactions`
 - **To column**: `ProductID`
+- **Cardinality**: One to Many (1:m) - One product has many inventory transactions
 - Click **OK**
 
 **Relationship 4:**
@@ -100,6 +103,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `ProductID`
 - **To table**: `PurchaseOrderItems`
 - **To column**: `ProductID`
+- **Cardinality**: One to Many (1:m) - One product appears in many purchase order items
 - Click **OK**
 
 **Relationship 5:**
@@ -107,6 +111,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `ProductID`
 - **To table**: `DemandForecast`
 - **To column**: `ProductID`
+- **Cardinality**: One to Many (1:m) - One product has multiple forecast periods
 - Click **OK**
 
 **Relationship 6:**
@@ -114,6 +119,8 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `WarehouseID`
 - **To table**: `Inventory`
 - **To column**: `WarehouseLocation`
+- **Cardinality**: One to Many (1:m) - One warehouse stores many products
+- **Note**: `WarehouseID` values are "Main", "Backup", "Regional"
 - Click **OK**
 
 **Relationship 7:**
@@ -121,6 +128,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `WarehouseID`
 - **To table**: `InventoryTransactions`
 - **To column**: `WarehouseLocation`
+- **Cardinality**: One to Many (1:m) - One warehouse has many transactions
 - Click **OK**
 
 **Relationship 8:**
@@ -128,6 +136,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `WarehouseID`
 - **To table**: `PurchaseOrders`
 - **To column**: `DeliveryLocation`
+- **Cardinality**: One to Many (1:m) - One warehouse receives many purchase orders
 - Click **OK**
 
 **Relationship 9:**
@@ -135,6 +144,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `PurchaseOrderID`
 - **To table**: `PurchaseOrderItems`
 - **To column**: `PurchaseOrderID`
+- **Cardinality**: One to Many (1:m) - One purchase order has many line items
 - Click **OK**
 
 **Relationship 10:**
@@ -142,6 +152,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `SupplierID`
 - **To table**: `PurchaseOrders`
 - **To column**: `SupplierID`
+- **Cardinality**: One to Many (1:m) - One supplier fulfills many purchase orders
 - Click **OK**
 
 **Relationship 11:**
@@ -149,6 +160,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `SupplierID`
 - **To table**: `ProductSuppliers`
 - **To column**: `SupplierID`
+- **Cardinality**: One to Many (1:m) - One supplier provides many products
 - Click **OK**
 
 **Relationship 12:**
@@ -156,6 +168,8 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `SupplierID`
 - **To table**: `SupplyChainEvents`
 - **To column**: `SupplierID`
+- **Cardinality**: One to Many (1:m) - One supplier can have many disruption events
+- **Note**: Some events may have NULL SupplierID (general market events)
 - Click **OK**
 
 **Relationship 13:**
@@ -163,6 +177,7 @@ Work through these relationships in the Manage Relationships dialog:
 - **From column**: `ProductID`
 - **To table**: `ProductSuppliers`
 - **To column**: `ProductID`
+- **Cardinality**: One to Many (1:m) - One product can have multiple suppliers
 - Click **OK**
 
 ### 3.4 Verify Your Relationships
