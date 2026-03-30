@@ -196,104 +196,129 @@ Since we removed sales tables, create a date table for time-based analysis:
 - Right-click in empty canvas space → **New table**
 - Enter this DAX formula:
 ```dax
-DateTable = CALENDAR(
-    DATE(2022, 1, 1),
-    DATE(2026, 12, 31)
+DateTable = 
+ADDCOLUMNS(
+    CALENDAR(DATE(2022,1,1), DATE(2026,12,31)),
+    "Year", YEAR([Date]),
+    "Month", MONTH([Date]),
+    "MonthName", FORMAT([Date], "MMMM"),
+    "Quarter", "Q" & QUARTER([Date]),
+    "Weekday", WEEKDAY([Date]),
+    "WeekdayName", FORMAT([Date], "dddd")
 )
 ```
 - Right-click the new DateTable → **Mark as date table**
-- Connect DateTable to transaction date fields if needed
+- Choose **"Date"** as the date column
 
-### 4.2 Set Data Types and Formats
+### 4.2 Connect DateTable to Transaction Date Fields  
+Create relationships between your DateTable and date fields using **"Manage relationships"** → **"New relationship"**:
+
+| **Relationship** | **From Table** | **From Column** | **To Table** | **To Column** | **Status** | **Notes** |
+|---|---|---|---|---|---|---|
+| **1: Inventory Transactions** | DateTable | Date | InventoryTransactions | TransactionDate | ✅ Active | Core time intelligence |
+| **2: Purchase Orders** | DateTable | Date | PurchaseOrders | OrderDate | ✅ Active | Order trends over time |
+| **3: Demand Forecast** | DateTable | Date | DemandForecast | ForecastDate | ❌ Skip | **Ambiguous paths error***  |
+| **4: Supply Chain Events** | DateTable | Date | SupplyChainEvents | StartDate | ✅ Active | Event timeline analysis |
+
+**Ambiguous Paths Issue:** DemandForecast creates multiple relationship paths between InventoryTransactions and Product:
+
+- Direct: InventoryTransactions → Product  
+- Indirect: InventoryTransactions → DateTable → DemandForecast → Product
+
+**Recommendation:** Skip this relationship to avoid model conflicts. The core time intelligence works with relationships 1, 2, and 4.
+
+**Verify Date Relationships:**
+- In Manage Relationships dialog, you should see 3 active date relationships
+- DateTable now connects to your key time-based transaction tables
+
+---
+
+## **Step 5: Format Data and Create Measures**
+
+### 5.1 Set Data Types and Formats
 **Currency Fields:**
 - Select `product_Product.ListPrice`, `product_Product.StandardCost` 
-- Set **Format** = `Currency ($)` and **Decimal places** = `2`
+- Set **Data Type** = `Decimal number` 
+- Set **Format** = `Currency ($)`
 - Select `inventory_Inventory.AverageCost`, `supplychain_ProductSuppliers.WholesaleCost`
-- Set **Format** = `Currency ($)` and **Decimal places** = `2`
-
-**Percentage Fields:**
-- Select `supplychain_Suppliers.ReliabilityScore`
-- Set **Format** = `Percentage` and **Decimal places** = `1`
-
-### 4.3 Hide Technical Fields
-Hide ID/GUID fields from report view:
-- Select each ID column: `ProductID`, `WarehouseID`, `SupplierID`, `PurchaseOrderID`
-- Right-click → **Hide in report view**
+- Set **Data Type** = `Decimal number`
+- Set **Format** = `Currency ($)`
 
 ---
 
-## **Step 5: Create Core Business Measures**
+## **Step 6: Create Core Business Measures**
 
-### 5.1 Add Key Performance Measures
-Right-click any table in the Fields pane → **New measure**, then enter:
+### 6.1 Add Key Performance Measures
+Create each measure individually by clicking the three dots (...) on the **Inventory** table → **New measure**:
 
-**Inventory Health Measures:**
+**Inventory Health Measures** (create one at a time):
 ```dax
-Total Current Stock = SUM(inventory_Inventory[CurrentStock])
-Total Available Stock = SUM(inventory_Inventory[AvailableStock])
-Total Reserved Stock = SUM(inventory_Inventory[ReservedStock])
+Total Current Stock = SUM(Inventory[CurrentStock])
+```
+```dax
+Total Available Stock = SUM(Inventory[AvailableStock])
+```
+```dax
+Total Reserved Stock = SUM(Inventory[ReservedStock])
+```
+```dax
 Stock Fill Rate % = DIVIDE([Total Available Stock], [Total Current Stock], 0) * 100
-Low Stock Items = COUNTROWS(FILTER(inventory_Inventory, inventory_Inventory[CurrentStock] < inventory_Inventory[ReorderPoint]))
+```
+```dax
+Low Stock Items = COUNTROWS(FILTER(Inventory, Inventory[CurrentStock] < Inventory[ReorderPoint]))
 ```
 
-**Supply Chain Measures:**
+**Supply Chain Measures** (click three dots (...) on **Suppliers** table → **New measure** for each):
 ```dax
-Active Suppliers = COUNTROWS(FILTER(supplychain_Suppliers, supplychain_Suppliers[Status] = "Active"))
-Average Reliability Score = AVERAGE(supplychain_Suppliers[ReliabilityScore])
-Active Disruptions = COUNTROWS(FILTER(supplychain_SupplyChainEvents, supplychain_SupplyChainEvents[Status] = "Active"))
-Average Lead Time Days = AVERAGE(supplychain_ProductSuppliers[LeadTimeDays])
+Active Suppliers = COUNTROWS(FILTER(Suppliers, Suppliers[Status] = "Active"))
+```
+```dax
+Average Reliability Score = AVERAGE(Suppliers[ReliabilityScore])
+```
+```dax
+Active Disruptions = COUNTROWS(FILTER(SupplyChainEvents, SupplyChainEvents[Status] = "Active"))
+```
+```dax
+Average Lead Time Days = AVERAGE(ProductSuppliers[LeadTimeDays])
 ```
 
-**Product Performance Measures:**
+**Product Performance Measures** (click three dots (...) on **Product** table → **New measure** for each):
 ```dax
-Total Products = COUNTROWS(product_Product)
-Active Products = COUNTROWS(FILTER(product_Product, product_Product[ProductStatus] = "active"))
-Average Product Cost = AVERAGE(product_Product[StandardCost])
-Product Categories = DISTINCTCOUNT(product_ProductCategory[CategoryName])
+Total Products = COUNTROWS(Product)
+```
+```dax
+Active Products = COUNTROWS(FILTER(Product, Product[ProductStatus] = "active"))
+```
+```dax
+Average Product Cost = AVERAGE(Product[StandardCost])
+```
+```dax
+Product Categories = DISTINCTCOUNT(ProductCategory[CategoryName])
 ```
 
-**Warehouse Efficiency Measures:**
+**Warehouse Efficiency Measures** (click three dots (...) on **Warehouses** table → **New measure** for each):
+
 ```dax
-Total Warehouses = COUNTROWS(inventory_Warehouses)
-Total Warehouse Capacity = SUM(inventory_Warehouses[MaxCapacity])
+Total Warehouses = COUNTROWS(Warehouses)
+```
+```dax
+Total Warehouse Capacity = SUM(Warehouses[MaxCapacity])
+```
+```dax
 Warehouse Utilization % = DIVIDE([Total Current Stock], [Total Warehouse Capacity], 0) * 100
 ```
-
----
-
-## **Step 6: Organize and Validate Model**
-
-### 6.1 Create Display Folders
-Organize measures into logical groups:
-- Select inventory measures → Properties → **Display folder** = `"Inventory Analytics"`
-- Select supply chain measures → **Display folder** = `"Supply Chain Analytics"`
-- Select product measures → **Display folder** = `"Product Analytics"`
-- Select warehouse measures → **Display folder** = `"Warehouse Analytics"`
-
-### 6.2 Test the Model
-Create a validation report to test relationships:
-- Add a **Matrix** visual
-- **Rows**: `product_ProductCategory[CategoryName]`
-- **Values**: `[Total Current Stock]`, `[Active Suppliers]`
-- Verify data appears and makes business sense
-
-### 6.3 Validate Relationships
-In **Model** view, check that:
-- All relationship lines show `1` on one side and `*` on the other
-- No relationships are dashed (inactive)
-- All tables are connected to the model (no orphaned tables)
 
 ---
 
 ## **Step 7: Save and Configure Access**
 
 ### 7.1 Save Your Model
-- Click **File** → **Save** to save your semantic model
+- Your semantic model **auto-saves** in Fabric - no manual save needed
 - The model is now available in your Fabric workspace
 
 ### 7.2 Set Refresh Schedule
 - In your workspace, find your semantic model
-- Click **...** → **Settings** → **Scheduled refresh**
+- Click **...** → **Settings** → **Scheduled refresh** (Note: For this project we do not set refresh schedule)
 - Configure to match your lakehouse data update schedule
 - Since this is Direct Lake mode, refresh may not be needed
 
