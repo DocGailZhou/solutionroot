@@ -1,7 +1,7 @@
 {
   "warehouses": [
     {
-      "WarehouseID": "Main",
+      "WarehouseID": "WH_100",
       "WarehouseName": "Main Distribution Center",
       "DisplayName": "Kansas City, MO",
       "Type": "Main",
@@ -35,7 +35,7 @@
       "CreatedBy": "system"
     },
     {
-      "WarehouseID": "Backup",
+      "WarehouseID": "WH_200",
       "WarehouseName": "Backup Distribution Center", 
       "DisplayName": "Memphis, TN",
       "Type": "Backup",
@@ -69,7 +69,7 @@
       "CreatedBy": "system"
     },
     {
-      "WarehouseID": "Regional",
+      "WarehouseID": "WH_500",
       "WarehouseName": "Regional Distribution Center",
       "DisplayName": "Atlanta, GA", 
       "Type": "Regional",
