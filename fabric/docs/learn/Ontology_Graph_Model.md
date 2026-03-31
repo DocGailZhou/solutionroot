@@ -1,4 +1,4 @@
-Graph Model ****
+Edit Graph Model in Fabric Ontology 
 
 
 
