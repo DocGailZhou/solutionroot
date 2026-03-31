@@ -1,6 +1,8 @@
-# Fabric Setup and Pipeline Run Guide
+# Fabric Setup and Pipeline Run Guide (Manual)
 
 This guide walks through the full process of setting up Fabric workspace,  running data pipeline,  and validating results.
+
+This step has been automated. This document provides a way that user can manually set up the Fabric Workspace and run the the pipelines to upload data and run pipeline notebook to populate all the tables in fabric lakehouse which is the foundation for Fabric Ontology. 
 
 ## Prerequisites
 
