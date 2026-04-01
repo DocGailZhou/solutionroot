@@ -50,12 +50,12 @@ The questions below contain placeholders in square brackets (e.g., `[Product Nam
 | 6 | Inventory | List all products stored in main warehouse, show product ID, Product Name, and Quantity on hand. | Warehouse inventory query |
 | 7 | Inventory | What is the available stock for Coffee Maker in main warehouse? | Multi-warehouse stock query |
 | 8 | Inventory | Show me products with inventory status LowStock and show results in tabular format. | Stock status filtering |
-| 9 | Inventory | How much of Coffee Mug is reserved in stock? <br /><br />(Example Product Names: BaseCamp Folding Table, TrailLite Daypack, Coffee Maker, Coffee Mug, Professional Ski Helmet, Winter Boots - Insulated) | Reserved stock inquiry |
+| 9 | Inventory | How much of Coffee Mugs is reserved in stock? <br /><br />(Example Product Names: BaseCamp Folding Table, TrailLite Daypack, Coffee Maker, Coffee Mug, Professional Ski Helmet, Winter Boots - Insulated) | Reserved stock inquiry |
 | 10 | Inventory | Which warehouse has the most capacity? | Capacity analysis |
-| 11 | Inventory | Show all purchase orders made to supplier Fabrikam. <br /><br />Other examples: Contoso Ltd, Alpine Ski House, Fabrikam, Worldwide Importers, Proseware Inc | Supplier order history |
-| 12 | Supply Chain | Which products are supplied by Proseware? <br /><br />(Example Supplier Names: Contoso, Proseware, Alpine Ski House, Fabrikam, Worldwide Importers) | Supplier product catalog |
-| 13 | Supply Chain | List recent supply chain events or disruptions for [**Product Name**] | Product-specific disruptions |
-| 14 | Inventory | What is the demand forecast for [**Product Category**] next month? (Example Categories: Tents, Backpacks, Camping Tables, Coffee Makers, Bakeware, Ski Boots, Winter Footwear) | Category demand prediction |
+| 11 | Inventory(*) | Show all purchase orders made to supplier Fabrikam, with purchase order details such as PO, TotalOrderValue, and status. Show results in tabular format. <br /><br />Other examples: Contoso Ltd, Alpine Ski House, Fabrikam, Worldwide Importers, Proseware Inc | Supplier order history |
+| 12 | Supply Chain (*) | Which products are supplied by Proseware? <br /><br />(Example Supplier Names: Contoso, Proseware, Alpine Ski House, Fabrikam, Worldwide Importers) | Supplier product catalog |
+| 13 | Supply Chain (*) | List all supply chain events from entity named supplychainevents. | Product-specific disruptions |
+| 14 | Inventory | What is the demand forecast (demandforecast) for Tents for May 2026? (Example Categories: Tents, Backpacks, Camping Tables, Coffee Makers, Bakeware, Ski Boots, Winter Footwear) | Category demand prediction |
 
 
 
