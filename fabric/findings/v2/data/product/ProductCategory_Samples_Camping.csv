@@ -1,0 +1,9 @@
+ProductCategoryID,ProductLineID,CategoryName,CategoryDescription,IsActive,CreatedBy,CreatedDate
+151,1,Tents,Tents for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+152,1,Backpacks,Backpacks for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+153,1,Hiking Clothing,Hiking Clothing for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+154,1,Hiking Footwear,Hiking Footwear for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+155,1,Camping Tables,Camping Tables for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+156,1,Camping Stoves,Camping Stoves for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+157,1,Sleeping Bags,Sleeping Bags for outdoor camping and adventure activities.,TRUE,system,01-01-2025
+158,1,Lighting,Lighting for outdoor camping and adventure activities.,TRUE,system,01-01-2025

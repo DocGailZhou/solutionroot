@@ -1,0 +1,116 @@
+PurchaseOrderID,PurchaseOrderNumber,SupplierID,OrderDate,ExpectedDeliveryDate,ActualDeliveryDate,Status,TotalOrderValue,WarehouseID,OrderedBy,OrderPriority,Notes,CreatedBy,CreatedDate
+1,PO-2026-0001,1,2026-03-19,2026-03-29,2026-03-31,Delivered,97.12,2,buyer1,Medium,Order for Camping products,system,2026-03-19
+2,PO-2026-0002,5,2026-04-21,2026-05-08,,InTransit,50599.95,3,buyer1,Low,Order for Ski products,system,2026-04-21
+3,PO-2026-0003,4,2026-03-23,2026-04-14,2026-04-14,Delivered,34356.64,1,buyer2,Low,Multi-category order,system,2026-03-23
+4,PO-2026-0004,3,2026-04-22,2026-05-08,,Sent,90776.7,3,buyer2,High,Order for Ski products,system,2026-04-22
+5,PO-2026-0005,2,2026-01-30,2026-02-09,2026-02-09,Delivered,11923.47,2,buyer2,Medium,Order for Kitchen products,system,2026-01-30
+6,PO-2026-0006,4,2026-03-12,2026-04-02,2026-04-04,Delivered,40672.7,3,buyer2,Low,Multi-category order,system,2026-03-12
+7,PO-2026-0007,3,2026-02-17,2026-02-28,2026-03-02,Delivered,7693.95,2,buyer1,Low,Order for Ski products,system,2026-02-17
+8,PO-2026-0008,4,2026-04-11,2026-04-30,,InTransit,86832.25,2,buyer1,Low,Multi-category order,system,2026-04-11
+9,PO-2026-0009,1,2026-03-12,2026-03-27,2026-03-27,Delivered,759.85,1,supply_manager,Medium,Order for Camping products,system,2026-03-12
+10,PO-2026-0010,5,2026-03-07,2026-03-25,,InTransit,43442.18,2,supply_manager,Low,Order for Ski products,system,2026-03-07
+11,PO-2026-0011,2,2026-03-26,2026-04-04,2026-04-05,Delivered,4203.84,1,buyer1,Low,Order for Kitchen products,system,2026-03-26
+12,PO-2026-0012,2,2026-04-12,2026-04-27,2026-04-27,Delivered,6347.87,3,supply_manager,Low,Order for Kitchen products,system,2026-04-12
+13,PO-2026-0013,3,2026-02-07,2026-02-20,2026-02-22,Delivered,13134.05,2,supply_manager,Low,Order for Ski products,system,2026-02-07
+14,PO-2026-0014,4,2026-03-16,2026-04-05,2026-04-07,Delivered,32851.43,1,supply_manager,Low,Multi-category order,system,2026-03-16
+15,PO-2026-0015,5,2026-03-05,2026-03-22,2026-03-25,Delivered,63869.3,2,supply_manager,High,Order for Ski products,system,2026-03-05
+16,PO-2026-0016,2,2026-03-30,2026-04-12,2026-04-12,Delivered,683.76,2,supply_manager,Low,Order for Kitchen products,system,2026-03-30
+17,PO-2026-0017,4,2026-04-18,2026-05-10,,Confirmed,81111.39,2,buyer2,Low,Multi-category order,system,2026-04-18
+18,PO-2026-0018,5,2026-03-10,2026-03-24,2026-03-25,Delivered,67133.89,1,buyer2,Low,Order for Ski products,system,2026-03-10
+19,PO-2026-0019,3,2026-02-02,2026-02-14,2026-02-14,Delivered,5049.64,3,buyer2,Low,Order for Ski products,system,2026-02-02
+20,PO-2026-0020,3,2026-03-20,2026-04-01,2026-04-04,Delivered,19056.72,1,supply_manager,Low,Order for Ski products,system,2026-03-20
+21,PO-2026-0021,1,2026-03-02,2026-03-13,2026-03-14,Delivered,16191.11,2,buyer2,Medium,Order for Camping products,system,2026-03-02
+22,PO-2026-0022,3,2026-03-19,2026-04-04,2026-04-07,Delivered,83460.04,1,buyer1,Low,Order for Ski products,system,2026-03-19
+23,PO-2026-0023,2,2026-04-13,2026-04-24,2026-04-27,Delivered,3207.2,2,supply_manager,Medium,Order for Kitchen products,system,2026-04-13
+24,PO-2026-0024,5,2026-03-24,2026-04-06,2026-04-08,Delivered,584.73,3,buyer2,Low,Order for Ski products,system,2026-03-24
+25,PO-2026-0025,3,2026-03-30,2026-04-09,2026-04-09,Delivered,68117.99,3,supply_manager,High,Order for Ski products,system,2026-03-30
+26,PO-2026-0026,5,2026-04-25,2026-05-08,,InTransit,43164.42,1,buyer2,High,Order for Ski products,system,2026-04-25
+27,PO-2026-0027,3,2026-02-15,2026-03-01,2026-03-08,Delivered,82621.0,3,supply_manager,Low,Order for Ski products,system,2026-02-15
+28,PO-2026-0028,1,2026-03-10,2026-03-23,2026-03-26,Delivered,7669.41,2,buyer2,Low,Order for Camping products,system,2026-03-10
+29,PO-2026-0029,5,2026-02-10,2026-02-23,2026-02-23,Delivered,5684.21,1,supply_manager,Low,Order for Ski products,system,2026-02-10
+30,PO-2026-0030,3,2026-03-23,2026-04-05,2026-04-08,Delivered,13067.88,2,supply_manager,Medium,Order for Ski products,system,2026-03-23
+31,PO-2026-0031,4,2026-04-02,2026-04-24,2026-04-24,Delivered,33792.96,3,buyer1,Low,Multi-category order,system,2026-04-02
+32,PO-2026-0032,5,2026-02-21,2026-03-06,2026-03-06,Delivered,38117.78,1,supply_manager,Low,Order for Ski products,system,2026-02-21
+33,PO-2026-0033,5,2026-04-28,2026-05-13,,InTransit,21180.69,2,buyer1,High,Order for Ski products,system,2026-04-28
+34,PO-2026-0034,2,2026-02-18,2026-03-02,2026-03-03,Delivered,2022.22,2,supply_manager,Low,Order for Kitchen products,system,2026-02-18
+35,PO-2026-0035,4,2026-03-04,2026-03-30,2026-03-30,Delivered,78405.94,1,buyer2,Low,Multi-category order,system,2026-03-04
+36,PO-2026-0036,2,2026-04-22,2026-05-07,,Confirmed,7.98,2,supply_manager,Low,Order for Kitchen products,system,2026-04-22
+37,PO-2026-0037,3,2026-04-13,2026-04-25,2026-04-27,Delivered,237.78,2,buyer2,Medium,Order for Ski products,system,2026-04-13
+38,PO-2026-0038,5,2026-03-07,2026-03-20,2026-03-21,Delivered,753.06,2,supply_manager,Medium,Order for Ski products,system,2026-03-07
+39,PO-2026-0039,2,2026-03-16,2026-03-29,2026-04-01,Delivered,12237.43,2,buyer1,Medium,Order for Kitchen products,system,2026-03-16
+40,PO-2026-0040,1,2026-04-25,2026-05-09,,Confirmed,1401.73,1,buyer2,Low,Order for Camping products,system,2026-04-25
+41,PO-2026-0041,5,2026-04-20,2026-05-05,,Sent,17873.01,3,supply_manager,Low,Order for Ski products,system,2026-04-20
+42,PO-2026-0042,5,2026-03-26,2026-04-10,2026-04-13,Delivered,23880.04,3,supply_manager,Medium,Order for Ski products,system,2026-03-26
+43,PO-2026-0043,2,2026-03-05,2026-03-16,2026-03-16,Delivered,1132.2,2,buyer2,Medium,Order for Kitchen products,system,2026-03-05
+44,PO-2026-0044,5,2026-03-05,2026-03-20,2026-03-22,Delivered,650.37,2,buyer1,Low,Order for Ski products,system,2026-03-05
+45,PO-2026-0045,2,2026-02-24,2026-03-08,2026-03-08,Delivered,1532.74,3,buyer1,Low,Order for Kitchen products,system,2026-02-24
+46,PO-2026-0046,2,2026-02-06,2026-02-17,2026-02-19,Delivered,9823.02,2,buyer1,Medium,Order for Kitchen products,system,2026-02-06
+47,PO-2026-0047,1,2026-03-02,2026-03-17,2026-03-20,Delivered,1715.2,1,buyer2,Low,Order for Camping products,system,2026-03-02
+48,PO-2026-0048,2,2026-03-14,2026-03-29,2026-04-01,Delivered,3449.47,1,buyer2,Emergency,Order for Kitchen products,system,2026-03-14
+49,PO-2026-0049,5,2026-03-23,2026-04-05,2026-04-08,Delivered,47451.7,1,buyer1,Low,Order for Ski products,system,2026-03-23
+50,PO-2026-0050,5,2026-02-16,2026-02-28,2026-02-28,Delivered,31548.52,2,buyer1,Low,Order for Ski products,system,2026-02-16
+51,PO-2026-0051,2,2026-03-14,2026-03-25,2026-03-31,Delivered,4326.66,3,buyer1,Low,Order for Kitchen products,system,2026-03-14
+52,PO-2026-0052,2,2026-04-23,2026-05-05,,InTransit,5880.54,3,supply_manager,High,Order for Kitchen products,system,2026-04-23
+53,PO-2026-0053,2,2026-01-31,2026-02-11,2026-02-12,Delivered,178.14,1,buyer2,High,Order for Kitchen products,system,2026-01-31
+54,PO-2026-0054,4,2026-02-28,2026-03-23,2026-03-24,Delivered,31605.46,1,supply_manager,Medium,Multi-category order,system,2026-02-28
+55,PO-2026-0055,2,2026-03-25,2026-04-04,2026-04-04,Delivered,207.36,3,buyer1,Low,Order for Kitchen products,system,2026-03-25
+56,PO-2026-0056,3,2026-02-08,2026-02-18,2026-02-20,Delivered,2344.29,1,supply_manager,Low,Order for Ski products,system,2026-02-08
+57,PO-2026-0057,3,2026-03-10,2026-03-26,2026-03-28,Delivered,34792.04,1,supply_manager,High,Order for Ski products,system,2026-03-10
+58,PO-2026-0058,2,2026-03-31,2026-04-13,2026-04-15,Delivered,3387.48,3,buyer2,Medium,Order for Kitchen products,system,2026-03-31
+59,PO-2026-0059,4,2026-02-13,2026-03-10,2026-03-12,Delivered,92274.55,3,buyer2,Low,Multi-category order,system,2026-02-13
+60,PO-2026-0060,1,2026-03-08,2026-03-22,2026-03-22,Delivered,4744.64,3,supply_manager,High,Order for Camping products,system,2026-03-08
+61,PO-2026-0061,1,2026-04-10,2026-04-23,2026-04-26,Delivered,11562.98,1,supply_manager,Low,Order for Camping products,system,2026-04-10
+62,PO-2026-0062,2,2026-03-24,2026-04-04,2026-04-06,Delivered,16839.37,3,buyer2,Medium,Order for Kitchen products,system,2026-03-24
+63,PO-2026-0063,1,2026-02-06,2026-02-21,2026-02-24,Delivered,26896.9,3,supply_manager,Low,Order for Camping products,system,2026-02-06
+64,PO-2026-0064,1,2026-02-23,2026-03-10,2026-03-12,Delivered,17774.96,3,buyer2,Low,Order for Camping products,system,2026-02-23
+65,PO-2026-0065,1,2026-03-07,2026-03-21,2026-03-22,Delivered,27834.34,2,buyer1,Low,Order for Camping products,system,2026-03-07
+66,PO-2026-0066,5,2026-02-27,2026-03-11,2026-03-14,Delivered,31333.02,1,buyer1,High,Order for Ski products,system,2026-02-27
+67,PO-2026-0067,2,2026-04-09,2026-04-20,2026-04-22,Delivered,1691.86,2,supply_manager,Low,Order for Kitchen products,system,2026-04-09
+68,PO-2026-0068,3,2026-03-21,2026-04-07,2026-04-10,Delivered,10687.32,3,supply_manager,Low,Order for Ski products,system,2026-03-21
+69,PO-2026-0069,2,2026-04-29,2026-05-08,,Sent,5125.85,2,supply_manager,Low,Order for Kitchen products,system,2026-04-29
+70,PO-2026-0070,3,2026-04-08,2026-04-24,2026-04-27,Delivered,21439.18,2,buyer1,Low,Order for Ski products,system,2026-04-08
+71,PO-2026-0071,3,2026-03-09,2026-03-25,2026-03-28,Delivered,82356.2,2,buyer2,Low,Order for Ski products,system,2026-03-09
+72,PO-2026-0072,5,2026-03-04,2026-03-21,2026-03-22,Delivered,78664.81,1,buyer1,Low,Order for Ski products,system,2026-03-04
+73,PO-2026-0073,4,2026-03-10,2026-04-04,2026-04-05,Delivered,19315.16,1,supply_manager,Low,Multi-category order,system,2026-03-10
+74,PO-2026-0074,4,2026-03-10,2026-03-31,2026-04-01,Delivered,91321.69,2,buyer2,Medium,Multi-category order,system,2026-03-10
+75,PO-2026-0075,1,2026-02-28,2026-03-09,2026-03-10,Delivered,26012.46,1,supply_manager,Low,Order for Camping products,system,2026-02-28
+76,PO-2026-0076,4,2026-04-12,2026-05-07,,Sent,14630.66,1,buyer2,Low,Multi-category order,system,2026-04-12
+77,PO-2026-0077,5,2026-03-12,2026-03-28,2026-03-31,Delivered,55405.77,2,buyer1,High,Order for Ski products,system,2026-03-12
+78,PO-2026-0078,1,2026-04-24,2026-05-04,,InTransit,10763.77,3,buyer2,Low,Order for Camping products,system,2026-04-24
+79,PO-2026-0079,1,2026-02-04,2026-02-19,2026-02-20,Delivered,17374.17,1,buyer2,Medium,Order for Camping products,system,2026-02-04
+80,PO-2026-0080,3,2026-02-15,2026-03-04,2026-03-06,Delivered,139800.96,2,supply_manager,Low,Order for Ski products,system,2026-02-15
+81,PO-2026-0081,2,2026-02-10,2026-02-18,2026-02-21,Delivered,253.0,2,supply_manager,High,Order for Kitchen products,system,2026-02-10
+82,PO-2026-0082,5,2026-02-13,2026-02-25,2026-03-09,Delivered,25613.96,3,buyer2,Low,Order for Ski products,system,2026-02-13
+83,PO-2026-0083,5,2026-04-11,2026-04-26,2026-04-28,Delivered,35621.35,1,buyer2,High,Order for Ski products,system,2026-04-11
+84,PO-2026-0084,1,2026-03-17,2026-04-01,2026-04-01,Delivered,19287.89,2,buyer2,Low,Order for Camping products,system,2026-03-17
+85,PO-2026-0085,2,2026-04-07,2026-04-15,2026-04-18,Delivered,711.12,3,buyer1,Low,Order for Kitchen products,system,2026-04-07
+86,PO-2026-0086,5,2026-04-13,2026-04-29,2026-05-10,Delivered,33135.55,2,buyer1,Low,Order for Ski products,system,2026-04-13
+87,PO-2026-0087,1,2026-04-02,2026-04-15,2026-04-17,Delivered,20965.25,3,supply_manager,Medium,Order for Camping products,system,2026-04-02
+88,PO-2026-0088,4,2026-04-26,2026-05-17,,Confirmed,17221.35,3,supply_manager,Low,Multi-category order,system,2026-04-26
+89,PO-2026-0089,5,2026-04-27,2026-05-15,,Sent,48189.85,3,buyer2,Low,Order for Ski products,system,2026-04-27
+90,PO-2026-0090,1,2026-03-15,2026-03-24,2026-03-25,Delivered,6091.12,2,buyer2,Medium,Order for Camping products,system,2026-03-15
+91,PO-2026-0091,4,2026-03-02,2026-03-28,2026-03-30,Delivered,125614.31,1,buyer2,Medium,Multi-category order,system,2026-03-02
+92,PO-2026-0092,5,2026-03-22,2026-04-08,2026-04-08,Delivered,63581.61,2,buyer1,Low,Order for Ski products,system,2026-03-22
+93,PO-2026-0093,3,2026-04-07,2026-04-20,2026-04-23,Delivered,19302.08,2,buyer1,High,Order for Ski products,system,2026-04-07
+94,PO-2026-0094,1,2026-01-30,2026-02-07,2026-02-09,Delivered,24819.85,1,supply_manager,Low,Order for Camping products,system,2026-01-30
+95,PO-2026-0095,2,2026-03-03,2026-03-18,2026-03-21,Delivered,11051.05,2,buyer1,Low,Order for Kitchen products,system,2026-03-03
+96,PO-2026-0096,5,2026-02-10,2026-02-26,,InTransit,74878.31,2,buyer1,Low,Order for Ski products,system,2026-02-10
+97,PO-2026-0097,3,2026-04-16,2026-05-01,,Confirmed,74909.38,3,buyer2,High,Order for Ski products,system,2026-04-16
+98,PO-2026-0098,3,2026-03-30,2026-04-11,2026-04-12,Delivered,1714.26,3,supply_manager,Low,Order for Ski products,system,2026-03-30
+99,PO-2026-0099,2,2026-04-25,2026-05-08,,Confirmed,13119.48,2,supply_manager,High,Order for Kitchen products,system,2026-04-25
+100,PO-2026-0100,3,2026-03-26,2026-04-06,2026-04-08,Delivered,19880.05,1,buyer2,Low,Order for Ski products,system,2026-03-26
+101,PO-2026-0101,4,2026-03-20,2026-04-15,2026-04-17,Delivered,31921.1,1,buyer1,Low,Multi-category order,system,2026-03-20
+102,PO-2026-0102,5,2026-04-14,2026-04-30,,Confirmed,48684.49,3,buyer2,Low,Order for Ski products,system,2026-04-14
+103,PO-2026-0103,5,2026-04-21,2026-05-08,,InTransit,78560.76,1,supply_manager,Medium,Order for Ski products,system,2026-04-21
+104,PO-2026-0104,4,2026-02-21,2026-03-19,2026-03-22,Delivered,28631.79,2,buyer1,Low,Multi-category order,system,2026-02-21
+105,PO-2026-0105,1,2026-03-11,2026-03-22,2026-03-25,Delivered,44604.49,3,buyer2,Medium,Order for Camping products,system,2026-03-11
+106,PO-2026-0106,3,2026-02-04,2026-02-15,2026-02-17,Delivered,95452.1,3,buyer1,High,Order for Ski products,system,2026-02-04
+107,PO-2026-0107,5,2026-04-08,2026-04-23,2026-04-23,Delivered,67286.07,1,supply_manager,Medium,Order for Ski products,system,2026-04-08
+108,PO-2026-0108,3,2026-03-28,2026-04-13,2026-04-15,Delivered,12428.2,1,supply_manager,Low,Order for Ski products,system,2026-03-28
+109,PO-2026-0109,1,2026-03-20,2026-03-31,2026-04-02,Delivered,2523.65,1,supply_manager,Low,Order for Camping products,system,2026-03-20
+110,PO-2026-0110,5,2026-03-26,2026-04-08,2026-04-11,Delivered,3696.81,2,buyer1,Low,Order for Ski products,system,2026-03-26
+111,PO-2026-0111,1,2026-03-11,2026-03-20,2026-03-21,Delivered,35314.53,2,supply_manager,High,Order for Camping products,system,2026-03-11
+112,PO-2026-0112,4,2026-02-02,2026-02-22,,InTransit,93750.53,2,buyer1,Low,Multi-category order,system,2026-02-02
+113,PO-2026-0113,1,2026-02-27,2026-03-09,2026-03-09,Delivered,5452.86,3,supply_manager,High,Order for Camping products,system,2026-02-27
+114,PO-2026-0114,5,2026-02-23,2026-03-08,2026-03-21,Delivered,24259.29,1,buyer1,Medium,Order for Ski products,system,2026-02-23
+115,PO-2026-0115,3,2026-03-02,2026-03-13,2026-03-14,Delivered,42483.91,3,buyer2,Low,Order for Ski products,system,2026-03-02
