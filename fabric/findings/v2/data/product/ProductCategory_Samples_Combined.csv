@@ -1,0 +1,31 @@
+ProductCategoryID,ProductLineID,CategoryName,CategoryDescription,IsActive,CreatedBy,CreatedDate
+151,1,Tents,Tents for outdoor camping and adventure activities.,true,system,2025-01-01
+152,1,Backpacks,Backpacks for outdoor camping and adventure activities.,true,system,2025-01-01
+153,1,Hiking Clothing,Hiking Clothing for outdoor camping and adventure activities.,true,system,2025-01-01
+154,1,Hiking Footwear,Hiking Footwear for outdoor camping and adventure activities.,true,system,2025-01-01
+155,1,Camping Tables,Camping Tables for outdoor camping and adventure activities.,true,system,2025-01-01
+156,1,Camping Stoves,Camping Stoves for outdoor camping and adventure activities.,true,system,2025-01-01
+157,1,Sleeping Bags,Sleeping Bags for outdoor camping and adventure activities.,true,system,2025-01-01
+158,1,Lighting,Lighting for outdoor camping and adventure activities.,true,system,2025-01-01
+201,2,Coffee Makers,Coffee Makers for home and business kitchens.,true,system,2025-01-01
+202,2,Cutlery,Cutlery for home and business kitchens.,true,system,2025-01-01
+203,2,Cups & Mugs,Cups & Mugs for home and business kitchens.,true,system,2025-01-01
+204,2,Serving Dishes,Serving Dishes for home and business kitchens.,true,system,2025-01-01
+205,2,Ice Cream Dishes,Ice Cream Dishes for home and business kitchens.,true,system,2025-01-01
+206,2,Mixing Bowls,Mixing Bowls for home and business kitchens.,true,system,2025-01-01
+207,2,Bakeware,Bakeware for home and business kitchens.,true,system,2025-01-01
+208,2,Storage Containers,Storage Containers for home and business kitchens.,true,system,2025-01-01
+209,2,Cooking Utensils,Cooking Utensils for home and business kitchens.,true,system,2025-01-01
+210,2,Measuring Tools,Measuring Tools for home and business kitchens.,true,system,2025-01-01
+211,2,Small Appliances,Small Appliances for home and business kitchens.,true,system,2025-01-01
+212,2,Cutting Boards,Cutting Boards for home and business kitchens.,true,system,2025-01-01
+301,3,Alpine Skis,Alpine Skis for winter sports and cold weather activities.,true,system,2025-01-01
+302,3,Cross-Country Skis,Cross-Country Skis for winter sports and cold weather activities.,true,system,2025-01-01
+303,3,Ski Boots,Ski Boots for winter sports and cold weather activities.,true,system,2025-01-01
+304,3,Ski Poles,Ski Poles for winter sports and cold weather activities.,true,system,2025-01-01
+305,3,Ski Apparel,Ski Apparel for winter sports and cold weather activities.,true,system,2025-01-01
+306,3,Safety Equipment,Safety Equipment for winter sports and cold weather activities.,true,system,2025-01-01
+307,3,Ski Accessories,Ski Accessories for winter sports and cold weather activities.,true,system,2025-01-01
+308,3,Ski Maintenance,Ski Maintenance for winter sports and cold weather activities.,true,system,2025-01-01
+309,3,Snowboards & Equipment,Snowboards & Equipment for winter sports and cold weather activities.,true,system,2025-01-01
+310,3,Winter Footwear,Winter Footwear for winter sports and cold weather activities.,true,system,2025-01-01
