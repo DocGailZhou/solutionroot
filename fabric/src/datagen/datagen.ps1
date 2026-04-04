@@ -296,7 +296,7 @@ try {
     
     # Build supply chain command with auto-scale
     $SupplyArgs = @(
-        "main_generate_supplychain.py"
+        "main_generate_inventory.py"
         "-s", $SupplyStartDate
         "-e", $SupplyEndDate
         "--auto-scale"

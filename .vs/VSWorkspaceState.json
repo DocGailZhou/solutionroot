@@ -1,0 +1,14 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\fabric",
+    "\\fabric\\docs",
+    "\\fabric\\docs\\data_refactoring",
+    "\\fabric\\docs\\data_refactoring\\findings",
+    "\\fabric\\docs\\data_refactoring\\findings\\v2",
+    "\\fabric\\docs\\data_refactoring\\findings\\v2\\notebooks",
+    "\\fabric\\docs\\data_refactoring\\findings\\v2\\notebooks\\schema"
+  ],
+  "SelectedNode": "\\fabric\\docs\\data_refactoring\\findings",
+  "PreviewInSolutionExplorer": false
+}
