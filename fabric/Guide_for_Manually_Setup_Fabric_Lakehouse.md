@@ -30,6 +30,7 @@ After upload, your lakehouse path should look like:
 - `Files/data/product`
 - `Files/data/sales/<product_line>s` (for example `Files/data/sales/camping` or `Files/data/sales/kitchen`)
 - `Files/data/supplychain`
+- `Files/data/shared`
 
 **Important**: data loading notebooks use paths like `Files/data/customer`, `Files/data/product`.  If folder names change, load steps will fail. The way to correct the problem is to synchronize the code and file structure under `data` folder. 
 
