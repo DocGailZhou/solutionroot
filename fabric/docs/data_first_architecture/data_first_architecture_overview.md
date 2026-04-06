@@ -85,15 +85,8 @@ Your Microsoft Fabric setup demonstrates several data-first principles:
 
 ## Industry Resources
 
-### Foundational Concepts
-- **[Martin Fowler - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)** - Seminal article on data mesh principles by the thought leader
-- **[ThoughtWorks Technology Radar - Data Mesh](https://www.thoughtworks.com/radar/techniques/data-mesh)** - Industry perspective on data mesh adoption
-
-### Cloud Platform Guidance
-- **[AWS Data Strategy](https://aws.amazon.com/big-data/datalakes-and-analytics/modern-data-architecture/)** - Modern data architecture patterns
-- **[Microsoft Data Architecture Guide](https://docs.microsoft.com/en-us/azure/architecture/data-guide/)** - Comprehensive data architecture patterns
-
 ### Data Mesh and Domain-Driven Design
+- **[Martin Fowler - Data Mesh](https://martinfowler.com/articles/data-mesh-principles.html)** - Seminal article on data mesh principles by the thought leader
 - **[Domain-Driven Design by Eric Evans](https://www.domainlanguage.com/ddd/)** - Original DDD concepts that inform data-first thinking
 - **[Data Mesh in Practice (O'Reilly)](https://www.oreilly.com/library/view/data-mesh/9781492092384/)** - Practical implementation guide
 - **[Zhamak Dehghani's Data Mesh](https://datamesh-architecture.com/)** - Creator's comprehensive resource
@@ -121,7 +114,3 @@ To evolve toward a more complete data-first architecture:
 4. **Establish governance**: Define data quality metrics and ownership models
 5. **Enable self-service**: Provide tools for business users to discover and access data
 6. **Monitor and iterate**: Implement observability and continuous improvement
-
----
-
-*This document serves as a foundation for data architecture discussions and planning. It should be updated as our data-first implementation evolves.*
