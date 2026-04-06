@@ -92,7 +92,7 @@ Your Microsoft Fabric setup demonstrates several data-first principles:
 ### Cloud Platform Guidance
 - **[AWS Data Strategy](https://aws.amazon.com/big-data/datalakes-and-analytics/modern-data-architecture/)** - Modern data architecture patterns
 - **[Microsoft Data Architecture Guide](https://docs.microsoft.com/en-us/azure/architecture/data-guide/)** - Comprehensive data architecture patterns
-- **[Google Cloud Data and Analytics](https://cloud.google.com/solutions/data-and-analytics)** - Data-first architecture on GCP
+- **[Google Cloud Architecture Center - Data Analytics](https://cloud.google.com/architecture/data-analytics)** - Data platform architecture patterns on GCP
 
 ### Data Mesh and Domain-Driven Design
 - **[Domain-Driven Design by Eric Evans](https://www.domainlanguage.com/ddd/)** - Original DDD concepts that inform data-first thinking
@@ -101,17 +101,17 @@ Your Microsoft Fabric setup demonstrates several data-first principles:
 
 ### Governance and Quality
 - **[DAMA-DMBOK Data Management Guide](https://www.dama.org/cpages/body-of-knowledge)** - Industry standard for data management
-- **[MIT CDOIQ - Data Quality](https://mitsloan.mit.edu/centers-initiatives/center-information-systems-research)** - Academic research on data quality
+- **[MIT Sloan - Data Quality Research](https://mitsloan.mit.edu/faculty/research-areas/information-technology)** - Academic research on data management and quality
 
 ### Platform Implementation
 - **[Confluent - Event-Driven Architecture](https://www.confluent.io/learn/event-driven-architecture/)** - Event streaming for data-first systems
 - **[Databricks Lakehouse Platform](https://databricks.com/glossary/data-lakehouse)** - Modern data platform architecture
-- **[Snowflake Data Cloud](https://docs.snowflake.com/en/user-guide-data-architecture.html)** - Cloud data platform patterns
+- **[Snowflake Architecture Guide](https://docs.snowflake.com/en/user-guide/intro-key-concepts)** - Cloud data platform architecture concepts
 
 ### Case Studies and Best Practices
 - **[Netflix Data Platform](https://netflixtechblog.com/keystone-real-time-stream-processing-platform-a3ee651812a)** - Large-scale data-first implementation
 - **[Uber's Data Platform Evolution](https://eng.uber.com/uber-big-data-platform/)** - Real-world data architecture evolution
-- **[Spotify's Event-Driven Architecture](https://engineering.atspotify.com/2022/07/how-spotify-migrated-to-an-event-driven-architecture/)** - Data-centric system design
+- **[Spotify Engineering Blog](https://engineering.atspotify.com/)** - Real-world data platform and event-driven architecture insights
 
 ## Next Steps
 
