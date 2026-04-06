@@ -44,9 +44,11 @@ After upload, your lakehouse path should look like:
 
 2. Upload all notebooks from `fabric/src/fabric/notebooks`, such as 
 
-   `main_pipeline.ipynb`
+   `pipeline_main.ipynb`
 
-   `update_pipeline.ipynb`
+   `pipeline_update.ipynb`
+
+   `reset_or_debug.ipynb`
 
 3. Then upload notebook files from subfolders as well:
    - `data_management`
@@ -56,50 +58,59 @@ After upload, your lakehouse path should look like:
 
 ## Step 4. Attach lakehouse and run the main pipeline
 
-1. Open `main_pipeline.ipynb` in Fabric.
+For first time data loading, follow below steps:
+
+1. Open `pipeline_main.ipynb` in Fabric.
 2. Attach the lakehouse you created (for example `miqdata`) to the notebook session.
 3. Run the notebook top-to-bottom.
 
-If you made changes to the notebooks or data, you can review and execute `update_pipeline.ipynb` 
+If you need to update a portion of the schema or data or data loading code, you can use below programs:
 
-1. Optional cleanup (commented by default):
-   - `#%run truncate_all_tables`
-   - `#%run drop_all_tables`
-2. Schema and table creation:
-   - `%run create_scheme_tables`
-3. Data load into all tables:
-   - `%run load_data_all_tables`
+1. `pipeline_update.ipynb`: designed to re-load entire data after code or data updates
+2. `reset_or_debug.ipynb`: designed to reset or debug tables associated with one particular schema. 
 
 ## Step 5. Expected output and validation
 
-During a successful run of `main_pipeline`, you should see messages similar to:
+During a successful run of `main_pipeline`, you will get a lot of messages. The last step is loading all the data to Fabric Lakehouse. You will be getting something similar to below: 
 
 ```text
-🎉 All schemas and tables created successfully!
-
-✅ Loading 'customer' schema from: Files/data/customer
-✅ Customer schema: 5 tables, 2,734 records loaded
-✅ Loading 'product' schema from: Files/data/product
-✅ Product schema: 2 tables, 90 records loaded
-✅ Loading 'sales' schema from 3 product lines: camping, kitchen, ski
-✅ Sales schema: 3 tables, 90,192 records loaded
-✅ Loading 'finance' schema from 3 product lines: camping, kitchen, ski
-✅ Finance schema: 3 tables, 39,557 records loaded
-✅ Loading 'inventory' schema from: Files/data/inventory
-✅ Inventory schema: 6 tables, 5,500 records loaded
-✅ Loading 'supplychain' schema from: Files/data/supplychain
-✅ Supplychain schema: 3 tables, 93 records loaded
-✅ Data loading is complete at: [2026-03-19 18:32:47] 
+✅Loading 'customer' schema from: Files/data/customer
+📊Customer schema: 5 tables, 2,734 records loaded
+   - Customer: 513 records
+   - CustomerAccount: 1,539 records
+   - CustomerRelationshipType: 9 records
+   - CustomerTradeName: 160 records
+   - Location: 513 records
+✅Loading 'product' schema from: Files/data/product
+📊Product schema: 3 tables, 93 records loaded
+   - ProductLine: 3 records
+   - Product: 60 records
+   - ProductCategory: 30 records
+✅Loading 'sales' schema from 3 product lines: camping, kitchen, ski
+📊Sales schema: 3 tables, 93,084 records loaded
+✅Loading 'finance' schema from 3 product lines: camping, kitchen, ski
+📊Finance schema: 3 tables, 40,657 records loaded
+✅Loading 'inventory' schema from: Files/data/inventory
+📊Inventory schema: 6 tables, 5,521 records loaded
+   - Warehouses: 3 records
+   - Inventory: 83 records
+   - InventoryTransactions: 4,545 records
+   - PurchaseOrders: 119 records
+   - PurchaseOrderItems: 351 records
+   - ForecastDemand: 420 records
+✅Loading 'supplychain' schema from: Files/data/supplychain
+📊Supplychain schema: 4 tables, 117 records loaded
+   - Suppliers: 5 records
+   - ProductSuppliers: 75 records
+   - SupplyChainEvents: 15 records
+   - SupplyChainEventImpacts: 22 records
+✅Loading 'shared' schema
+DimDate populated: 3,201 rows (2018-01-01 to 2026-10-06)
+📊Shared schema: 1 table, 3,201 records loaded
+   - DimDate: 3,201 records (includes 6 months future for forecasting)
+======================================================================
+📊 DATA LOADING COMPLETE - COMPREHENSIVE SUMMARY
+======================================================================
+🕐 Completed at: 2026-04-06 19:46:14
+======================================================================
 ```
-
-Final expected state:
-
-- 6 schemas created: `customer`, `product`, `sales`, `finance`, `inventory`, `supplychain`
-- 22 total tables created and populated
-- Data loaded from `Files/data/...` into corresponding lakehouse tables
-
-## Common issues
-
-- `Path not found` errors: confirm `Files/data/...` folder structure matches exactly.
-- Notebook reference errors on `%run`: verify all required notebooks were uploaded.
-- Table already exists or duplicate-data scenarios: use the optional cleanup cells and rerun.
