@@ -92,7 +92,6 @@ Your Microsoft Fabric setup demonstrates several data-first principles:
 ### Cloud Platform Guidance
 - **[AWS Data Strategy](https://aws.amazon.com/big-data/datalakes-and-analytics/modern-data-architecture/)** - Modern data architecture patterns
 - **[Microsoft Data Architecture Guide](https://docs.microsoft.com/en-us/azure/architecture/data-guide/)** - Comprehensive data architecture patterns
-- **[Google Cloud Architecture Center - Data Analytics](https://cloud.google.com/architecture/data-analytics)** - Data platform architecture patterns on GCP
 
 ### Data Mesh and Domain-Driven Design
 - **[Domain-Driven Design by Eric Evans](https://www.domainlanguage.com/ddd/)** - Original DDD concepts that inform data-first thinking
@@ -101,7 +100,6 @@ Your Microsoft Fabric setup demonstrates several data-first principles:
 
 ### Governance and Quality
 - **[DAMA-DMBOK Data Management Guide](https://www.dama.org/cpages/body-of-knowledge)** - Industry standard for data management
-- **[MIT Sloan - Data Quality Research](https://mitsloan.mit.edu/faculty/research-areas/information-technology)** - Academic research on data management and quality
 
 ### Platform Implementation
 - **[Confluent - Event-Driven Architecture](https://www.confluent.io/learn/event-driven-architecture/)** - Event streaming for data-first systems
