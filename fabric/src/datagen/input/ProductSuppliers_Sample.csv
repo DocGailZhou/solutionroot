@@ -1,76 +1,76 @@
 ProductSupplierID,ProductID,ProductName,SupplierID,SupplierProductCode,WholesaleCost,MinOrderQuantity,MaxOrderQuantity,LeadTimeDays,Status,CreatedBy,CreatedDate
-1,1521,Adventurer Pro Backpack,1,CON-1521,122.8,5,10000,13,Active,system,12/21/2018
-2,1531,Summit Breeze Jacket,1,CON-1531,91.09,1,10000,10,Active,system,11/17/2018
-3,1541,TrekReady Hiking Boots,1,CON-1541,101.5,1,10000,8,Active,system,11/2/2018
-4,1551,Adventure Daypack,1,CON-1551,56.55,3,10000,12,Active,system,1/1/2026
-5,1561,Trail Explorer Hat,1,CON-1561,19.32,5,10000,5,Active,system,11/28/2018
-6,1571,Wilderness Water Bottle,1,CON-1571,18.72,10,10000,9,Active,system,12/31/2018
-7,1581,Survival Compass,1,CON-1581,27.36,3,10000,7,Active,system,11/10/2018
-8,1591,Outdoor Flashlight,1,CON-1591,47.13,2,10000,11,Active,system,12/16/2018
-9,1601,Camping Chair,1,CON-1601,84.24,1,10000,14,Active,system,11/9/2018
-10,1611,Portable Tent,1,CON-1611,164.34,1,10000,6,Active,system,11/21/2018
-11,1621,Nature Binoculars,1,CON-1621,136.95,1,10000,15,Active,system,11/15/2018
-12,1631,Trail Mix Snacks,1,CON-1631,7.98,12,10000,4,Active,system,12/8/2018
-13,1641,Adventure Map,1,CON-1641,13.44,8,10000,3,Active,system,12/11/2018
-14,1651,Camping Stove,1,CON-1651,86.85,1,10000,10,Active,system,11/3/2018
-15,1661,Sleeping Bag,1,CON-1661,112.59,1,10000,16,Active,system,1/5/2026
-16,1671,Hiking Poles,1,CON-1671,68.94,2,10000,9,Active,system,12/29/2018
-17,1681,Emergency Whistle,1,CON-1681,8.58,10,10000,2,Active,system,11/26/2018
-18,1691,Outdoor Cooler,1,CON-1691,97.35,1,10000,13,Active,system,12/4/2018
-19,1701,Insect Repellent,1,CON-1701,12.54,6,10000,5,Active,system,12/18/2018
-20,1711,Portable Grill,1,CON-1711,139.32,1,10000,12,Active,system,11/19/2018
-21,2522,Pro Chef Knife Set,2,PRO-2522,97.5,1,10000,7,Active,system,12/9/2018
-22,2532,Silicone Baking Mats,2,PRO-2532,23.4,5,10000,5,Active,system,11/14/2018
-23,2542,Digital Kitchen Scale,2,PRO-2542,35.1,3,10000,6,Active,system,12/24/2018
-24,2552,Measuring Cup Set,2,PRO-2552,19.5,8,10000,4,Active,system,11/27/2018
-25,2562,Stainless Mixing Bowls,2,PRO-2562,46.8,2,10000,8,Active,system,12/13/2018
-26,2572,Non-stick Frying Pan,2,PRO-2572,58.5,1,10000,9,Active,system,11/6/2018
-27,2582,Cast Iron Dutch Oven,2,PRO-2582,78,1,10000,10,Active,system,12/2/2018
-28,2592,Electric Stand Mixer,2,PRO-2592,234,1,10000,12,Active,system,11/22/2018
-29,2602,Food Processor,2,PRO-2602,156,1,10000,11,Active,system,12/7/2018
-30,2612,Instant-read Thermometer,2,PRO-2612,24.6,4,10000,3,Active,system,11/18/2018
-31,2622,Spice Rack Organizer,2,PRO-2622,39,2,10000,7,Active,system,12/26/2018
-32,2632,Bamboo Cutting Board,2,PRO-2632,31.2,3,10000,5,Active,system,11/12/2018
-33,2642,Kitchen Timer Set,2,PRO-2642,15.6,6,10000,4,Active,system,12/20/2018
-34,2652,Silicone Spatula Set,2,PRO-2652,18.9,7,10000,6,Active,system,11/8/2018
-35,2662,Glass Storage Containers,2,PRO-2662,52,2,10000,8,Active,system,12/1/2018
-36,2672,Coffee Bean Grinder,2,PRO-2672,67.2,1,10000,9,Active,system,11/25/2018
-37,2682,Kitchen Towel Set,2,PRO-2682,22.1,4,10000,2,Active,system,12/15/2018
-38,2692,Vegetable Steamer,2,PRO-2692,28.6,3,10000,7,Active,system,11/4/2018
-39,2702,Oil Dispenser Bottle,2,PRO-2702,14.3,8,10000,3,Active,system,12/22/2018
-40,2712,Cookbook Stand,2,PRO-2712,33.8,2,10000,5,Active,system,11/16/2018
-41,3523,Alpine Snow Skis,3,WIN-3523,292.5,1,10000,14,Active,system,12/5/2018
-42,3533,Ski Boot Collection,3,WIN-3533,195,1,10000,12,Active,system,11/20/2018
-43,3543,Pro Ski Poles,3,WIN-3543,78,2,10000,10,Active,system,12/28/2018
-44,3553,Snow Helmet,3,WIN-3553,117,1,10000,8,Active,system,11/7/2018
-45,3563,Ski Goggles,3,WIN-3563,58.5,2,10000,6,Active,system,12/12/2018
-46,3573,Thermal Base Layers,3,WIN-3573,46.8,3,10000,7,Active,system,11/13/2018
-47,3583,Insulated Ski Gloves,3,WIN-3583,39,4,10000,5,Active,system,12/25/2018
-48,3593,Ski Wax Kit,3,WIN-3593,23.4,5,10000,3,Active,system,11/11/2018
-49,3603,Skiing Ensemble,3,WIN-3603,156,1,10000,11,Active,system,12/3/2018
-50,3613,Après-ski Boots,3,WIN-3613,97.5,1,10000,9,Active,system,11/24/2018
-51,3623,Snow Tube,3,WIN-3623,31.2,2,10000,4,Active,system,12/19/2018
-52,3633,Ice Scraper,3,WIN-3633,12.48,8,10000,2,Active,system,11/17/2018
-53,3643,Ski Rack,3,WIN-3643,67.6,1,10000,8,Active,system,12/14/2018
-54,3653,Snow Shovel,3,WIN-3653,43.68,2,10000,6,Active,system,11/5/2018
-55,3663,Winter Beanie,3,WIN-3663,21.06,6,10000,4,Active,system,12/27/2018
-56,3673,Hand Warmers,3,WIN-3673,9.36,10,10000,3,Active,system,11/23/2018
-57,3683,Thermal Socks,3,WIN-3683,18.72,7,10000,5,Active,system,12/10/2018
-58,3693,Ski Bag,3,WIN-3693,54.6,1,10000,9,Active,system,11/1/2018
-59,3703,Snowboard,3,WIN-3703,234,1,10000,13,Active,system,12/6/2018
-60,3713,Snowboard Bindings,3,WIN-3713,117,1,10000,11,Active,system,11/29/2018
-61,1521,Adventurer Pro Backpack,4,ALT-1521,120.75,6,8000,15,Active,system,12/12/2018
-62,1531,Summit Breeze Jacket,4,ALT-1531,89.73,2,8000,12,Active,system,11/8/2018
-63,1541,TrekReady Hiking Boots,4,ALT-1541,99.98,2,8000,10,Active,system,11/23/2018
-64,1551,Adventure Daypack,4,ALT-1551,55.72,4,8000,14,Active,system,12/30/2018
-65,1561,Trail Explorer Hat,4,ALT-1561,19.03,6,8000,7,Active,system,11/19/2018
-66,2522,Pro Chef Knife Set,4,ALT-2522,96.04,2,8000,9,Active,system,12/1/2018
-67,2532,Silicone Baking Mats,4,ALT-2532,23.05,6,8000,6,Active,system,11/15/2018
-68,2542,Digital Kitchen Scale,4,ALT-2542,34.58,4,8000,8,Active,system,12/17/2018
-69,2552,Measuring Cup Set,4,ALT-2552,19.22,9,8000,5,Active,system,11/26/2018
-70,2562,Stainless Mixing Bowls,4,ALT-2562,46.12,3,8000,10,Active,system,12/4/2018
-71,3523,Alpine Snow Skis,5,SPE-3523,288.08,2,5000,16,Active,system,12/21/2018
-72,3533,Ski Boot Collection,5,SPE-3533,192.08,2,5000,14,Active,system,11/10/2018
-73,3543,Pro Ski Poles,5,SPE-3543,76.83,3,5000,12,Active,system,12/23/2018
-74,3553,Snow Helmet,5,SPE-3553,115.25,2,5000,10,Active,system,11/2/2018
-75,3563,Ski Goggles,5,SPE-3563,57.62,3,5000,8,Active,system,12/8/2018
+1,1511,Alpine Explorer Tent,1,CON-1511,281.53,3,10000.0,7,Active,system,2025-12-21
+2,1512,SkyView 2-Person Tent,1,CON-1512,197.86,1,10000.0,9,Active,system,2025-12-21
+3,1521,Adventurer Pro Backpack,1,CON-1521,119.17,5,10000.0,8,Active,system,2025-12-21
+4,1522,SummitClimber Backpack,1,CON-1522,134.41,1,10000.0,7,Active,system,2025-12-21
+5,1523,TrailLite Daypack,1,CON-1523,47.3,5,10000.0,7,Active,system,2025-12-21
+6,1531,Summit Breeze Jacket,1,CON-1531,85.71,2,10000.0,13,Active,system,2025-12-21
+7,1532,TrailBlaze Hiking Pants,1,CON-1532,54.8,1,10000.0,11,Active,system,2025-12-21
+8,1533,RainGuard Hiking Jacket,1,CON-1533,107.78,4,10000.0,9,Active,system,2025-12-21
+9,1541,TrekReady Hiking Boots,1,CON-1541,108.54,2,10000.0,9,Active,system,2025-12-21
+10,1542,TrailWalker Hiking Shoes,1,CON-1542,83.67,1,10000.0,12,Active,system,2025-12-21
+11,1543,TrekStar Hiking Sandals,1,CON-1543,52.24,3,10000.0,8,Active,system,2025-12-21
+12,1551,BaseCamp Folding Table,1,CON-1551,56.2,1,10000.0,11,Active,system,2025-12-21
+13,1552,TrekMaster Camping Chair,1,CON-1552,45.98,4,10000.0,8,Active,system,2025-12-21
+14,1553,Adventure Dining Table,1,CON-1553,87.23,5,10000.0,11,Active,system,2025-12-21
+15,1561,EcoFire Camping Stove,1,CON-1561,79.86,5,10000.0,12,Active,system,2025-12-21
+16,1562,PowerBurner Camping Stove,1,CON-1562,112.81,1,10000.0,8,Active,system,2025-12-21
+17,1563,CompactCook Camping Stove,1,CON-1563,59.37,1,10000.0,11,Active,system,2025-12-21
+18,1571,CozyNights Sleeping Bag,1,CON-1571,102.1,4,10000.0,8,Active,system,2025-12-21
+19,1572,MountainDream Sleeping Bag,1,CON-1572,177.25,2,10000.0,12,Active,system,2025-12-21
+20,1581,LED Headlamp - Rechargeable,1,CON-1581,44.25,3,10000.0,10,Active,system,2025-12-21
+21,2011,Coffee Maker,2,PRO-2011,120.91,1,10000.0,10,Active,system,2025-12-21
+22,2012,Espresso Machine,2,PRO-2012,281.0,5,10000.0,6,Active,system,2025-12-21
+23,2021,Chef Knife,2,PRO-2021,59.8,4,10000.0,6,Active,system,2025-12-21
+24,2022,Fork Set,2,PRO-2022,28.69,5,10000.0,10,Active,system,2025-12-21
+25,2031,Coffee Mug,2,PRO-2031,20.25,1,10000.0,7,Active,system,2025-12-21
+26,2041,Serving Platter,2,PRO-2041,43.57,3,10000.0,5,Active,system,2025-12-21
+27,2051,Ice Cream Bowl,2,PRO-2051,15.41,2,10000.0,5,Active,system,2025-12-21
+28,2061,Mixing Bowl,2,PRO-2061,27.44,3,10000.0,9,Active,system,2025-12-21
+29,2071,Baking Pan,2,PRO-2071,17.53,4,10000.0,8,Active,system,2025-12-21
+30,2081,Food Storage Set,2,PRO-2081,23.0,4,10000.0,10,Active,system,2025-12-21
+31,2091,Spatula,2,PRO-2091,7.38,2,10000.0,6,Active,system,2025-12-21
+32,2101,Measuring Cup Set,2,PRO-2101,12.84,3,10000.0,9,Active,system,2025-12-21
+33,2111,High-Speed Blender,2,PRO-2111,129.6,5,10000.0,8,Active,system,2025-12-21
+34,2112,4-Slice Toaster,2,PRO-2112,57.27,2,10000.0,6,Active,system,2025-12-21
+35,2121,Bamboo Cutting Board Set,2,PRO-2121,29.56,1,10000.0,5,Active,system,2025-12-21
+36,3011,Alpine Pro Racing Skis - 170cm,3,WIN-3011,845.83,3,10000.0,9,Active,system,2025-12-21
+37,3012,Mountain Master All-Terrain Skis - 165cm,3,WIN-3012,560.67,2,10000.0,13,Active,system,2025-12-21
+38,3013,Beginner's Choice Alpine Skis - 160cm,3,WIN-3013,305.62,2,10000.0,11,Active,system,2025-12-21
+39,3021,Nordic Classic XC Skis - 185cm,3,WIN-3021,230.67,3,10000.0,11,Active,system,2025-12-21
+40,3022,Backcountry Explorer XC Skis - 190cm,3,WIN-3022,358.21,1,10000.0,12,Active,system,2025-12-21
+41,3031,Pro Flex Racing Ski Boots,3,WIN-3031,459.79,3,10000.0,8,Active,system,2025-12-21
+42,3032,Comfort Fit Recreational Boots,3,WIN-3032,276.26,2,10000.0,14,Active,system,2025-12-21
+43,3033,Women's Performance Ski Boots,3,WIN-3033,407.14,1,10000.0,10,Active,system,2025-12-21
+44,3041,Carbon Fiber Racing Poles - 120cm,3,WIN-3041,114.35,2,10000.0,9,Active,system,2025-12-21
+45,3042,Aluminum All-Mountain Poles - 115cm,3,WIN-3042,57.66,3,10000.0,13,Active,system,2025-12-21
+46,3051,Insulated Ski Jacket - Men's,3,WIN-3051,167.9,1,10000.0,12,Active,system,2025-12-21
+47,3052,Thermal Base Layer Set - Women's,3,WIN-3052,79.81,3,10000.0,8,Active,system,2025-12-21
+48,3053,Waterproof Ski Pants,3,WIN-3053,123.28,3,10000.0,13,Active,system,2025-12-21
+49,3061,Professional Ski Helmet,3,WIN-3061,117.61,2,10000.0,9,Active,system,2025-12-21
+50,3062,Anti-Fog Ski Goggles,3,WIN-3062,71.96,3,10000.0,12,Active,system,2025-12-21
+51,3071,Ski Boot Bag - Premium,3,WIN-3071,34.5,2,10000.0,12,Active,system,2025-12-21
+52,3072,Hand Warmers - 10 Pack,3,WIN-3072,8.13,2,10000.0,8,Active,system,2025-12-21
+53,3081,All-Temp Ski Wax Kit,3,WIN-3081,43.8,2,10000.0,14,Active,system,2025-12-21
+54,3082,Edge Tuning Tool Set,3,WIN-3082,59.43,3,10000.0,9,Active,system,2025-12-21
+55,3091,Freestyle Snowboard - 155cm,3,WIN-3091,414.73,3,10000.0,8,Active,system,2025-12-21
+56,3092,All-Mountain Snowboard - 158cm,3,WIN-3092,488.21,3,10000.0,8,Active,system,2025-12-21
+57,3101,Winter Boots - Insulated,3,WIN-3101,91.11,3,10000.0,9,Active,system,2025-12-21
+58,3102,Winter Hiking Boots - Waterproof,3,WIN-3102,134.96,1,10000.0,12,Active,system,2025-12-21
+59,3103,Snowboard Bindings - Pro,3,WIN-3103,177.45,3,10000.0,14,Active,system,2025-12-21
+60,3104,Ski Tuning Bench - Portable,3,WIN-3104,115.52,3,10000.0,9,Active,system,2025-12-21
+61,1511,Alpine Explorer Tent,4,ALT-1511,288.7,3,8000.0,15,Active,system,2025-12-21
+62,1512,SkyView 2-Person Tent,4,ALT-1512,210.91,4,8000.0,13,Active,system,2025-12-21
+63,1521,Adventurer Pro Backpack,4,ALT-1521,118.13,5,8000.0,14,Active,system,2025-12-21
+64,1522,SummitClimber Backpack,4,ALT-1522,132.76,2,8000.0,11,Active,system,2025-12-21
+65,2011,Coffee Maker,4,ALT-2011,118.4,6,8000.0,14,Active,system,2025-12-21
+66,2012,Espresso Machine,4,ALT-2012,274.97,2,8000.0,11,Active,system,2025-12-21
+67,2021,Chef Knife,4,ALT-2021,56.88,2,8000.0,15,Active,system,2025-12-21
+68,3011,Alpine Pro Racing Skis - 170cm,4,ALT-3011,805.99,4,8000.0,10,Active,system,2025-12-21
+69,3012,Mountain Master All-Terrain Skis - 165cm,4,ALT-3012,567.17,4,8000.0,11,Active,system,2025-12-21
+70,3013,Beginner's Choice Alpine Skis - 160cm,4,ALT-3013,312.31,6,8000.0,11,Active,system,2025-12-21
+71,3011,Alpine Pro Racing Skis - 170cm,5,SPE-3011,798.38,5,5000.0,16,Active,system,2025-12-21
+72,3012,Mountain Master All-Terrain Skis - 165cm,5,SPE-3012,576.86,5,5000.0,15,Active,system,2025-12-21
+73,3013,Beginner's Choice Alpine Skis - 160cm,5,SPE-3013,298.3,5,5000.0,12,Active,system,2025-12-21
+74,3021,Nordic Classic XC Skis - 185cm,5,SPE-3021,228.78,5,5000.0,15,Active,system,2025-12-21
+75,3022,Backcountry Explorer XC Skis - 190cm,5,SPE-3022,386.94,2,5000.0,12,Active,system,2025-12-21
