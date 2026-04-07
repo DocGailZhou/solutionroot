@@ -4,7 +4,7 @@
 
 This approach uses automated code generation to speed up customer data integration. 
 
-The concept: Customer uploads their data files → System analyzes the data structure → Generates working notebooks tailored to their schema → Customer gets code that follows established best practices.
+The concept: Customer uploads their data files → System analyzes the data structure → Generates working notebooks tailored to their schema → Customer gets code that follows established best practices. That is the code generated magically works with customer's new data set. 
 
 ## Prerequisites for Success
 
@@ -14,7 +14,7 @@ Successful automated code generation requires substantial foundational work:
 Building reliable automation needs hundreds of customer datasets across industries to train pattern recognition systems. This includes capturing domain expertise about how different industries structure data, plus machine learning infrastructure for schema inference and continuous learning from customer feedback.
 
 **Engineering Investment For First Working Solution**  
-To successfully swap one customer dataset, the technical work requires 8-12 dedicated engineers working for 18-24 months to build reliable automation, substantial computing resources for data analysis, and extensive testing across diverse data scenarios.
+To successfully swap one customer dataset, the technical work requires dedicated engineers working for months to build reliable automation, substantial computing resources for data analysis, and extensive testing across diverse data scenarios.
 
 **What "First Customer Dataset" Actually Means**
 Consider a manufacturing customer with production/quality data: 50GB of operational data across 15 CSV files, covering 18 months of production lines with 200K work orders, 10K equipment sensors, and quality control measurements. You will need to generate sample data for manufacturing and the code to process the data. 
