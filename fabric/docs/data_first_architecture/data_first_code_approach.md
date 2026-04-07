@@ -17,16 +17,16 @@ Building reliable automation needs hundreds of customer datasets across industri
 To successfully swap one customer dataset, the technical work requires 8-12 dedicated engineers working for 18-24 months to build reliable automation, substantial computing resources for data analysis, and extensive testing across diverse data scenarios.
 
 **What "First Customer Dataset" Actually Means**
-Consider a manufacturing customer with production/quality data: 50GB of operational data across 15 CSV files, covering 18 months of production lines with 200K work orders, 10K equipment sensors, and quality control measurements. To make your existing retail-focused datagen.ps1 code work with manufacturing requires:
+Consider a manufacturing customer with production/quality data: 50GB of operational data across 15 CSV files, covering 18 months of production lines with 200K work orders, 10K equipment sensors, and quality control measurements. You will need to generate sample data for manufacturing and the code to process the data. 
 
 - **Cleansed customer data**: Customers will never provide their actual production data (their primary asset), so we need sanitized representative datasets that maintain realistic complexity while removing sensitive information
-- **Separate industry data generation**: Your current datagen.ps1 (retail) stays unchanged. You would need to create datagen_mf.ps1 with completely different Python code and industry models to generate manufacturing datasets for testing data swaps  
+- **Separate industry data generation**: Our current datagen.ps1 (retail) stays unchanged.  We can rename the file as `datagen_retail.ps1`. You would need to create `datagen_manufacturing.ps1` with completely different Python code and industry models to generate manufacturing datasets for testing data swaps  
 - **Industry-specific schemas**: Manufacturing requires entirely different data models (production_orders, equipment, materials, quality_metrics, maintenance_schedules) versus retail (customers, sales, inventory, products)
-- **Domain-specific business logic**: Understanding that their "work_order_id" maps to your "order_id" and their manufacturing processes for quality control, equipment downtime, and material consumption calculations
+- **Domain-specific business logic**: Need manufacturing processes logic for quality control, equipment downtime, and material consumption calculations
 - **New validation rules**: Manufacturing data validation differs completely from retail - equipment sensor ranges, production capacity constraints, quality thresholds, and supply chain lead times
 - **Representative complexity**: Each industry generates fundamentally different data patterns - equipment telemetry streams versus discrete purchase transactions, continuous production monitoring versus seasonal sales cycles
 
-Without creating complete industry-specific data generation systems (datagen_retail.ps1, datagen_mf.ps1, datagen_healthcare.ps1, etc.) plus domain expertise for each vertical, automated cross-industry code generation cannot work effectively.
+Without creating complete industry-specific data generation systems (datagen_retail.ps1, datagen_manufacturing.ps1, datagen_healthcare.ps1, etc.) plus domain expertise for each vertical, automated cross-industry code generation cannot work effectively. 
 
 **Why This Is Hard**
 Data structure reflects business logic, which is unique to each organization. Commercial data integration tools like Informatica, Talend, Power BI, and Azure Data Factory still require extensive manual configuration because they can't automatically understand that "CustomerID" in Company A means something different than "customer_reference" in Company B.
