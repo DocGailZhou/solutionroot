@@ -28,7 +28,7 @@ Consider a manufacturing customer with production/quality data: 50GB of operatio
 
 Without creating complete industry-specific data generation systems (datagen_retail.ps1, datagen_manufacturing.ps1, datagen_healthcare.ps1, etc.) plus domain expertise for each vertical, automated cross-industry code generation cannot work effectively. 
 
-**Why This Is Hard**
+**Why This is Hard**
 Data structure reflects business logic, which is unique to each organization. Commercial data integration tools like Informatica, Talend, Power BI, and Azure Data Factory still require extensive manual configuration because they can't automatically understand that "CustomerID" in Company A means something different than "customer_reference" in Company B.
 
 Even well-funded software companies with decades of experience haven't solved automated data integration - it requires understanding business context, not just technical patterns.
