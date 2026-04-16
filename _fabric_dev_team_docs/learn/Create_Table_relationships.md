@@ -3,6 +3,8 @@
 > This guide walks through exactly how to set up the table relationships for the  
 > Fabric IQ Supply Chain semantic model in the Microsoft Fabric web interface.
 
+> **📅 Updated April 2026**: Expanded to include complete data model with Sales, Finance, Customer, and shared Date dimension relationships. Total relationships: 33 (DimDate connected across all schemas for unified time intelligence).
+
 ---
 
 ## What Are Table Relationships and Why Do They Matter?
@@ -111,73 +113,149 @@ After creating each relationship, click on the line between tables to verify:
 
 Work through this list one relationship at a time. The **From** column is always the "one" side (the reference/dimension table).
 
-### Group 1: Product → Inventory Domain
+### Group 1: Core Dimension Relationships
 
 | # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
 |---|---|---|---|---|---|---|---|
-| 1 | Product_Inventory | `product_product` | `ProductID` | `inventory_Inventory` | `ProductID` | One to Many | Single |
-| 2 | Product_InventoryTransactions | `product_product` | `ProductID` | `inventory_InventoryTransactions` | `ProductID` | One to Many | Single |
-| 3 | Product_PurchaseOrderItems | `product_product` | `ProductID` | `inventory_PurchaseOrderItems` | `ProductID` | One to Many | Single |
-| 4 | Product_DemandForecast | `product`_product | `ProductID` | `inventory_DemandForecast` | `ProductID` | One to Many | Single |
-| 5 | Product_ProductCategory | `product_productCategory` | `CategoryID` | `product_Product` | `ProductCategoryID` | One to Many | Single |
+| 1 | Product_ProductCategory | `product_ProductCategory` | `CategoryID` | `product_Product` | `ProductCategoryID` | One to Many | Single |
+| 2 | ProductLine_Product | `product_ProductLine` | `ProductLineID` | `product_Product` | `ProductLineID` | One to Many | Single |
+
+### Group 2: Customer → Sales Domain
+
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 3 | Customer_Order | `customer_Customer` | `CustomerID` | `sales_Order` | `CustomerID` | One to Many | Single |
+| 4 | Customer_CustomerAccount | `customer_Customer` | `CustomerID` | `customer_CustomerAccount` | `CustomerID` | One to Many | Single |
+| 5 | CustomerAccount_Order | `customer_CustomerAccount` | `CustomerAccountID` | `sales_Order` | `CustomerAccountID` | One to Many | Single |
+| 6 | Customer_Location | `customer_Customer` | `CustomerID` | `customer_Location` | `CustomerID` | One to Many | Single |
+| 7 | CustomerRelationshipType_Customer | `customer_CustomerRelationshipType` | `CustomerRelationshipTypeID` | `customer_Customer` | `CustomerRelationshipTypeID` | One to Many | Single |
+
+### Group 3: Product → Sales Domain
+
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 8 | Product_OrderLine | `product_Product` | `ProductID` | `sales_OrderLine` | `ProductID` | One to Many | Single |
+| 9 | Order_OrderLine | `sales_Order` | `OrderID` | `sales_OrderLine` | `OrderID` | One to Many | Single |
+| 10 | Order_OrderPayment | `sales_Order` | `OrderID` | `sales_OrderPayment` | `OrderID` | One to Many | Single |
+
+### Group 4: Sales → Finance Domain
+
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 11 | Customer_Invoice | `customer_Customer` | `CustomerID` | `finance_invoice` | `CustomerID` | One to Many | Single |
+| 12 | Order_Invoice | `sales_Order` | `OrderID` | `finance_invoice` | `OrderID` | One to Many | Single |
+| 13 | Invoice_Payment | `finance_invoice` | `InvoiceID` | `finance_payment` | `InvoiceID` | One to Many | Single |
+| 14 | CustomerAccount_Account | `customer_CustomerAccount` | `CustomerAccountID` | `finance_account` | `CustomerAccountID` | One to Many | Single |
+
+### Group 5: Product → Inventory Domain
+
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 15 | Product_Inventory | `product_Product` | `ProductID` | `inventory_Inventory` | `ProductID` | One to Many | Single |
+| 16 | Product_InventoryTransactions | `product_Product` | `ProductID` | `inventory_InventoryTransactions` | `ProductID` | One to Many | Single |
+| 17 | Product_PurchaseOrderItems | `product_Product` | `ProductID` | `inventory_PurchaseOrderItems` | `ProductID` | One to Many | Single |
+| 18 | Product_DemandForecast | `product_Product` | `ProductID` | `inventory_DemandForecast` | `ProductID` | One to Many | Single |
 
 ---
 
-### Group 2: Warehouses → Inventory Domain
+### Group 6: Warehouses → Inventory Domain
 
 | # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
 |---|---|---|---|---|---|---|---|
-| 6 | Warehouses_Inventory | `inventory_Warehouses` | `WarehouseID` | `inventory_Inventory` | `WarehouseLocation` | One to Many | Single |
-| 7 | Warehouses_InventoryTransactions | `inventory_Warehouses` | `WarehouseID` | `inventory_InventoryTransactions` | `WarehouseLocation` | One to Many | Single |
-| 8 | Warehouses_PurchaseOrders | `inventory_Warehouses` | `WarehouseID` | `inventory_PurchaseOrders` | `DeliveryLocation` | One to Many | Single |
+| 19 | Warehouses_Inventory | `inventory_Warehouses` | `WarehouseID` | `inventory_Inventory` | `WarehouseLocation` | One to Many | Single |
+| 20 | Warehouses_InventoryTransactions | `inventory_Warehouses` | `WarehouseID` | `inventory_InventoryTransactions` | `WarehouseLocation` | One to Many | Single |
+| 21 | Warehouses_PurchaseOrders | `inventory_Warehouses` | `WarehouseID` | `inventory_PurchaseOrders` | `DeliveryLocation` | One to Many | Single |
 
 > **Note**: `WarehouseID` values in your data are `Main`, `Backup`, `Regional`. The `WarehouseLocation` and `DeliveryLocation` fields in the other tables use these same values as foreign keys.
 
 ---
 
-### Group 3: Purchase Orders → Line Items
+### Group 7: Purchase Orders → Line Items
 
 | # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
 |---|---|---|---|---|---|---|---|
-| 9 | PurchaseOrders_PurchaseOrderItems | `inventory_PurchaseOrders` | `PurchaseOrderID` | `inventory_PurchaseOrderItems` | `PurchaseOrderID` | One to Many | Single |
+| 22 | PurchaseOrders_PurchaseOrderItems | `inventory_PurchaseOrders` | `PurchaseOrderID` | `inventory_PurchaseOrderItems` | `PurchaseOrderID` | One to Many | Single |
 
 ---
 
-### Group 4: Suppliers → Supply Chain Domain
+### Group 8: Suppliers → Supply Chain Domain
 
 | # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
 |---|---|---|---|---|---|---|---|
-| 10 | Suppliers_PurchaseOrders | `supplychain_Suppliers` | `SupplierID` | `inventory_PurchaseOrders` | `SupplierID` | One to Many | Single |
-| 11 | Suppliers_ProductSuppliers | `supplychain_Suppliers` | `SupplierID` | `supplychain_ProductSuppliers` | `SupplierID` | One to Many | Single |
-| 12 | Suppliers_SupplyChainEvents | `supplychain_Suppliers` | `SupplierID` | `supplychain_SupplyChainEvents` | `SupplierID` | One to Many | Single |
+| 23 | Suppliers_PurchaseOrders | `supplychain_Suppliers` | `SupplierID` | `inventory_PurchaseOrders` | `SupplierID` | One to Many | Single |
+| 24 | Suppliers_ProductSuppliers | `supplychain_Suppliers` | `SupplierID` | `supplychain_ProductSuppliers` | `SupplierID` | One to Many | Single |
+| 25 | Suppliers_SupplyChainEvents | `supplychain_Suppliers` | `SupplierID` | `supplychain_SupplyChainEvents` | `SupplierID` | One to Many | Single |
 
 > **Note**: `SupplyChainEvents.SupplierID` can be NULL (for general/market-wide events). This is fine — the relationship still works. NULL rows simply won't match any supplier and will appear as "blank" in reports.
 
 ---
 
-### Group 5: Product → Supply Chain Domain
+### Group 9: Product → Supply Chain Domain
 
 | # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
 |---|---|---|---|---|---|---|---|
-| 13 | Product_ProductSuppliers | `product_Product` | `ProductID` | `supplychain_ProductSuppliers` | `ProductID` | One to Many | Single |
+| 26 | Product_ProductSuppliers | `product_Product` | `ProductID` | `supplychain_ProductSuppliers` | `ProductID` | One to Many | Single |
+
+---
+
+### Group 10: Date Dimension Relationships (Shared Across All Schemas)
+
+| # | Relationship Name | From Table | From Field | To Table | To Field | Cardinality | Direction |
+|---|---|---|---|---|---|---|---|
+| 27 | DimDate_Order | `shared_DimDate` | `FullDate` | `sales_Order` | `OrderDate` | One to Many | Single |
+| 28 | DimDate_Invoice | `shared_DimDate` | `FullDate` | `finance_invoice` | `InvoiceDate` | One to Many | Single |
+| 29 | DimDate_InvoiceDueDate | `shared_DimDate` | `FullDate` | `finance_invoice` | `DueDate` | One to Many | Single |
+| 30 | DimDate_CustomerEstablished | `shared_DimDate` | `FullDate` | `customer_Customer` | `CustomerEstablishedDate` | One to Many | Single |
+| 31 | DimDate_InventoryTransactions | `shared_DimDate` | `FullDate` | `inventory_InventoryTransactions` | `TransactionDate` | One to Many | Single |
+| 32 | DimDate_PurchaseOrders | `shared_DimDate` | `FullDate` | `inventory_PurchaseOrders` | `OrderDate` | One to Many | Single |
+| 33 | DimDate_SupplyChainEvents | `shared_DimDate` | `FullDate` | `supplychain_SupplyChainEvents` | `EventDate` | One to Many | Single |
+
+> **Note**: The shared.DimDate table serves as the central calendar dimension across ALL schemas, enabling consistent time-based analysis for sales, finance, customer, inventory, and supply chain operations. This ensures unified time intelligence reporting across the entire business model.
 
 ---
 
 ## Complete Relationship Diagram
 
-After all 13 relationships are created, your model diagram should look like this:
+After all 33 relationships are created, your model diagram should look like this:
 
 ```
-ProductCategory ──→ Product ──→ Inventory
-                      │    ──→ InventoryTransactions
-                      │    ──→ PurchaseOrderItems
-                      │    ──→ DemandForecast
-                      └──→ ProductSuppliers ←── Suppliers ──→ SupplyChainEvents
-                                                    │
-Warehouses ──→ Inventory                            └──→ PurchaseOrders ──→ PurchaseOrderItems
-         ──→ InventoryTransactions
-         ──→ PurchaseOrders
+                    shared.DimDate (Calendar) ←── SHARED ACROSS ALL SCHEMAS
+                     │  │  │  │  │  │  │
+                     │  │  │  │  │  │  └──→ SupplyChainEvents
+                     │  │  │  │  │  └─────→ PurchaseOrders
+                     │  │  │  │  └────────→ InventoryTransactions
+                     │  │  │  └───────────→ Customer (EstablishedDate)
+                     │  │  └──────────────→ Invoice (DueDate)
+                     │  └─────────────────→ Invoice (InvoiceDate)
+                     └────────────────────→ Order (OrderDate)
+                                             │
+Customer ←─ CustomerRelationshipType        ├──→ OrderLine ──→ Product ──→ ProductCategory
+    │                                       │        │         │
+    ├──→ CustomerAccount ──→ Order ─────────┘        │         └──→ ProductLine
+    │        │                                       │         │
+    └──→ Location                                    │         ├──→ Inventory ←── Warehouses
+             │                                       │         │         │
+Customer ────┴──→ Invoice ←─── Order                 │         ├──→ InventoryTransactions
+    │              │                                 │         │
+    └──→ Account   └──→ Payment                     │         ├──→ PurchaseOrderItems
+                                                     │         │
+                   Order ──→ OrderPayment           │         ├──→ DemandForecast
+                                                     │         │
+                                                     └──→ ProductSuppliers ←── Suppliers
+                                                                   │               │
+                                                                   │               ├──→ SupplyChainEvents
+                                                                   │               │
+                                                                   │               └──→ PurchaseOrders ──→ PurchaseOrderItems
+                                                                   │
+                                                                   └─── Warehouses
 ```
+
+### Key Data Flow Patterns:
+1. **Customer Journey**: Customer → Order → OrderLine → Product
+2. **Financial Flow**: Order → Invoice → Payment
+3. **Inventory Flow**: Product → Inventory → InventoryTransactions (with date tracking)
+4. **Supply Chain Flow**: Supplier → PurchaseOrders → PurchaseOrderItems → Product
+5. **Time Intelligence**: DimDate connects to ALL domains (Sales, Finance, Customer, Inventory, Supply Chain) for comprehensive cross-domain temporal analysis
 
 ---
 
@@ -197,11 +275,33 @@ If you see `*` on both sides, the relationship is Many-to-Many — this usually 
 An **inactive relationship** appears as a **dashed line** instead of a solid line. Inactive relationships are not used by default. If you see a dashed line, click it and check the "Make this relationship active" setting.
 
 ### Check 4: Run a quick test in a report
-Create a simple Matrix visual:
+Create a simple Matrix visual to test different domains:
+
+**Test 1 - Sales Analysis:**
+- Rows: `CustomerRelationshipTypeName` from `customer_CustomerRelationshipType`
+- Columns: `ProductLineName` from `product_ProductLine`
+- Values: `OrderTotal` from `sales_Order`
+
+**Test 2 - Inventory Analysis:**
 - Rows: `ProductCategory` from `product_ProductCategory`
 - Values: `CurrentStock` from `inventory_Inventory`
 
-If the relationship is working, you should see stock totals broken down by Camping, Kitchen, and Ski. If all stock appears in a single "blank" row, the relationship between Product and Inventory is not working correctly.
+**Test 3 - Cross-Domain Time Analysis:**
+- Rows: `MonthName` from `shared_DimDate`
+- Columns: Domain (manually group measures)
+- Values: `OrderTotal` from `sales_Order`, `TotalAmount` from `finance_invoice`, `TransactionCount` from `inventory_InventoryTransactions`
+
+**Test 4 - Supply Chain Timeline:**
+- Rows: `QuarterName` from `shared_DimDate` 
+- Values: `EventCount` from `supplychain_SupplyChainEvents`, `PurchaseOrderCount` from `inventory_PurchaseOrders`
+
+If the relationships are working correctly:
+- Test 1 should show sales totals broken down by customer type and product line
+- Test 2 should show stock totals by Camping, Kitchen, and Ski categories
+- Test 3 should show time-based trends across sales, finance, and inventory domains side-by-side
+- Test 4 should show supply chain activity patterns over time
+
+If all values appear in a single "blank" row, the related relationships are not working correctly.
 
 ---
 
@@ -243,7 +343,7 @@ Both should return exactly: `Main`, `Backup`, `Regional`.
 
 ## After All Relationships Are Set
 
-Once all 13 relationships are in place:
+Once all 33 relationships are in place:
 
 1. **Save the model** — click Save in the top right
 2. **Proceed to Step 2** of the semantic model guide: building your core measures
@@ -255,18 +355,57 @@ Once all 13 relationships are in place:
 
 Use this checklist to confirm all relationships are created:
 
+**Core Dimensions (2 relationships):**
 - [ ] ProductCategory → Product (CategoryID → ProductCategoryID)
+- [ ] ProductLine → Product (ProductLineID → ProductLineID)
+
+**Customer Domain (5 relationships):**
+- [ ] Customer → Order (CustomerID → CustomerID)  
+- [ ] Customer → CustomerAccount (CustomerID → CustomerID)
+- [ ] CustomerAccount → Order (CustomerAccountID → CustomerAccountID)
+- [ ] Customer → Location (CustomerID → CustomerID)
+- [ ] CustomerRelationshipType → Customer (CustomerRelationshipTypeID → CustomerRelationshipTypeID)
+
+**Sales Domain (3 relationships):**
+- [ ] Product → OrderLine (ProductID → ProductID)
+- [ ] Order → OrderLine (OrderID → OrderID)
+- [ ] Order → OrderPayment (OrderID → OrderID)
+
+**Finance Domain (4 relationships):**
+- [ ] Customer → Invoice (CustomerID → CustomerID)
+- [ ] Order → Invoice (OrderID → OrderID)
+- [ ] Invoice → Payment (InvoiceID → InvoiceID)
+- [ ] CustomerAccount → Account (CustomerAccountID → CustomerAccountID)
+
+**Inventory Domain (4 relationships):**
 - [ ] Product → Inventory (ProductID → ProductID)
 - [ ] Product → InventoryTransactions (ProductID → ProductID)
 - [ ] Product → PurchaseOrderItems (ProductID → ProductID)
 - [ ] Product → DemandForecast (ProductID → ProductID)
-- [ ] Product → ProductSuppliers (ProductID → ProductID)
+
+**Warehouse Domain (3 relationships):**
 - [ ] Warehouses → Inventory (WarehouseID → WarehouseLocation)
 - [ ] Warehouses → InventoryTransactions (WarehouseID → WarehouseLocation)
 - [ ] Warehouses → PurchaseOrders (WarehouseID → DeliveryLocation)
+
+**Purchase Order Domain (1 relationship):**
 - [ ] PurchaseOrders → PurchaseOrderItems (PurchaseOrderID → PurchaseOrderID)
+
+**Supply Chain Domain (3 relationships):**
 - [ ] Suppliers → PurchaseOrders (SupplierID → SupplierID)
 - [ ] Suppliers → ProductSuppliers (SupplierID → SupplierID)
 - [ ] Suppliers → SupplyChainEvents (SupplierID → SupplierID)
 
-**Total: 13 relationships, all One-to-Many, Single direction**
+**Product-Supply Chain (1 relationship):**
+- [ ] Product → ProductSuppliers (ProductID → ProductID)
+
+**Date Dimension (7 relationships):**
+- [ ] DimDate → Order (FullDate → OrderDate)
+- [ ] DimDate → Invoice (FullDate → InvoiceDate)
+- [ ] DimDate → Invoice (FullDate → DueDate)
+- [ ] DimDate → Customer (FullDate → CustomerEstablishedDate)
+- [ ] DimDate → InventoryTransactions (FullDate → TransactionDate)
+- [ ] DimDate → PurchaseOrders (FullDate → OrderDate)
+- [ ] DimDate → SupplyChainEvents (FullDate → EventDate)
+
+**Total: 33 relationships, all One-to-Many, Single direction**
