@@ -1,19 +1,19 @@
 # Inventory Data Generation Summary
 
-**Date Range**: 2025-07-01 to 2026-04-30  
-**Duration**: 303 days  
-**Integration**: Connected to 53,219 sales line items
+**Date Range**: 2026-07-01 to 2026-12-31  
+**Duration**: 183 days  
+**Integration**: Connected to 126,021 sales line items
 
 ## 🏭 Generation Overview
 
 ### **Total Summary**
-- **Total Records Generated**: 5,402
+- **Total Records Generated**: 3,883
 - **Suppliers**: 5 suppliers loaded from CSV files
 - **Product-Supplier Mappings**: 75 relationships
-- **Inventory Records**: 81 stock locations
-- **Purchase Orders**: 118 procurement orders  
-- **PO Line Items**: 238 order details
-- **Inventory Transactions**: 4545 movement records
+- **Inventory Records**: 74 stock locations
+- **Purchase Orders**: 200 procurement orders  
+- **PO Line Items**: 444 order details
+- **Inventory Transactions**: 2745 movement records
 - **Demand Forecasts**: 420 predictive analytics records
 
 ### **Supplier Network**
@@ -36,9 +36,9 @@
 ## 📋 Generated Files
 
 ### **Inventory Data** (`output/inventory/`)  
-- `Inventory.csv` - 81 stock levels across warehouses
-- `InventoryTransactions.csv` - 4545 movement audit trail
-- `PurchaseOrders.csv` - 118 procurement orders  
-- `PurchaseOrderItems.csv` - 238 line items with details
+- `Inventory.csv` - 74 stock levels across warehouses
+- `InventoryTransactions.csv` - 2745 movement audit trail
+- `PurchaseOrders.csv` - 200 procurement orders  
+- `PurchaseOrderItems.csv` - 444 line items with details
 - `DemandForecast.csv` - 420 predictive analytics records
 - `Warehouses.csv` - 3 distribution center configurations
